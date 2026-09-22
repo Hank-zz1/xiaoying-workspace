@@ -2,12 +2,153 @@
   "version": 1,
   "prompts": [
     {
+      "id": "44d05dba-a279-4fde-add0-8fdbdf92f76b",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260921-soft-poplar-204392",
+      "createdAt": 1790042309922,
+      "expiresAt": 1790042369922,
+      "status": "active",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "git-b4a75d24",
+        "online-bb60d8fd"
+      ],
+      "candidates": [
+        {
+          "slug": "git-b4a75d24",
+          "name": "工作区 Git 同步与跨机迁移",
+          "description": "当用户需要将小盈工作区通过 Git 同步到远程 GitHub 仓库、推送到远端或在新电脑上还原工作区时使用",
+          "sourceMemoryIds": [
+            "7a014aa6",
+            "b6b95b43",
+            "f7443cc2",
+            "a49f54ce"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-bb60d8fd",
+          "name": "万链Online飞书文档读取与授权",
+          "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki 内容，且 lark-cli 因用户身份未授权无法访问时，通过扫码授权或 browser_tool 绕过登录获取正文",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "git-b4a75d24",
+        "online-bb60d8fd"
+      ]
+    },
+    {
+      "id": "31f197a9-f087-4445-a9cb-aef8f7c75e63",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260921-soft-poplar-204392",
+      "createdAt": 1790041636194,
+      "expiresAt": 1790041696194,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-721ab2a3",
+        "online-5eb89d5c"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-721ab2a3",
+          "name": "澳洲/新西兰冰箱品牌新品监控",
+          "description": "当需要巡检澳洲与新西兰冰箱市场（海信/美的/三星/LG/西屋）新品与库存变化时使用，通过 SchedulerTick 定时任务抓取官网/零售商页面并与基线文件比对推送飞书",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "877c793c",
+            "fe52992c",
+            "b1a86c87",
+            "95ef9c84",
+            "34a73499",
+            "4ad45083",
+            "17fcac00",
+            "3f1e80ae",
+            "dc130820",
+            "bb43df3c",
+            "164db212",
+            "e30d622a"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-5eb89d5c",
+          "name": "万链Online飞书文档访问与每日新闻播报",
+          "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档内容，或进行每日新闻播报时使用，涵盖 lark-cli 授权、browser_tool 绕过登录及新闻时效性验证。",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf",
+            "d73cf925"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-721ab2a3",
+        "online-5eb89d5c"
+      ]
+    },
+    {
+      "id": "0183dd82-2968-44a2-ab06-964da8165c47",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260921-soft-poplar-204392",
+      "createdAt": 1790039027486,
+      "expiresAt": 1790039087486,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "online-cli-bb60d8fd"
+      ],
+      "candidates": [
+        {
+          "slug": "online-cli-bb60d8fd",
+          "name": "飞书万链Online文档CLI与浏览器读取",
+          "description": "当需要读取 ihaier.feishu.cn (万链Online) 飞书 wiki 文档内容时，优先用 lark-cli 授权后读取，未授权时用 browser_tool 绕过登录读取",
+          "sourceMemoryIds": [
+            "11c598bf",
+            "4b9c1f0a"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "online-cli-bb60d8fd"
+      ]
+    },
+    {
       "id": "2cf38005-c56d-4899-a600-785fe07fa776",
       "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
       "sessionId": "260921-soft-poplar-204392",
       "createdAt": 1789959959951,
       "expiresAt": 1789960019951,
-      "status": "active",
+      "status": "auto_aborted",
       "source": "recent_conversations",
       "candidateSlugs": [
         "auto-skill-4a31253b",

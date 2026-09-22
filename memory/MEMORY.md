@@ -2,6 +2,8 @@
 
 ### Workspace Fact
 
+- [id:7a014aa6] 工作区远程 GitHub 仓库（https://github.com/Hank-zz1/xiaoying-workspace.git）尚未验证是否存在；命令行 git ls-remote 因网络超时无法确认，需在浏览器打开该地址查看：404 表示仓库不存在需新建，显示仓库页面则可直接推送。建议创建为 Private 私有仓库。
+- [id:8fe8f5f1] 工作区数据规模：约 2490 个文件/306737 行，含 285 个历史会话、197 个自定义技能、6 个定时任务、370+ 条长期记忆，仓库约 300-500MB，新机克隆预计 10-20 分钟。
 - [id:5d7483cf] 10.200.17.83 的 27000 端口运行的是 ZWSOFT（中望）网络许可服务：license file 位于 C:\Program Files\ZWSOFT\ZWSOFT Network License Manager\LicenseFile.lic，vendor daemon 为 zwflex，提供 ZW2D_PRO 等中望授权，并非 NX 许可。
 - [id:20e06074] NX 1867 报错 'License Error: Feature has expired. [-10]' 说明客户端已能连通许可服务器，问题在于服务器端 NX 许可（gateway）已于 2022-11-15 过期；10.163.248.200 上 ugslmd 不可达属服务器故障，需联系 IT 修复。
 - [id:9fa3e3d2] NX 1867 已安装完成并验证可正常启动运行，许可从在线西门子许可服务器 10.200.17.83 成功获取；正确许可配置已写入用户级环境变量，重启后仍生效。
@@ -279,6 +281,7 @@
 
 ### Decision
 
+- [id:fa4ee93c] 工作区仓库公开性建议：因包含历史对话、API 密钥/Webhook URL、技能配置与工作数据，GitHub 仓库应设为 Private 私有；GitHub 免费账号支持无限私有仓库。
 - [id:0160258a] 情绪冰仓产品设计原则：核心功能优先级为可视化分区、低噪夜间体验、DIY 小料/冰杯适配、家居化外观；智能化功能（语音交互、屏幕显示、复杂温控）定位为后续增强功能，不应喧宾夺主
 - [id:c56b4a07] 心有灵犀 AI 情绪感知冰箱方案专为制冷平台定制，强调四大优势：技术底座、1 亿台设备数据、食联网生态、厨房场景闭环
 - [id:ca17395c] 论文定位为纯综述论文，无需实验、无需代码、无需GPU，仅需文献调研和对比表格分析
@@ -297,6 +300,9 @@
 
 ### Procedure
 
+- [id:7757a683] 使用用户的 GitHub 账号进行 git push 时，命令行推送会遇到连接超时；可行替代方案是使用 GitHub Desktop（Add Local Repository 后点击 Push origin）或配置代理/VPN 后重试，密码/Token 通过 Windows 弹窗输入而非命令行。
+- [id:b6b95b43] 工作区 Git 远程仓库设定为 https://github.com/Hank-zz1/xiaoying-workspace.git，主分支 main；配套脚本 push-to-github.bat（当前机推送到 GitHub）与 新电脑恢复.bat（新机克隆并关联工作区），另有 00-开始这里.md、Git 同步总览.md、跨机器同步指南.md、推送 GitHub 指南.md、备份核查报告.md 等文档。
+- [id:f7443cc2] 工作区已采用 Git 同步方案：在工作区根目录初始化 .git 并创建 .gitignore（排除临时文件与大型数据），首次提交约 2490 个文件、306737 行；配套脚本 setup-git-remote.bat 设置远程地址，文档为 README-GitSync.md 与《Git 同步指南.md》；推送命令为 git branch -M main && git push -u origin main，新机器用 git clone <仓库地址> <工作区路径> 还原。
 - [id:89ba5871] 小盈数据迁移工具已创建于工作区根目录：迁移小盈数据.bat（自动备份 sessions/、config.json、automations.json、memory/、skills/、skills-dev/、sources/ 到桌面「小盈数据备份_时间戳」文件夹）和《小盈数据迁移指南.md》；此外全局技能位于 C:\Users\26011970\.incaier-agent\skills\，技能注册表为 my-workspace\skill-registry.json。
 - [id:a49f54ce] 小盈历史对话数据存储于 C:\Users\26011970\.incaier-agent\workspaces\my-workspace\sessions\ 目录（每会话一个文件夹，内含 session.jsonl）；迁移到新机时需一并复制 config.json、automations.json、memory/、skills/、sources/，保持路径一致或更新配置内的路径引用。
 - [id:3277e472] 查询 FlexLM 许可状态命令：在 D:/Siemens/NX/UGFLEXLM 下执行 ./lmutil.exe lmstat -a -c "27000@10.200.17.83"，可查看 license server 与 vendor daemon 的 UP/Feature usage 信息。

@@ -3,16 +3,74 @@
   "candidates": [
     {
       "slug": "online-bb60d8fd",
-      "name": "万链Online飞书文档读取",
-      "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki内容时，先尝试lark-cli授权读取，未授权时改用browser_tool绕过登录",
-      "draftSkillMd": "---\nname: \"万链Online飞书文档读取\"\ndescription: \"当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki内容时，先尝试lark-cli授权读取，未授权时改用browser_tool绕过登录\"\nversion: 1.0.0\n---\n\n# 万链Online飞书文档读取\n\n## When to Use\n当任务涉及访问或读取 ihaier.feishu.cn（万链Online）上的飞书文档、wiki 节点内容时加载本技能。适用于 lark-cli 已授权或未授权两种情况。\n\n## Procedure\n1. 优先尝试使用 lark-cli 读取飞书内容。若用户尚未授权（用户身份未授权），lark-cli 无法访问 ihaier.feishu.cn 文档。\n2. 引导用户完成授权：执行 `\"$HOME/.lark-cli/lark-cli\" auth login` 生成二维码，让用户扫码完成万链Online飞书 OAuth 授权。\n3. 授权完成后即可通过 lark-cli 读取飞书 wiki 节点内容，docx/wikispaces 等 API 均可调用，无需用户手动复制内容。\n4. 如果当前无法完成授权，则改用 browser_tool 直接 navigate 目标文档 URL 绕过登录读取正文内容（会跳转到 iamd.haier.net SSO 登录页后再渲染文档）。\n\n## Commands\n```bash\n\"$HOME/.lark-cli/lark-cli\" auth login\n```\n\n## Pitfalls\n- lark-cli 用户身份未授权时无法通过 CLI 访问 ihaier.feishu.cn（万链Online）文档，需先完成扫码授权。\n- 使用 browser_tool 访问时会先跳转到 iamd.haier.net SSO 登录页，需等待其完成登录后再渲染文档正文。\n\n## Verification\n- 授权路径：lark-cli 能成功调用 docx/wikispaces 等 API 读取到 wiki 节点内容。\n- 浏览器路径：browser_tool 能读取到文档正文内容。",
+      "name": "万链Online飞书文档读取与授权",
+      "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki 内容，且 lark-cli 因用户身份未授权无法访问时，通过扫码授权或 browser_tool 绕过登录获取正文",
+      "draftSkillMd": "---\nname: \"万链Online飞书文档读取与授权\"\ndescription: \"当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki 内容，且 lark-cli 因用户身份未授权无法访问时，通过扫码授权或 browser_tool 绕过登录获取正文\"\nversion: 1.0.0\n---\n\n# 万链Online飞书文档读取与授权\n\n## When to Use\n当用户需要访问 ihaier.feishu.cn（万链Online）上的飞书文档或 wiki 节点内容，而 lark-cli 因用户身份未授权或未登录导致无法读取时，加载并遵循本技能。典型触发场景：用户提供万链Online飞书文档/wiki 链接、要求总结或引用其中内容，但 CLI 报未授权错误。\n\n## Procedure\n1. 优先尝试使用 lark-cli 读取目标文档/wiki 内容，调用相应的 docx/wikispaces 等子命令：\n   ```bash\n   \"$HOME/.lark-cli/lark-cli\" <docx/wikispaces 子命令>\n   ```\n2. 若 lark-cli 报未授权或无法访问 ihaier.feishu.cn（万链Online）文档，则引导用户完成飞书 OAuth 授权：执行下方 auth login 命令生成二维码，并将二维码展示给用户，请其使用飞书扫码完成万链Online飞书 OAuth 授权：\n   ```bash\n   \"$HOME/.lark-cli/lark-cli\" auth login\n   ```\n3. 用户扫码完成授权后，重新执行第 1 步的 lark-cli 命令。此时 docx、wikispaces 等 API 均可正常调用，可直接读取飞书 wiki 节点与文档内容，不再需要用户手动复制内容。\n4. 若用户暂时无法扫码授权、需要立即读取内容，则作为兜底方案，改用 browser_tool 直接 navigate 打开目标飞书文档 URL。页面会先跳转到 iamd.haier.net SSO 登录页，等待其渲染完成后即可绕过登录读取正文内容。\n\n## Commands\n```bash\n\"$HOME/.lark-cli/lark-cli\" auth login\n```\n\n```bash\n\"$HOME/.lark-cli/lark-cli\" <docx/wikispaces 子命令>\n```\n\nbrowser_tool：navigate 至目标飞书文档 URL（形如 `https://ihaier.feishu.cn/...`），等待跳转 `iamd.haier.net` SSO 登录页后渲染出正文。\n\n## Pitfalls\n- lark-cli 在用户身份未授权/未登录状态下无法访问 ihaier.feishu.cn（万链Online）文档，必须先完成 OAuth 授权。\n- browser_tool 直接打开文档时会先跳转至 iamd.haier.net SSO 登录页，需等待该页渲染完成后再读取正文，否则会拿到登录页而非文档内容。\n- 授权前只能靠用户手动复制内容作为临时替代；授权后即可通过 CLI 直接读取，无需再手动复制。\n- OAuth 授权必须由用户本人扫码完成，agent 无法代为扫码，需明确将二维码交付给用户。\n\n## Verification\n- 执行 lark-cli docx/wikispaces 子命令后能正常返回飞书 wiki 节点/文档内容，即表示授权与读取成功。\n- 使用 browser_tool 时，页面在跳转 iamd.haier.net SSO 登录页后成功渲染出文档正文内容，而非停留在登录页。",
       "sourceMemoryIds": [
         "4b9c1f0a",
         "11c598bf"
       ],
       "triggerSessionCount": 2,
       "createdAt": 1789722950398,
-      "updatedAt": 1789959959692,
+      "updatedAt": 1790042309636,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "git-b4a75d24",
+      "name": "工作区 Git 同步与跨机迁移",
+      "description": "当用户需要将小盈工作区通过 Git 同步到远程 GitHub 仓库、推送到远端或在新电脑上还原工作区时使用",
+      "draftSkillMd": "---\nname: \"工作区 Git 同步与跨机迁移\"\ndescription: \"当用户需要将小盈工作区通过 Git 同步到远程 GitHub 仓库、推送到远端或在新电脑上还原工作区时使用\"\nversion: 1.0.0\n---\n\n# 工作区 Git 同步与跨机迁移\n\n## When to Use\n- 用户要求将工作区同步/推送到 GitHub 远程仓库\n- 用户需要在新电脑上克隆或还原工作区\n- 用户需要迁移小盈历史对话数据、配置、记忆、技能等至新机器\n- 需要验证或设置工作区远程仓库地址\n\n## Procedure\n1. 确认远程仓库地址：`https://github.com/Hank-zz1/xiaoying-workspace.git`，主分支为 `main`。\n2. 在工作区根目录初始化 Git 并创建 `.gitignore`，排除临时文件与大型数据。\n3. 首次提交工作区文件（约 2490 个文件、306737 行）。\n4. 使用脚本 `setup-git-remote.bat` 设置远程地址。\n5. 将分支重命名为 main 并推送：\n   ```\n   git branch -M main && git push -u origin main\n   ```\n6. 在新机器上克隆还原工作区：\n   ```\n   git clone https://github.com/Hank-zz1/xiaoying-workspace.git <工作区路径>\n   ```\n7. 迁移小盈历史对话数据：从 `C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace\\sessions\\`（每会话一个文件夹，内含 `session.jsonl`）一并复制 `config.json`、`automations.json`、`memory/`、`skills/`、`sources/`，保持路径一致或更新配置内的路径引用。\n8. 使用配套脚本：`push-to-github.bat`（当前机推送到 GitHub）、`新电脑恢复.bat`（新机克隆并关联工作区）。\n9. 参考文档：`00-开始这里.md`、`Git 同步总览.md`、`跨机器同步指南.md`、`推送 GitHub 指南.md`、`备份核查报告.md`、`README-GitSync.md`、`Git 同步指南.md`。\n\n## Commands\n```bash\ngit branch -M main && git push -u origin main\n```\n```bash\ngit clone https://github.com/Hank-zz1/xiaoying-workspace.git <工作区路径>\n```\n```bash\ngit ls-remote https://github.com/Hank-zz1/xiaoying-workspace.git\n```\n```bash\nsetup-git-remote.bat\n```\n```bash\npush-to-github.bat\n```\n```bash\n新电脑恢复.bat\n```\n\n## Pitfalls\n- 远程仓库存在性未验证：`git ls-remote` 可能因网络超时无法确认，需在浏览器打开 `https://github.com/Hank-zz1/xiaoying-workspace.git` 查看——404 表示仓库不存在需新建，显示仓库页面则可直接推送。\n- 建议将仓库创建为 Private 私有仓库。\n- 迁移历史对话时若仅复制 sessions 而遗漏 `config.json`、`automations.json`、`memory/`、`skills/`、`sources/`，将导致配置或记忆丢失；新机路径不一致时需更新配置内的路径引用。\n\n## Verification\n- 浏览器打开 `https://github.com/Hank-zz1/xiaoying-workspace.git` 能正常显示仓库页面（非 404）。\n- `git push -u origin main` 成功且无报错。\n- 新机器 `git clone` 后工作区文件数量与目录结构完整，sessions、config、memory、skills、sources 均已还原。",
+      "sourceMemoryIds": [
+        "7a014aa6",
+        "b6b95b43",
+        "f7443cc2",
+        "a49f54ce"
+      ],
+      "triggerSessionCount": 1,
+      "createdAt": 1790042309636,
+      "updatedAt": 1790042309636,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-721ab2a3",
+      "name": "澳洲/新西兰冰箱品牌新品监控",
+      "description": "当需要巡检澳洲与新西兰冰箱市场（海信/美的/三星/LG/西屋）新品与库存变化时使用，通过 SchedulerTick 定时任务抓取官网/零售商页面并与基线文件比对推送飞书",
+      "draftSkillMd": "---\nname: \"澳洲/新西兰冰箱品牌新品监控\"\ndescription: \"当需要巡检澳洲与新西兰冰箱市场（海信/美的/三星/LG/西屋）新品与库存变化时使用，通过 SchedulerTick 定时任务抓取官网/零售商页面并与基线文件比对推送飞书\"\nversion: 1.0.0\n---\n\n# 澳洲/新西兰冰箱品牌新品监控\n\n## When to Use\n- 需要按计划巡检澳洲（AU）与新西兰（NZ）冰箱市场新品、上下架变化时\n- 收到 SchedulerTick 定时任务触发，或需手动执行一次品牌监控巡检时\n- 需要更新/比对基线文件并推送变化到飞书群时\n\n## Procedure\n1. **确认调度配置**：读取 `automations.json` 的 SchedulerTick 配置，共 4 个定时任务：\n   - 工作日 10:23 / 13:23 / 16:23 巡检（仅在有变化时推送）\n   - 每日 15:07 汇总（始终推送）\n2. **加载基线文件**：\n   - AU 基线：`data/au-fridge-baseline-2026-06-15.md`\n   - NZ 基线：`data/au-fridge-baseline-2026-08-27.md`（含海信 44 款 + 三星 13 款，统一管理，不再散落多个会话目录）\n3. **按品牌抓取 AU 数据（5 品牌）**：\n   - **海信 AU**：使用最新排序 URL，注意 `currentPage` 从 **0** 开始（非 1）：\n     `https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0`\n   - **美的 AU**：官网 Top Mount 子页面为 JS 动态渲染，首次抓取可能误报 `No Relevant Product`，**必须二次重试确认**；同时监控 **Bing Lee** 渠道判断库存状态（两渠道任一在售即为在售）\n   - **三星 AU**：官网深度 JS 渲染，`firecrawl_scrape` 仅返回空占位符。改用：① 页面底部促销信息提取 SKU 列表（曾识别出 23 款）；② `web_search` 间接搜索型号；③ `firecrawl_agent` 异步导航\n   - **LG AU**：官网有 `document_antibot` 反爬，所有直接抓取失败。改用 `bocha_web_search` 搜索 `new LG Australia fridge 2026` 获取 GF-/GS- 系列型号，或监控 The Good Guys / Harvey Norman / Bing Lee 零售商页面。搜索结果如 sourceforge.net 等为无效匹配，需人工验证\n   - **西屋 AU**：按常规官网抓取\n4. **按品牌抓取 NZ 数据（3 品牌：海信/三星/LG；美的/西屋在 NZ 无独立官网及零售页面）**：\n   - **海信 NZ**：有效 URL 为 `https://hisense.co.nz/appliances/fridge/`，可提取 44 款产品\n   - **三星 NZ**：使用 `--mode=jsonld` 从 `https://samsung.com/nz/refrigerators` 提取 JSON-LD，可获取 13 款产品\n   - **LG NZ**：官网 `lg.com/nz/fridges/` 被 Akamai IP 层限流，有头模式也连接超时（`ERR_CONNECTION_TIMED_OUT`），需退避重试或回退到 web_search / ai_search 间接搜索新闻/媒体信息\n5. **比对基线**：将本次抓取结果与基线文件逐品牌比对，识别新增/下架/型号变化。\n6. **推送飞书**：仅当有变化时（工作日巡检）或每日汇总时，用 Python `requests` 向 Webhook 发送 interactive 卡片：\n   `https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4`\n7. **更新基线**：推送成功后，将最新结果写回对应基线文件。\n\n## Commands\n```bash\n# 海信 AU 最新排序（注意 currentPage=0 起始）\nhttps://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0\n\n# 海信 NZ\nhttps://hisense.co.nz/appliances/fridge/\n\n# 三星 NZ JSON-LD 提取\nfirecrawl_scrape --mode=jsonld https://samsung.com/nz/refrigerators\n\n# LG AU 间接搜索\nbocha_web_search \"new LG Australia fridge 2026\"\n\n# 飞书推送（Python requests, interactive 卡片）\nhttps://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n```\n\n## Pitfalls\n- **海信 AU 分页陷阱**：`currentPage` 从 **0** 开始，误用 `currentPage=1` 会取到第二页数据，导致第一产品错误。\n- **美的 AU 误报**：Top Mount 子页面 JS 渲染，首次 `firecrawl_scrape` 可能返回 `No Relevant Product`，需二次重试；且必须结合官网 + Bing Lee 双渠道判断，单渠道易误判下架。\n- **三星 AU 空结果**：`firecrawl_scrape`、`firecrawl_agent`、`firecrawl_map` 均无法获取完整列表，不要依赖直接抓取。\n- **LG 反爬**：AU/NZ 官网均有 `document_antibot` 或 Akamai IP 层限流，直接抓取（含 firecrawl、有头模式）会失败/超时，不要反复重试同一通道。\n- **搜索结果噪音**：`bocha_web_search` 可能返回 sourceforge.net 等无效匹配，需人工验证。\n- **NZ 品牌范围**：NZ 仅海信/三星/LG 三家，美的和西屋在 NZ 无官网及零售页面，不要尝试抓取。\n- **基线文件统一**：NZ 基线统一为 `data/au-fridge-baseline-2026-08-27.md`，不要散落写入多个会话目录。\n- **型号消失**：美的 AU 部分型号（如 MDRT580MTF45AP 413L）从未进入可购买状态即下架，需关注是否退市或战略调整。\n\n## Verification\n- 抓取结果与基线文件完成逐品牌比对，新增/下架型号明确列出。\n- 有变化时飞书 interactive 卡片成功发送（HTTP 200）。\n- 基线文件已更新（或确认无变化保持原状）。\n- NZ 海信应约 44 款、三星应约 13 款，数量偏差需排查抓取异常。",
+      "sourceMemoryIds": [
+        "1c37b7da",
+        "28baa449",
+        "cd83863a",
+        "877c793c",
+        "fe52992c",
+        "b1a86c87",
+        "95ef9c84",
+        "34a73499",
+        "4ad45083",
+        "17fcac00",
+        "3f1e80ae",
+        "dc130820",
+        "bb43df3c",
+        "164db212",
+        "e30d622a"
+      ],
+      "triggerSessionCount": 6,
+      "createdAt": 1789873070164,
+      "updatedAt": 1790041635938,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "online-5eb89d5c",
+      "name": "万链Online飞书文档访问与每日新闻播报",
+      "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档内容，或进行每日新闻播报时使用，涵盖 lark-cli 授权、browser_tool 绕过登录及新闻时效性验证。",
+      "draftSkillMd": "---\nname: \"万链Online飞书文档访问与每日新闻播报\"\ndescription: \"当需要读取 ihaier.feishu.cn（万链Online）飞书文档内容，或进行每日新闻播报时使用，涵盖 lark-cli 授权、browser_tool 绕过登录及新闻时效性验证。\"\nversion: 1.0.0\n---\n\n# 万链Online飞书文档访问与每日新闻播报\n\n## When to Use\n- 需要访问或读取 `ihaier.feishu.cn`（万链Online）上的飞书文档/wiki 节点内容时。\n- `lark-cli` 用户身份未授权导致无法通过 CLI 读取飞书文档时。\n- 执行每日新闻播报任务，需搜索并验证当日新闻时。\n\n## Procedure\n1. 首先尝试用 `lark-cli` 读取飞书 wiki/docx 内容（docx/wikispaces 等 API 均可调用）。\n2. 若 `lark-cli` 用户身份未授权，有两种解决方案：\n   - **方案 A（推荐，可长期使用）**：执行 `\"$HOME/.lark-cli/lark-cli\" auth login` 生成二维码，让用户扫码完成万链Online飞书 OAuth 授权。授权后 `lark-cli` 即可读取飞书 wiki 节点内容（docx/wikispaces 等 API 均可调用），无需用户手动复制内容。\n   - **方案 B（绕过登录）**：当无法完成 CLI 授权时，使用 `browser_tool` 直接 navigate 到文档 URL，绕过登录读取正文内容。访问会先跳转到 `iamd.haier.net` SSO 登录页，之后会渲染出文档正文。\n3. 进行每日新闻播报时，使用 `bocha_ai_search` 搜索新闻，必须指定准确日期（如 `2026 年 6 月 22 日`）。\n4. 发布播报前，确认每条新闻均为当日内容，避免出现过时信息。\n\n## Commands\n```bash\n# 生成二维码进行万链Online飞书 OAuth 授权\n\"$HOME/.lark-cli/lark-cli\" auth login\n```\n\n```text\n# 使用 browser_tool 直接 navigate 绕过登录（方案 B）\nnavigate to: https://ihaier.feishu.cn/<文档路径>\n（会跳转到 iamd.haier.net SSO 登录页后渲染文档正文）\n```\n\n```text\n# 每日新闻搜索（bocha_ai_search），必须指定准确日期\nquery: \"<主题> 2026 年 6 月 22 日\"\n```\n\n## Pitfalls\n- `ihaier.feishu.cn`（万链Online）文档在 `lark-cli` 用户身份未授权时无法通过 CLI 访问，不要反复重试 CLI 读取，应改用授权或 browser_tool 方案。\n- 使用 browser_tool navigate 时会跳转到 `iamd.haier.net` SSO 登录页，需等待其完成渲染后再读取正文，不要误认为访问失败。\n- 每日新闻播报时若未指定准确日期，可能混入过时新闻内容，发布前必须逐条核对时效性。\n\n## Verification\n- 飞书文档：确认已成功读取文档正文内容（CLI 返回内容，或 browser_tool 渲染出文档页面）。\n- 新闻播报：确认所有新闻均为指定当日内容，无过时信息。",
+      "sourceMemoryIds": [
+        "4b9c1f0a",
+        "11c598bf",
+        "d73cf925"
+      ],
+      "triggerSessionCount": 3,
+      "createdAt": 1790041635938,
+      "updatedAt": 1790041635938,
       "source": "auto_skill"
     },
     {
@@ -76,33 +134,6 @@
       "triggerSessionCount": 6,
       "createdAt": 1789884863592,
       "updatedAt": 1789884863592,
-      "source": "auto_skill"
-    },
-    {
-      "slug": "auto-skill-721ab2a3",
-      "name": "澳新冰箱品牌新品监控",
-      "description": "在澳洲/新西兰市场定期监控海信、美的、三星、LG、西屋冰箱新品时使用，处理定时巡检推送、品牌官网反爬与JS渲染抓取、基线对比及飞书通知。",
-      "draftSkillMd": "---\nname: \"澳新冰箱品牌新品监控\"\ndescription: \"在澳洲/新西兰市场定期监控海信、美的、三星、LG、西屋冰箱新品时使用，处理定时巡检推送、品牌官网反爬与JS渲染抓取、基线对比及飞书通知。\"\nversion: 1.0.0\n---\n\n# 澳新冰箱品牌新品监控\n\n## When to Use\n当需要执行或维护澳洲/新西兰冰箱品牌（海信、美的、三星、LG、西屋）新品监控任务时加载本技能，包括：\n- 通过 SchedulerTick 定时巡检 4 个任务（工作日 10:23/13:23/16:23 变化推送，每日 15:07 汇总推送）\n- 从各品牌官网或零售商页面抓取冰箱 SKU 并与基线文件对比\n- 遇到反爬/JS 动态渲染时选择替代方案\n- 有变化时发送飞书 interactive 卡片并更新基线\n\n## Procedure\n\n1. **读取基线文件**：读取当前基线（澳洲：`data/au-fridge-baseline-2026-06-15.md`；新西兰：`data/au-fridge-baseline-2026-08-27.md`，含海信 44 款 + 三星 13 款，统一管理不再散落多个会话目录）。\n\n2. **抓取各品牌数据**（按品牌选择最终可用方案）：\n   - **海信 AU**：使用最新排序分页 URL，注意 `currentPage` 从 **0** 开始（非 1）：\n     `https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0`\n   - **海信 NZ**：使用 URL `hisense.co.nz/appliances/fridge/`，可提取 44 款产品。\n   - **三星 NZ**：使用 `--mode=jsonld` 从 `samsung.com/nz/refrigerators` 提取 JSON-LD 数据（可获取 13 款产品）。\n   - **三星 AU**：官网深度 JS 渲染，`firecrawl_scrape` 返回空。改用 web_search 间接搜索型号，或观察页面底部促销信息提取 SKU 列表。\n   - **美的 AU**：同时监控官网 `midea.com/au` 的 Top Mount 子页面 **和** Bing Lee 两个渠道判断库存状态；Top Mount 子页面为 JS 渲染，首次抓取可能误报 `No Relevant Product`，需二次重试确认。\n   - **LG**：官网（AU/NZ）有 `document_antibot` 反爬与 Akamai IP 层限流，直接抓取失败。改用 `bocha_web_search` 搜索 `'new LG Australia fridge 2026'` 获取 GF-/GS- 系列型号，并持续监控 The Good Guys / Harvey Norman / Bing Lee 等零售商页面。\n   - **西屋**：仅澳洲有售；新西兰无独立官网及零售页面。\n\n3. **对比基线**：将抓取结果与基线文件比对，检测新增/下架型号。若官网与零售商结果矛盾（如美的 Top Mount），以双渠道交叉验证为准，避免误判。\n\n4. **发送飞书通知**（仅在有变化或每日汇总时）：用 Python `requests` 发送 interactive 卡片到 Webhook：\n   `https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4`\n   - 工作日 10:23/13:23/16:23 巡检：**仅变化时**推送\n   - 每日 15:07 汇总：**始终**推送\n\n5. **更新基线**：推送成功后，将本次结果写回对应基线文件。\n\n## Commands\n\n```bash\n# 海信 AU 最新排序（currentPage 从 0 开始）\nhttps://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0\n\n# 海信 NZ（可提取 44 款）\nhttps://hisense.co.nz/appliances/fridge/\n\n# 三星 NZ JSON-LD 模式（可提取 13 款）\n# 使用 --mode=jsonld 抓取：\nhttps://samsung.com/nz/refrigerators\n\n# 美的 AU Top Mount 官网（需二次重试）\nhttps://midea.com/au\n\n# LG 间接搜索（官网被 document_antibot 拦截）\n# bocha_web_search: 'new LG Australia fridge 2026'\n\n# 飞书 Webhook\nhttps://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n```\n\n## Pitfalls\n- **海信 AU 分页**：`currentPage` 从 0 起始；误用 `currentPage=1` 会抓到第二页数据，导致错误的“第一款产品”。\n- **三星 AU**：`firecrawl_scrape` 返回空占位符和分类导航；`firecrawl_agent` 调用失败；`firecrawl_map` 返回空链接；API 端点需认证。\n- **美的 AU Top Mount**：JS 渲染，首次抓取可能误报 `No Relevant Product`；不可仅凭官网判断下架，必须结合 Bing Lee 双渠道验证（如 MDRT580MTF45AP 曾误判下架，实际 Bing Lee 有售）。\n- **LG**：AU/NZ 官网有 Akamai IP 层限流，有头模式也连接超时（`ERR_CONNECTION_TIMED_OUT`），需退避重试或回退 Web 搜索。\n- **搜索结果噪音**：`bocha_web_search` 可能返回 sourceforge.net 等无效匹配，需人工验证型号有效性。\n- **新西兰市场范围**：仅海信/三星/LG 三个品牌有公开页面；美的和西屋在 NZ 无独立官网及零售页面，不要为其在 NZ 做无用抓取。\n\n## Verification\n- 确认基线文件已更新，且无散落的多会话目录文件（NZ 统一使用 `data/au-fridge-baseline-2026-08-27.md`）。\n- 飞书 Webhook 返回成功（interactive 卡片已送达）。\n- 抓取计数符合预期：海信 NZ 约 44 款、三星 NZ 约 13 款；异常空结果需二次重试确认后再判定。\n- 若官网抓取失败，确认已回退至 web_search / 零售商页面方案并记录原因。",
-      "sourceMemoryIds": [
-        "1c37b7da",
-        "28baa449",
-        "cd83863a",
-        "e30d622a",
-        "877c793c",
-        "fe52992c",
-        "b1a86c87",
-        "95ef9c84",
-        "34a73499",
-        "4ad45083",
-        "17fcac00",
-        "3f1e80ae",
-        "dc130820",
-        "bb43df3c",
-        "164db212"
-      ],
-      "triggerSessionCount": 6,
-      "createdAt": 1789873070164,
-      "updatedAt": 1789873070164,
       "source": "auto_skill"
     },
     {
