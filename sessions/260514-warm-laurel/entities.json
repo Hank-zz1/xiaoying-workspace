@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 6193272,
+  "entities": {
+    "中信": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "论文": {
+      "count": 25,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "权威": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183156
+    },
+    "智慧": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183156
+    },
+    "集成电路": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "通讯": {
+      "count": 2,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "正文": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "美观": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "白底": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794183156
+    },
+    "中华人民共和国": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183156
+    },
+    "公正": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183156
+    },
+    "中国": {
+      "count": 4,
+      "category": "location",
+      "lastSeen": 1787794183156
+    },
+    "目前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794183156
+    },
+    "英文": {
+      "count": 3,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "后期": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794183156
+    },
+    "如下": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794183156
+    },
+    "华罗庚": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183156
+    },
+    "北京": {
+      "count": 3,
+      "category": "location",
+      "lastSeen": 1787794183156
+    },
+    "布什": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794183156
+    },
+    "建华": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183156
+    },
+    "程裕淇": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183156
+    },
+    "永康": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183156
+    },
+    "edge": {
+      "count": 1,
+      "category": "app",
+      "lastSeen": 1787794183156
+    },
+    "小林": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183156
+    },
+    "西安": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183156
+    },
+    "西安交通大学": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794183156
+    },
+    "Python": {
+      "count": 2,
+      "category": "technology",
+      "lastSeen": 1787794183156
+    }
+  }
+}

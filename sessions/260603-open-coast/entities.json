@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 1624967,
+  "entities": {
+    "山东": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183752
+    },
+    "青岛": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183752
+    },
+    "论文格式": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183752
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 541581,
+  "entities": {
+    "悉尼大学": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794184522
+    },
+    "青岛": {
+      "count": 3,
+      "category": "location",
+      "lastSeen": 1787794184522
+    },
+    "申报": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184522
+    },
+    "目前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184522
+    },
+    "崂山区": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794184522
+    },
+    "这三项": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184522
+    },
+    "往年": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184522
+    },
+    "今年": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184522
+    },
+    "多少钱": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184522
+    },
+    "安家费": {
+      "count": 2,
+      "category": "person",
+      "lastSeen": 1787794184522
+    }
+  }
+}

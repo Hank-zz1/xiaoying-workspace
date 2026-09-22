@@ -1,0 +1,37 @@
+{
+  "capabilityId": "cap_c33326c5ef7b4fd6930ce19d74abe583",
+  "isMarketProvisioned": true,
+  "version": "1.0.1",
+  "commitId": "444960ec88a6830a9a107873a1655468c95e415c",
+  "latestCommitId": "444960ec88a6830a9a107873a1655468c95e415c",
+  "contentHash": "sha256:dfef7be4b6bb949dbfc0be838a07d52b0054dd2ff798eb2c6571da748ddc454b",
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/personal/21044820/office-pdf-vkai",
+  "updatedAt": 1787728838739,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_14124a3edcae4266843b974042053add",
+  "name": "PDF 全能处理工具",
+  "capabilityName": "PDF 全能处理工具",
+  "logoUrl": null,
+  "capabilityDescription": "PDF 全能处理工具：读取、转换、编辑、生成、表单填写、OCR、合并拆分、水印、加解密等一站式 PDF 操作。支持可填写表单和视觉覆盖层两种填写方式。",
+  "publisherName": "刘博",
+  "official": false,
+  "orgName": null,
+  "needApproval": false,
+  "categoryIds": [
+    "204"
+  ],
+  "categories": [
+    {
+      "id": "204",
+      "name": "企业通用效能",
+      "code": "enterprise_efficiency",
+      "rootId": "2",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/57afb6851b024bd6bdc1cc66101768ac.png"
+    }
+  ],
+  "usageExamples": null,
+  "provisionSignature": "8daef3177bd3639377663c4edd0657b4",
+  "localInstallFingerprint": "sha256:1ebbb01cb773e47ef25f1e7fe01ce61ab12da7d83f348b79c978a60f56bc0e6d"
+}

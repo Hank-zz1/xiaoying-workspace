@@ -1,0 +1,290 @@
+{
+  "version": 1,
+  "labels": [
+    {
+      "id": "development",
+      "name": "研发",
+      "color": {
+        "light": "#3B82F6",
+        "dark": "#60A5FA"
+      },
+      "children": [
+        {
+          "id": "code",
+          "name": "代码",
+          "color": {
+            "light": "#4F46E5",
+            "dark": "#818CF8"
+          }
+        },
+        {
+          "id": "bug",
+          "name": "缺陷",
+          "color": {
+            "light": "#0EA5E9",
+            "dark": "#38BDF8"
+          }
+        },
+        {
+          "id": "automation",
+          "name": "自动化",
+          "color": {
+            "light": "#06B6D4",
+            "dark": "#22D3EE"
+          }
+        }
+      ]
+    },
+    {
+      "id": "content",
+      "name": "内容",
+      "color": {
+        "light": "#8B5CF6",
+        "dark": "#A78BFA"
+      },
+      "children": [
+        {
+          "id": "writing",
+          "name": "写作",
+          "color": {
+            "light": "#7C3AED",
+            "dark": "#C4B5FD"
+          }
+        },
+        {
+          "id": "research",
+          "name": "研究",
+          "color": {
+            "light": "#A855F7",
+            "dark": "#C084FC"
+          }
+        },
+        {
+          "id": "design",
+          "name": "设计",
+          "color": {
+            "light": "#D946EF",
+            "dark": "#E879F9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "business",
+      "name": "业务",
+      "color": {
+        "light": "#10B981",
+        "dark": "#34D399"
+      },
+      "children": [
+        {
+          "id": "haier-bio",
+          "name": "海尔生物",
+          "color": {
+            "light": "#059669",
+            "dark": "#10B981"
+          }
+        },
+        {
+          "id": "yikang-life",
+          "name": "盈康生命",
+          "color": {
+            "light": "#0D9488",
+            "dark": "#14B8A6"
+          }
+        },
+        {
+          "id": "shanghai-leishi",
+          "name": "上海莱士",
+          "color": {
+            "light": "#0891B2",
+            "dark": "#06B6D4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hr",
+      "name": "人力",
+      "color": {
+        "light": "#F97316",
+        "dark": "#FB923C"
+      },
+      "children": [
+        {
+          "id": "hr-recruitment",
+          "name": "招聘",
+          "color": {
+            "light": "#EA580C",
+            "dark": "#F97316"
+          }
+        },
+        {
+          "id": "hr-performance",
+          "name": "绩效",
+          "color": {
+            "light": "#C2410C",
+            "dark": "#EA580C"
+          }
+        },
+        {
+          "id": "hr-training",
+          "name": "培训",
+          "color": {
+            "light": "#9A3412",
+            "dark": "#C2410C"
+          }
+        },
+        {
+          "id": "hr-compensation",
+          "name": "薪酬",
+          "color": {
+            "light": "#7C2D12",
+            "dark": "#9A3412"
+          }
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "财务",
+      "color": {
+        "light": "#84CC16",
+        "dark": "#A3E635"
+      },
+      "children": [
+        {
+          "id": "finance-accounting",
+          "name": "会计",
+          "color": {
+            "light": "#65A30D",
+            "dark": "#84CC16"
+          }
+        },
+        {
+          "id": "finance-budget",
+          "name": "预算",
+          "color": {
+            "light": "#4D7C0F",
+            "dark": "#65A30D"
+          }
+        },
+        {
+          "id": "finance-tax",
+          "name": "税务",
+          "color": {
+            "light": "#3F6212",
+            "dark": "#4D7C0F"
+          }
+        },
+        {
+          "id": "finance-reporting",
+          "name": "报表",
+          "color": {
+            "light": "#365314",
+            "dark": "#3F6212"
+          }
+        }
+      ]
+    },
+    {
+      "id": "legal",
+      "name": "法务",
+      "color": {
+        "light": "#6366F1",
+        "dark": "#818CF8"
+      },
+      "children": [
+        {
+          "id": "legal-contract",
+          "name": "合同",
+          "color": {
+            "light": "#4F46E5",
+            "dark": "#6366F1"
+          }
+        },
+        {
+          "id": "legal-compliance",
+          "name": "合规",
+          "color": {
+            "light": "#4338CA",
+            "dark": "#4F46E5"
+          }
+        },
+        {
+          "id": "legal-ip",
+          "name": "知识产权",
+          "color": {
+            "light": "#3730A3",
+            "dark": "#4338CA"
+          }
+        },
+        {
+          "id": "legal-dispute",
+          "name": "纠纷",
+          "color": {
+            "light": "#312E81",
+            "dark": "#3730A3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "investment",
+      "name": "投融资",
+      "color": {
+        "light": "#EC4899",
+        "dark": "#F472B6"
+      },
+      "children": [
+        {
+          "id": "investment-m-a",
+          "name": "并购",
+          "color": {
+            "light": "#DB2777",
+            "dark": "#EC4899"
+          }
+        },
+        {
+          "id": "investment-fundraising",
+          "name": "融资",
+          "color": {
+            "light": "#BE185D",
+            "dark": "#DB2777"
+          }
+        },
+        {
+          "id": "investment-ipo",
+          "name": "IPO",
+          "color": {
+            "light": "#9D174D",
+            "dark": "#BE185D"
+          }
+        },
+        {
+          "id": "investment-equity",
+          "name": "股权投资",
+          "color": {
+            "light": "#831843",
+            "dark": "#9D174D"
+          }
+        }
+      ]
+    },
+    {
+      "id": "priority",
+      "name": "优先级",
+      "color": {
+        "light": "#F59E0B",
+        "dark": "#FBBF24"
+      },
+      "valueType": "number"
+    },
+    {
+      "id": "project",
+      "name": "项目",
+      "color": "foreground/50",
+      "valueType": "string"
+    }
+  ]
+}

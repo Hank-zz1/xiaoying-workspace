@@ -1,0 +1,11 @@
+{
+  "allowedBashPatterns": [
+    { "pattern": "^python3?\\s.*scripts/(detect_cn|humanize_cn|academic_cn|style_cn|compare_cn|restructure_cn)\\.py", "comment": "运行检测和改写脚本" },
+    { "pattern": "^ls\\s", "comment": "列出文件" },
+    { "pattern": "^cat\\s", "comment": "查看文件内容" },
+    { "pattern": "^head\\s", "comment": "查看文件开头" },
+    { "pattern": "^tail\\s", "comment": "查看文件末尾" },
+    { "pattern": "^wc\\s", "comment": "统计文件" },
+    { "pattern": "^file\\s", "comment": "查看文件类型" }
+  ]
+}

@@ -1,0 +1,76 @@
+Expression: document.querySelector('body').innerText.substring(0, 5000)
+Result type: string
+
+Result:
+Refrigerator
+Discover
+Air Conditioner
+Refrigerator
+Laundry
+Kitchen Appliances
+Living Appliances
+Renewable Energy
+Business Solutions
+Customer Support
+
+ 
+
+ 
+
+Shop Now
+All Refrigerator
+French Door
+Quad Door
+Side by Side
+Top Mount
+Bottom Mount
+Car Fridge
+Chest Freezer
+Midea AU - Simply ideal
+Refrigerator
+Filter
+Reset
+Color
+Black
+Dark Stainless
+Dark Stainless Steel
+Stainless
+Stainless Steel
+White
+Category
+Capacity
+Power
+All
+ 
+(0)
+Sort By
+No Relevant Product
+Product Parts & Accessories
+Contact us to replace the parts and accessories made specifically for your Midea products.
+Call Now
+Customer Support
+Do you have questions about your Midea product? Midea Customer Service is here to help!
+Get Help
+Products
+SmartHome
+Air Conditioner
+Refrigerator
+Laundry
+Kitchen
+Floorcare
+Energy Storage System
+Help & Support
+Customer Support
+About
+Midea Australia
+News
+Blog
+Global Sponsorship
+Connect with Us
+Subscribe to our newsletter to get the latest news and product announcements
+Subscribe
+Check to see how we manage your data Privacy policy
+Simply ideal
+Copyright 2026 Copyright Midea. All rights reserved.
+Privacy Policy Terms of Service Cookie Consent
+Australia

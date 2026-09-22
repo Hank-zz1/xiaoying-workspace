@@ -1,0 +1,19 @@
+Navigated to: https://www.westinghouse.com.au/fridges-and-freezers/
+Title: Fridges and Freezers | Westinghouse Australia
+Elapsed: 65942ms
+URL changed: true
+Recent failed requests: 4
+Viewport: 1266x763, scroll=(0, 0)
+Interactive elements: 124 (refs @e1..@e124 injected)
+Key elements:
+  @e6 [input]
+  @e19 [input] Search by Product Model or Name
+  @e41 [button] quick view
+  @e42 [button] buy online
+  @e46 [button] quick view
+  @e47 [button] buy online
+  @e51 [button] quick view
+  @e52 [button] buy online
+  @e56 [button] quick view
+  @e57 [button] buy online
+Run "snapshot" for full element list.

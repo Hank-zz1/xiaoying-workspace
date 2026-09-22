@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "localId": "local-c82a00a3-a23e-4752-893e-82af3aa0c06e",
+  "capabilityId": null,
+  "skillSlug": "overseas-fridge-radar",
+  "projectId": null,
+  "projectName": "overseas-fridge-radar-9xi8",
+  "projectUrl": null,
+  "branch": null,
+  "status": "EDITING",
+  "baseVersion": null,
+  "baseContentHash": null,
+  "baseCommitId": null,
+  "latestKnownOnlineVersion": null,
+  "latestKnownOnlineCommitId": null,
+  "lastSavedCommitId": null,
+  "lastSubmittedCommitId": null,
+  "submittedContentHash": null,
+  "submissionId": null,
+  "mr": null,
+  "marketForm": {
+    "displayInfoConfirmed": false,
+    "projectName": "overseas-fridge-radar-9xi8",
+    "isPublic": false,
+    "needApproval": false,
+    "updatedAt": 1782453053793,
+    "name": "海外冰箱竞品雷达",
+    "description": "独立运行的海外冰箱竞品监控智能体。支持按需查询海外冰箱品牌（海信、美的、三星、LG、西屋等）的新品动态、价格变化、促销活动，生成竞品对比分析报告。与现有澳洲冰箱定时监控完全隔离，不共享数据文件。"
+  },
+  "submittedAt": null
+}

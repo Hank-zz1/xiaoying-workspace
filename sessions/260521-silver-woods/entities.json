@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 26798,
+  "entities": {
+    "青岛市": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183433
+    },
+    "崂山区": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183433
+    }
+  }
+}

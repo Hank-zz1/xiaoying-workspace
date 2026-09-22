@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 2141922,
+  "entities": {
+    "三甲胺": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794182905
+    },
+    "中文": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794182905
+    },
+    "澳洲": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794182905
+    },
+    "密封": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794182905
+    },
+    "明白": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794182905
+    }
+  }
+}

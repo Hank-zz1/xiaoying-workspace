@@ -1,0 +1,88 @@
+{
+  "date": "2026-06-16",
+  "time_of_day": "上午",
+  "changes_found": true,
+  "changes": [
+    {
+      "model": "MDRS925FIM45AP",
+      "type": "Side by Side (Space Master)",
+      "capacity": "700L",
+      "baseline_status": "在售",
+      "current_status": "Coming Soon",
+      "change_type": "状态变更"
+    },
+    {
+      "model": "MDRF923FIM45AP",
+      "type": "Quad Door (Space Master)",
+      "capacity": "706L",
+      "baseline_status": "在售",
+      "current_status": "Coming Soon",
+      "change_type": "状态变更"
+    }
+  ],
+  "brands": {
+    "海信": {
+      "status": "无变化",
+      "page1_models": [
+        "HRFD537SW",
+        "HRFD535BW",
+        "HRBM419SW",
+        "HRBM419BW",
+        "HRBM419B",
+        "HRCD615TBW",
+        "HRCD615TBWV",
+        "HRSBS613BWX",
+        "HRTF497SW",
+        "HRBF126S",
+        "HRBF126B",
+        "HRBF46"
+      ],
+      "new_models_found": [],
+      "release_2026_count": 5,
+      "note": "所有可见型号均在基线中，无新增"
+    },
+    "美的": {
+      "status": "有变化 - 2款产品状态变更",
+      "mdr_t580_status": "仍为 Coming Soon",
+      "changes": [
+        {
+          "model": "MDRS925FIM45AP",
+          "type": "Side by Side (Space Master)",
+          "capacity": "700L",
+          "baseline_status": "在售",
+          "current_status": "Coming Soon",
+          "change_type": "状态变更"
+        },
+        {
+          "model": "MDRF923FIM45AP",
+          "type": "Quad Door (Space Master)",
+          "capacity": "706L",
+          "baseline_status": "在售",
+          "current_status": "Coming Soon",
+          "change_type": "状态变更"
+        }
+      ],
+      "note": "MDRT580MTF45AP 仍为 Coming Soon；MDRS925FIM45AP 和 MDRF923FIM45AP 从在售变为 Coming Soon（可能是标注修正）"
+    },
+    "三星": {
+      "status": "无有效数据",
+      "note": "搜索结果未找到三星澳洲2026新款冰箱相关信息"
+    },
+    "LG": {
+      "status": "无有效数据",
+      "note": "搜索结果未找到LG澳洲2026新款冰箱相关信息"
+    },
+    "西屋": {
+      "status": "无变化(首次获取了产品列表页数据)",
+      "models_seen": [
+        "WHE6170BB",
+        "WQE6170BB",
+        "WHE6170SB",
+        "WQE5750BB",
+        "WHE5650SD",
+        "WQE5760BB"
+      ],
+      "note": "基线无完整产品型号列表，无法对比；本次获取到12款产品型号，均为在售产品"
+    }
+  }
+}

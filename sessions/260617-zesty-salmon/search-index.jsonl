@@ -1,0 +1,11 @@
+{"sessionId":"260617-zesty-salmon","lineNumber":1,"kind":"header","text":"检查系统架构是 32 位还是 64 位"}
+{"sessionId":"260617-zesty-salmon","lineNumber":2,"kind":"message","text":"帮我看一下本机是86的还是64的"}
+{"sessionId":"260617-zesty-salmon","lineNumber":4,"kind":"message","text":"你的本机是 **64 位**系统。 - 内核架构：`x86_64` - 操作系统架构：64-bit - 处理器架构：`AMD64`"}
+{"sessionId":"260617-zesty-salmon","lineNumber":5,"kind":"message","text":"那我应该用哪个 pasted-image-1.png image/png"}
+{"sessionId":"260617-zesty-salmon","lineNumber":11,"kind":"message","text":"根据之前的系统检测结果，你的本机是 **64 位**系统，应该选择 **x64** 版本。 - 内核架构：`x86_64` - 操作系统：64-bit - 处理器：AMD64 选择 **x64** 即可。"}
+{"sessionId":"260617-zesty-salmon","lineNumber":12,"kind":"message","text":"pasted-image-1.png image/png"}
+{"sessionId":"260617-zesty-salmon","lineNumber":15,"kind":"message","text":"这是 **PSoC Programmer** 安装程序的界面，由 Cypress Semiconductor 出品。 当前显示的是**联系信息填写页面**： - **Name:** 26011970 - **Company:** H2508 - **Email:** liuzihan.bx@haier.com 你已经填好了信息，直接点击右下角的 **Finish** 按钮即可完成安装。"}
+{"sessionId":"260617-zesty-salmon","lineNumber":16,"kind":"message","text":"信息必填吗"}
+{"sessionId":"260617-zesty-salmon","lineNumber":17,"kind":"message","text":"根据 OCR 识别结果： - **Name: \\*** — 必填（带星号） - **Company:** — 非必填（无星号） - **Email: \\*** — 必填（带星号） - 底部有说明：`* Indicates a required field`（星号表示必填字段） 不过你也看到了 **\"Continue Without Contact Information\"**（跳过联系信息继续）的选项，如果你想跳过填写，可以直接点击那个链接。"}
+{"sessionId":"260617-zesty-salmon","lineNumber":18,"kind":"message","text":"我不确定是否能用公司邮箱"}
+{"sessionId":"260617-zesty-salmon","lineNumber":19,"kind":"message","text":"如果你只是用这个工具做海尔相关的开发工作，用公司邮箱完全没问题，这是正常的开发工具注册，很常见。 如果不想留邮箱也可以直接点 **\"Continue Without Contact Information\"**，跳过填写直接完成安装。"}

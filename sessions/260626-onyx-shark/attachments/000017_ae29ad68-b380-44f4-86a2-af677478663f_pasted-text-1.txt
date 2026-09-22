@@ -1,0 +1,109 @@
+[
+  {
+    "role": "user",
+    "content": "{\"input\": {\"query\": \"欧洲26年有什么新品上架官网\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Start",
+          "arguments": "{\"query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"query\": \"欧洲26年有什么新品上架官网\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "意图识别01",
+          "arguments": "{\"query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"classificationId\": 1, \"classificationName\": \"竞品查询\", \"reason\": \"用户询问特定时间（26年）和特定渠道（官网）的新品上架情况，属于查询新品动态，符合竞品查询的定义。\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "大模型01",
+          "arguments": "{\"input\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"region\": \"欧洲\", \"raw_output\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "LLM_Tool",
+          "arguments": "{\"input\": \"{'input': '欧洲26年有什么新品上架官网'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": {\"region\": \"欧洲\", \"raw_output\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码01",
+          "arguments": "{\"input\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "JavaScript_Tool",
+          "arguments": "{\"input\": \"{'input': '{\\\"region\\\": \\\"欧洲\\\"}'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  }
+]

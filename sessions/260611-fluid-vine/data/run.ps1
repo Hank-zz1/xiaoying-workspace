@@ -1,0 +1,2 @@
+$env:NODE_PATH = "C:/Users/26011970/.incaier-agent/skills/market-incaier-pptxyn0/scripts/node_modules"
+node "C:/Users/26011970/.incaier-agent/workspaces/my-workspace/sessions/260611-fluid-vine/data/gen-ppt.js"

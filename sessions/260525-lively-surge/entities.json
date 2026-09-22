@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 65574,
+  "entities": {
+    "中文": {
+      "count": 6,
+      "category": "other",
+      "lastSeen": 1787794183540
+    },
+    "罗列": {
+      "count": 3,
+      "category": "location",
+      "lastSeen": 1787794183540
+    },
+    "当前": {
+      "count": 3,
+      "category": "date_period",
+      "lastSeen": 1787794183540
+    }
+  }
+}

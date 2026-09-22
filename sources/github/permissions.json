@@ -1,0 +1,10 @@
+{
+  "allowedApiEndpoints": [
+    { "method": "GET", "path": ".*", "comment": "所有 GET 请求（只读）" },
+    { "method": "POST", "path": "^/repos/.*/issues$", "comment": "创建 Issue" },
+    { "method": "POST", "path": "^/repos/.*/issues/.*/comments$", "comment": "评论 Issue" },
+    { "method": "POST", "path": "^/repos/.*/pulls$", "comment": "创建 Pull Request" },
+    { "method": "PATCH", "path": "^/repos/.*/issues/.*$", "comment": "更新 Issue" },
+    { "method": "PATCH", "path": "^/repos/.*/pulls/.*/merge$", "comment": "合并 Pull Request" }
+  ]
+}

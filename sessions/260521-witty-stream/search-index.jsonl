@@ -1,0 +1,3 @@
+{"sessionId":"260521-witty-stream","lineNumber":1,"kind":"header","text":"本质定义与概念阐释"}
+{"sessionId":"260521-witty-stream","lineNumber":2,"kind":"message","text":"是什么 pasted-image-1.png image/png"}
+{"sessionId":"260521-witty-stream","lineNumber":7,"kind":"message","text":"从图片中可以看到，这是一个名为 **`uniprot-query`** 的 **Skill（技能）**。 - **图标**：橙色方块，带有 \"un\" 字样 - **名称**：`uniprot-query` - **类型**：SKILL（技能） 这应该是一个用于查询 **UniProt**（Universal Protein Resource，全球通用的蛋白质序列和功能信息数据库）的技能。用户可以通过这个技能快速查询蛋白质的序列、功能、结构域、注释等信息。 不过我注意到这个技能似乎不在你当前工作区的技能列表中。当前工作区的技能位于 `C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace\\skills\\` 目录下。如果你想要使用这个技能，可能需要： 1. 检查它是否安装在全局技能目录 (`C:\\Users\\26011970\\.incaier-agent\\skills\\`) 2. 或者通过能力市场安装此技能 需要我帮你查找这个技能的具体位置吗？"}

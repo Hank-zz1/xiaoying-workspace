@@ -1,0 +1,4386 @@
+{
+  "sheets": [
+    {
+      "name": "备份报价",
+      "rows": 65,
+      "cols": 1,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 10,
+          "col": 0,
+          "value": "步骤1"
+        },
+        {
+          "row": 28,
+          "col": 0,
+          "value": "图例"
+        },
+        {
+          "row": 47,
+          "col": 0,
+          "value": "步骤2\n在home下相应项目下新建报价单"
+        },
+        {
+          "row": 64,
+          "col": 0,
+          "value": "图例"
+        }
+      ]
+    },
+    {
+      "name": "Sheet2",
+      "rows": 0,
+      "cols": 0,
+      "merged_cells": [],
+      "non_empty_cells": []
+    },
+    {
+      "name": "招标流程",
+      "rows": 36,
+      "cols": 30,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "招标流程"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": "1.0"
+        },
+        {
+          "row": 4,
+          "col": 10,
+          "value": "2.0"
+        },
+        {
+          "row": 4,
+          "col": 29,
+          "value": "3编辑"
+        },
+        {
+          "row": 35,
+          "col": 29,
+          "value": "4海大园寻号"
+        }
+      ]
+    },
+    {
+      "name": "风量仿真",
+      "rows": 0,
+      "cols": 0,
+      "merged_cells": [],
+      "non_empty_cells": []
+    },
+    {
+      "name": "ECR编号查询",
+      "rows": 2,
+      "cols": 2,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "更改图纸的ECR文件号查询，登陆网址："
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": "http://10.135.2.101/controller/home"
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": "根据图中提示操作"
+        }
+      ]
+    },
+    {
+      "name": "模号开工单",
+      "rows": 376,
+      "cols": 31,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 225,
+          "col": 14,
+          "value": "信息维护信息可查看之前完成的作为参考"
+        },
+        {
+          "row": 305,
+          "col": 23,
+          "value": "备份改模"
+        },
+        {
+          "row": 375,
+          "col": 28,
+          "value": "白静"
+        },
+        {
+          "row": 375,
+          "col": 30,
+          "value": "18004041.0"
+        }
+      ]
+    },
+    {
+      "name": "雷区排查",
+      "rows": 58,
+      "cols": 2,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "雷区排查网址："
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "value": "drd.haier.net"
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": "账号密码邢博博："
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": "01304631密码Xfm25267788"
+        },
+        {
+          "row": 57,
+          "col": 0,
+          "value": "点击失败案例编号"
+        }
+      ]
+    },
+    {
+      "name": "更改图纸ECR流程",
+      "rows": 340,
+      "cols": 3,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 2,
+          "value": "创建ECR更改图纸流程"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": "1.在当前桌面：“创建”栏【更改对象】选择----选择【更改请求】；"
+        },
+        {
+          "row": 21,
+          "col": 1,
+          "value": "2.新建更改请求属性内容填写"
+        },
+        {
+          "row": 44,
+          "col": 1,
+          "value": "备注：更改Part属性：主要是更改专用号或者成品编码属性；变更通道选择：通道ECR\n      更改图纸/文档：主要是更改系统图纸或者规格文档等系统文档类;变更通道选择：通道ECRwCRB;\n       更改BOM：主要是更改系统成品编码或者总成专用号已经双经销BOM；变更通道选择：通道ECRwCR\n"
+        },
+        {
+          "row": 64,
+          "col": 1,
+          "value": "备注：问题描述：详细说明更改原因；建议的解决方案：说明具体的更改点。"
+        },
+        {
+          "row": 66,
+          "col": 1,
+          "value": "3.生成ECR号并指派管理员；"
+        },
+        {
+          "row": 109,
+          "col": 1,
+          "value": "4.点击“相关对象”，在左下角选择“搜索和添加”"
+        },
+        {
+          "row": 139,
+          "col": 1,
+          "value": "5 相关对象：搜索和添加"
+        },
+        {
+          "row": 201,
+          "col": 1,
+          "value": "备注：搜索出来的文档、专用号或者成品编码，在选择关联对象时必须要选择最新版本关联。"
+        },
+        {
+          "row": 226,
+          "col": 1,
+          "value": "6.添加：审核委员会"
+        },
+        {
+          "row": 256,
+          "col": 1,
+          "value": "备注：贵州事业部：黄永刚"
+        },
+        {
+          "row": 257,
+          "col": 1,
+          "value": "备注：按照流程审核委员会添加的原则是你所更改的BOM或者文档涉及到的相关部门，必须添加相关部门负责人审核。详细见BOM关联平台要求。"
+        },
+        {
+          "row": 259,
+          "col": 1,
+          "value": "注：Bom更改走下面流程"
+        },
+        {
+          "row": 259,
+          "col": 2,
+          "value": "注：图纸更改走下面流程"
+        },
+        {
+          "row": 260,
+          "col": 1,
+          "value": "7.生成CI文件：勾选被更改的文档号，在右上角“更改操作”中选择“单层BOM更改”，修改图纸文档生成CI文件是沿用的更改BOM生成CI文件的操作，可借鉴使用。"
+        },
+        {
+          "row": 260,
+          "col": 2,
+          "value": "7.点击相关对象下的“创建和添加”，"
+        },
+        {
+          "row": 282,
+          "col": 2,
+          "value": "选择“更改信息”"
+        },
+        {
+          "row": 290,
+          "col": 1,
+          "value": "备注：生成的CI文件，主要是在系统中上传你更改文档的更改依据，即见证性资料"
+        },
+        {
+          "row": 292,
+          "col": 1,
+          "value": "8.提交“ECM_变更申请流程”"
+        },
+        {
+          "row": 310,
+          "col": 1,
+          "value": "9.查询ECR审核流程，推进审核流程。"
+        },
+        {
+          "row": 335,
+          "col": 1,
+          "value": "10.ECR审核流程结束"
+        },
+        {
+          "row": 339,
+          "col": 2,
+          "value": "添加写好的附件"
+        }
+      ]
+    },
+    {
+      "name": "DES号-图纸专用号",
+      "rows": 395,
+      "cols": 20,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "1.登录SAP 界面  --CS12查询号"
+        },
+        {
+          "row": 0,
+          "col": 3,
+          "value": "选择HGVS-800"
+        },
+        {
+          "row": 13,
+          "col": 13,
+          "value": "主数据查询"
+        },
+        {
+          "row": 26,
+          "col": 18,
+          "value": "90P0"
+        },
+        {
+          "row": 26,
+          "col": 19,
+          "value": "中德"
+        },
+        {
+          "row": 27,
+          "col": 18,
+          "value": "9800.0"
+        },
+        {
+          "row": 27,
+          "col": 19,
+          "value": "合肥"
+        },
+        {
+          "row": 29,
+          "col": 0,
+          "value": "2.输入物料描述，不知道确定的型号可以使用后缀*搜索"
+        },
+        {
+          "row": 66,
+          "col": 0,
+          "value": "3.查询具体的型号，或者通用型号 选择"
+        },
+        {
+          "row": 98,
+          "col": 0,
+          "value": "4.填写工厂信息"
+        },
+        {
+          "row": 127,
+          "col": 0,
+          "value": "5.查询所需要的物料专用号"
+        },
+        {
+          "row": 192,
+          "col": 0,
+          "value": "6.登录PLM,输入零部件专用号进行搜索"
+        },
+        {
+          "row": 255,
+          "col": 0,
+          "value": "7.搜索结果，选择最新版本"
+        },
+        {
+          "row": 279,
+          "col": 0,
+          "value": "8.在专用号汇总里面的文档下，选择最新版本的图纸号"
+        },
+        {
+          "row": 343,
+          "col": 0,
+          "value": "9.在图纸属性下查询零部件的DES号码"
+        },
+        {
+          "row": 394,
+          "col": 0,
+          "value": "10.登录TCUA,在搜索栏输入DES号码进行图纸查询。"
+        }
+      ]
+    },
+    {
+      "name": "新DRD系统更改工艺卡片",
+      "rows": 40,
+      "cols": 54,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "新版DRD系统更改ECR工艺卡片流程"
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": "一、发起更改请求"
+        },
+        {
+          "row": 6,
+          "col": 0,
+          "value": "1.登录DRD系统，选择“PDM”，在“变更管理”下选择“更改请求”"
+        },
+        {
+          "row": 6,
+          "col": 10,
+          "value": "2.点击新建，填写基本属性和其他属性，注意选择更改类型。"
+        },
+        {
+          "row": 6,
+          "col": 22,
+          "value": "3.选择“搜索关联”，选择关联的文档编号（高级搜索可查找产品型号和专用号）"
+        },
+        {
+          "row": 6,
+          "col": 36,
+          "value": "4.添加处理方案，选择上传本地文件（更改说明）"
+        },
+        {
+          "row": 6,
+          "col": 53,
+          "value": "4.选择合适的审核委员会，等待审核完成"
+        },
+        {
+          "row": 39,
+          "col": 10,
+          "value": "变更通道ECR:项目开发阶段，首版图发布，没认证，可以直接签，无需各节点审核                     ECRwCRB：需要各节点审核                      "
+        }
+      ]
+    },
+    {
+      "name": "新版DRD专用号流程发布",
+      "rows": 23,
+      "cols": 22,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 1,
+          "col": 0,
+          "value": "1.选择物料主数据，搜索专用号"
+        },
+        {
+          "row": 1,
+          "col": 10,
+          "value": "2.点击搜索的专用号"
+        },
+        {
+          "row": 1,
+          "col": 21,
+          "value": "3.检查下挂的图纸和属性，检查属性，如有问题签出更改，重点检查技术属性和分类属性"
+        },
+        {
+          "row": 20,
+          "col": 10,
+          "value": "4.签入，点击提交流程"
+        },
+        {
+          "row": 22,
+          "col": 0,
+          "value": "5.给模块经理发邮件，模块经理审核完成后让采购审核，采购审核完成流程结束"
+        }
+      ]
+    },
+    {
+      "name": "图纸升版走流程",
+      "rows": 12,
+      "cols": 1,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "图纸升版走流程"
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": "（1）找出需要升版图纸，检查确认图纸格式、处数、格式、线性等是否正确"
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": "（2）图纸打印出来（注意线型），找项目经理、直线经理（卢晓东或者邢博博签字确认）"
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": "（3）在TC中打开三维，检查：海尔-三维建模，模型质量检查，（见附图）检查左边显示栏无报错和红×"
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": "（4）在TC中打开二维图，检查：海尔-制图质量检查，（见附图）检查左边显示栏无报错和红×，没有错误之后，选文件-导出-teamcenter-全选，如图所示。"
+        },
+        {
+          "row": 7,
+          "col": 0,
+          "value": "（5）TC刷新之后，有个验证结果汇总，双击打开，检查验证结果无X号，可选择下图2进行提交流程。"
+        },
+        {
+          "row": 9,
+          "col": 0,
+          "value": "（6）签字完成后（如有意见请校核并在图纸中改正）扫描，图纸提交流程到任宪伟，将图纸扫描件和22年审核台账发给于晓芳代审批（任宪伟）。"
+        },
+        {
+          "row": 11,
+          "col": 0,
+          "value": "(7)下一个审批许以浩（打电话发邮件和ihaier）"
+        }
+      ]
+    },
+    {
+      "name": "CVI系统物料技术参数维护操作指导",
+      "rows": 2,
+      "cols": 9,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "CVI系统物料技术参数维护操作指导"
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "value": "账号密码"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": "卢晓东："
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": "1339416.0"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": "Haier，123"
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": "链接"
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": "https://cvi-pro.haier.net/DFR%20Online/GEA-Haier%20Production/Search/Query/RestoreSearch?newSearch=True#"
+        }
+      ]
+    },
+    {
+      "name": "通过PLM反查",
+      "rows": 1,
+      "cols": 2,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 1,
+          "value": "登陆PLM"
+        }
+      ]
+    },
+    {
+      "name": "新版DRD中更改专用号信息",
+      "rows": 1,
+      "cols": 1,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "1.走ECR改Part属性\n2.在物料属性里搜索专用号进行下挂，一定选择ECR，不用ECRwCRB\n3.在我的任务里指定审核人（任宪伟-于晓芳），并点确认\n4.审核完成后（寇胜楠—于晓芳），流程结束"
+        }
+      ]
+    },
+    {
+      "name": "冷藏风道SKD总成",
+      "rows": 2,
+      "cols": 9,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 1,
+          "col": 8,
+          "value": "冷藏风道SKD总成"
+        }
+      ]
+    },
+    {
+      "name": "新品报验流程",
+      "rows": 89,
+      "cols": 21,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "1.先在PDM系统里查样件单"
+        },
+        {
+          "row": 55,
+          "col": 0,
+          "value": "2.去报验系统盯流程"
+        },
+        {
+          "row": 63,
+          "col": 20,
+          "value": "1.PDM查样件单，填写补充信息\n2.去报验系统盯流程\n"
+        },
+        {
+          "row": 88,
+          "col": 20,
+          "value": "1.检验分工，外检负责人分类；\n2.标准维护，图纸上的技术要求，可以入BOM\n3.供方自检，上传样件尺寸报告\n4.供方送样，委托外检试验\nRohs实验一般完成时间为3天，型式实验为2周"
+        }
+      ]
+    },
+    {
+      "name": "CAD导入UG设置",
+      "rows": 0,
+      "cols": 0,
+      "merged_cells": [],
+      "non_empty_cells": []
+    },
+    {
+      "name": "升版新的专用号",
+      "rows": 4,
+      "cols": 3,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 3,
+          "col": 2,
+          "value": "进入PLM搜索对应的专用号，点击右上角复制"
+        }
+      ]
+    },
+    {
+      "name": "双经销BOM操作",
+      "rows": 39,
+      "cols": 33,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "目录"
+        },
+        {
+          "row": 0,
+          "col": 22,
+          "value": "1.填写双经销BOM确认单"
+        },
+        {
+          "row": 0,
+          "col": 27,
+          "value": "2.PLM录入BOM"
+        },
+        {
+          "row": 0,
+          "col": 32,
+          "value": "3.发布、审核"
+        },
+        {
+          "row": 12,
+          "col": 20,
+          "value": "无色母和有色母的区别、注意专用号和图号"
+        },
+        {
+          "row": 25,
+          "col": 27,
+          "value": "填完记得保存"
+        },
+        {
+          "row": 38,
+          "col": 27,
+          "value": "记得扩展工厂，只选择第一层级即可"
+        }
+      ]
+    },
+    {
+      "name": "流程",
+      "rows": 4,
+      "cols": 6,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 3,
+          "col": 0,
+          "value": "包装运输仿真"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": "小微F"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": "李建帅"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": "孟亮"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": "正常时间需要4周，提前预约"
+        }
+      ]
+    },
+    {
+      "name": "认证有关流程",
+      "rows": 5,
+      "cols": 24,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 2,
+          "col": 1,
+          "value": "基线生成问题处理"
+        },
+        {
+          "row": 4,
+          "col": 23,
+          "value": "工艺卡片流程"
+        }
+      ]
+    },
+    {
+      "name": "常用的模号信息",
+      "rows": 22,
+      "cols": 8,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 2,
+          "col": 7,
+          "value": "型号:BCD-190WGHC2Z0S9 "
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": "产品编码:BC12J0000 "
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": "项目号:ZL-22年QD两门海尔星厨风冷大冷冻项目-B01 "
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": "PBCS立项号：PAAB202216991 "
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": "型号:BCD-540WGHTD14SEU1  "
+        },
+        {
+          "row": 9,
+          "col": 7,
+          "value": "产品编码:BC11T1000"
+        },
+        {
+          "row": 10,
+          "col": 7,
+          "value": "项目号:ZL-21年QDT型海尔星厨549升级项目-A05 "
+        },
+        {
+          "row": 11,
+          "col": 7,
+          "value": "PBCS立项号：PAAA202114913"
+        },
+        {
+          "row": 15,
+          "col": 7,
+          "value": "型号:BCD-218STPC   \n产品编码:BA0AM00AA\n项目号BX-19年冰箱海尔中国直冷三门BM-F/3D-C1平台210项目-B01\nPBCS立项号：PAAB201905737"
+        },
+        {
+          "row": 18,
+          "col": 7,
+          "value": "型号:BCD-252WXPS   \n产品编码:BB0B9008N\n项目号：BX-19年冰箱国内三门 BM-F/3D-S5平台风冷电商钣金拓展项目\nPBCS立项号：PAAC201907647"
+        },
+        {
+          "row": 21,
+          "col": 7,
+          "value": "型号：BCD-201TMPM"
+        }
+      ]
+    },
+    {
+      "name": "技术要求",
+      "rows": 18,
+      "cols": 5,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 17,
+          "col": 4,
+          "value": "印刷：子件必须有印刷标准，总成可以没有。"
+        }
+      ]
+    },
+    {
+      "name": "签字",
+      "rows": 0,
+      "cols": 0,
+      "merged_cells": [],
+      "non_empty_cells": []
+    },
+    {
+      "name": "型号名称",
+      "rows": 43,
+      "cols": 11,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "value": "序号"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": "系列"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": "产品中类名称"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": "型号描述"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": "型号编码"
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": "销售特征"
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": "品牌"
+        },
+        {
+          "row": 1,
+          "col": 8,
+          "value": "产地"
+        },
+        {
+          "row": 1,
+          "col": 9,
+          "value": "外观"
+        },
+        {
+          "row": 1,
+          "col": 10,
+          "value": "渠道"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": "1.0"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": "180.0"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": "BM直冷(两门)"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": "BCD-160LTMPC"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": "BK0YV0000"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": "2.0"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": "BM直冷(两门)"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": "BCD-180LLC2E0C9"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": "BK0YV1000"
+        },
+        {
+          "row": 4,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": "3.0"
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": "BM直冷(两门)"
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": "BCD-177LLC2E0L9"
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": "BK0YV3000"
+        },
+        {
+          "row": 5,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": "4.0"
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": "BM直冷(两门)"
+        },
+        {
+          "row": 6,
+          "col": 4,
+          "value": "BCD-180TMPS"
+        },
+        {
+          "row": 6,
+          "col": 5,
+          "value": "BK0YV0072"
+        },
+        {
+          "row": 6,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 6,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": "5.0"
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": "BM直冷(两门)"
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": "BCD-178TMPD"
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": "BK0YV0093"
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": "6.0"
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": "BM直冷(两门)"
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": "BCD-178TMPT"
+        },
+        {
+          "row": 8,
+          "col": 5,
+          "value": "BK0YV0097"
+        },
+        {
+          "row": 8,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 8,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "value": "7.0"
+        },
+        {
+          "row": 9,
+          "col": 2,
+          "value": "241.0"
+        },
+        {
+          "row": 9,
+          "col": 3,
+          "value": "BM风冷(两门)"
+        },
+        {
+          "row": 9,
+          "col": 4,
+          "value": "BCD-241WLDCQ"
+        },
+        {
+          "row": 9,
+          "col": 5,
+          "value": "BJ0WM109E"
+        },
+        {
+          "row": 9,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 9,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "value": "8.0"
+        },
+        {
+          "row": 10,
+          "col": 3,
+          "value": "BM风冷(两门)"
+        },
+        {
+          "row": 10,
+          "col": 4,
+          "value": "BCD-239WDGC"
+        },
+        {
+          "row": 10,
+          "col": 5,
+          "value": "BJ0W700AE"
+        },
+        {
+          "row": 10,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 10,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "value": "9.0"
+        },
+        {
+          "row": 11,
+          "col": 2,
+          "value": "309.0"
+        },
+        {
+          "row": 11,
+          "col": 3,
+          "value": "BM风冷(两门)"
+        },
+        {
+          "row": 11,
+          "col": 4,
+          "value": "BCD-309WMCO"
+        },
+        {
+          "row": 11,
+          "col": 5,
+          "value": "BJ0X6108D"
+        },
+        {
+          "row": 11,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 11,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 12,
+          "col": 1,
+          "value": "10.0"
+        },
+        {
+          "row": 12,
+          "col": 2,
+          "value": "210.0"
+        },
+        {
+          "row": 12,
+          "col": 3,
+          "value": "三门"
+        },
+        {
+          "row": 12,
+          "col": 4,
+          "value": "BCD-218LLC3E0C9"
+        },
+        {
+          "row": 12,
+          "col": 5,
+          "value": "BA0AM0000"
+        },
+        {
+          "row": 12,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 12,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "value": "11.0"
+        },
+        {
+          "row": 13,
+          "col": 3,
+          "value": "三门"
+        },
+        {
+          "row": 13,
+          "col": 4,
+          "value": "BCD-215STPD"
+        },
+        {
+          "row": 13,
+          "col": 5,
+          "value": "BA0AM00A1"
+        },
+        {
+          "row": 13,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 13,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "value": "12.0"
+        },
+        {
+          "row": 14,
+          "col": 3,
+          "value": "三门"
+        },
+        {
+          "row": 14,
+          "col": 4,
+          "value": "BCD-218STPS"
+        },
+        {
+          "row": 14,
+          "col": 5,
+          "value": "BA0AM00AA"
+        },
+        {
+          "row": 14,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 14,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "value": "13.0"
+        },
+        {
+          "row": 15,
+          "col": 3,
+          "value": "三门"
+        },
+        {
+          "row": 15,
+          "col": 4,
+          "value": "BCD-216STPT"
+        },
+        {
+          "row": 15,
+          "col": 5,
+          "value": "BA0AM10AA"
+        },
+        {
+          "row": 15,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 15,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "value": "14.0"
+        },
+        {
+          "row": 16,
+          "col": 2,
+          "value": "215.0"
+        },
+        {
+          "row": 16,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 16,
+          "col": 4,
+          "value": "BCD-221WLMPC"
+        },
+        {
+          "row": 16,
+          "col": 5,
+          "value": "BB0AM30A8"
+        },
+        {
+          "row": 16,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 16,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 17,
+          "col": 1,
+          "value": "15.0"
+        },
+        {
+          "row": 17,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 17,
+          "col": 4,
+          "value": "BCD-218WLDPPU1"
+        },
+        {
+          "row": 17,
+          "col": 5,
+          "value": "BB0B60094"
+        },
+        {
+          "row": 17,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 17,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 18,
+          "col": 1,
+          "value": "16.0"
+        },
+        {
+          "row": 18,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 18,
+          "col": 4,
+          "value": "BCD-221WLLC3D7B1"
+        },
+        {
+          "row": 18,
+          "col": 5,
+          "value": "BB0B61000"
+        },
+        {
+          "row": 18,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 18,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 19,
+          "col": 1,
+          "value": "17.0"
+        },
+        {
+          "row": 19,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 19,
+          "col": 4,
+          "value": "BCD-216WLMPP"
+        },
+        {
+          "row": 19,
+          "col": 5,
+          "value": "BB0B61094"
+        },
+        {
+          "row": 19,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 19,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 20,
+          "col": 1,
+          "value": "18.0"
+        },
+        {
+          "row": 20,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 20,
+          "col": 4,
+          "value": "BCD-219WLDCJ"
+        },
+        {
+          "row": 20,
+          "col": 5,
+          "value": "BB0B6509E"
+        },
+        {
+          "row": 20,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 20,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 21,
+          "col": 1,
+          "value": "19.0"
+        },
+        {
+          "row": 21,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 21,
+          "col": 4,
+          "value": "BCD-219WLMCQ"
+        },
+        {
+          "row": 21,
+          "col": 5,
+          "value": "BB0B6609E"
+        },
+        {
+          "row": 21,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 21,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 22,
+          "col": 1,
+          "value": "20.0"
+        },
+        {
+          "row": 22,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 22,
+          "col": 4,
+          "value": "BCD-217WDVLU1"
+        },
+        {
+          "row": 22,
+          "col": 5,
+          "value": "BB0A40098"
+        },
+        {
+          "row": 22,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 22,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 23,
+          "col": 1,
+          "value": "21.0"
+        },
+        {
+          "row": 23,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 23,
+          "col": 4,
+          "value": "BCD-216WMPT"
+        },
+        {
+          "row": 23,
+          "col": 5,
+          "value": "BB0A400A8"
+        },
+        {
+          "row": 23,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 23,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 23,
+          "col": 8,
+          "value": "佛山"
+        },
+        {
+          "row": 24,
+          "col": 1,
+          "value": "22.0"
+        },
+        {
+          "row": 24,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 24,
+          "col": 4,
+          "value": "BCD-217WXCL"
+        },
+        {
+          "row": 24,
+          "col": 5,
+          "value": "BB0B60000"
+        },
+        {
+          "row": 24,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 24,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 25,
+          "col": 1,
+          "value": "23.0"
+        },
+        {
+          "row": 25,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 25,
+          "col": 4,
+          "value": "BCD-213WMPS"
+        },
+        {
+          "row": 25,
+          "col": 5,
+          "value": "BB0B6108V"
+        },
+        {
+          "row": 25,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 25,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 25,
+          "col": 8,
+          "value": "佛山"
+        },
+        {
+          "row": 26,
+          "col": 1,
+          "value": "24.0"
+        },
+        {
+          "row": 26,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 26,
+          "col": 4,
+          "value": "BCD-218WDPD"
+        },
+        {
+          "row": 26,
+          "col": 5,
+          "value": "BB0B640A8"
+        },
+        {
+          "row": 26,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 26,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 26,
+          "col": 8,
+          "value": "佛山"
+        },
+        {
+          "row": 27,
+          "col": 1,
+          "value": "25.0"
+        },
+        {
+          "row": 27,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 27,
+          "col": 4,
+          "value": "BCD-220WDGR"
+        },
+        {
+          "row": 27,
+          "col": 5,
+          "value": "BB0B6909E"
+        },
+        {
+          "row": 27,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 27,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 27,
+          "col": 8,
+          "value": "佛山"
+        },
+        {
+          "row": 28,
+          "col": 1,
+          "value": "26.0"
+        },
+        {
+          "row": 28,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 28,
+          "col": 4,
+          "value": "BCD-220WMGL"
+        },
+        {
+          "row": 28,
+          "col": 5,
+          "value": "BB0B6809E"
+        },
+        {
+          "row": 28,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 28,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 28,
+          "col": 8,
+          "value": "佛山"
+        },
+        {
+          "row": 29,
+          "col": 1,
+          "value": "27.0"
+        },
+        {
+          "row": 29,
+          "col": 2,
+          "value": "256.0"
+        },
+        {
+          "row": 29,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 29,
+          "col": 4,
+          "value": "BCD-252WLLC35DC9U1"
+        },
+        {
+          "row": 29,
+          "col": 5,
+          "value": "BB0B91000"
+        },
+        {
+          "row": 29,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 29,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 30,
+          "col": 1,
+          "value": "28.0"
+        },
+        {
+          "row": 30,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 30,
+          "col": 4,
+          "value": "BCD-251WDGUU1"
+        },
+        {
+          "row": 30,
+          "col": 5,
+          "value": "BB0AQ00AE"
+        },
+        {
+          "row": 30,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 30,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 31,
+          "col": 1,
+          "value": "29.0"
+        },
+        {
+          "row": 31,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 31,
+          "col": 4,
+          "value": "BCD-255WDCI"
+        },
+        {
+          "row": 31,
+          "col": 5,
+          "value": "BB0B90000"
+        },
+        {
+          "row": 31,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 31,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 32,
+          "col": 1,
+          "value": "30.0"
+        },
+        {
+          "row": 32,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 32,
+          "col": 4,
+          "value": "BCD-252WXPS"
+        },
+        {
+          "row": 32,
+          "col": 5,
+          "value": "BB0B9008N"
+        },
+        {
+          "row": 32,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 32,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 33,
+          "col": 1,
+          "value": "31.0"
+        },
+        {
+          "row": 33,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 33,
+          "col": 4,
+          "value": "BCD-251WDPTU1"
+        },
+        {
+          "row": 33,
+          "col": 5,
+          "value": "BB0B900AC"
+        },
+        {
+          "row": 33,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 33,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 34,
+          "col": 1,
+          "value": "32.0"
+        },
+        {
+          "row": 34,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 34,
+          "col": 4,
+          "value": "BCD-253WDPDU1"
+        },
+        {
+          "row": 34,
+          "col": 5,
+          "value": "BB0B920AE"
+        },
+        {
+          "row": 34,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 34,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 35,
+          "col": 1,
+          "value": "33.0"
+        },
+        {
+          "row": 35,
+          "col": 2,
+          "value": "218.0"
+        },
+        {
+          "row": 35,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 35,
+          "col": 4,
+          "value": " BCD-218WGHC3E9G1U1"
+        },
+        {
+          "row": 35,
+          "col": 5,
+          "value": "BB0V74000"
+        },
+        {
+          "row": 35,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 35,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 35,
+          "col": 9,
+          "value": "阿玛尼灰（玻璃）"
+        },
+        {
+          "row": 35,
+          "col": 10,
+          "value": "京东"
+        },
+        {
+          "row": 36,
+          "col": 1,
+          "value": "34.0"
+        },
+        {
+          "row": 36,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 36,
+          "col": 4,
+          "value": "BCD-217WGHC3E9C9U1"
+        },
+        {
+          "row": 36,
+          "col": 5,
+          "value": "BB0V73000"
+        },
+        {
+          "row": 36,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 36,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 36,
+          "col": 9,
+          "value": "烟青灰（钣金）"
+        },
+        {
+          "row": 36,
+          "col": 10,
+          "value": "电商"
+        },
+        {
+          "row": 37,
+          "col": 1,
+          "value": "35.0"
+        },
+        {
+          "row": 37,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 37,
+          "col": 4,
+          "value": " BCD-218WGHC3E7Y1"
+        },
+        {
+          "row": 37,
+          "col": 5,
+          "value": "BB0V75000"
+        },
+        {
+          "row": 37,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 37,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 37,
+          "col": 9,
+          "value": "苏黎金（玻璃）"
+        },
+        {
+          "row": 37,
+          "col": 10,
+          "value": "自有"
+        },
+        {
+          "row": 38,
+          "col": 1,
+          "value": "36.0"
+        },
+        {
+          "row": 38,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 38,
+          "col": 4,
+          "value": "BCD-218WGHC3R9B1"
+        },
+        {
+          "row": 38,
+          "col": 5,
+          "value": "BB0V71000"
+        },
+        {
+          "row": 38,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 38,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 38,
+          "col": 9,
+          "value": "晶釉蓝纯色"
+        },
+        {
+          "row": 39,
+          "col": 1,
+          "value": "37.0"
+        },
+        {
+          "row": 39,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 39,
+          "col": 4,
+          "value": "BCD-218WGHC3R9B9"
+        },
+        {
+          "row": 39,
+          "col": 5,
+          "value": "BB0V72000"
+        },
+        {
+          "row": 39,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 39,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 39,
+          "col": 9,
+          "value": "星石蓝"
+        },
+        {
+          "row": 39,
+          "col": 10,
+          "value": "自有"
+        },
+        {
+          "row": 40,
+          "col": 1,
+          "value": "38.0"
+        },
+        {
+          "row": 40,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 40,
+          "col": 4,
+          "value": " BCD-217WGHC3R9G9 "
+        },
+        {
+          "row": 40,
+          "col": 5,
+          "value": "BB0V70000"
+        },
+        {
+          "row": 40,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 40,
+          "col": 7,
+          "value": "海尔"
+        },
+        {
+          "row": 40,
+          "col": 9,
+          "value": "雾晶灰"
+        },
+        {
+          "row": 41,
+          "col": 1,
+          "value": "39.0"
+        },
+        {
+          "row": 41,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 41,
+          "col": 4,
+          "value": "BCD-218WGLC3D7S9U1"
+        },
+        {
+          "row": 41,
+          "col": 5,
+          "value": "BB0V76000"
+        },
+        {
+          "row": 41,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 41,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 41,
+          "col": 9,
+          "value": "钣金-海晶灰"
+        },
+        {
+          "row": 41,
+          "col": 10,
+          "value": "京东"
+        },
+        {
+          "row": 42,
+          "col": 1,
+          "value": "40.0"
+        },
+        {
+          "row": 42,
+          "col": 3,
+          "value": "BM风冷(三门)"
+        },
+        {
+          "row": 42,
+          "col": 4,
+          "value": "BCD-217WGLC3DRM1"
+        },
+        {
+          "row": 42,
+          "col": 5,
+          "value": "BB0V77000"
+        },
+        {
+          "row": 42,
+          "col": 6,
+          "value": "内生内销"
+        },
+        {
+          "row": 42,
+          "col": 7,
+          "value": "统帅"
+        },
+        {
+          "row": 42,
+          "col": 9,
+          "value": "玻璃-涧石蓝渐变"
+        },
+        {
+          "row": 42,
+          "col": 10,
+          "value": "B店"
+        }
+      ]
+    },
+    {
+      "name": "总装图号",
+      "rows": 100,
+      "cols": 14,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 1,
+          "col": 1,
+          "value": "A、B类项目总装装配图信息记录表"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": "序号"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": "装配号（DES号）"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": "装配名称"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": "装配创建者"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": "项目名称"
+        },
+        {
+          "row": 2,
+          "col": 6,
+          "value": "相关型号"
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": "项目类别"
+        },
+        {
+          "row": 2,
+          "col": 8,
+          "value": "项目经理"
+        },
+        {
+          "row": 2,
+          "col": 9,
+          "value": "项目上市日期"
+        },
+        {
+          "row": 2,
+          "col": 10,
+          "value": "备注"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": "1.0"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": "*150170"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": "830T匀冷四门（476）"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": "刘敏"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": "BX-15年冰箱830T型匀冷四门项目-A01"
+        },
+        {
+          "row": 3,
+          "col": 6,
+          "value": "BCD-476FDGJ"
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": "A"
+        },
+        {
+          "row": 3,
+          "col": 8,
+          "value": "刘敏"
+        },
+        {
+          "row": 3,
+          "col": 9,
+          "value": "2015.10"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": "2.0"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": "*173882/173886"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": "830五门480"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": "沈万辉"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": "3.0"
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": "*406674"
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": "830新五门(475)"
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": "卢晓东"
+        },
+        {
+          "row": 6,
+          "col": 1,
+          "value": "4.0"
+        },
+        {
+          "row": 6,
+          "col": 2,
+          "value": "*410410"
+        },
+        {
+          "row": 6,
+          "col": 3,
+          "value": "统帅五门415"
+        },
+        {
+          "row": 7,
+          "col": 1,
+          "value": "5.0"
+        },
+        {
+          "row": 7,
+          "col": 2,
+          "value": "*212492"
+        },
+        {
+          "row": 7,
+          "col": 3,
+          "value": "HT93"
+        },
+        {
+          "row": 7,
+          "col": 4,
+          "value": "刘敏"
+        },
+        {
+          "row": 7,
+          "col": 5,
+          "value": "BX-16年对开门905*600平台HT93项目-A01"
+        },
+        {
+          "row": 7,
+          "col": 6,
+          "value": "BCD-608WDGPU1"
+        },
+        {
+          "row": 7,
+          "col": 7,
+          "value": "A"
+        },
+        {
+          "row": 7,
+          "col": 8,
+          "value": "刘敏"
+        },
+        {
+          "row": 7,
+          "col": 9,
+          "value": "2017.10"
+        },
+        {
+          "row": 8,
+          "col": 1,
+          "value": "6.0"
+        },
+        {
+          "row": 8,
+          "col": 2,
+          "value": "*433378"
+        },
+        {
+          "row": 8,
+          "col": 3,
+          "value": "586.0"
+        },
+        {
+          "row": 8,
+          "col": 4,
+          "value": "卢晓东"
+        },
+        {
+          "row": 9,
+          "col": 1,
+          "value": "7.0"
+        },
+        {
+          "row": 9,
+          "col": 2,
+          "value": "*288081"
+        },
+        {
+          "row": 9,
+          "col": 3,
+          "value": "HT93大屏（552）"
+        },
+        {
+          "row": 9,
+          "col": 4,
+          "value": "卢晓东"
+        },
+        {
+          "row": 10,
+          "col": 1,
+          "value": "8.0"
+        },
+        {
+          "row": 10,
+          "col": 2,
+          "value": "*279937"
+        },
+        {
+          "row": 10,
+          "col": 3,
+          "value": "卡萨帝609"
+        },
+        {
+          "row": 10,
+          "col": 4,
+          "value": "赵欣"
+        },
+        {
+          "row": 11,
+          "col": 1,
+          "value": "9.0"
+        },
+        {
+          "row": 11,
+          "col": 2,
+          "value": "*905550"
+        },
+        {
+          "row": 11,
+          "col": 3,
+          "value": "HT91-G0（549）\\全空间"
+        },
+        {
+          "row": 11,
+          "col": 4,
+          "value": "卢晓东"
+        },
+        {
+          "row": 12,
+          "col": 1,
+          "value": "10.0"
+        },
+        {
+          "row": 12,
+          "col": 2,
+          "value": "*500600"
+        },
+        {
+          "row": 12,
+          "col": 3,
+          "value": "HT91-G1（658）"
+        },
+        {
+          "row": 12,
+          "col": 4,
+          "value": "王海翔"
+        },
+        {
+          "row": 13,
+          "col": 1,
+          "value": "11.0"
+        },
+        {
+          "row": 13,
+          "col": 2,
+          "value": "*368451"
+        },
+        {
+          "row": 13,
+          "col": 3,
+          "value": "HT71注塑大屏"
+        },
+        {
+          "row": 13,
+          "col": 4,
+          "value": "郭磊"
+        },
+        {
+          "row": 14,
+          "col": 1,
+          "value": "12.0"
+        },
+        {
+          "row": 14,
+          "col": 2,
+          "value": "*700703"
+        },
+        {
+          "row": 14,
+          "col": 3,
+          "value": "HT71-G2（429）"
+        },
+        {
+          "row": 14,
+          "col": 4,
+          "value": "郭磊"
+        },
+        {
+          "row": 15,
+          "col": 1,
+          "value": "13.0"
+        },
+        {
+          "row": 15,
+          "col": 2,
+          "value": "*700444"
+        },
+        {
+          "row": 15,
+          "col": 3,
+          "value": "HT71-G01775（406）"
+        },
+        {
+          "row": 15,
+          "col": 4,
+          "value": "郭磊"
+        },
+        {
+          "row": 16,
+          "col": 1,
+          "value": "14.0"
+        },
+        {
+          "row": 16,
+          "col": 2,
+          "value": "*700701"
+        },
+        {
+          "row": 16,
+          "col": 3,
+          "value": "HT71注塑大屏"
+        },
+        {
+          "row": 16,
+          "col": 4,
+          "value": "郭磊"
+        },
+        {
+          "row": 17,
+          "col": 1,
+          "value": "15.0"
+        },
+        {
+          "row": 17,
+          "col": 2,
+          "value": "*700702"
+        },
+        {
+          "row": 17,
+          "col": 3,
+          "value": "71G1注塑门框切换（统帅）"
+        },
+        {
+          "row": 18,
+          "col": 1,
+          "value": "16.0"
+        },
+        {
+          "row": 18,
+          "col": 2,
+          "value": "*595600"
+        },
+        {
+          "row": 18,
+          "col": 3,
+          "value": "600法式大屏"
+        },
+        {
+          "row": 18,
+          "col": 4,
+          "value": "吴占宙"
+        },
+        {
+          "row": 19,
+          "col": 1,
+          "value": "17.0"
+        },
+        {
+          "row": 19,
+          "col": 2,
+          "value": "*331666"
+        },
+        {
+          "row": 19,
+          "col": 3,
+          "value": "350WDCM"
+        },
+        {
+          "row": 20,
+          "col": 1,
+          "value": "18.0"
+        },
+        {
+          "row": 20,
+          "col": 2,
+          "value": "*700600"
+        },
+        {
+          "row": 20,
+          "col": 3,
+          "value": "HT71钣金405"
+        },
+        {
+          "row": 20,
+          "col": 4,
+          "value": "郭磊"
+        },
+        {
+          "row": 21,
+          "col": 1,
+          "value": "19.0"
+        },
+        {
+          "row": 21,
+          "col": 2,
+          "value": "*701775"
+        },
+        {
+          "row": 21,
+          "col": 3,
+          "value": "法式71钣金，410"
+        },
+        {
+          "row": 21,
+          "col": 4,
+          "value": "石磊"
+        },
+        {
+          "row": 21,
+          "col": 11,
+          "value": "3组双8显示"
+        },
+        {
+          "row": 22,
+          "col": 1,
+          "value": "20.0"
+        },
+        {
+          "row": 22,
+          "col": 2,
+          "value": "*336605"
+        },
+        {
+          "row": 22,
+          "col": 3,
+          "value": "印度单门"
+        },
+        {
+          "row": 22,
+          "col": 4,
+          "value": "王普"
+        },
+        {
+          "row": 23,
+          "col": 1,
+          "value": "21.0"
+        },
+        {
+          "row": 23,
+          "col": 2,
+          "value": "*304258"
+        },
+        {
+          "row": 23,
+          "col": 3,
+          "value": "256.0"
+        },
+        {
+          "row": 23,
+          "col": 4,
+          "value": "薛金亮"
+        },
+        {
+          "row": 24,
+          "col": 1,
+          "value": "22.0"
+        },
+        {
+          "row": 24,
+          "col": 2,
+          "value": "*170909"
+        },
+        {
+          "row": 24,
+          "col": 3,
+          "value": "小金厨"
+        },
+        {
+          "row": 24,
+          "col": 4,
+          "value": "侯鸿彬"
+        },
+        {
+          "row": 25,
+          "col": 1,
+          "value": "23.0"
+        },
+        {
+          "row": 25,
+          "col": 2,
+          "value": "*149463"
+        },
+        {
+          "row": 25,
+          "col": 3,
+          "value": "326.0"
+        },
+        {
+          "row": 25,
+          "col": 4,
+          "value": "刘敏"
+        },
+        {
+          "row": 26,
+          "col": 1,
+          "value": "24.0"
+        },
+        {
+          "row": 26,
+          "col": 2,
+          "value": "*183867"
+        },
+        {
+          "row": 26,
+          "col": 3,
+          "value": "260无竖梁"
+        },
+        {
+          "row": 26,
+          "col": 4,
+          "value": "刘敏"
+        },
+        {
+          "row": 27,
+          "col": 1,
+          "value": "25.0"
+        },
+        {
+          "row": 27,
+          "col": 2,
+          "value": "*171477"
+        },
+        {
+          "row": 27,
+          "col": 3,
+          "value": "匀冷御厨四门"
+        },
+        {
+          "row": 27,
+          "col": 4,
+          "value": "郭磊"
+        },
+        {
+          "row": 27,
+          "col": 8,
+          "value": "`"
+        },
+        {
+          "row": 28,
+          "col": 1,
+          "value": "26.0"
+        },
+        {
+          "row": 28,
+          "col": 2,
+          "value": "*500500"
+        },
+        {
+          "row": 28,
+          "col": 3,
+          "value": "HT81、506升级"
+        },
+        {
+          "row": 28,
+          "col": 4,
+          "value": "朱云涛"
+        },
+        {
+          "row": 29,
+          "col": 1,
+          "value": "27.0"
+        },
+        {
+          "row": 29,
+          "col": 2,
+          "value": "*500500"
+        },
+        {
+          "row": 29,
+          "col": 3,
+          "value": "503（G2）"
+        },
+        {
+          "row": 30,
+          "col": 1,
+          "value": "28.0"
+        },
+        {
+          "row": 30,
+          "col": 2,
+          "value": "*79079000"
+        },
+        {
+          "row": 30,
+          "col": 3,
+          "value": "790法式(2.5D玻璃)"
+        },
+        {
+          "row": 30,
+          "col": 4,
+          "value": "付东晓"
+        },
+        {
+          "row": 31,
+          "col": 1,
+          "value": "29.0"
+        },
+        {
+          "row": 31,
+          "col": 2,
+          "value": "*207570"
+        },
+        {
+          "row": 31,
+          "col": 3,
+          "value": "TM545 595 495"
+        },
+        {
+          "row": 31,
+          "col": 4,
+          "value": "朱云涛"
+        },
+        {
+          "row": 32,
+          "col": 1,
+          "value": "30.0"
+        },
+        {
+          "row": 32,
+          "col": 2,
+          "value": "*265451"
+        },
+        {
+          "row": 32,
+          "col": 3,
+          "value": "HD91-550"
+        },
+        {
+          "row": 32,
+          "col": 4,
+          "value": "任树飞"
+        },
+        {
+          "row": 33,
+          "col": 1,
+          "value": "31.0"
+        },
+        {
+          "row": 33,
+          "col": 2,
+          "value": "*172789"
+        },
+        {
+          "row": 33,
+          "col": 3,
+          "value": "HD92(618)"
+        },
+        {
+          "row": 33,
+          "col": 4,
+          "value": "赵欣"
+        },
+        {
+          "row": 34,
+          "col": 1,
+          "value": "32.0"
+        },
+        {
+          "row": 34,
+          "col": 2,
+          "value": "*194485"
+        },
+        {
+          "row": 34,
+          "col": 3,
+          "value": "FPA905-T"
+        },
+        {
+          "row": 34,
+          "col": 4,
+          "value": "赵欣"
+        },
+        {
+          "row": 35,
+          "col": 1,
+          "value": "33.0"
+        },
+        {
+          "row": 35,
+          "col": 2,
+          "value": "*196422"
+        },
+        {
+          "row": 35,
+          "col": 3,
+          "value": "意式FPA790"
+        },
+        {
+          "row": 35,
+          "col": 4,
+          "value": "孔徳强"
+        },
+        {
+          "row": 36,
+          "col": 1,
+          "value": "34.0"
+        },
+        {
+          "row": 36,
+          "col": 2,
+          "value": "*830999\\*830995"
+        },
+        {
+          "row": 36,
+          "col": 3,
+          "value": "556\\0060526627冷藏泡沫"
+        },
+        {
+          "row": 36,
+          "col": 4,
+          "value": "刘志军"
+        },
+        {
+          "row": 37,
+          "col": 1,
+          "value": "35.0"
+        },
+        {
+          "row": 37,
+          "col": 2,
+          "value": "*830549"
+        },
+        {
+          "row": 37,
+          "col": 3,
+          "value": "527五门"
+        },
+        {
+          "row": 38,
+          "col": 1,
+          "value": "36.0"
+        },
+        {
+          "row": 38,
+          "col": 2,
+          "value": "*275061"
+        },
+        {
+          "row": 38,
+          "col": 3,
+          "value": "559.0"
+        },
+        {
+          "row": 39,
+          "col": 1,
+          "value": "37.0"
+        },
+        {
+          "row": 39,
+          "col": 2,
+          "value": "*353471"
+        },
+        {
+          "row": 39,
+          "col": 3,
+          "value": "551.0"
+        },
+        {
+          "row": 40,
+          "col": 1,
+          "value": "38.0"
+        },
+        {
+          "row": 40,
+          "col": 2,
+          "value": "*369791"
+        },
+        {
+          "row": 40,
+          "col": 3,
+          "value": "517.0"
+        },
+        {
+          "row": 41,
+          "col": 1,
+          "value": "39.0"
+        },
+        {
+          "row": 41,
+          "col": 2,
+          "value": "*275042"
+        },
+        {
+          "row": 41,
+          "col": 3,
+          "value": "519.0"
+        },
+        {
+          "row": 41,
+          "col": 4,
+          "value": "面光源"
+        },
+        {
+          "row": 42,
+          "col": 1,
+          "value": "40.0"
+        },
+        {
+          "row": 42,
+          "col": 2,
+          "value": "*408222"
+        },
+        {
+          "row": 42,
+          "col": 3,
+          "value": "HTF508"
+        },
+        {
+          "row": 42,
+          "col": 4,
+          "value": "557衍生的T型门"
+        },
+        {
+          "row": 43,
+          "col": 1,
+          "value": "41.0"
+        },
+        {
+          "row": 43,
+          "col": 2,
+          "value": "*269763"
+        },
+        {
+          "row": 43,
+          "col": 3,
+          "value": "551大屏（556升级）"
+        },
+        {
+          "row": 44,
+          "col": 1,
+          "value": "42.0"
+        },
+        {
+          "row": 44,
+          "col": 2,
+          "value": "*905905"
+        },
+        {
+          "row": 44,
+          "col": 3,
+          "value": "CF92法式633"
+        },
+        {
+          "row": 44,
+          "col": 4,
+          "value": "付伟健"
+        },
+        {
+          "row": 45,
+          "col": 1,
+          "value": "43.0"
+        },
+        {
+          "row": 45,
+          "col": 2,
+          "value": "*7000001"
+        },
+        {
+          "row": 45,
+          "col": 3,
+          "value": "420.0"
+        },
+        {
+          "row": 45,
+          "col": 4,
+          "value": "印策"
+        },
+        {
+          "row": 46,
+          "col": 1,
+          "value": "44.0"
+        },
+        {
+          "row": 46,
+          "col": 2,
+          "value": "*107697"
+        },
+        {
+          "row": 46,
+          "col": 3,
+          "value": "521.0"
+        },
+        {
+          "row": 46,
+          "col": 4,
+          "value": "郑晓磊"
+        },
+        {
+          "row": 47,
+          "col": 1,
+          "value": "45.0"
+        },
+        {
+          "row": 47,
+          "col": 2,
+          "value": "*148035"
+        },
+        {
+          "row": 47,
+          "col": 3,
+          "value": "设计E-225"
+        },
+        {
+          "row": 47,
+          "col": 4,
+          "value": "张玉琢"
+        },
+        {
+          "row": 48,
+          "col": 1,
+          "value": "46.0"
+        },
+        {
+          "row": 48,
+          "col": 2,
+          "value": "*168835"
+        },
+        {
+          "row": 48,
+          "col": 3,
+          "value": "181日本"
+        },
+        {
+          "row": 48,
+          "col": 4,
+          "value": "刘海亮"
+        },
+        {
+          "row": 49,
+          "col": 1,
+          "value": "47.0"
+        },
+        {
+          "row": 49,
+          "col": 2,
+          "value": "*154085"
+        },
+        {
+          "row": 49,
+          "col": 3,
+          "value": "600意式三代"
+        },
+        {
+          "row": 49,
+          "col": 4,
+          "value": "李军平"
+        },
+        {
+          "row": 50,
+          "col": 1,
+          "value": "48.0"
+        },
+        {
+          "row": 50,
+          "col": 2,
+          "value": "*124710"
+        },
+        {
+          "row": 50,
+          "col": 3,
+          "value": "296.0"
+        },
+        {
+          "row": 50,
+          "col": 4,
+          "value": "于钦浩"
+        },
+        {
+          "row": 50,
+          "col": 7,
+          "value": "  "
+        },
+        {
+          "row": 51,
+          "col": 1,
+          "value": "49.0"
+        },
+        {
+          "row": 51,
+          "col": 2,
+          "value": "*405405"
+        },
+        {
+          "row": 51,
+          "col": 3,
+          "value": "405、大屏\\450升级"
+        },
+        {
+          "row": 51,
+          "col": 4,
+          "value": "付伟健"
+        },
+        {
+          "row": 51,
+          "col": 11,
+          "value": "双层抽屉"
+        },
+        {
+          "row": 51,
+          "col": 12,
+          "value": "冷冻风机遮蔽"
+        },
+        {
+          "row": 51,
+          "col": 13,
+          "value": "四门图纸19年升级的  "
+        },
+        {
+          "row": 52,
+          "col": 1,
+          "value": "50.0"
+        },
+        {
+          "row": 52,
+          "col": 2,
+          "value": "*405406"
+        },
+        {
+          "row": 52,
+          "col": 3,
+          "value": "436冷冻精控"
+        },
+        {
+          "row": 52,
+          "col": 4,
+          "value": "吴占宙"
+        },
+        {
+          "row": 53,
+          "col": 1,
+          "value": "51.0"
+        },
+        {
+          "row": 53,
+          "col": 2,
+          "value": "*166955"
+        },
+        {
+          "row": 53,
+          "col": 3,
+          "value": "328.0"
+        },
+        {
+          "row": 53,
+          "col": 4,
+          "value": "边翔胜"
+        },
+        {
+          "row": 54,
+          "col": 1,
+          "value": "52.0"
+        },
+        {
+          "row": 54,
+          "col": 2,
+          "value": "*89324"
+        },
+        {
+          "row": 54,
+          "col": 3,
+          "value": "意式321"
+        },
+        {
+          "row": 54,
+          "col": 4,
+          "value": "缪丽燕"
+        },
+        {
+          "row": 55,
+          "col": 1,
+          "value": "53.0"
+        },
+        {
+          "row": 55,
+          "col": 2,
+          "value": "*86263"
+        },
+        {
+          "row": 55,
+          "col": 3,
+          "value": "法式三代"
+        },
+        {
+          "row": 55,
+          "col": 4,
+          "value": "张珩"
+        },
+        {
+          "row": 56,
+          "col": 1,
+          "value": "54.0"
+        },
+        {
+          "row": 56,
+          "col": 2,
+          "value": "*133866"
+        },
+        {
+          "row": 56,
+          "col": 3,
+          "value": "456.0"
+        },
+        {
+          "row": 56,
+          "col": 4,
+          "value": "张玉琢"
+        },
+        {
+          "row": 57,
+          "col": 1,
+          "value": "55.0"
+        },
+        {
+          "row": 57,
+          "col": 2,
+          "value": "*88088"
+        },
+        {
+          "row": 57,
+          "col": 3,
+          "value": "316.0"
+        },
+        {
+          "row": 57,
+          "col": 4,
+          "value": "张伟"
+        },
+        {
+          "row": 58,
+          "col": 1,
+          "value": "56.0"
+        },
+        {
+          "row": 58,
+          "col": 2,
+          "value": "*130700"
+        },
+        {
+          "row": 58,
+          "col": 3,
+          "value": "260.0"
+        },
+        {
+          "row": 58,
+          "col": 4,
+          "value": "孔徳强"
+        },
+        {
+          "row": 59,
+          "col": 1,
+          "value": "57.0"
+        },
+        {
+          "row": 59,
+          "col": 2,
+          "value": "*137184"
+        },
+        {
+          "row": 59,
+          "col": 3,
+          "value": "240.0"
+        },
+        {
+          "row": 59,
+          "col": 4,
+          "value": "刘海亮"
+        },
+        {
+          "row": 60,
+          "col": 1,
+          "value": "58.0"
+        },
+        {
+          "row": 60,
+          "col": 2,
+          "value": "*105957"
+        },
+        {
+          "row": 60,
+          "col": 3,
+          "value": "241机械"
+        },
+        {
+          "row": 60,
+          "col": 4,
+          "value": "张慧敏"
+        },
+        {
+          "row": 61,
+          "col": 1,
+          "value": "59.0"
+        },
+        {
+          "row": 61,
+          "col": 2,
+          "value": "*116071"
+        },
+        {
+          "row": 61,
+          "col": 3,
+          "value": "意式700"
+        },
+        {
+          "row": 61,
+          "col": 4,
+          "value": "杨龙"
+        },
+        {
+          "row": 62,
+          "col": 1,
+          "value": "60.0"
+        },
+        {
+          "row": 62,
+          "col": 2,
+          "value": "*116079"
+        },
+        {
+          "row": 62,
+          "col": 3,
+          "value": "意式700顶置"
+        },
+        {
+          "row": 62,
+          "col": 4,
+          "value": "杨龙"
+        },
+        {
+          "row": 63,
+          "col": 1,
+          "value": "61.0"
+        },
+        {
+          "row": 63,
+          "col": 2,
+          "value": "*126235"
+        },
+        {
+          "row": 63,
+          "col": 3,
+          "value": "620.0"
+        },
+        {
+          "row": 63,
+          "col": 4,
+          "value": "刘延林"
+        },
+        {
+          "row": 64,
+          "col": 1,
+          "value": "62.0"
+        },
+        {
+          "row": 64,
+          "col": 2,
+          "value": "*122719"
+        },
+        {
+          "row": 64,
+          "col": 3,
+          "value": "460.0"
+        },
+        {
+          "row": 64,
+          "col": 4,
+          "value": "任浩南"
+        },
+        {
+          "row": 65,
+          "col": 1,
+          "value": "63.0"
+        },
+        {
+          "row": 65,
+          "col": 2,
+          "value": "*365433"
+        },
+        {
+          "row": 65,
+          "col": 3,
+          "value": "165直冷升级"
+        },
+        {
+          "row": 65,
+          "col": 4,
+          "value": "边翔胜"
+        },
+        {
+          "row": 66,
+          "col": 1,
+          "value": "64.0"
+        },
+        {
+          "row": 66,
+          "col": 2,
+          "value": "*357378"
+        },
+        {
+          "row": 66,
+          "col": 3,
+          "value": "AQUA500"
+        },
+        {
+          "row": 66,
+          "col": 4,
+          "value": "任宪伟"
+        },
+        {
+          "row": 67,
+          "col": 1,
+          "value": "65.0"
+        },
+        {
+          "row": 67,
+          "col": 2,
+          "value": "*5501900"
+        },
+        {
+          "row": 67,
+          "col": 3,
+          "value": "N6D"
+        },
+        {
+          "row": 68,
+          "col": 1,
+          "value": "66.0"
+        },
+        {
+          "row": 68,
+          "col": 2,
+          "value": "*600595"
+        },
+        {
+          "row": 68,
+          "col": 3,
+          "value": "595超薄"
+        },
+        {
+          "row": 68,
+          "col": 4,
+          "value": "李军平"
+        },
+        {
+          "row": 69,
+          "col": 1,
+          "value": "67.0"
+        },
+        {
+          "row": 69,
+          "col": 2,
+          "value": "*364279"
+        },
+        {
+          "row": 69,
+          "col": 3,
+          "value": "210直冷升级"
+        },
+        {
+          "row": 70,
+          "col": 1,
+          "value": "68.0"
+        },
+        {
+          "row": 70,
+          "col": 2,
+          "value": "*81861"
+        },
+        {
+          "row": 70,
+          "col": 3,
+          "value": "801.0"
+        },
+        {
+          "row": 71,
+          "col": 1,
+          "value": "69.0"
+        },
+        {
+          "row": 71,
+          "col": 2,
+          "value": "*9051900"
+        },
+        {
+          "row": 71,
+          "col": 3,
+          "value": "美式对开"
+        },
+        {
+          "row": 72,
+          "col": 1,
+          "value": "70.0"
+        },
+        {
+          "row": 72,
+          "col": 2,
+          "value": "*905777"
+        },
+        {
+          "row": 72,
+          "col": 3,
+          "value": "超薄制冰"
+        },
+        {
+          "row": 73,
+          "col": 1,
+          "value": "71.0"
+        },
+        {
+          "row": 73,
+          "col": 2,
+          "value": "*700500"
+        },
+        {
+          "row": 73,
+          "col": 3,
+          "value": "卡萨帝500"
+        },
+        {
+          "row": 74,
+          "col": 1,
+          "value": "72.0"
+        },
+        {
+          "row": 74,
+          "col": 2,
+          "value": "*621650"
+        },
+        {
+          "row": 74,
+          "col": 3,
+          "value": "卡萨帝650"
+        },
+        {
+          "row": 75,
+          "col": 1,
+          "value": "73.0"
+        },
+        {
+          "row": 75,
+          "col": 2,
+          "value": "*600595"
+        },
+        {
+          "row": 75,
+          "col": 3,
+          "value": "嵌入400"
+        },
+        {
+          "row": 76,
+          "col": 1,
+          "value": "74.0"
+        },
+        {
+          "row": 76,
+          "col": 2,
+          "value": "22522500.0"
+        },
+        {
+          "row": 76,
+          "col": 3,
+          "value": "230.0"
+        },
+        {
+          "row": 76,
+          "col": 4,
+          "value": "设计E"
+        },
+        {
+          "row": 77,
+          "col": 1,
+          "value": "75.0"
+        },
+        {
+          "row": 77,
+          "col": 2,
+          "value": "DES55517703"
+        },
+        {
+          "row": 77,
+          "col": 3,
+          "value": "270.0"
+        },
+        {
+          "row": 78,
+          "col": 1,
+          "value": "76.0"
+        },
+        {
+          "row": 78,
+          "col": 2,
+          "value": "*595888/*459573"
+        },
+        {
+          "row": 78,
+          "col": 3,
+          "value": "1.77两门"
+        },
+        {
+          "row": 78,
+          "col": 4,
+          "value": "设计C"
+        },
+        {
+          "row": 79,
+          "col": 1,
+          "value": "77.0"
+        },
+        {
+          "row": 79,
+          "col": 2,
+          "value": "*383170"
+        },
+        {
+          "row": 79,
+          "col": 3,
+          "value": "HT81"
+        },
+        {
+          "row": 80,
+          "col": 1,
+          "value": "78.0"
+        },
+        {
+          "row": 80,
+          "col": 2,
+          "value": "GF100"
+        },
+        {
+          "row": 80,
+          "col": 3,
+          "value": "*83007007"
+        },
+        {
+          "row": 81,
+          "col": 1,
+          "value": "79.0"
+        },
+        {
+          "row": 81,
+          "col": 2,
+          "value": "*621650"
+        },
+        {
+          "row": 81,
+          "col": 3,
+          "value": "GT10"
+        },
+        {
+          "row": 81,
+          "col": 4,
+          "value": "赵欣"
+        },
+        {
+          "row": 82,
+          "col": 1,
+          "value": "80.0"
+        },
+        {
+          "row": 82,
+          "col": 2,
+          "value": "*357378"
+        },
+        {
+          "row": 82,
+          "col": 3,
+          "value": "TZ51"
+        },
+        {
+          "row": 83,
+          "col": 1,
+          "value": "81.0"
+        },
+        {
+          "row": 83,
+          "col": 2,
+          "value": "620.0"
+        },
+        {
+          "row": 83,
+          "col": 3,
+          "value": "*549630"
+        },
+        {
+          "row": 83,
+          "col": 4,
+          "value": "*533728"
+        },
+        {
+          "row": 84,
+          "col": 1,
+          "value": "83.0"
+        },
+        {
+          "row": 84,
+          "col": 2,
+          "value": "*83551775"
+        },
+        {
+          "row": 84,
+          "col": 3,
+          "value": "GT100"
+        },
+        {
+          "row": 85,
+          "col": 1,
+          "value": "84.0"
+        },
+        {
+          "row": 85,
+          "col": 2,
+          "value": "*905620"
+        },
+        {
+          "row": 85,
+          "col": 3,
+          "value": "*905620"
+        },
+        {
+          "row": 86,
+          "col": 1,
+          "value": "85.0"
+        },
+        {
+          "row": 86,
+          "col": 2,
+          "value": "*433378"
+        },
+        {
+          "row": 86,
+          "col": 3,
+          "value": "600.0"
+        },
+        {
+          "row": 87,
+          "col": 1,
+          "value": "86.0"
+        },
+        {
+          "row": 87,
+          "col": 2,
+          "value": "*448772"
+        },
+        {
+          "row": 87,
+          "col": 3,
+          "value": "219升级"
+        },
+        {
+          "row": 87,
+          "col": 4,
+          "value": "薛金亮"
+        },
+        {
+          "row": 88,
+          "col": 1,
+          "value": "87.0"
+        },
+        {
+          "row": 88,
+          "col": 2,
+          "value": "*290179"
+        },
+        {
+          "row": 88,
+          "col": 3,
+          "value": "GEA-T "
+        },
+        {
+          "row": 89,
+          "col": 1,
+          "value": "88.0"
+        },
+        {
+          "row": 89,
+          "col": 2,
+          "value": "*905888"
+        },
+        {
+          "row": 89,
+          "col": 3,
+          "value": "GEA-F"
+        },
+        {
+          "row": 90,
+          "col": 1,
+          "value": "89.0"
+        },
+        {
+          "row": 90,
+          "col": 2,
+          "value": "811476.0"
+        },
+        {
+          "row": 90,
+          "col": 3,
+          "value": "476中字门"
+        },
+        {
+          "row": 91,
+          "col": 1,
+          "value": "90.0"
+        },
+        {
+          "row": 91,
+          "col": 2,
+          "value": "*607949"
+        },
+        {
+          "row": 91,
+          "col": 3,
+          "value": "549薄门升级"
+        },
+        {
+          "row": 92,
+          "col": 1,
+          "value": "91.0"
+        },
+        {
+          "row": 92,
+          "col": 2,
+          "value": "*00540812"
+        },
+        {
+          "row": 92,
+          "col": 3,
+          "value": "BM700"
+        },
+        {
+          "row": 93,
+          "col": 1,
+          "value": "92.0"
+        },
+        {
+          "row": 93,
+          "col": 2,
+          "value": "*905100"
+        },
+        {
+          "row": 93,
+          "col": 3,
+          "value": "905CD(650)博观法式"
+        },
+        {
+          "row": 94,
+          "col": 1,
+          "value": "93.0"
+        },
+        {
+          "row": 94,
+          "col": 2,
+          "value": "*83551900"
+        },
+        {
+          "row": 94,
+          "col": 3,
+          "value": "GT1900超薄门"
+        },
+        {
+          "row": 94,
+          "col": 4,
+          "value": "于兴嘉"
+        },
+        {
+          "row": 95,
+          "col": 1,
+          "value": "94.0"
+        },
+        {
+          "row": 95,
+          "col": 2,
+          "value": "DES00669098/DES00673165"
+        },
+        {
+          "row": 95,
+          "col": 3,
+          "value": "日本TX50"
+        },
+        {
+          "row": 96,
+          "col": 1,
+          "value": "95.0"
+        },
+        {
+          "row": 96,
+          "col": 2,
+          "value": "*83621775"
+        },
+        {
+          "row": 96,
+          "col": 3,
+          "value": "GT620(830CD)"
+        },
+        {
+          "row": 96,
+          "col": 4,
+          "value": "于兴嘉"
+        },
+        {
+          "row": 97,
+          "col": 1,
+          "value": "96.0"
+        },
+        {
+          "row": 97,
+          "col": 2,
+          "value": "DES00830100"
+        },
+        {
+          "row": 97,
+          "col": 3,
+          "value": "830超薄升级（小博观）"
+        },
+        {
+          "row": 97,
+          "col": 4,
+          "value": "刘名超"
+        },
+        {
+          "row": 98,
+          "col": 1,
+          "value": "97.0"
+        },
+        {
+          "row": 98,
+          "col": 2,
+          "value": "*90590500"
+        },
+        {
+          "row": 98,
+          "col": 3,
+          "value": "905CD-T(底置)"
+        },
+        {
+          "row": 98,
+          "col": 4,
+          "value": "吕福顺"
+        },
+        {
+          "row": 99,
+          "col": 1,
+          "value": "98.0"
+        },
+        {
+          "row": 99,
+          "col": 2,
+          "value": "*905620"
+        },
+        {
+          "row": 99,
+          "col": 3,
+          "value": "905CD-T(欧洲)"
+        },
+        {
+          "row": 99,
+          "col": 4,
+          "value": "任树飞"
+        }
+      ]
+    },
+    {
+      "name": "包装底座装配",
+      "rows": 6,
+      "cols": 8,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 1,
+          "col": 0,
+          "value": "序号"
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "value": "系列"
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "value": "图号"
+        },
+        {
+          "row": 1,
+          "col": 3,
+          "value": "底座与支撑板间隙"
+        },
+        {
+          "row": 1,
+          "col": 4,
+          "value": "底座厚度"
+        },
+        {
+          "row": 1,
+          "col": 5,
+          "value": "整机重量"
+        },
+        {
+          "row": 1,
+          "col": 6,
+          "value": "图片"
+        },
+        {
+          "row": 1,
+          "col": 7,
+          "value": "备注"
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "value": "1.0"
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "value": "830中字"
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "value": "*607036"
+        },
+        {
+          "row": 2,
+          "col": 3,
+          "value": "57mm"
+        },
+        {
+          "row": 2,
+          "col": 4,
+          "value": "109mm"
+        },
+        {
+          "row": 2,
+          "col": 5,
+          "value": "125KG"
+        },
+        {
+          "row": 2,
+          "col": 7,
+          "value": "超前仿真+实验验证OK"
+        },
+        {
+          "row": 3,
+          "col": 0,
+          "value": "2.0"
+        },
+        {
+          "row": 3,
+          "col": 1,
+          "value": "549T型"
+        },
+        {
+          "row": 3,
+          "col": 2,
+          "value": "*607039"
+        },
+        {
+          "row": 3,
+          "col": 3,
+          "value": "54mm"
+        },
+        {
+          "row": 3,
+          "col": 4,
+          "value": "95mm"
+        },
+        {
+          "row": 3,
+          "col": 5,
+          "value": "114KG"
+        },
+        {
+          "row": 3,
+          "col": 7,
+          "value": "多次实验验证OK"
+        },
+        {
+          "row": 4,
+          "col": 0,
+          "value": "3.0"
+        },
+        {
+          "row": 4,
+          "col": 1,
+          "value": "700T"
+        },
+        {
+          "row": 4,
+          "col": 2,
+          "value": "*614333"
+        },
+        {
+          "row": 4,
+          "col": 3,
+          "value": "55mm"
+        },
+        {
+          "row": 4,
+          "col": 4,
+          "value": "102mm"
+        },
+        {
+          "row": 4,
+          "col": 5,
+          "value": "98KG"
+        },
+        {
+          "row": 4,
+          "col": 7,
+          "value": "角部跌落验证方案OK"
+        },
+        {
+          "row": 5,
+          "col": 0,
+          "value": "4.0"
+        },
+        {
+          "row": 5,
+          "col": 1,
+          "value": "GT10"
+        },
+        {
+          "row": 5,
+          "col": 2,
+          "value": "*463562"
+        },
+        {
+          "row": 5,
+          "col": 3,
+          "value": "26mm"
+        },
+        {
+          "row": 5,
+          "col": 4,
+          "value": "101mm"
+        },
+        {
+          "row": 5,
+          "col": 5,
+          "value": "175KG"
+        },
+        {
+          "row": 5,
+          "col": 7,
+          "value": "全防护，跌落高度17cm"
+        }
+      ]
+    },
+    {
+      "name": "开工单",
+      "rows": 0,
+      "cols": 0,
+      "merged_cells": [],
+      "non_empty_cells": []
+    },
+    {
+      "name": "下快件",
+      "rows": 63,
+      "cols": 22,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 62,
+          "col": 21,
+          "value": "张文权限在薛金亮\n陈炜自己审"
+        }
+      ]
+    },
+    {
+      "name": "配额查询",
+      "rows": 1,
+      "cols": 1,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "查看双经销以及配额信息"
+        }
+      ]
+    },
+    {
+      "name": "海达源技改涨价",
+      "rows": 22,
+      "cols": 40,
+      "merged_cells": [],
+      "non_empty_cells": [
+        {
+          "row": 0,
+          "col": 0,
+          "value": "1.找模块核价"
+        },
+        {
+          "row": 0,
+          "col": 15,
+          "value": "3.填写模块资料，找曲金鹏、程慧丽签字"
+        },
+        {
+          "row": 0,
+          "col": 28,
+          "value": "5.得到定向需求号后去填写异常处理里面变更申请"
+        },
+        {
+          "row": 0,
+          "col": 39,
+          "value": "7.海达园需求发布灰色，需要用薛权限审核，通知供应商报价，公议，签章"
+        },
+        {
+          "row": 17,
+          "col": 0,
+          "value": "2.在DRD里申请技术通知单，并填写技术通知单，找项目经理签字"
+        },
+        {
+          "row": 21,
+          "col": 14,
+          "value": "4.填写海达源，并上传以上三个PDF文件"
+        },
+        {
+          "row": 21,
+          "col": 28,
+          "value": "6.填写申请，找王咏审核"
+        }
+      ]
+    }
+  ],
+  "total_sheets": 32
+}

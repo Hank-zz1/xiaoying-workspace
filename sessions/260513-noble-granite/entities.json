@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 639039,
+  "entities": {
+    "论文": {
+      "count": 2,
+      "category": "other",
+      "lastSeen": 1787794183035
+    },
+    "深度": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183035
+    },
+    "新鲜度": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183035
+    },
+    "后期": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794183035
+    }
+  }
+}

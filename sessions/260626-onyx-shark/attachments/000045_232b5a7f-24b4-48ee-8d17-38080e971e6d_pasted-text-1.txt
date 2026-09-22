@@ -1,0 +1,109 @@
+[
+  {
+    "role": "user",
+    "content": "{\"input\": {\"query\": \"澳洲海信26年产品给我列出\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Start",
+          "arguments": "{\"query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"query\": \"澳洲海信26年产品给我列出\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "意图识别01",
+          "arguments": "{\"query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"classificationId\": 1, \"classificationName\": \"竞品查询\", \"reason\": \"用户查询特定品牌（海信）在特定区域（澳洲）的特定年份（26年）的产品列表，属于查询新品或产品动态，符合竞品查询的定义。\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "大模型01",
+          "arguments": "{\"input\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"region\": \"澳洲\", \"brands\": [{\"name\": \"海信\", \"mode\": \"scrape\", \"url\": \"https://hisense.com.au/appliances/fridges-freezers/all\", \"search_cn\": \"2026 海信 澳洲 冰箱 新品 上市\"}], \"raw_output\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "LLM_Tool",
+          "arguments": "{\"input\": \"{'input': '澳洲海信26年产品给我列出'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": {\"region\": \"澳洲\", \"brands\": [{\"name\": \"海信\", \"mode\": \"scrape\", \"url\": \"https://hisense.com.au/appliances/fridges-freezers/all\", \"search_cn\": \"2026 海信 澳洲 冰箱 新品 上市\"}], \"raw_output\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码01",
+          "arguments": "{\"input\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Python_Tool",
+          "arguments": "{\"input\": \"{'input': '{\\\\n  \\\"region\\\": \\\"澳洲\\\",\\\\n  \\\"brands\\\": [\\\\n    {\\\\n      \\\"name\\\": \\\"海信\\\",\\\\n      \\\"mode\\\": \\\"scrape\\\",\\\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\\\n    }\\\\n  ]\\\\n}'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  }
+]

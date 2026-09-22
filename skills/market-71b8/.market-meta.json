@@ -1,0 +1,37 @@
+{
+  "capabilityId": "cap_ad44d4e72e7d4cc3b2cbf10e6c1ba4e8",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": "7310cfde26b284a4df813f75522e90dc9d0f1a58",
+  "latestCommitId": "7310cfde26b284a4df813f75522e90dc9d0f1a58",
+  "contentHash": "sha256:3b00d9b2c5d09a76189a6ec3589000e37b1df8bbb8daea00099528e67bb73067",
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/personal/00593289/upgrade-auto-fix-0zt3",
+  "updatedAt": 1787727847004,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_b42283c193724233bac5f4305ca32c53",
+  "name": "版本升级后自动检测修复工具",
+  "capabilityName": "版本升级后自动检测修复工具",
+  "logoUrl": null,
+  "capabilityDescription": "Incaier Agent 平台版本升级后，自动扫描工作区中所有能力（技能、自动化、配置、数据源、部署平台），检测并修复因版本升级导致的逻辑错误。通用工具，适用于任何用户的任何工作区。",
+  "publisherName": "于明凯",
+  "official": false,
+  "orgName": null,
+  "needApproval": false,
+  "categoryIds": [
+    "207"
+  ],
+  "categories": [
+    {
+      "id": "207",
+      "name": "生命科学",
+      "code": "quality_safety_compliance",
+      "rootId": "2",
+      "icon": "https://iam.haierfhtech.com/prod-api/obs-kjpt-prod/incos-dev/2/2026/06/24/c335b50ef3f2456dbbc1c94b8b3ed8c5.png"
+    }
+  ],
+  "usageExamples": null,
+  "provisionSignature": "4f97ef77dd1618ff635dfa0c28c61fbc",
+  "localInstallFingerprint": "sha256:3b00d9b2c5d09a76189a6ec3589000e37b1df8bbb8daea00099528e67bb73067"
+}

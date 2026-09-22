@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 1748619,
+  "entities": {
+    "美的": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183699
+    },
+    "海信": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183699
+    },
+    "澳洲": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183699
+    }
+  }
+}

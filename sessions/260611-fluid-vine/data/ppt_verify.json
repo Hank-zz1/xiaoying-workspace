@@ -1,0 +1,629 @@
+{
+  "slides": 12,
+  "details": [
+    {
+      "page": 1,
+      "shapes": 7,
+      "has_image": true,
+      "items": [
+        {
+          "type": "image",
+          "name": "Picture 1"
+        },
+        {
+          "type": "text",
+          "content": "情绪冰仓"
+        },
+        {
+          "type": "text",
+          "content": "一杯饮尽松弛感"
+        },
+        {
+          "type": "text",
+          "content": "年轻人的第一台情绪饮料柜  |  2026 海尔智家黑客马拉松"
+        },
+        {
+          "type": "text",
+          "content": "制冷产业第1组"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "shapes": 19,
+      "has_image": false,
+      "items": [
+        {
+          "type": "text",
+          "content": "年轻人的冰箱，不懂我"
+        },
+        {
+          "type": "text",
+          "content": "01"
+        },
+        {
+          "type": "text",
+          "content": "酒放冰箱串味"
+        },
+        {
+          "type": "text",
+          "content": "红酒和剩菜共存，\u000b打开冰箱那一刻，什么心情都没了"
+        },
+        {
+          "type": "text",
+          "content": "02"
+        },
+        {
+          "type": "text",
+          "content": "温度一刀切"
+        },
+        {
+          "type": "text",
+          "content": "啤酒不够冰、红酒太冷、\u000b养生茶饮没地方放，分区全靠塑料袋"
+        },
+        {
+          "type": "text",
+          "content": "03"
+        },
+        {
+          "type": "text",
+          "content": "氛围感为零"
+        },
+        {
+          "type": "text",
+          "content": "深夜想来一杯，打开冰箱\u000b只有刺眼的白光和嗡嗡的噪音"
+        },
+        {
+          "type": "text",
+          "content": "Z世代年轻人独居比例持续上升，但传统冰箱/冷柜从未为一个人的精致生活设计过"
+        },
+        {
+          "type": "text",
+          "content": "02 / 12"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "shapes": 14,
+      "has_image": true,
+      "items": [
+        {
+          "type": "text",
+          "content": "不只是冷柜"
+        },
+        {
+          "type": "text",
+          "content": "是懂你情绪的私人饮品管家"
+        },
+        {
+          "type": "text",
+          "content": "专业分温精储"
+        },
+        {
+          "type": "text",
+          "content": "红葡萄酒/白葡萄酒/啤酒/零卡饮料\u000b功能饮料/养生饮品，各有专属温区"
+        },
+        {
+          "type": "text",
+          "content": "RGB情绪氛围灯"
+        },
+        {
+          "type": "text",
+          "content": "4种灯光模式自动匹配饮品类型\u000b微醺暖光 / 冰爽蓝光 / 养生绿光 / 熬夜紫光"
+        },
+        {
+          "type": "text",
+          "content": "透明视窗+静音"
+        },
+        {
+          "type": "text",
+          "content": "全透明钢化玻璃门，拿取一目了然\u000b35dB静音运行，不打扰深夜独处"
+        },
+        {
+          "type": "image",
+          "name": "Picture 13"
+        },
+        {
+          "type": "text",
+          "content": "03 / 12"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "shapes": 19,
+      "has_image": false,
+      "items": [
+        {
+          "type": "text",
+          "content": "为什么是现在"
+        },
+        {
+          "type": "text",
+          "content": "4500亿"
+        },
+        {
+          "type": "text",
+          "content": "情绪消费市场规模"
+        },
+        {
+          "type": "text",
+          "content": "Z世代为情绪买单的意愿\u000b是上一代的3.2倍"
+        },
+        {
+          "type": "text",
+          "content": "2.3亿"
+        },
+        {
+          "type": "text",
+          "content": "中国独居成年人"
+        },
+        {
+          "type": "text",
+          "content": "一人食/一人饮场景爆发\u000b精致独处成为新生活方式"
+        },
+        {
+          "type": "text",
+          "content": "67%"
+        },
+        {
+          "type": "text",
+          "content": "愿意为氛围付费"
+        },
+        {
+          "type": "text",
+          "content": "年轻消费者愿为产品设计\u000b和情绪体验支付溢价"
+        },
+        {
+          "type": "text",
+          "content": "数据来源：艾瑞咨询《2025中国情绪消费白皮书》、国家统计局、京东消费报告"
+        },
+        {
+          "type": "text",
+          "content": "04 / 12"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "shapes": 16,
+      "has_image": true,
+      "items": [
+        {
+          "type": "text",
+          "content": "硬核产品力"
+        },
+        {
+          "type": "image",
+          "name": "Picture 3"
+        },
+        {
+          "type": "text",
+          "content": "温区"
+        },
+        {
+          "type": "text",
+          "content": "4个独立温区\u000b6°C红葡萄酒 / 4°C白葡萄酒\u000b2°C啤酒 / 8°C养生饮品"
+        },
+        {
+          "type": "text",
+          "content": "灯光"
+        },
+        {
+          "type": "text",
+          "content": "RGB全彩氛围灯\u000b4种预设模式 + 自定义\u000b1600万色可选"
+        },
+        {
+          "type": "text",
+          "content": "容量"
+        },
+        {
+          "type": "text",
+          "content": "68L紧凑机身\u000b可容纳24罐饮料+4瓶酒\u000b适合1-2人使用"
+        },
+        {
+          "type": "text",
+          "content": "交互"
+        },
+        {
+          "type": "text",
+          "content": "触摸面板 + 手机App\u000b开门感应亮灯\u000b智能提醒饮品保质期"
+        },
+        {
+          "type": "text",
+          "content": "05 / 12"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "shapes": 25,
+      "has_image": true,
+      "items": [
+        {
+          "type": "text",
+          "content": "四种情绪模式"
+        },
+        {
+          "type": "text",
+          "content": "一键切换，灯光+温度自动匹配你的当下心情"
+        },
+        {
+          "type": "text",
+          "content": "微醺时刻"
+        },
+        {
+          "type": "text",
+          "content": "6°C | 暖橙光"
+        },
+        {
+          "type": "text",
+          "content": "下班后的红酒时光\u000b柔和暖光，慢慢放松"
+        },
+        {
+          "type": "text",
+          "content": "冰爽派对"
+        },
+        {
+          "type": "text",
+          "content": "2°C | 冰蓝光"
+        },
+        {
+          "type": "text",
+          "content": "周末朋友来家\u000b啤酒透心凉，氛围拉满"
+        },
+        {
+          "type": "text",
+          "content": "养生模式"
+        },
+        {
+          "type": "text",
+          "content": "8°C | 自然绿"
+        },
+        {
+          "type": "text",
+          "content": "枸杞茶、人参饮\u000b恒温保存，随时滋养"
+        },
+        {
+          "type": "text",
+          "content": "熬夜补给"
+        },
+        {
+          "type": "text",
+          "content": "4°C | 霓虹紫"
+        },
+        {
+          "type": "text",
+          "content": "深夜赶工打游戏\u000b功能饮料冰镇即取"
+        },
+        {
+          "type": "image",
+          "name": "Picture 24"
+        },
+        {
+          "type": "text",
+          "content": "06 / 12"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "shapes": 5,
+      "has_image": true,
+      "items": [
+        {
+          "type": "image",
+          "name": "Picture 1"
+        },
+        {
+          "type": "text",
+          "content": "回到家，打开冰仓的那一抹光，\u000b就是一天中最松弛的时刻。"
+        },
+        {
+          "type": "text",
+          "content": "07 / 12"
+        }
+      ]
+    },
+    {
+      "page": 8,
+      "shapes": 9,
+      "has_image": true,
+      "items": [
+        {
+          "type": "image",
+          "name": "Picture 2"
+        },
+        {
+          "type": "text",
+          "content": "独处模式"
+        },
+        {
+          "type": "text",
+          "content": "一人食、一人饮、一人宅\u000b打开喜欢的饮料，打开喜欢的剧\u000b冰仓的微光是最佳陪伴\u000b不被打扰的私人时刻"
+        },
+        {
+          "type": "image",
+          "name": "Picture 6"
+        },
+        {
+          "type": "text",
+          "content": "社交模式"
+        },
+        {
+          "type": "text",
+          "content": "朋友聚会、游戏之夜、看球赛\u000b冰仓秒变氛围制造机\u000b冰啤酒随手拿，RGB灯光燥起来\u000b让每一次聚会都更有仪式感"
+        },
+        {
+          "type": "text",
+          "content": "08 / 12"
+        }
+      ]
+    },
+    {
+      "page": 9,
+      "shapes": 26,
+      "has_image": false,
+      "items": [
+        {
+          "type": "text",
+          "content": "商业模式"
+        },
+        {
+          "type": "text",
+          "content": "定价策略"
+        },
+        {
+          "type": "text",
+          "content": "基础款：1299元 — 2温区 + 单色灯"
+        },
+        {
+          "type": "text",
+          "content": "标准款：1799元 — 4温区 + 4模式RGB灯"
+        },
+        {
+          "type": "text",
+          "content": "Pro款：2299元 — 6温区 + 全彩RGB + App控制"
+        },
+        {
+          "type": "text",
+          "content": "渠道策略"
+        },
+        {
+          "type": "text",
+          "content": "线上：天猫/京东/抖音电商 + 小红书种草"
+        },
+        {
+          "type": "text",
+          "content": "线下：海尔门店体验区 + 潮玩集合店"
+        },
+        {
+          "type": "text",
+          "content": "收入预测"
+        },
+        {
+          "type": "text",
+          "content": "Year 1"
+        },
+        {
+          "type": "text",
+          "content": "5万台"
+        },
+        {
+          "type": "text",
+          "content": "8000万"
+        },
+        {
+          "type": "text",
+          "content": "Year 2"
+        },
+        {
+          "type": "text",
+          "content": "15万台"
+        },
+        {
+          "type": "text",
+          "content": "2.4亿"
+        },
+        {
+          "type": "text",
+          "content": "Year 3"
+        },
+        {
+          "type": "text",
+          "content": "30万台"
+        },
+        {
+          "type": "text",
+          "content": "4.8亿"
+        },
+        {
+          "type": "text",
+          "content": "预计毛利率 35%+，第二年起实现盈利"
+        },
+        {
+          "type": "text",
+          "content": "09 / 12"
+        }
+      ]
+    },
+    {
+      "page": 10,
+      "shapes": 15,
+      "has_image": false,
+      "items": [
+        {
+          "type": "text",
+          "content": "为什么是我们"
+        },
+        {
+          "type": "text",
+          "content": "01"
+        },
+        {
+          "type": "text",
+          "content": "海尔供应链"
+        },
+        {
+          "type": "text",
+          "content": "依托海尔全球领先的制冷技术\u000b和成熟供应链体系\u000b成本优势+品质保证"
+        },
+        {
+          "type": "text",
+          "content": "02"
+        },
+        {
+          "type": "text",
+          "content": "情绪洞察先行"
+        },
+        {
+          "type": "text",
+          "content": "深入Z世代生活方式研究\u000b不只是卖冷柜，是卖情绪体验\u000b差异化定位，避开价格战"
+        },
+        {
+          "type": "text",
+          "content": "03"
+        },
+        {
+          "type": "text",
+          "content": "快速迭代能力"
+        },
+        {
+          "type": "text",
+          "content": "模块化设计支持快速迭代\u000b通过App OTA持续更新灯光模式\u000b建立用户粘性和品牌忠诚度"
+        },
+        {
+          "type": "text",
+          "content": "10 / 12"
+        }
+      ]
+    },
+    {
+      "page": 11,
+      "shapes": 41,
+      "has_image": false,
+      "items": [
+        {
+          "type": "text",
+          "content": "我们的团队"
+        },
+        {
+          "type": "text",
+          "content": "任泓博"
+        },
+        {
+          "type": "text",
+          "content": "产品负责人"
+        },
+        {
+          "type": "text",
+          "content": "刘子涵"
+        },
+        {
+          "type": "text",
+          "content": "技术负责人"
+        },
+        {
+          "type": "text",
+          "content": "李兆木"
+        },
+        {
+          "type": "text",
+          "content": "供应链"
+        },
+        {
+          "type": "text",
+          "content": "鹿宝祥"
+        },
+        {
+          "type": "text",
+          "content": "市场策略"
+        },
+        {
+          "type": "text",
+          "content": "安文滨"
+        },
+        {
+          "type": "text",
+          "content": "用户体验"
+        },
+        {
+          "type": "text",
+          "content": "王洪博"
+        },
+        {
+          "type": "text",
+          "content": "工业设计"
+        },
+        {
+          "type": "text",
+          "content": "王志康"
+        },
+        {
+          "type": "text",
+          "content": "软件开发"
+        },
+        {
+          "type": "text",
+          "content": "臧炳松"
+        },
+        {
+          "type": "text",
+          "content": "品牌传播"
+        },
+        {
+          "type": "text",
+          "content": "赵妹钧"
+        },
+        {
+          "type": "text",
+          "content": "数据分析"
+        },
+        {
+          "type": "text",
+          "content": "导师：吴凌霄"
+        },
+        {
+          "type": "text",
+          "content": "制冷产业第1组  |  2026海尔智家黑客马拉松创业大赛  |  新研发&管理赛道"
+        },
+        {
+          "type": "text",
+          "content": "11 / 12"
+        }
+      ]
+    },
+    {
+      "page": 12,
+      "shapes": 8,
+      "has_image": true,
+      "items": [
+        {
+          "type": "image",
+          "name": "Picture 1"
+        },
+        {
+          "type": "text",
+          "content": "情绪冰仓"
+        },
+        {
+          "type": "text",
+          "content": "一杯饮尽松弛感"
+        },
+        {
+          "type": "text",
+          "content": "Thank You"
+        },
+        {
+          "type": "text",
+          "content": "制冷产业第1组  |  期待您的宝贵意见"
+        },
+        {
+          "type": "text",
+          "content": "12 / 12"
+        }
+      ]
+    }
+  ]
+}

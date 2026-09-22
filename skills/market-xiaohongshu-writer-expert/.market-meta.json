@@ -1,0 +1,34 @@
+{
+  "capabilityId": "cap_11d1c9174e0c4fbfaad43ff096ab1ef3",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": null,
+  "latestCommitId": null,
+  "contentHash": null,
+  "projectUrl": null,
+  "updatedAt": 1787722144573,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_51a8807610ce46619da91a01f6141cec",
+  "name": "小红书爆款文案专家",
+  "capabilityName": "小红书爆款文案专家",
+  "logoUrl": null,
+  "capabilityDescription": "## 能力简介\r\n\r\n根据任意主题生成小红书爆款文案，自动匹配8种风格模板，输出包含正文、配图描述、封面文案和搜索关键词的完整图文方案\r\n\r\n## 适用场景\r\n\r\n适用于多种科研和业务场景中的数据处理和分析需求，支持批量操作和自动化处理，可无缝集成到现有工作流程中。帮助用户提升工作效率和数据处理质量，满足不同类型项目的专业化需求。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [],
+  "categories": [],
+  "tags": [
+    "官方"
+  ],
+  "usageExamples": [
+    "帮我写一篇关于\"打工人自带神仙减脂餐\"的小红书文案，要那种让人看了就想点赞收藏的爆款风格。",
+    "咱们公司新上了一款主打\"熬夜急救\"的涂抹面膜，核心卖点是5分钟提亮和质地清爽。你帮我弄一篇小红书种草文案吧，要把这两个卖点自然地揉进去，顺便告诉我封面图怎么拍、封面写什么字，再给几个能蹭上流量的搜索关键词。",
+    "咱们品牌下个月要首发一款针对职场新人的\"桌面胶囊咖啡机\"，主打3秒出杯和高颜值。帮我策划一套完整的小红书爆款图文方案：切入点要结合早八人没时间买咖啡的痛点，带点情绪共鸣；正文要口语化，顺便分享个\"高效早晨routine\"；最后把配图的具体画面描述、封面的分行短文案，还有能带来长尾搜索流量的关键词都列清楚，我得直接发给设计和运营去落地执行。"
+  ],
+  "provisionSignature": "b8ffd16b7ebf1131e2ddc37ac8572e31",
+  "localInstallFingerprint": "sha256:5ba5df9742bea5364703509044463a2272e614648950d1fe9cbe850e8e54fcf9"
+}

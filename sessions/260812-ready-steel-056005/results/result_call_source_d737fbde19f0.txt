@@ -1,0 +1,51 @@
+[call_source describe - no upstream call made]
+Source tool: market-fetch3hil.firecrawl_monitor_create
+Description: 【创建监控】建立一个 Firecrawl 监控:周期性抓取(scrape 或 crawl)指定页面,并把每次结果与上一次快照做差异比对,有"有意义的变化"时触发通知。 简单用法:传 page(单个 URL)或 pages(多个 URL)+ goal(用大白话描述你关心什么变化),即可创建一个默认 30 分钟周期、由 API 判断"是否有意义变化"的监控。 关键参数: - page / pages:要监控的一个 / 多个页面 URL - goal:用自然语言说明"哪些变化才算数"(设了 goal 即自动开启有意义变化判断) - body:高级用法(crawl 目标、JSON 变化跟踪、自定义保留天数、手动控制 judgeEnabled 等) 注意:依赖服务端配置;周期监控会持续占用抓取资源。
+Signature: firecrawl_monitor_create(body?: object, page?: string, pages?: string[], goal?: string, name?: string, scheduleText?: string, ...+4more)
+Input schema:
+{
+  "type": "object",
+  "properties": {
+    "body": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "page": {
+      "type": "string"
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "goal": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "scheduleText": {
+      "type": "string"
+    },
+    "timezone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "includeDiffs": {
+      "type": "boolean"
+    },
+    "webhookUrl": {
+      "type": "string"
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false
+}
+Attachment rule: if this schema/description requires a public or online HTTP(S) file URL and the user supplied a local attachment, call prepare_attachment_url with its attachment ID first. Use the returned url here; do not send attachment:// or a local path, and do not search for an upload source.
+Execute with: call_source(target="market-fetch3hil.firecrawl_monitor_create", arguments={...})

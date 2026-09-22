@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>青岛摄影机位地图 · 精确机位版</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; background: #0a1628; color: #e8e8e8; height: 100vh; overflow: hidden; }
+    .header { background: linear-gradient(135deg, #1a2a3a 0%, #0d1b2a 100%); padding: 10px 18px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(100, 200, 255, 0.12); box-shadow: 0 4px 20px rgba(0,0,0,0.3); flex-shrink: 0; }
+    .header h1 { font-size: 17px; font-weight: 600; background: linear-gradient(90deg, #4fc3f7, #81d4fa, #b3e5fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1px; }
+    .header .sub { font-size: 11px; color: #546e7a; margin-top: 2px; }
+    .header-right { display: flex; align-items: center; gap: 8px; }
+    .search-box { background: rgba(255,255,255,0.06); border: 1px solid rgba(100, 200, 255, 0.12); border-radius: 18px; padding: 5px 12px; font-size: 12px; color: #e0e0e0; width: 170px; outline: none; }
+    .search-box::placeholder { color: #455a64; }
+    .search-box:focus { border-color: #4fc3f7; }
+    .badge { background: rgba(79, 195, 247, 0.12); border: 1px solid rgba(79, 195, 247, 0.25); border-radius: 16px; padding: 4px 12px; font-size: 11px; color: #4fc3f7; white-space: nowrap; }
+    .container { display: flex; height: calc(100vh - 54px); }
+    .sidebar { width: 380px; background: #111d2e; border-right: 1px solid rgba(100, 200, 255, 0.08); overflow-y: auto; flex-shrink: 0; display: flex; flex-direction: column; }
+    .sidebar::-webkit-scrollbar { width: 5px; }
+    .sidebar::-webkit-scrollbar-track { background: transparent; }
+    .sidebar::-webkit-scrollbar-thumb { background: rgba(79, 195, 247, 0.25); border-radius: 3px; }
+    .sidebar-header { padding: 10px 14px; border-bottom: 1px solid rgba(100, 200, 255, 0.06); position: sticky; top: 0; background: #111d2e; z-index: 100; }
+    .filter-tabs { display: flex; gap: 5px; flex-wrap: wrap; }
+    .ftab { padding: 3px 10px; border-radius: 14px; font-size: 11px; cursor: pointer; border: 1px solid rgba(100, 200, 255, 0.12); background: transparent; color: #78909c; transition: all 0.2s; user-select: none; white-space: nowrap; }
+    .ftab:hover { border-color: #4fc3f7; color: #4fc3f7; }
+    .ftab.active { background: rgba(79, 195, 247, 0.18); border-color: #4fc3f7; color: #4fc3f7; }
+    .route-sec { padding: 8px 14px; border-bottom: 1px solid rgba(100, 200, 255, 0.06); }
+    .route-title { font-size: 11px; font-weight: 600; color: #546e7a; margin-bottom: 6px; letter-spacing: 1px; }
+    .route-btns { display: flex; gap: 5px; flex-wrap: wrap; }
+    .rbtn { padding: 3px 9px; border-radius: 10px; font-size: 11px; cursor: pointer; border: 1px solid rgba(255, 200, 100, 0.15); background: rgba(255, 200, 100, 0.06); color: #b8860b; transition: all 0.2s; }
+    .rbtn:hover { background: rgba(255, 200, 100, 0.15); border-color: #daa520; }
+    .rbtn.active { background: rgba(255, 200, 100, 0.22); border-color: #daa520; color: #ffd700; }
+    .spot-list { padding: 4px; flex: 1; overflow-y: auto; }
+    .sgt { font-size: 10px; color: #455a64; padding: 6px 12px 3px; font-weight: 600; letter-spacing: 1px; }
+    .sgroup { margin-bottom: 8px; }
+    .sgroup-h { padding: 6px 12px; font-size: 12px; font-weight: 600; color: #81d4fa; background: rgba(79, 195, 247, 0.06); border-bottom: 1px solid rgba(79, 195, 247, 0.08); display: flex; align-items: center; gap: 6px; }
+    .sgroup-h .cnt { font-size: 10px; color: #546e7a; font-weight: 400; }
+    .spot-card { display: flex; align-items: flex-start; gap: 8px; padding: 8px 12px; cursor: pointer; transition: all 0.2s; border-bottom: 1px solid rgba(100, 200, 255, 0.04); }
+    .spot-card:hover { background: rgba(79, 195, 247, 0.06); }
+    .spot-card.active { background: rgba(79, 195, 247, 0.1); border-color: rgba(79, 195, 247, 0.18); }
+    .sico { width: 30px; height: 30px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; margin-top: 2px; }
+    .sinfo { flex: 1; min-width: 0; }
+    .sname { font-size: 12px; font-weight: 600; color: #e0e0e0; margin-bottom: 1px; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+    .sname .area-tag { font-size: 9px; color: #546e7a; font-weight: 400; }
+    .hot { font-size: 9px; padding: 1px 5px; border-radius: 6px; background: rgba(255, 82, 82, 0.18); color: #ff5252; font-weight: 500; }
+    .pro { font-size: 9px; padding: 1px 5px; border-radius: 6px; background: rgba(171, 71, 188, 0.18); color: #ab47bc; font-weight: 500; }
+    .spose { font-size: 11px; color: #4fc3f7; font-weight: 500; margin-bottom: 2px; }
+    .sdesc { font-size: 10px; color: #607d8b; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .stags { display: flex; gap: 3px; margin-top: 3px; flex-wrap: wrap; }
+    .stag { font-size: 9px; padding: 1px 6px; border-radius: 7px; }
+    .t-sea { background: rgba(77, 182, 172, 0.12); color: #4db6ac; }
+    .t-sunrise { background: rgba(255, 183, 77, 0.12); color: #ffb74d; }
+    .t-sunset { background: rgba(255, 138, 101, 0.12); color: #ff8a65; }
+    .t-night { background: rgba(149, 119, 213, 0.12); color: #9577d5; }
+    .t-bldg { background: rgba(255, 167, 38, 0.12); color: #ffa726; }
+    .t-rom { background: rgba(236, 112, 140, 0.12); color: #ec708c; }
+    .t-film { background: rgba(129, 199, 132, 0.12); color: #81c784; }
+    .t-aerial { background: rgba(159, 168, 210, 0.12); color: #9fa8da; }
+    .map-box { flex: 1; position: relative; }
+    #map { width: 100%; height: 100%; background: #0d1b2a; }
+    .leaflet-tile-pane { transition: opacity 0.2s; }
+    .leaflet-tile-container img { will-change: transform; }
+    .leaflet-control-attribution { display: none !important; }
+    .info-panel { position: absolute; bottom: 14px; left: 14px; width: 420px; max-height: 62vh; overflow-y: auto; background: rgba(17, 29, 46, 0.97); backdrop-filter: blur(12px); border-radius: 14px; padding: 18px; border: 1px solid rgba(100, 200, 255, 0.12); display: none; animation: su 0.3s ease; z-index: 1000; }
+    @keyframes su { from { transform: translateY(16px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .info-panel.show { display: block; }
+    .ih { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .iname { font-size: 15px; font-weight: 600; color: #4fc3f7; }
+    .iclose { width: 24px; height: 24px; border-radius: 50%; border: 1px solid rgba(100, 200, 255, 0.18); background: transparent; color: #78909c; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 13px; }
+    .ipose { font-size: 12px; color: #81d4fa; font-weight: 500; margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid rgba(100, 200, 255, 0.08); }
+    .idets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 10px; }
+    .idet { background: rgba(79, 195, 247, 0.06); border-radius: 8px; padding: 8px; }
+    .idet-l { font-size: 10px; color: #546e7a; margin-bottom: 3px; }
+    .idet-v { font-size: 11px; color: #cfd8dc; font-weight: 500; line-height: 1.3; }
+    .isection { margin-bottom: 10px; }
+    .isec-t { font-size: 11px; font-weight: 600; color: #81d4fa; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+    .isec-c { font-size: 11px; color: #90a4ae; line-height: 1.5; }
+    .iacts { display: flex; gap: 6px; }
+    .ibtn { flex: 1; padding: 7px 8px; border-radius: 8px; border: 1px solid rgba(100, 200, 255, 0.15); background: transparent; color: #4fc3f7; font-size: 11px; cursor: pointer; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 4px; transition: all 0.2s; }
+    .ibtn:hover { background: rgba(79, 195, 247, 0.12); }
+    .ibtn.p { background: rgba(79, 195, 247, 0.18); border-color: #4fc3f7; }
+    .stats { position: absolute; top: 12px; right: 12px; background: rgba(17, 29, 46, 0.9); backdrop-filter: blur(10px); border-radius: 10px; padding: 8px 12px; border: 1px solid rgba(100, 200, 255, 0.1); display: flex; gap: 12px; z-index: 999; }
+    .si { text-align: center; }
+    .sn { font-size: 16px; font-weight: 700; color: #4fc3f7; }
+    .sl { font-size: 9px; color: #546e7a; }
+    .area-f { position: absolute; top: 12px; left: 12px; background: rgba(17, 29, 46, 0.9); backdrop-filter: blur(10px); border-radius: 10px; padding: 8px 12px; border: 1px solid rgba(100, 200, 255, 0.1); z-index: 999; }
+    .at { font-size: 10px; color: #546e7a; margin-bottom: 5px; font-weight: 600; }
+    .atabs { display: flex; gap: 3px; flex-wrap: wrap; }
+    .atab { padding: 3px 8px; border-radius: 8px; font-size: 10px; cursor: pointer; border: 1px solid rgba(100, 200, 255, 0.1); background: transparent; color: #546e7a; transition: all 0.2s; }
+    .atab:hover { border-color: #4fc3f7; color: #4fc3f7; }
+    .atab.active { background: rgba(79, 195, 247, 0.18); border-color: #4fc3f7; color: #4fc3f7; }
+    .legend { position: absolute; bottom: 14px; right: 14px; background: rgba(17, 29, 46, 0.9); backdrop-filter: blur(10px); border-radius: 10px; padding: 10px 12px; border: 1px solid rgba(100, 200, 255, 0.1); z-index: 999; }
+    .lt { font-size: 10px; color: #546e7a; margin-bottom: 5px; font-weight: 600; }
+    .li { display: flex; align-items: center; gap: 6px; margin-bottom: 3px; }
+    .ldot { width: 8px; height: 8px; border-radius: 50%; }
+    .ltx { font-size: 10px; color: #78909c; }
+    .cm { position: relative; cursor: pointer; }
+    .mp { width: 28px; height: 28px; border-radius: 50% 50% 50% 0; position: absolute; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0,0,0,0.3); border: 2px solid rgba(255,255,255,0.2); }
+    .mp .me { transform: rotate(45deg); font-size: 13px; }
+    .ml { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: rgba(17, 29, 46, 0.9); color: #cfd8dc; padding: 1px 5px; border-radius: 6px; font-size: 9px; white-space: nowrap; border: 1px solid rgba(100, 200, 255, 0.12); }
+    .leaflet-popup-content-wrapper { background: #111d2e !important; color: #cfd8dc !important; border: 1px solid rgba(100, 200, 255, 0.18) !important; border-radius: 10px !important; box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important; }
+    .leaflet-popup-tip { background: #111d2e !important; border: 1px solid rgba(100, 200, 255, 0.18) !important; }
+    .leaflet-popup-close-button { color: #4fc3f7 !important; }
+    @media (max-width: 768px) { .container { flex-direction: column; } .sidebar { width: 100%; height: 38%; border-right: none; border-bottom: 1px solid rgba(100, 200, 255, 0.08); } .map-box { height: 62%; } .info-panel { left: 8px; right: 8px; width: auto; bottom: 8px; } .idets { grid-template-columns: repeat(2, 1fr); } .search-box { width: 130px; } }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>📷 青岛摄影机位地图 · 精确机位版</h1>
+      <div class="sub">整合小红书 · 视觉中国 · 500px · 蜂鸟网 · 知乎 · 今日头条 · 马蜂窝 · 十六番</div>
+    </div>
+    <div class="header-right">
+      <input type="text" class="search-box" id="searchBox" placeholder="🔍 搜索机位...">
+      <div class="badge" id="spotCount">0 个机位</div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="filter-tabs">
+          <div class="ftab active" data-f="all">全部</div>
+          <div class="ftab" data-f="sea">海景</div>
+          <div class="ftab" data-f="bldg">建筑</div>
+          <div class="ftab" data-f="sunset">日落</div>
+          <div class="ftab" data-f="sunrise">日出</div>
+          <div class="ftab" data-f="night">夜景</div>
+          <div class="ftab" data-f="rom">文艺</div>
+          <div class="ftab" data-f="aerial">航拍</div>
+        </div>
+      </div>
+      <div class="route-sec">
+        <div class="route-title">📍 经典拍摄路线</div>
+        <div class="route-btns">
+          <div class="rbtn" data-r="ot">老城一日</div>
+          <div class="rbtn" data-r="cl">环海线</div>
+          <div class="rbtn" data-r="wc">西海岸</div>
+          <div class="rbtn" data-r="ls">崂山线</div>
+          <div class="rbtn" data-r="nt">夜景线</div>
+          <div class="rbtn" data-r="wed">婚纱旅拍</div>
+        </div>
+      </div>
+      <div class="spot-list" id="spotList"></div>
+    </div>
+    <div class="map-box">
+      <div id="map"></div>
+      <div class="area-f">
+        <div class="at">区域筛选</div>
+        <div class="atabs">
+          <div class="atab active" data-a="all">全部</div>
+          <div class="atab" data-a="市南">市南区</div>
+          <div class="atab" data-a="崂山">崂山区</div>
+          <div class="atab" data-a="黄岛">西海岸</div>
+          <div class="atab" data-a="市北">市北区</div>
+          <div class="atab" data-a="李沧">李沧区</div>
+          <div class="atab" data-a="即墨">即墨区</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="si"><div class="sn" id="sn">0</div><div class="sl">精确机位</div></div>
+        <div class="si"><div class="sn" id="sa">0</div><div class="sl">景点覆盖</div></div>
+        <div class="si"><div class="sn">6</div><div class="sl">区域覆盖</div></div>
+        <div class="si"><div class="sn">6</div><div class="sl">拍摄路线</div></div>
+      </div>
+      <div class="legend">
+        <div class="lt">图例</div>
+        <div class="li"><div class="ldot" style="background:#ff5252"></div><div class="ltx">热门爆款机位</div></div>
+        <div class="li"><div class="ldot" style="background:#ab47bc"></div><div class="ltx">视觉中国/500px 收录</div></div>
+        <div class="li"><div class="ldot" style="background:#4fc3f7"></div><div class="ltx">普通推荐机位</div></div>
+      </div>
+      <div class="info-panel" id="infoPanel">
+        <div class="ih"><div class="iname" id="iname"></div><button class="iclose" id="iclose">✕</button></div>
+        <div class="ipose" id="ipose"></div>
+        <div class="idets" id="idets"></div>
+        <div id="iExtra"></div>
+        <div class="iacts" id="iacts"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 每个机位包含: name(景点名), spot(具体机位名称), area, lng, lat, emoji, pose(机位描述/站哪), ref(参照物/前景背景), angle(拍摄朝向/角度), compose(构图建议), cat, tags, tc, r, hot, pro, bt, bs, tip, nav(导航目标)
+    const spots = [
+      // ====== 栈桥 ======
+      { id:1, name:'栈桥', spot:'回澜阁往岸拍经典构图', area:'市南', lng:120.3194, lat:36.0617, emoji:'🌊', cat:['sea','bldg','aerial'], tags:['海景','地标','航拍'], tc:['sea','aerial'], r:['ot'], hot:true, pro:true,
+        pose:'站在栈桥尽头的回澜阁上，面向岸边方向拍摄',
+        ref:'前景：人字形栈桥桥身当前景引导线 | 中景：海面与海鸥 | 背景：小青岛白色灯塔+城市天际线',
+        angle:'朝向西北方向，竖屏拍摄把栈桥+小青岛一同收入画面',
+        compose:'用长焦(70-200mm)压缩空间，让栈桥和远处的灯塔产生纵深感。低角度贴桥面拍能增强引导线效果。退潮时礁石露出，前景更有层次。',
+        bt:'清晨 6:00-8:00 或日落前', bs:'全年（冬春海鸥季更佳）', tip:'退潮拍礁石层次注意防滑。清晨游客最少。航拍俯瞰最壮观。',
+        nav:'栈桥回澜阁' },
+      { id:2, name:'栈桥', spot:'东侧拍夜景', area:'市南', lng:120.3220, lat:36.0620, emoji:'🌃', cat:['night','sea'], tags:['夜景','地标'], tc:['night'], r:['nt'],
+        pose:'站在栈桥东侧的沙滩上，面向栈桥方向拍摄',
+        ref:'前景：东侧沙滩/礁石 | 中景：栈桥桥身+回澜阁亮灯 | 背景：老城区灯光',
+        angle:'朝向西南，横拍展现栈桥侧面夜景轮廓',
+        compose:'涨潮时海面如镜，回澜阁灯光倒映在海面上。带三脚架拍慢门，水面丝滑效果。满月之夜海面有月光倒影更梦幻。',
+        bt:'夜晚 19:00-22:00', bs:'全年', tip:'东侧角度比正面更有层次感，涨潮比退潮效果好。',
+        nav:'栈桥东侧沙滩' },
+      { id:3, name:'栈桥', spot:'退潮礁石+海鸥', area:'市南', lng:120.3180, lat:36.0605, emoji:'🐦', cat:['sea','sunrise'], tags:['海鸥','礁石','生态'], tc:['sea'], r:['ot'],
+        pose:'退潮后走到栈桥两侧露出的礁石上，低机位拍摄',
+        ref:'前景：红色礁石+海浪泡沫 | 中景：栈桥桥墩 | 背景：回澜阁+海鸥群',
+        angle:'低角度仰拍，用广角(16-35mm)把礁石纹理和天空纳入',
+        compose:'海鸥飞翔时抓拍，用快门优先(1/1000s以上)冻结动作。红礁石与蓝海对比鲜明，是很好的色彩构图元素。',
+        bt:'退潮时（查潮汐表）', bs:'11月-次年4月海鸥季', tip:'务必查潮汐表，礁石湿滑穿防滑鞋。海鸥季带长焦抓拍。',
+        nav:'栈桥' },
+
+      // ====== 圣弥厄尔教堂 ======
+      { id:4, name:'圣弥厄尔教堂', spot:'正面广场对称构图', area:'市南', lng:120.3240, lat:36.0660, emoji:'⛪', cat:['bldg'], tags:['建筑','德式','婚纱'], tc:['bldg'], r:['ot','wed'], hot:true, pro:true,
+        pose:'站在教堂正前方的广场中央，面向教堂拍摄',
+        ref:'前景：广场地面+人群 | 中景：教堂双塔正面 | 背景：蓝天',
+        angle:'正对教堂，居中对称构图，竖拍突出双塔高度',
+        compose:'用超广角(14-24mm)拍出气势，教堂占画面2/3。阳光穿透彩色玻璃窗时，内侧拍摄有斑斓光影。婚纱旅拍必去机位。',
+        bt:'上午 9:00-11:00（顺光）', bs:'全年', tip:'避开周末人流，侧面下坡处咖啡店前拍红墙+教堂也出片。',
+        nav:'圣弥厄尔教堂' },
+      { id:5, name:'圣弥厄尔教堂', spot:'下坡路文创街视角', area:'市南', lng:120.3230, lat:36.0655, emoji:'🧱', cat:['bldg','rom'], tags:['文艺','街拍','咖啡'], tc:['rom'], r:['ot'],
+        pose:'从教堂侧面下坡处的文创街/咖啡店方向，仰拍教堂侧面',
+        ref:'前景：咖啡店招牌/文创小店 | 中景：教堂侧墙+钟楼 | 背景：红瓦屋顶',
+        angle:'仰角30-45度，斜侧方拍教堂，红墙和绿树形成色彩对比',
+        compose:'用50mm或85mm定焦拍特写，红墙+教堂双塔的经典构图。咖啡店外摆的桌椅当前景，有生活气息。',
+        bt:'下午', bs:'全年', tip:'咖啡店消费后可以坐在窗前拍教堂侧影。',
+        nav:'大学路网红墙' },
+
+      // ====== 信号山公园 ======
+      { id:6, name:'信号山', spot:'旋转观景台360度全景', area:'市南', lng:120.3316, lat:36.0664, emoji:'🌅', cat:['sunset','night','aerial'], tags:['全景','俯瞰','航拍'], tc:['sunset','night'], r:['ot'], hot:true, pro:true,
+        pose:'山顶旋转观景楼（红蘑菇建筑）二层，360度旋转平台',
+        ref:'往西南：基督教堂绿色钟楼+栈桥+小青岛 | 往东南：迎宾馆+小鱼山览潮阁 | 往东：电视塔',
+        angle:'旋转平台可任意方向拍摄，建议西南+东南两个方向各拍一组',
+        compose:'带超广角(14-24mm)拍全景接片，红瓦绿树碧海蓝天尽收眼底。日落前1小时登楼，金色阳光洒在红屋顶上最壮观。',
+        bt:'日落前 1小时登楼', bs:'全年', tip:'观景楼门票10元。不用上观景台，山上亭子也能拍好看的全景。龙山路方向上山沿途可拍教堂。',
+        nav:'信号山公园' },
+      { id:7, name:'信号山', spot:'南坡踏浪观景台拍迎宾馆', area:'市南', lng:120.3325, lat:36.0655, emoji:'🏰', cat:['bldg','rom'], tags:['德式建筑','小众机位'], tc:['bldg'], r:['ot'],
+        pose:'快到山顶的南坡踏浪观景台（连心桥下方），面向南方拍摄',
+        ref:'前景：山坡绿树 | 中景：德国迎宾馆全貌（古堡式建筑）| 背景：远处海面',
+        angle:'从高处俯拍迎宾馆，竖屏把建筑和绿树纳入',
+        compose:'这里是拍迎宾馆最佳位置，比从地面拍更有气势。上午顺光，建筑细节清晰。带中长焦(70-200mm)压缩空间。',
+        bt:'上午 9:00-11:00', bs:'全年', tip:'进入景区免费，踏浪观景台不额外收费。',
+        nav:'信号山公园' },
+      { id:8, name:'信号山', spot:'东侧鸟瞰总督府', area:'市南', lng:120.3310, lat:36.0670, emoji:'🏛️', cat:['bldg','aerial'], tags:['德式建筑','俯瞰'], tc:['bldg','aerial'], r:['ot'],
+        pose:'信号山东侧山坡，面向东方拍摄',
+        ref:'前景：郁郁葱葱的树林 | 中景：德国总督楼旧址博物馆 | 背景：远处崂山轮廓',
+        angle:'从高处斜侧方俯拍，展现总督府依山面海的选址',
+        compose:'上午光线最佳，建筑被绿树环绕的构图。带70-200mm长焦拍建筑细节。',
+        bt:'上午', bs:'全年', tip:'知乎摄影达人推荐机位，比单纯看海边更有味道。',
+        nav:'信号山公园' },
+
+      // ====== 小鱼山公园 ======
+      { id:9, name:'小鱼山', spot:'览潮台拍一浴全景', area:'市南', lng:120.3380, lat:36.0580, emoji:'🏔️', cat:['sea','sunset'], tags:['海景','俯瞰','一浴'], tc:['sea'], r:['ot'],
+        pose:'山顶览潮台观景亭，面向南方拍摄',
+        ref:'前景：亭子栏杆 | 中景：第一海水浴场弧形沙滩 | 背景：海天一色+远处海面',
+        angle:'俯拍一浴全景，一半沙滩一半海水的经典构图',
+        compose:'比信号山人少很多，日落时分逆光效果极佳。带广角拍弧形海岸线。金色阳光洒在沙滩上时最美。',
+        bt:'日落前 1小时', bs:'全年', tip:'山顶不高，爬山轻松。带广角镜头。',
+        nav:'小鱼山公园' },
+
+      // ====== 八大关 ======
+      { id:10, name:'八大关', spot:'临淮关路人行横道森林公路', area:'市南', lng:120.3510, lat:36.0575, emoji:'🌳', cat:['bldg','rom'], tags:['森林公路','街拍','婚纱'], tc:['bldg','rom'], r:['ot','wed'], hot:true,
+        pose:'八大关北侧步行到临淮关路，站在人行横道上拍摄',
+        ref:'前景：白色人行横道斑马线 | 中景：两侧龙柏树列队形成的"树隧道" | 背景：道路尽头',
+        angle:'站在斑马线中央，低机位正对道路纵深方向，竖拍或横拍均可',
+        compose:'龙柏树列形成天然引导线，人行横道的白色条纹增加画面节奏感。阴天更有电影质感，晴天阳光穿透树叶有光斑效果。',
+        bt:'全天（阴天电影感更强）', bs:'春夏秋', tip:'青岛最美森林公路，婚纱旅拍热门机位。',
+        nav:'八大关临淮关路' },
+      { id:11, name:'八大关', spot:'花石楼四楼窗户看海', area:'市南', lng:120.3580, lat:36.0510, emoji:'🏰', cat:['sea','bldg'], tags:['古堡','海景','二楼'], tc:['sea','bldg'], r:['ot','wed'], pro:true,
+        pose:'进入花石楼（黄海路18号），上到四楼窗户处，面向大海拍摄',
+        ref:'前景：窗户石框（天然画框构图）| 中景：第二海水浴场沙滩 | 背景：海面+远处海天线',
+        angle:'从窗户向外平视拍摄，利用窗框做天然框景',
+        compose:'花石楼是欧洲古堡式建筑，塔楼顶部和弧形是拍海景的好地方。下午去人少光线好。门票8.5元。',
+        bt:'下午 2:00-4:00（人少光好）', bs:'全年', tip:'下午去人少，室内注意曝光补偿。窗外海景非常出片。',
+        nav:'花石楼' },
+      { id:12, name:'八大关', spot:'公主楼墨绿背景人像', area:'市南', lng:120.3540, lat:36.0565, emoji:'💚', cat:['rom','bldg'], tags:['童话','人像','婚纱'], tc:['rom'], r:['wed'],
+        pose:'公主楼正面（居庸关路10号），以墨绿色楼体为背景拍摄人像',
+        ref:'前景：人物 | 背景：墨绿色公主楼外墙+尖塔 | 侧面：落叶松',
+        angle:'正面拍建筑全貌+人像，或斜侧方拍人物与建筑局部',
+        compose:'衣服推荐绿色（与楼体相近）或黄色（互补色）。墨绿色背景配浅色衣服对比鲜明。门票20元。',
+        bt:'上午或下午', bs:'春夏秋', tip:'穿搭建议：绿色或黄色系衣服最出片。',
+        nav:'公主楼' },
+      { id:13, name:'八大关', spot:'韶关路22号别墅外观', area:'市南', lng:120.3520, lat:36.0560, emoji:'🏡', cat:['bldg','rom'], tags:['别墅','街拍','小众'], tc:['bldg'], r:['ot'],
+        pose:'韶关路22号别墅前的人行道上，面向别墅拍摄',
+        ref:'前景：人行道+行道树 | 中景：22号别墅外观（特色屋顶）| 背景：绿树蓝天',
+        angle:'斜侧方45度拍别墅外观，带周围环境',
+        compose:'虽然只能外观屋顶，但建筑造型很有特色，适合街拍。搭配八大关的街景，很有欧洲小镇感。',
+        bt:'上午或下午', bs:'全年', tip:'韶关路22号，外观拍照即可，不要擅入私人区域。',
+        nav:'八大关韶关路' },
+
+      // ====== 第二海水浴场 ======
+      { id:14, name:'第二海水浴场', spot:'海边凉亭俯拍栈道', area:'市南', lng:120.3580, lat:36.0480, emoji:'🌉', cat:['sea'], tags:['电影感','栈道','悲伤逆流成河'], tc:['sea'], r:['cl'], hot:true,
+        pose:'走上二浴海边的凉亭高处，俯拍通往大海的栈道',
+        ref:'前景：凉亭栏杆 | 中景：通往海中的栈道 | 背景：海面+天空',
+        angle:'高处俯拍，竖屏展现栈道延伸入海的纵深感',
+        compose:'《悲伤逆流成河》同款机位！阴天更有电影质感。栈道尽头是海的画面感极强。',
+        bt:'下午或阴天', bs:'全年', tip:'阴天拍更有电影感。俯拍效果最佳。',
+        nav:'第二海水浴场' },
+      { id:15, name:'第二海水浴场', spot:'堤坝水泥方块拍背影', area:'市南', lng:120.3560, lat:36.0470, emoji:'🧱', cat:['sea','rom'], tags:['极简','背影','文艺'], tc:['sea'], r:['cl'],
+        pose:'坐在第二海水浴场防波堤延伸到海中的水泥方块上，背对镜头拍摄',
+        ref:'前景：水泥方块（仿佛坐在钢琴键上）| 中景：人物背影 | 背景：海面+晚霞',
+        angle:'从人物侧后方拍，把人和海面晚霞一同收入',
+        compose:'极简构图的绝佳地点。夕阳倒影入镜，文艺风格背影照。日落前1小时光线最佳。',
+        bt:'日落前 1小时', bs:'全年', tip:'坐在水泥方块上注意安全，防波堤湿滑。',
+        nav:'第二海水浴场' },
+      { id:16, name:'第二海水浴场', spot:'溶洞（退潮进入）', area:'市南', lng:120.3590, lat:36.0470, emoji:'🪨', cat:['sea'], tags:['独特地貌','探险'], tc:['sea'], r:['cl'],
+        pose:'退潮后从沙滩走到海边溶洞处，进入洞内拍摄',
+        ref:'前景：洞口岩石 | 中景：洞内岩壁纹理 | 光线：洞口射入的光束（丁达尔效果）',
+        angle:'从洞内向外拍，利用洞口做天然框景；或从洞口侧拍洞壁',
+        compose:'光线从洞口射入形成丁达尔光束效果。海浪拍洞壁有水花飞溅的动态感。',
+        bt:'退潮时（必须查潮汐表）', bs:'夏秋', tip:'务必查潮汐表！注意防水，穿防水鞋。涨潮时洞内危险。',
+        nav:'第二海水浴场' },
+
+      // ====== 大学路/福山支路 ======
+      { id:17, name:'大学路', spot:'红墙打卡点', area:'市南', lng:120.3300, lat:36.0650, emoji:'🧱', cat:['bldg','rom'], tags:['网红','红墙','打卡'], tc:['rom'], r:['ot'], hot:true,
+        pose:'大学路与鱼山路交汇处的红墙拐角，正面拍摄红墙',
+        ref:'前景：人物+红墙 | 背景：红墙+绿树+琉璃瓦 | 地面：石板路',
+        angle:'正面或侧面拍红墙拐角，竖拍突出红墙高度',
+        compose:'红墙与绿树的色彩对比。避开人流高峰，侧面拍红墙更有感觉。周边文艺小店和咖啡馆值得探索。',
+        bt:'上午或傍晚', bs:'全年', tip:'小红书最火打卡点之一，人很多，建议早去。',
+        nav:'大学路与鱼山路路口' },
+      { id:18, name:'福山支路16号', spot:'房屋缝隙看大海框景', area:'市南', lng:120.3355, lat:36.0625, emoji:'🖼️', cat:['sea'], tags:['框景','小众','文艺'], tc:['sea'], r:['ot'],
+        pose:'小鱼山公园北门附近福山支路16号，找到两栋房子之间的缝隙',
+        ref:'前景：两栋房屋墙壁形成的狭缝（天然画框）| 中景：老城区红瓦屋顶 | 背景：远处大海',
+        angle:'正对缝隙平视拍摄，竖屏构图',
+        compose:'天然的框景构图！老城区红瓦屋顶和远处大海在狭缝中交汇。用长焦(70-200mm)压缩空间感。小红书爆款机位。',
+        bt:'上午或下午（顺光）', bs:'全年', tip:'定位福山支路16号附近，在小巷子里找房屋缝隙。',
+        nav:'福山支路16号' },
+
+      // ====== 西陵峡路 ======
+      { id:19, name:'西陵峡一路', spot:'龙柏树引导线通往大海', area:'市南', lng:120.3150, lat:36.0580, emoji:'🌳', cat:['sunset','sea'], tags:['通往大海','龙柏树','引导线'], tc:['sunset'], r:['ot'],
+        pose:'站在西陵峡一路路中央（注意安全），面向大海方向拍摄',
+        ref:'前景：路面+两侧龙柏树列 | 中景：道路延伸 | 背景：尽头的大海',
+        angle:'低角度正对道路纵深方向，利用龙柏树列做引导线',
+        compose:'笔直的龙柏树形成天然引导线，路尽头就是大海，纵深感极强。傍晚光线柔和最美。',
+        bt:'下午或傍晚', bs:'春夏秋', tip:'低角度拍引导线效果最好。注意安全，避开车辆。',
+        nav:'西陵峡一路' },
+      { id:20, name:'西陵峡三路', spot:'行李箱+通往大海的路', area:'市南', lng:120.3120, lat:36.0590, emoji:'🌊', cat:['sea','sunset'], tags:['漫画路','行李箱','文艺'], tc:['sunset'], r:[],
+        pose:'站在西陵峡三路马路一侧，把行李箱放在路边当前景',
+        ref:'前景：行李箱 | 中景：龙柏树引导线+笔直马路 | 背景：尽头的大海',
+        angle:'低角度拍马路引导线，行李箱当前景，竖拍',
+        compose:'比西陵峡一路更小众。行李箱+龙柏树+大海的三元素构图，纵深感极强。适合拍"在路上"的文艺感。',
+        bt:'下午或傍晚', bs:'春夏秋', tip:'带个行李箱当前景，拍照更有意境。',
+        nav:'西陵峡三路' },
+
+      // ====== 江苏路基督教堂 ======
+      { id:21, name:'江苏路基督教堂', spot:'钟楼俯瞰老城', area:'市南', lng:120.3282, lat:36.0667, emoji:'🏰', cat:['bldg'], tags:['德式','钟楼','俯瞰'], tc:['bldg'], r:['ot'],
+        pose:'登上基督教堂钟楼（江苏路15号），从钟楼窗口俯瞰',
+        ref:'前景：钟楼窗口石框 | 中景：老城区红瓦屋顶 | 背景：远处海面+栈桥方向',
+        angle:'从钟楼窗口向外拍摄，利用窗口做框景',
+        compose:'绿色尖顶钟楼本身是信号山全景中的亮点，登钟楼可以拍到不一样的老城视角。周日钟声响起时更有氛围。',
+        bt:'上午', bs:'全年', tip:'钟楼可登，门票10元。周日每半小时报时。',
+        nav:'江苏路基督教堂' },
+      { id:22, name:'江苏路基督教堂', spot:'信号山方向拍绿色钟楼', area:'市南', lng:120.3275, lat:36.0670, emoji:'🟢', cat:['bldg','rom'], tags:['钟楼','色彩','小众'], tc:['bldg'], r:['ot'],
+        pose:'从信号山公园往西南方向望去，绿色钟楼在一片红屋顶中非常突出',
+        ref:'前景：信号山山坡 | 中景：基督教堂绿色钟楼 | 背景：远处栈桥+小青岛',
+        angle:'从高处斜侧方俯拍，绿色钟楼在红屋顶中特别醒目',
+        compose:'这是信号山看下去的经典构图之一。绿色+红色对比鲜明。带长焦(70-200mm)压缩。',
+        bt:'上午', bs:'全年', tip:'在信号山南坡或旋转观景台即可拍到，不需专程去。',
+        nav:'信号山公园' },
+
+      // ====== 琴屿路 ======
+      { id:23, name:'琴屿路', spot:'环海公路日落', area:'市南', lng:120.3302, lat:36.0536, emoji:'🛤️', cat:['sunset','sea'], tags:['环海公路','浪漫','日落'], tc:['sunset','rom'], r:['cl'], hot:true, pro:true,
+        pose:'走在琴屿路弯道上，面向西方日落方向拍摄',
+        ref:'前景：蜿蜒的公路曲线 | 中景：海面波光粼粼 | 背景：小青岛灯塔+日落',
+        angle:'顺着公路弯道方向拍，利用曲线引导视线到海面',
+        compose:'"不是洱海，是青岛"。视觉中国和500px大量收录。日落时分整条路被金色阳光覆盖。傍晚车少注意安全。',
+        bt:'日落前 1-2小时', bs:'春夏秋', tip:'傍晚车少注意安全。长焦压缩效果更好。',
+        nav:'琴屿路' },
+
+      // ====== 小青岛 ======
+      { id:24, name:'小青岛', spot:'白色灯塔+栈桥方向', area:'市南', lng:120.3237, lat:36.0533, emoji:'🏝️', cat:['sea','night','aerial'], tags:['灯塔','夜景','航拍'], tc:['sea','night'], r:['cl','nt'], pro:true,
+        pose:'从小青岛岛上，面向栈桥方向拍摄',
+        ref:'前景：岛上礁石/草坪 | 中景：白色灯塔 | 背景：栈桥回澜阁+城市天际线',
+        angle:'从岛上拍栈桥方向，横拍展现岛与城的关系',
+        compose:'从栈桥方向拍能把灯塔和城市天际线一起收入画面。夜晚灯塔亮灯后尤为浪漫。航拍效果极佳。',
+        bt:'下午或夜晚亮灯后', bs:'全年', tip:'从栈桥方向看小青岛经典，从小青岛看栈桥同样经典。',
+        nav:'小青岛公园' },
+
+      // ====== 威尔德咖啡馆 ======
+      { id:25, name:'威尔德咖啡馆', spot:'蓝窗海景', area:'市南', lng:120.3680, lat:36.0550, emoji:'☕', cat:['sea','rom'], tags:['海景','文艺','蓝窗'], tc:['rom'], r:['cl'], hot:true,
+        pose:'坐在咖啡馆巨大落地窗前，面向大海拍摄',
+        ref:'前景：窗框+人物 | 中景：整片蓝色海面 | 背景：海天一线',
+        angle:'从室内向外拍，人和海同框；或从侧面拍人物+窗+海的构图',
+        compose:'"为了一扇窗，来了一趟青岛"。下午整片海都是蓝色调。室内注意曝光补偿，避免窗外过曝。',
+        bt:'下午 2:00-4:00', bs:'全年', tip:'下午蓝调时刻最美。室内注意曝光补偿。需消费。',
+        nav:'威尔德咖啡馆' },
+
+      // ====== 燕儿岛山公园 ======
+      { id:26, name:'燕儿岛山公园', spot:'海边木栈道', area:'市南', lng:120.4051, lat:36.0563, emoji:'🌿', cat:['sea','rom'], tags:['木栈道','小众','草地'], tc:['sea'], r:['cl'],
+        pose:'沿海边木栈道行走，栈道和草地交替拍摄',
+        ref:'前景：木栈道栏杆/草地 | 中景：海浪拍岸 | 背景：蓝色大海',
+        angle:'沿栈道方向拍纵深感，或侧拍人物+栈道+海的组合',
+        compose:'海边木栈道+绿草地+蓝色海浪，恍如在台湾。游客不多，新翻修过。木栈道和草地是最好拍的点。',
+        bt:'下午', bs:'春夏秋', tip:'人少景美，适合慢慢拍。木栈道和草地交替构图。',
+        nav:'燕儿岛山公园' },
+
+      // ====== 小麦岛 ======
+      { id:27, name:'小麦岛', spot:'大树+草坪宫崎骏风', area:'崂山', lng:120.4300, lat:36.0650, emoji:'🌿', cat:['sunset','sea','rom'], tags:['大树','草坪','宫崎骏'], tc:['sunset','rom'], r:['cl'], hot:true, pro:true,
+        pose:'导航至小麦岛研究院对面，找到四颗大树的位置，在草坪上拍摄',
+        ref:'前景：绿色草坪 | 中景：两颗大树+人物 | 背景：大海+日落',
+        angle:'在大树间穿行拍摄，人或站在大树下，背景是海和天',
+        compose:'宫崎骏漫画感！大树+草坪+大海的组合非常治愈。日落时分有乐队唱歌氛围感拉满。傍晚风大注意设备安全。',
+        bt:'日落前 1-2小时', bs:'全年', tip:'定位小麦岛研究院对面四颗大树。傍晚风大注意安全。',
+        nav:'小麦岛公园' },
+      { id:28, name:'小麦岛', spot:'海边孤独大树', area:'崂山', lng:120.4310, lat:36.0640, emoji:'🌳', cat:['sea','rom'], tags:['孤独感','文艺','人像'], tc:['rom'], r:['cl'],
+        pose:'走到小麦岛海边最突出的那棵孤树旁',
+        ref:'前景：人物站在树下 | 中景：孤树 | 背景：大海+天空',
+        angle:'从远处拍人物+孤树+大海，或用长焦拍人物靠树的特写',
+        compose:'极简构图，孤独感拉满。适合拍文艺风格人像。日落时逆光剪影效果极佳。',
+        bt:'日落前', bs:'全年', tip:'傍晚逆光拍剪影。穿浅色衣服更出片。',
+        nav:'小麦岛公园' },
+      { id:29, name:'小麦岛', spot:'海边礁石+栈道', area:'崂山', lng:120.4320, lat:36.0635, emoji:'🪨', cat:['sea'], tags:['礁石','栈道','海景'], tc:['sea'], r:['cl'],
+        pose:'走到小麦岛海边礁石区，站在礁石上拍摄',
+        ref:'前景：礁石纹理 | 中景：人物 | 背景：栈道+大海',
+        angle:'低机位拍礁石纹理+海，或从栈道方向拍人物+礁石',
+        compose:'礁石与海的粗犷对比，适合拍有力量感的照片。注意脚下湿滑。',
+        bt:'下午', bs:'全年', tip:'礁石湿滑注意安全。长焦拍海浪拍礁石的动态。',
+        nav:'小麦岛公园' },
+
+      // ====== 奥帆中心/浮山湾 ======
+      { id:30, name:'浮山湾', spot:'灯光秀城市天际线', area:'市南', lng:120.3870, lat:36.0620, emoji:'🌃', cat:['night','sea','aerial'], tags:['灯光秀','城市','航拍'], tc:['night','aerial'], r:['nt'], hot:true, pro:true,
+        pose:'奥帆中心海边或情人坝上，面向浮山湾方向拍摄',
+        ref:'前景：海面倒影 | 中景：城市天际线建筑群灯光 | 背景：夜空',
+        angle:'横拍展现整个天际线，竖拍突出单体建筑',
+        compose:'灯光秀每晚19:40开启。海面灯光倒影是点睛之笔。带三脚架拍慢门，水面丝滑+灯光不拖影。航拍俯瞰最震撼。',
+        bt:'19:40-21:00（夏季）/ 18:40-20:00（冬季）', bs:'全年', tip:'提前到占好位置。蓝调时刻(日落后20分钟)天空颜色最美。',
+        nav:'奥帆中心' },
+      { id:31, name:'奥帆中心', spot:'情人坝拍夜景', area:'市南', lng:120.3900, lat:36.0600, emoji:'💕', cat:['night'], tags:['情人坝','灯光秀','浪漫'], tc:['night'], r:['nt'],
+        pose:'站在奥帆中心情人坝尽头，面向五四广场方向拍摄',
+        ref:'前景：情人坝堤坝 | 中景：海面 | 背景：五四广场灯光秀+天际线',
+        angle:'横拍展现灯光秀全景，竖拍突出情人坝延伸感',
+        compose:'以五四广场灯光秀为背景打卡拍照。海风吹拂很有氛围。拍完可以在情人坝品尝海鲜。',
+        bt:'夜晚灯光秀时间', bs:'全年', tip:'情人节/节日更浪漫。带三脚架。',
+        nav:'奥帆中心情人坝' },
+
+      // ====== 五四广场 ======
+      { id:32, name:'五四广场', spot:'蓝调时刻拍天际线', area:'市南', lng:120.3846, lat:36.0627, emoji:'🔴', cat:['night','bldg'], tags:['地标','夜景','天际线'], tc:['bldg','night'], r:['nt'], hot:true,
+        pose:'五四广场海边的观景平台，面向城市方向拍摄',
+        ref:'前景：广场"五月的风"雕塑 | 中景：海边步道 | 背景：高楼大厦天际线',
+        angle:'横拍把雕塑和天际线一起纳入，蓝调时刻天空宝石蓝',
+        compose:'日落后20分钟蓝调时刻，天空宝石蓝色，城市灯光刚亮但未过曝。"五月的风"红色雕塑是前景亮点。',
+        bt:'日落后20分钟（蓝调时刻）', bs:'全年', tip:'蓝调时刻只有约20分钟，提前架好三脚架。',
+        nav:'五四广场' },
+
+      // ====== 国际会议中心 ======
+      { id:33, name:'国际会议中心', spot:'红毯灯光隧道赛博朋克', area:'市南', lng:120.3890, lat:36.0610, emoji:'🏢', cat:['night','bldg'], tags:['赛博朋克','红毯','灯光'], tc:['night'], r:['nt'],
+        pose:'站在国际会议中心海上红毯灯光隧道内，低处仰拍',
+        ref:'前景：隧道灯光线条 | 中景：人物 | 背景：远处城市霓虹',
+        angle:'低处仰拍，人在灯光隧道中行走的感觉',
+        compose:'"赛博光影隧道"。暗黑系/金属感服装+广角仰拍，秒出未来感大片。灯光+远处城市霓虹交织。',
+        bt:'夜晚灯光秀时间', bs:'全年', tip:'穿暗黑系或金属感服装+广角镜头最出片。',
+        nav:'青岛国际会议中心' },
+
+      // ====== 海之恋公园 ======
+      { id:34, name:'海之恋公园', spot:'观景台日落海景', area:'崂山', lng:120.4450, lat:36.0850, emoji:'💕', cat:['sea','rom'], tags:['观景台','日落','浪漫'], tc:['rom'], r:['cl'],
+        pose:'走上海之恋公园观景台，面向大海日落方向拍摄',
+        ref:'前景：观景台栏杆/栈道 | 中景：海面 | 背景：日落',
+        angle:'从观景台向外平视拍摄，横拍展现海面日落全景',
+        compose:'新晋网红打卡地。日落前到达，光线柔和最美。适合情侣拍照。',
+        bt:'日落前', bs:'春夏秋', tip:'日落前到达光线最美。情侣拍照圣地。',
+        nav:'海之恋公园' },
+
+      // ====== 极地海洋世界海边 ======
+      { id:35, name:'极地海洋世界海边', spot:'海边酒吧街文艺风', area:'崂山', lng:120.4500, lat:36.0750, emoji:'🐋', cat:['sea','rom'], tags:['文艺','咖啡馆','日落'], tc:['rom'], r:['cl'],
+        pose:'极地海洋世界外面的海边酒吧街，在浪咖啡等海边咖啡馆前拍摄',
+        ref:'前景：咖啡户外座椅 | 中景：人物+咖啡馆外观 | 背景：海面+日落',
+        angle:'侧拍人物+咖啡馆+海的组合，或从咖啡馆内向外拍',
+        compose:'下午阳光斜射时海面波光粼粼。海边咖啡馆是拍摄文艺风的绝佳地点。',
+        bt:'下午', bs:'全年', tip:'海边咖啡馆消费后拍照，下午光线好。',
+        nav:'青岛极地海洋世界' },
+
+      // ====== 石老人 ======
+      { id:36, name:'石老人', spot:'白色房子+日出韩系风', area:'崂山', lng:120.4680, lat:36.0917, emoji:'🌅', cat:['sunrise','sea','aerial'], tags:['日出','白色房子','韩系','航拍'], tc:['sunrise','aerial'], r:['cl'], hot:true, pro:true,
+        pose:'石老人海水浴场海边，找到白色海边房子，面向东方日出方向',
+        ref:'前景：沙滩纹理 | 中景：白色海边房子+人物 | 背景：初升的太阳+海蚀柱轮廓',
+        angle:'横拍把白色房子、海蚀柱和日出一起纳入；竖拍突出白色房子',
+        compose:'韩系ins风！白色房子+日出是石老人最经典的构图。海蚀柱在晨光中轮廓分明。带三脚架拍慢门。航拍海蚀柱最震撼。',
+        bt:'日出前 30分钟到达', bs:'全年', tip:'提前查好日出时间，带三脚架拍慢门。航拍海蚀柱最震撼。',
+        nav:'石老人海水浴场' },
+
+      // ====== 沙子口 ======
+      { id:37, name:'沙子口', spot:'彩色渔村+日落航拍', area:'崂山', lng:120.5200, lat:36.1400, emoji:'🏘️', cat:['sunset','sea','aerial'], tags:['彩色房子','渔村','航拍'], tc:['sunset','aerial'], r:['ls'], hot:true, pro:true,
+        pose:'导航至沙子口渔村，在山坡高处或渔港码头上方的观景位置拍摄',
+        ref:'前景：山坡/码头 | 中景：错落的彩色房屋建在山坡上 | 背景：大海+日落',
+        angle:'俯拍渔村全景，彩色房屋面朝大海的构图',
+        compose:'仿佛进入了意大利五渔村！搭配日落拍摄效果绝佳。500px热门收录。渔港码头也值得拍。航拍俯瞰最壮观。',
+        bt:'日落前 1-2小时', bs:'春夏秋', tip:'下午光线最好。航拍展示彩色渔村与海的关系。',
+        nav:'沙子口' },
+
+      // ====== 崂山太清宫 ======
+      { id:38, name:'崂山太清宫', spot:'古树枝干+道观+大海三层构图', area:'崂山', lng:120.6100, lat:36.1300, emoji:'⛩️', cat:['bldg','sea','aerial'], tags:['道教','山海','航拍'], tc:['bldg','aerial'], r:['ls'], pro:true,
+        pose:'进入太清宫院内，在古树与道观之间找到三层构图的位置',
+        ref:'前景：古树枝干 | 中景：太清宫道观建筑 | 背景：远处大海',
+        angle:'从院内向外拍，古树-道观-大海三层纵深感',
+        compose:'山海结合的壮阔感在这里体现得淋漓尽致。视觉中国有大量航拍收录。航拍展示山、海、宫观的关系。',
+        bt:'上午', bs:'春夏秋', tip:'带广角拍古建筑，航拍更震撼。',
+        nav:'崂山太清宫' },
+
+      // ====== 青山渔村 ======
+      { id:39, name:'青山渔村', spot:'崂山公路观景台俯拍全景', area:'崂山', lng:120.6317, lat:36.1829, emoji:'🏡', cat:['sea','sunset','aerial'], tags:['渔村','全景','航拍'], tc:['sunset','aerial'], r:['ls'], pro:true,
+        pose:'崂山公路观景台上，面向青山渔村方向俯拍',
+        ref:'前景：观景台栏杆 | 中景：红瓦石墙依山而建的渔村 | 背景：茶园梯田+大海',
+        angle:'俯拍渔村全景，展现红房子+茶园+大海的层次',
+        compose:'中国最美渔村之一，500年历史。红瓦石墙依山而建，茶园梯田层层叠叠。航拍最震撼。',
+        bt:'日出前或日落前', bs:'春夏秋', tip:'从仰口检查站进入需提前联系农家宴报备车牌。',
+        nav:'青山渔村' },
+      { id:40, name:'青山渔村', spot:'青山南站向下拍红房子+大海', area:'崂山', lng:120.6310, lat:36.1820, emoji:'🏠', cat:['sea','rom'], tags:['红房子','山海','小众机位'], tc:['sea'], r:['ls'],
+        pose:'青山南站附近，向下方向拍摄',
+        ref:'前景：山坡植被 | 中景：红色渔村房子 | 背景：蓝色大海',
+        angle:'高处斜侧方俯拍，红房子与蓝海的色彩对比',
+        compose:'红瓦石墙+蓝色大海的经典配色。红色在绿色山坡中特别突出。',
+        bt:'上午或下午', bs:'春夏秋', tip:'定位青山南站，找下坡方向的位置。',
+        nav:'青山渔村' },
+      { id:41, name:'青山渔村', spot:'水库停车场观景台', area:'崂山', lng:120.6320, lat:36.1835, emoji:'🔭', cat:['aerial','sea'], tags:['观景台','俯瞰','航拍'], tc:['aerial'], r:['ls'],
+        pose:'青山渔村水库停车场向下走，找到有栏杆的观景台',
+        ref:'前景：栏杆 | 中景：渔村房屋 | 背景：海湾+渔船',
+        angle:'从观景台向外俯拍，横拍展现渔村全景',
+        compose:'这个机位人少且视野开阔，适合拍渔村全貌。渔船停靠在港湾的画面很有生活气息。',
+        bt:'上午或傍晚', bs:'春夏秋', tip:'水库停车场位置较偏，建议自驾。',
+        nav:'青山渔村水库' },
+
+      // ====== 雕龙嘴村 ======
+      { id:42, name:'雕龙嘴村', spot:'海上日出', area:'崂山', lng:120.6350, lat:36.1900, emoji:'🐉', cat:['sunrise','sea','film'], tags:['古渔村','日出','山海'], tc:['sunrise'], r:['ls'],
+        pose:'雕龙嘴村海边，面向东方海上日出方向，提前30分钟到达',
+        ref:'前景：沙滩/礁石 | 中景：渔村民居+渔船 | 背景：海上日出的太阳',
+        angle:'横拍日出全景，竖拍人物+日出的剪影',
+        compose:'近400年历史古渔村，中国最美村镇之一。民居依山就势错落有致。海上日出是最大亮点。巨峰突兀白云缥缈。',
+        bt:'日出前 30分钟', bs:'全年', tip:'提前30分钟到达，每年都有全国各地游客蜂拥而至。',
+        nav:'雕龙嘴村' },
+
+      // ====== 流清河沙滩 ======
+      { id:43, name:'流清河沙滩', spot:'崂山巨峰远景极简海滩', area:'崂山', lng:120.6145, lat:36.1252, emoji:'🏖️', cat:['sea','sunrise'], tags:['极简','干净','山海一色'], tc:['sea'], r:['ls'],
+        pose:'流清河沙滩中央，面向崂山巨峰方向拍摄',
+        ref:'前景：干净沙滩纹理 | 中景：海浪 | 背景：崂山巨峰轮廓',
+        angle:'低机位贴沙滩拍，崂山巨峰作为远景构图',
+        compose:'山海一色，这是很难见到的风景。海水和沙滩都干净，沙子细。适合拍摄极简海滩和山海壮阔感。',
+        bt:'清晨或傍晚', bs:'夏秋', tip:'崂山巨峰作为远景构图，带超广角。',
+        nav:'流清河沙滩' },
+
+      // ====== 仰口沙滩 ======
+      { id:44, name:'仰口沙滩', spot:'崂山巨峰当前景日出', area:'崂山', lng:120.6400, lat:36.2000, emoji:'🏖️', cat:['sea','sunrise'], tags:['日出','干净','山海'], tc:['sunrise'], r:['ls'],
+        pose:'仰口沙滩面向崂山巨峰方向，日出的反方向',
+        ref:'前景：宽阔平缓的沙滩 | 中景：海浪拍岸 | 背景：崂山巨峰+日出光芒',
+        angle:'超广角拍沙滩宽阔感+巨峰远景',
+        compose:'沙滩宽阔平缓长约1200余米，沙细软海水清澈。崂山巨峰作为前景构图非常壮观。',
+        bt:'日出或上午', bs:'夏秋', tip:'崂山巨峰当前景构图，带超广角。',
+        nav:'仰口沙滩' },
+
+      // ====== 海军博物馆 ======
+      { id:45, name:'海军博物馆', spot:'亮剑深蓝雕塑仰拍', area:'市南', lng:120.3400, lat:36.0560, emoji:'⚓', cat:['bldg','rom'], tags:['军事','雕塑','仰拍'], tc:['bldg'], r:[], pro:true,
+        pose:'海军博物馆主展馆西广场海军英雄广场，"亮剑深蓝"雕塑侧面/斜侧面',
+        ref:'前景：雕塑人物 | 中景：雕塑的剑柄 | 利用近大远小透视将人物的手与剑柄重合',
+        angle:'竖屏仰拍，站在雕塑侧面或斜侧面',
+        compose:'利用近大远小透视原理，把人物的手与剑柄重合，竖屏仰拍极具视觉冲击力。地址：莱阳路8号。',
+        bt:'上午或下午', bs:'全年', tip:'竖屏仰拍，侧面站位。注意利用透视错位构图。',
+        nav:'中国人民解放军海军博物馆' },
+
+      // ====== 观象山公园 ======
+      { id:46, name:'观象山公园', spot:'小众俯瞰老城全景', area:'市南', lng:120.3267, lat:36.0702, emoji:'🔭', cat:['sunset','aerial','night'], tags:['小众','全景','夜景'], tc:['sunset'], r:[],
+        pose:'观象山公园山顶天文台旧址附近，四周找最佳俯视角',
+        ref:'前景：山坡植被 | 中景：老城区红瓦屋顶群 | 背景：远处海面/城市灯光',
+        angle:'俯拍老城全景，日落或夜晚灯光方向',
+        compose:'比信号山更小众的观景山，人少安静。日落和夜景都很出片。山顶天文台旧址是很好的参照物。',
+        bt:'日落或夜晚', bs:'全年', tip:'人少景美，适合安静地拍。',
+        nav:'观象山公园' },
+
+      // ====== 龙江路涂鸦街 ======
+      { id:47, name:'龙江路涂鸦街', spot:'动漫彩绘街拍日系', area:'市南', lng:120.3347, lat:36.0661, emoji:'🎨', cat:['rom','film'], tags:['涂鸦','日系','街拍'], tc:['rom'], r:[],
+        pose:'在龙江路涂鸦街的墙壁前，以动漫彩绘为背景拍摄',
+        ref:'前景：人物 | 背景：龙猫/宫崎骏等动漫风格涂鸦墙壁',
+        angle:'正面拍人物+涂鸦墙合影，或侧拍人物与墙壁局部',
+        compose:'适合日系街拍，穿浅色衣服更出片。动漫元素随处可见，艺术气息十足。',
+        bt:'上午或下午', bs:'全年', tip:'穿浅色衣服更出片。注意避开人流。',
+        nav:'龙江路' },
+
+      // ====== 李慰农公园 ======
+      { id:48, name:'李慰农公园', spot:'松树框景拍栈桥', area:'市南', lng:120.3131, lat:36.0604, emoji:'🌲', cat:['sea'], tags:['框景','小众','文艺'], tc:['sea'], r:[],
+        pose:'隐藏在太平路的李慰农公园内，找到松树掩映的位置',
+        ref:'前景：松树作为天然画框 | 中景：海面 | 背景：栈桥回澜阁',
+        angle:'透过松树缝隙看向栈桥方向，竖拍框景构图',
+        compose:'松树当前景框住栈桥，避开人流拍栈桥的经典机位。2025年成为年轻游客拍照打卡新热门。',
+        bt:'上午或下午', bs:'全年', tip:'找松树和栈桥在一条线上的位置。',
+        nav:'李慰农公园' },
+
+      // ====== 音乐广场 ======
+      { id:49, name:'音乐广场', spot:'音乐家雕像+大海', area:'市南', lng:120.3898, lat:36.0609, emoji:'🎵', cat:['sea','night'], tags:['雕像','海边','小众'], tc:['sea'], r:[],
+        pose:'音乐广场内聂耳/冼星海/贝多芬等音乐家雕像旁，面向大海拍摄',
+        ref:'前景：音乐家雕像 | 中景：人物 | 背景：海面',
+        angle:'侧拍雕像+人物+海的组合，凝固的音符仿佛在海风中流淌',
+        compose:'相较于游人如织的五四广场，这里是本地人偏爱的看海圣地。傍晚光线柔和最美。',
+        bt:'傍晚', bs:'全年', tip:'音乐家雕像+大海构图，傍晚光线柔和。',
+        nav:'音乐广场' },
+
+      // ====== 雷达山栈道 ======
+      { id:50, name:'雷达山栈道', spot:'蓝调时刻城市天际线', area:'市南', lng:120.3650, lat:36.0480, emoji:'🌉', cat:['sunset','night','aerial'], tags:['蓝调','天际线','航拍'], tc:['sunset','night'], r:[],
+        pose:'雷达山滨海绿道栈道上，面向浮山湾CBD方向',
+        ref:'前景：蜿蜒的栈道 | 中景：海面 | 背景：浮山湾畔CBD建筑群（青岛"曼哈顿"）',
+        angle:'沿栈道方向拍纵深+天际线的组合',
+        compose:'蓝调时刻天空宝石蓝，对岸CBD建筑群登场，是捕捉青岛"曼哈顿"的黄金机位。日落后20分钟最美。',
+        bt:'蓝调时刻（日落后20分钟）', bs:'全年', tip:'日落后20分钟蓝调时刻最美，带三脚架。',
+        nav:'雷达山' },
+
+      // ====== 雕塑园 ======
+      { id:51, name:'雕塑园', spot:'雕塑+大海艺术构图', area:'崂山', lng:120.4485, lat:36.0754, emoji:'🗿', cat:['rom','sea'], tags:['雕塑','海边','文艺'], tc:['rom'], r:[],
+        pose:'雕塑园内海边，找到合适的现代艺术雕塑作为前景',
+        ref:'前景：雕塑 | 中景：草坪/人物 | 背景：大海',
+        angle:'侧拍雕塑+海的组合，或用长焦压缩雕塑与海的距离',
+        compose:'各种现代艺术雕塑散落草坪和海边。人少景美，雕塑与大海的组合构图非常有艺术感。',
+        bt:'下午', bs:'春夏秋', tip:'雕塑+大海的组合构图，带长焦压缩。',
+        nav:'青岛雕塑园' },
+
+      // ====== 金茂湾 ======
+      { id:52, name:'金茂湾', spot:'灯塔+跨海大桥+晚霞', area:'市南', lng:120.3000, lat:36.0644, emoji:'🌅', cat:['sunset'], tags:['小众','日落','灯塔','跨海大桥'], tc:['sunset'], r:[],
+        pose:'金茂湾观景平台，面向胶州湾方向拍摄',
+        ref:'前景：观景平台/栏杆 | 中景：灯塔 | 背景：跨海大桥+绚丽晚霞',
+        angle:'横拍把灯塔、跨海大桥、晚霞三元素一起纳入',
+        compose:'灯塔+跨海大桥+晚霞三元素构图。视野开阔，大海和晚霞尽收眼底。提前占位。',
+        bt:'日落前 1小时', bs:'全年', tip:'提前占位，三元素构图为佳。',
+        nav:'金茂湾' },
+
+      // ====== 劈柴院 ======
+      { id:53, name:'劈柴院', spot:'夜晚"卜"字形老街烟火气', area:'市南', lng:120.3182, lat:36.0678, emoji:'🍢', cat:['film','night'], tags:['美食','老街','市井'], tc:['film'], r:[],
+        pose:'进入劈柴院"卜"字形街巷内，低机位拍摄老街建筑',
+        ref:'前景：青砖二层楼建筑 | 中景：街巷+美食摊位烟火气 | 背景：夜晚灯光',
+        angle:'低机位贴地拍青砖建筑，夜晚流光溢彩灯火辉煌',
+        compose:'近景特写最佳。夜晚拍更有氛围。能拍出老青岛的市井烟火气。',
+        bt:'傍晚至深夜', bs:'全年', tip:'夜晚拍更有氛围，近景特写最佳。',
+        nav:'劈柴院' },
+
+      // ====== 小港码头 ======
+      { id:54, name:'小港码头', spot:'渔港日落烟火气', area:'市北', lng:120.3140, lat:36.0715, emoji:'⚓', cat:['sunset','film'], tags:['码头','日落','渔港','人文'], tc:['sunset'], r:[],
+        pose:'小港码头海边，面向西方日落方向拍摄',
+        ref:'前景：渔船/渔网/铁锚 | 中景：码头工人/修补渔网的老人 | 背景：日落+灯塔',
+        angle:'横拍渔港全景，竖拍渔船剪影',
+        compose:'待到日头西斜，渔船剪影很出片。拎着塑料袋装啤酒的年轻人，挨着修补渔网的老人，咸腥海风里混着铁锚的铁锈味。',
+        bt:'傍晚', bs:'全年', tip:'黄昏拍渔船剪影，本地人的烟火气。',
+        nav:'小港码头' },
+
+      // ====== 国际邮轮母港 ======
+      { id:55, name:'国际邮轮母港', spot:'集装箱部落工业风', area:'市北', lng:120.3188, lat:36.0842, emoji:'🚢', cat:['sunset','aerial','bldg'], tags:['工业风','集装箱','日落'], tc:['sunset','aerial'], r:[], pro:true,
+        pose:'TEU集装箱部落内，在潮流品牌聚集区的集装箱之间拍摄',
+        ref:'前景：集装箱色块 | 中景：人物/涂鸦 | 背景：邮轮/灯塔',
+        angle:'侧拍集装箱色块+人物，利用集装箱的色彩对比构图',
+        compose:'影视拍摄取景基地。巨大的邮轮、集装箱、灯塔构极具工业感和电影感。2023青岛网红打卡地。',
+        bt:'傍晚日落', bs:'全年', tip:'集装箱部落拍工业风，邮轮码头拍日落。',
+        nav:'青岛国际邮轮母港' },
+
+      // ====== 广兴里/四方路 ======
+      { id:56, name:'广兴里（四方路）', spot:'里院巷道人文扫街', area:'市北', lng:120.3223, lat:36.0704, emoji:'🏚️', cat:['bldg','film'], tags:['里院','人文','怀旧'], tc:['bldg'], r:[],
+        pose:'漫步广兴里百年里院建筑群的青砖二层巷道间',
+        ref:'前景：斑驳的墙壁和门洞 | 中景：巷道+老青岛生活场景 | 背景：里院建筑',
+        angle:'带35mm人文镜头扫街，低机位拍出历史沧桑感',
+        compose:'青岛最具代表性的里院建筑群。斑驳的墙壁和门洞承载着老青岛的市井记忆。像在去对话，能拍出历史韵味。',
+        bt:'上午或傍晚', bs:'全年', tip:'里院巷道适合人文扫街，注意尊重居民。带35mm镜头。',
+        nav:'广兴里' },
+
+      // ====== 纺织谷 ======
+      { id:57, name:'纺织谷', spot:'涂鸦墙+韩国街双机位', area:'市北', lng:120.3735, lat:36.1393, emoji:'🏭', cat:['bldg','film'], tags:['工业风','涂鸦','街拍'], tc:['bldg','film'], r:[],
+        pose:'大门进去左拐是涂鸦墙区域，右拐一直走是韩国街区域',
+        ref:'涂鸦墙：前景人物+色彩鲜明的涂鸦墙壁 | 韩国街：地标+装饰墙壁',
+        angle:'涂鸦墙正面拍人像合影，韩国街拍街拍感',
+        compose:'承载了青岛往事的国棉五厂。涂鸦墙色彩鲜明浓浓街拍风，韩国街地标和墙壁装饰很有韩国感觉。工业风穿搭出片。',
+        bt:'下午', bs:'全年', tip:'涂鸦墙和韩国街是两个方向。工业风穿搭出片。',
+        nav:'纺织谷' },
+
+      // ====== 台东步行街 ======
+      { id:58, name:'台东步行街', spot:'夜市烟火气', area:'市北', lng:120.3650, lat:36.0850, emoji:'🍜', cat:['night'], tags:['夜市','美食','人文'], tc:['night'], r:['nt'],
+        pose:'台东步行街夜市摊位前，低机位拍摄烟火气',
+        ref:'前景：美食摊位/鲅鱼水饺/烤肉串 | 中景：人群烟火气 | 背景：夜市霓虹',
+        angle:'低机位拍食物特写+烟火气，注意设备防盗',
+        compose:'烟火气十足，是拍摄市井人文和美食的绝佳地点。拍美食和烟火气。',
+        bt:'傍晚至深夜', bs:'全年', tip:'注意设备防盗。低光环境注意对焦。',
+        nav:'台东步行街' },
+
+      // ====== 金沙滩 ======
+      { id:59, name:'金沙滩', spot:'金色沙滩+日落航拍', area:'黄岛', lng:120.2550, lat:35.9500, emoji:'🏖️', cat:['sea','sunset','aerial'], tags:['沙滩','日落','航拍'], tc:['sunset','aerial'], r:['wc'], hot:true, pro:true,
+        pose:'金沙滩沙滩中央，面向西方日落方向',
+        ref:'前景：细腻金黄的沙滩纹理 | 中景：海浪 | 背景：日落+天际线',
+        angle:'低机位贴沙滩拍，展现金色沙滩和蓝色大海的对比',
+        compose:'亚洲第一滩。日落时分整片沙滩被染成金色。航拍展示金色沙滩和蓝色大海的对比最震撼。',
+        bt:'日落前', bs:'夏秋', tip:'啤酒节期间人超多，建议平日前往。航拍最震撼。',
+        nav:'金沙滩' },
+
+      // ====== 唐岛湾 ======
+      { id:60, name:'唐岛湾', spot:'晨曦渔船剪影', area:'黄岛', lng:120.2300, lat:35.9400, emoji:'🌅', cat:['sunset','sea','aerial'], tags:['晨拍','渔船','航拍'], tc:['sunset','aerial'], r:['wc'], pro:true,
+        pose:'唐岛湾环湾步道上，面向东方晨曦方向',
+        ref:'前景：步道/水面 | 中景：湾内渔船剪影 | 背景：远处城市天际线',
+        angle:'横拍晨曦全景，渔船剪影很出片',
+        compose:'晨曦和日落都很壮观。视觉中国有航拍收录。湾内的渔船和远处的城市天际线是很好的构图元素。',
+        bt:'清晨或日落', bs:'全年', tip:'晨曦拍渔船剪影很出片，航拍展示湾区全貌。',
+        nav:'唐岛湾公园' },
+
+      // ====== 城市阳台 ======
+      { id:61, name:'城市阳台', spot:'观景平台直面晚霞', area:'黄岛', lng:120.0800, lat:35.8800, emoji:'🌊', cat:['sea','sunset','aerial'], tags:['观景平台','晚霞','航拍'], tc:['sunset','aerial'], r:['wc'],
+        pose:'城市阳台观景平台上，面向大海方向',
+        ref:'前景：观景平台栏杆 | 中景：开阔海面 | 背景：绚丽晚霞',
+        angle:'横拍晚霞全景，竖拍人物+晚霞',
+        compose:'西海岸的隐藏机位，人少景美。提前占位，晚霞时间很短。航拍展示城市阳台与大海的关系。',
+        bt:'傍晚', bs:'全年', tip:'提前占位，晚霞时间很短。',
+        nav:'城市阳台' },
+
+      // ====== 东环岛路 ======
+      { id:62, name:'东环岛路', spot:'北欧风空旷感', area:'黄岛', lng:120.2800, lat:35.9600, emoji:'🛤️', cat:['sea'], tags:['北欧风','空旷','极简'], tc:['sea'], r:['wc'],
+        pose:'东环岛路空旷路段，面向大海方向',
+        ref:'前景：路面/草地 | 中景：开阔海景 | 背景：海天一线',
+        angle:'横拍展现空旷感，极简构图',
+        compose:'人少风景开阔，可以拍出北欧片的空旷感。在天黑之前、不要全黑之时拍摄效果超好。',
+        bt:'傍晚蓝调时刻', bs:'全年', tip:'蓝调时刻最出片。不要等到全黑。',
+        nav:'东环岛路' },
+
+      // ====== 红树林度假村 ======
+      { id:63, name:'红树林度假村', spot:'建筑线条+水面倒影', area:'黄岛', lng:120.1900, lat:35.9100, emoji:'🏨', cat:['sea','rom','sunset'], tags:['度假','建筑','日落'], tc:['rom'], r:['wc'],
+        pose:'红树林度假村建筑群之间，找到有水面倒影的位置',
+        ref:'前景：水面倒影 | 中景：建筑线条 | 背景：日落金色光线',
+        angle:'侧拍建筑+水面倒影，日落金色光线最美',
+        compose:'热带风情的度假酒店群。建筑线条和水面倒影构图，日落金色最美。木栈道和水景也很好拍。',
+        bt:'日落前', bs:'全年', tip:'建筑线条和水面倒影构图。',
+        nav:'红树林度假村' },
+
+      // ====== 星光岛 ======
+      { id:64, name:'星光岛', spot:'大剧院航拍夜景', area:'黄岛', lng:120.1500, lat:35.8600, emoji:'🌟', cat:['sea','aerial','night','bldg'], tags:['航拍','夜景','建筑'], tc:['aerial','night'], r:['wc'], pro:true,
+        pose:'航拍星光岛大剧院及周边建筑群，夜晚拍摄',
+        ref:'前景：海面灯光倒影 | 中景：大剧院独特造型 | 背景：星光岛建筑群夜景',
+        angle:'航拍俯瞰，展现大剧院造型和整个星光岛的关系',
+        compose:'西海岸标志性建筑群。视觉中国有大量航拍收录。大剧院造型独特，航拍夜景非常震撼。',
+        bt:'夜晚或航拍', bs:'全年', tip:'航拍夜景最震撼，需要无人机。',
+        nav:'星光岛' },
+
+      // ====== 鱼鸣嘴村 ======
+      { id:65, name:'鱼鸣嘴村', spot:'鱼嘴突出部拍日落', area:'黄岛', lng:120.1750, lat:35.9200, emoji:'🐟', cat:['sea','sunset','aerial'], tags:['渔村','日落','航拍'], tc:['sunset','aerial'], r:['wc'],
+        pose:'走到鱼鸣嘴村最突出的陆地尖尖处（状似鱼嘴），面向西方日落方向',
+        ref:'前景：礁石/鱼嘴突出部 | 中景：黄海海面 | 背景：日落+远处金沙滩银沙滩连三岛',
+        angle:'横拍日落全景，展现三面环海的壮阔',
+        compose:'薛家岛最西端，三面环海有"鱼嘴雪浪"之称。远处是金沙滩、银沙滩、连三岛。西南风盛行季节惊涛拍岸。',
+        bt:'日落前', bs:'全年', tip:'鱼嘴突出部拍日落最震撼，注意防风。',
+        nav:'鱼鸣嘴村' },
+
+      // ====== 银沙滩 ======
+      { id:66, name:'银沙滩', spot:'极简银色海滩', area:'黄岛', lng:120.2300, lat:35.9350, emoji:'🏖️', cat:['sea'], tags:['沙滩','小众','极简'], tc:['sea'], r:['wc'],
+        pose:'银沙滩沙滩中央，面向大海方向',
+        ref:'前景：银白色沙滩纹理 | 中景：海浪 | 背景：海天一线',
+        angle:'低机位贴沙滩拍极简构图',
+        compose:'比金沙滩更安静，沙质细腻呈银白色。适合拍摄干净纯粹的海滩照片。日出日落都有很好光线。',
+        bt:'上午或傍晚', bs:'夏秋', tip:'人少景美，适合拍极简海滩。',
+        nav:'银沙滩' },
+
+      // ====== 古镇口炮台 ======
+      { id:67, name:'古镇口炮台', spot:'炮台+跨海大桥', area:'黄岛', lng:120.2100, lat:35.8700, emoji:'🏰', cat:['bldg','sea'], tags:['历史','炮台','跨海大桥'], tc:['bldg'], r:['wc'],
+        pose:'古镇口炮台遗址上，面向大海方向',
+        ref:'前景：炮台遗址石墙 | 中景：开阔海面 | 背景：远处胶州湾跨海大桥',
+        angle:'横拍炮台+大海+跨海大桥三层构图',
+        compose:'历史悠久的海防建筑物，面向大海可远眺胶州湾跨海大桥。适合拍摄历史遗迹和海景结合的题材。',
+        bt:'上午或傍晚', bs:'全年', tip:'炮台+大海构图，带广角拍遗址全貌。',
+        nav:'古镇口炮台' },
+
+      // ====== 北海救助灯塔 ======
+      { id:68, name:'北海救助灯塔', spot:'S弯公路+灯塔+大海', area:'黄岛', lng:120.2500, lat:35.9300, emoji:'🔦', cat:['sea','sunset'], tags:['灯塔','S弯公路','航拍'], tc:['sunset'], r:['wc'],
+        pose:'沿着九龙山路自驾，导航到北海救助局青岛救助基地',
+        ref:'前景：蜿蜒的S形海边公路 | 中景：红白相间灯塔 | 背景：海+对面青岛绵长海岸线',
+        angle:'横拍展现S弯公路+灯塔+大海三元素',
+        compose:'红白相间灯塔伫立在蜿蜒S形海边公路一侧。海的对面便是青岛绵长的海岸线。航拍最震撼。',
+        bt:'日出或日落', bs:'全年', tip:'自驾前往，航拍最出片。',
+        nav:'北海救助局青岛救助基地' },
+
+      // ====== 灵山湾 ======
+      { id:69, name:'灵山湾', spot:'慢门极简海景', area:'黄岛', lng:120.1000, lat:35.8500, emoji:'🌅', cat:['sea','sunset'], tags:['慢门','极简','小众'], tc:['sunset'], r:['wc'],
+        pose:'灵山湾海滩中央，面向日落方向',
+        ref:'前景：沙滩 | 中景：海浪 | 背景：晚霞',
+        angle:'低机位+三脚架拍慢门海景',
+        compose:'西海岸最安静的海滩之一，晚霞壮观。带ND滤镜拍慢门海景。适合极简构图。',
+        bt:'傍晚', bs:'全年', tip:'带ND滤镜拍慢门海景。',
+        nav:'灵山湾' },
+
+      // ====== 海云庵老街 ======
+      { id:70, name:'海云庵老街', spot:'糖球会民俗人文', area:'市北', lng:120.3500, lat:36.0950, emoji:'🏮', cat:['bldg','film'], tags:['老街','民俗','人文'], tc:['bldg'], r:[],
+        pose:'海云庵老街内，糖球会期间拍摄民俗场景',
+        ref:'前景：糖球摊位 | 中景：民俗表演/人群 | 背景：老街建筑',
+        angle:'带35mm扫街，抓拍民俗活动',
+        compose:'青岛最古老的老街之一。糖球会期间尤其热闹，是拍摄民俗人文的绝佳地点。',
+        bt:'糖球会期间（正月十六）', bs:'全年', tip:'糖球会期间最热闹，带35mm扫街。',
+        nav:'海云庵' },
+
+      // ====== 登州路啤酒街 ======
+      { id:71, name:'登州路啤酒街', spot:'霓虹灯下人文', area:'市北', lng:120.3380, lat:36.0780, emoji:'🍺', cat:['night','film'], tags:['啤酒','霓虹','人文'], tc:['night'], r:[],
+        pose:'登州路啤酒街摊位前，霓虹灯下拍摄',
+        ref:'前景：啤酒杯+美食 | 中景：烟火气 | 背景：霓虹灯',
+        angle:'低机位拍食物+霓虹灯背景',
+        compose:'夜幕降临后霓虹闪烁，啤酒杯和美食的烟火气是拍摄人文的好题材。',
+        bt:'夜晚', bs:'全年', tip:'霓虹灯下拍人文，注意低光对焦。',
+        nav:'登州路啤酒街' },
+
+      // ====== 康有为故居 ======
+      { id:72, name:'康有为故居', spot:'德式别墅+古树', area:'市南', lng:120.3390, lat:36.0640, emoji:'🏡', cat:['bldg'], tags:['历史','德式','小众'], tc:['bldg'], r:['ot'],
+        pose:'康有为故居院内，德式别墅前拍摄',
+        ref:'前景：院内古树 | 中景：德式别墅外观 | 背景：蓝天',
+        angle:'侧拍别墅+古树的组合',
+        compose:'康有为晚年居住地，德式别墅建筑。院内古树参天。庭院和建筑外观结合拍摄。',
+        bt:'上午', bs:'全年', tip:'庭院和建筑外观结合拍摄。',
+        nav:'康有为故居' },
+
+      // ====== 青岛美术馆 ======
+      { id:73, name:'青岛美术馆', spot:'大穹顶内部超广角', area:'市南', lng:120.3340, lat:36.0640, emoji:'🎨', cat:['bldg'], tags:['建筑','穹顶','文艺'], tc:['bldg'], r:['ot'],
+        pose:'青岛美术馆大穹顶内部，正对穹顶中心仰拍',
+        ref:'前景：穹顶内部结构 | 中景：穹顶图案/彩绘 | 背景：穹顶中心',
+        angle:'仰拍穹顶，超广角展现内部全貌',
+        compose:'中西合璧建筑风格。穹顶内部用超广角拍摄很有视觉冲击力。内部展览也值得拍。',
+        bt:'上午', bs:'全年', tip:'穹顶内部用超广角拍。',
+        nav:'青岛美术馆' },
+
+      // ====== 总督府旧址 ======
+      { id:74, name:'总督府旧址', spot:'正面对称构图', area:'市南', lng:120.3270, lat:36.0660, emoji:'🏛️', cat:['bldg'], tags:['德式建筑','历史','对称'], tc:['bldg'], r:['ot'],
+        pose:'总督府旧址（现青岛市人大）正前方，面向建筑拍摄',
+        ref:'前景：广场地面 | 中景：宏伟的德式建筑正面 | 背景：蓝天',
+        angle:'正对建筑，居中对称构图',
+        compose:'宏伟的德式建筑，外观保存完好。视觉中国有高质量收录。正面拍摄对称构图，注意不要擅入内部。',
+        bt:'全天', bs:'全年', tip:'正面拍摄对称构图，不要擅入内部。',
+        nav:'青岛市人大（总督府旧址）' },
+
+      // ====== 圣保罗教堂 ======
+      { id:75, name:'圣保罗教堂', spot:'红砖外墙+小巷', area:'市南', lng:120.3260, lat:36.0680, emoji:'⛪', cat:['bldg','rom'], tags:['教堂','红砖','文艺'], tc:['rom'], r:['ot'],
+        pose:'圣保罗教堂正面及旁边小巷',
+        ref:'前景：红砖外墙 | 中景：教堂钟楼 | 背景：小巷+蓝天',
+        angle:'正面拍教堂全貌，侧拍红砖外墙+小巷',
+        compose:'比天主教堂更安静的教堂，红砖外墙很有味道。周边的小巷子适合散步和扫街。',
+        bt:'上午', bs:'全年', tip:'周边小巷适合人文扫街。',
+        nav:'圣保罗教堂' },
+
+      // ====== 青岛火车站 ======
+      { id:76, name:'青岛火车站', spot:'钟楼正面+航拍', area:'市南', lng:120.3180, lat:36.0640, emoji:'🚂', cat:['bldg','aerial'], tags:['德式','钟楼','航拍'], tc:['bldg','aerial'], r:['ot'],
+        pose:'青岛火车站正前方广场上，面向钟楼拍摄',
+        ref:'前景：广场 | 中景：钟楼 | 背景：蓝天/航拍视角下的老城',
+        angle:'正面拍摄钟楼对称构图，航拍展示火车站与老城的关系',
+        compose:'德式风格的火车站，钟楼是标志性元素。从出站口往栈桥方向走，一路都是老城风景。',
+        bt:'上午或傍晚', bs:'全年', tip:'钟楼正面拍摄对称构图，航拍效果更佳。',
+        nav:'青岛火车站' },
+
+      // ====== 创客大街 ======
+      { id:77, name:'创客大街', spot:'集装箱区域街拍', area:'崂山', lng:120.4600, lat:36.0900, emoji:'🎨', cat:['rom'], tags:['文艺','街拍','集装箱'], tc:['rom'], r:[],
+        pose:'定位中天大厦附近找集装箱区域',
+        ref:'前景：集装箱色块 | 中景：人物+涂鸦 | 背景：美术馆方向',
+        angle:'侧拍人物+集装箱，街拍感',
+        compose:'可以拍街拍，不用去韩国建大！有集装箱区域和美术馆，还有mokito咖啡馆。适合拍摄日系街拍和工业风照片。',
+        bt:'下午', bs:'全年', tip:'定位中天大厦附近，商拍需消费。',
+        nav:'创客大街' },
+
+      // ====== 世博园 ======
+      { id:78, name:'世博园', spot:'园林花海航拍', area:'李沧', lng:120.4300, lat:36.1300, emoji:'🌺', cat:['rom'], tags:['花海','园林','航拍'], tc:['rom','aerial'], r:[],
+        pose:'世博园园区内高处或航拍',
+        ref:'前景：花卉/园林 | 中景：园区景观 | 背景：航拍全景',
+        angle:'航拍展示园林全景效果最好',
+        compose:'2014年世界园艺博览会旧址，园区面积大，四季都有不同的花卉和园林景观。',
+        bt:'上午', bs:'春夏秋', tip:'航拍展示园林全景，春天花卉最美。',
+        nav:'青岛世博园' },
+
+      // ====== 即墨温泉海泉湾 ======
+      { id:79, name:'即墨温泉海泉湾', spot:'海景+温泉对比', area:'即墨', lng:120.6700, lat:36.3500, emoji:'♨️', cat:['sea'], tags:['温泉','度假','小众'], tc:['rom'], r:[],
+        pose:'温泉区面向大海的方向',
+        ref:'前景：温泉雾气 | 中景：人物在温泉中 | 背景：前方大海',
+        angle:'侧拍温泉+大海的对比构图',
+        compose:'面朝大海泡温泉。冬季拍摄海景和温泉的对比很有意思。',
+        bt:'全天', bs:'冬季', tip:'冬季海景+温泉的对比构图。',
+        nav:'即墨温泉海泉湾' },
+
+      // ====== 田横岛 ======
+      { id:80, name:'田横岛', spot:'原始海岛航拍', area:'即墨', lng:120.7200, lat:36.3200, emoji:'🏝️', cat:['sea','aerial'], tags:['海岛','航拍','原始'], tc:['aerial'], r:[], pro:true,
+        pose:'航拍田横岛全岛',
+        ref:'前景：海面 | 中景：原始海岛地貌 | 背景：海天一线',
+        angle:'航拍俯瞰全岛，展现原始风貌',
+        compose:'即墨最出名的海岛，视觉中国有航拍收录。岛上保留着原始风貌，周围海水清澈。航拍展示海岛全貌非常壮观。',
+        bt:'上午', bs:'夏秋', tip:'航拍最出片，岛上原始风貌值得探索。',
+        nav:'田横岛' }
+    ];
+
+    const CC = { sea:'#4db6ac', bldg:'#ffa726', sunset:'#ff8a65', sunrise:'#ffb74d', night:'#9577d5', rom:'#ec708c', aerial:'#9fa8da' };
+    const AO = ['市南','崂山','黄岛','市北','李沧','即墨'];
+    const AN = { '市南':'市南区', '崂山':'崂山区', '黄岛':'西海岸', '市北':'市北区', '李沧':'李沧区', '即墨':'即墨区' };
+
+    let map=null, markers={}, curF='all', curA='all', curR=null, searchT='';
+
+    // Group spots by name (parent location)
+    function getGroups() {
+      const g = {};
+      spots.forEach(s => {
+        if (!g[s.name]) g[s.name] = { name: s.name, area: s.area, spots: [], emoji: s.emoji };
+        g[s.name].spots.push(s);
+      });
+      return g;
+    }
+
+    function getVisibleSpots() {
+      return spots.filter(s => {
+        if (curF!=='all' && !s.cat.includes(curF)) return false;
+        if (curA!=='all' && s.area!==curA) return false;
+        if (curR && (!s.r || !s.r.includes(curR))) return false;
+        if (searchT && !s.name.includes(searchT) && !s.spot.includes(searchT) && !s.desc.includes(searchT)) return false;
+        return true;
+      });
+    }
+
+    function renderList() {
+      const list = document.getElementById('spotList');
+      list.innerHTML = '';
+      const visible = getVisibleSpots();
+      document.getElementById('spotCount').textContent = `${visible.length} 个机位`;
+      document.getElementById('sn').textContent = visible.length;
+      // count unique parent names
+      const uniqueNames = new Set(visible.map(s => s.name));
+      document.getElementById('sa').textContent = uniqueNames.size;
+
+      const g = {};
+      visible.forEach(s => {
+        const key = s.area + '|' + s.name;
+        if (!g[key]) g[key] = { name: s.name, area: s.area, emoji: s.emoji, spots: [] };
+        g[key].spots.push(s);
+      });
+
+      AO.forEach(area => {
+        const areaGroups = {};
+        Object.entries(g).forEach(([key, val]) => {
+          if (val.area === area) areaGroups[key] = val;
+        });
+        if (Object.keys(areaGroups).length === 0) return;
+
+        const at = document.createElement('div'); at.className='sgt';
+        at.textContent = `── ${AN[area]} (${Object.values(areaGroups).reduce((a,b)=>a+b.spots.length,0)} 机位) ──`;
+        list.appendChild(at);
+
+        Object.entries(areaGroups).forEach(([key, grp]) => {
+          const sg = document.createElement('div'); sg.className='sgroup';
+          const sh = document.createElement('div'); sh.className='sgroup-h';
+          sh.innerHTML = `${grp.emoji} ${grp.name} <span class="cnt">${grp.spots.length} 个机位</span>`;
+          sg.appendChild(sh);
+
+          grp.spots.forEach(s => {
+            const c = document.createElement('div'); c.className='spot-card'; c.dataset.id=s.id;
+            const th = s.tags.map((t,i) => `<span class="stag t-${s.tc[i]||'sea'}">${t}</span>`).join('');
+            c.innerHTML = `<div class="sico" style="background:${CC[s.cat[0]]}18">${s.emoji}</div>
+              <div class="sinfo">
+                <div class="sname">${s.spot}</div>
+                <div class="spose">${s.pose}</div>
+                <div class="sdesc">${s.compose}</div>
+                <div class="stags">${th}</div>
+              </div>`;
+            c.addEventListener('click', () => flyTo(s.id));
+            sg.appendChild(c);
+          });
+          list.appendChild(sg);
+        });
+      });
+    }
+
+    document.querySelectorAll('.ftab').forEach(t => t.addEventListener('click', () => {
+      document.querySelectorAll('.ftab').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active'); curF=t.dataset.f; renderList(); updateM();
+    }));
+    document.querySelectorAll('.atab').forEach(t => t.addEventListener('click', () => {
+      document.querySelectorAll('.atab').forEach(x=>x.classList.remove('active'));
+      t.classList.add('active'); curA=t.dataset.a; renderList(); updateM();
+    }));
+    document.querySelectorAll('.rbtn').forEach(t => t.addEventListener('click', () => {
+      const was = t.classList.contains('active');
+      document.querySelectorAll('.rbtn').forEach(x=>x.classList.remove('active'));
+      curR = was ? null : t.dataset.r;
+      if (curR) t.classList.add('active');
+      renderList(); updateM();
+    }));
+    document.getElementById('searchBox').addEventListener('input', e => { searchT=e.target.value; renderList(); updateM(); });
+
+    function initMap() {
+      map = L.map('map', { center:[36.062,120.420], zoom:11, zoomControl:false, zoomAnimation:true, markerZoomAnimation:true });
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { subdomains:'abcd', maxZoom:20, maxNativeZoom:18, keepBuffer:4, updateWhenZooming:false }).addTo(map);
+      L.control.zoom({ position:'topright' }).addTo(map);
+      spots.forEach(s => {
+        const ic = L.divIcon({ className:'',
+          html:`<div class="cm"><div class="ml">${s.spot}</div><div class="mp" style="background:${CC[s.cat[0]]};${s.pro?'border:2px solid rgba(171,71,188,0.5);':''}"><span class="me">${s.emoji}</span></div></div>`,
+          iconSize:[28,36], iconAnchor:[14,36], popupAnchor:[0,-36] });
+        const m = L.marker([s.lat,s.lng], {icon:ic}).addTo(map);
+        m.on('click', () => showInfo(s));
+        markers[s.id] = m;
+      });
+    }
+
+    function updateM() {
+      spots.forEach(s => {
+        const m = markers[s.id]; if (!m) return;
+        let show = true;
+        if (curF!=='all' && !s.cat.includes(curF)) show=false;
+        if (curA!=='all' && s.area!==curA) show=false;
+        if (curR && (!s.r || !s.r.includes(curR))) show=false;
+        if (searchT && !s.name.includes(searchT) && !s.spot.includes(searchT)) show=false;
+        show ? map.addLayer(m) : map.removeLayer(m);
+      });
+    }
+
+    function flyTo(id) {
+      const s = spots.find(x=>x.id===id); if (!s) return;
+      map.flyTo([s.lat,s.lng], 15, { duration:0.8 });
+      document.querySelectorAll('.spot-card').forEach(c=>c.classList.remove('active'));
+      const c = document.querySelector(`.spot-card[data-id="${id}"]`);
+      if (c) { c.classList.add('active'); c.scrollIntoView({ behavior:'smooth', block:'nearest' }); }
+      showInfo(s);
+    }
+
+    function showInfo(s) {
+      const p = document.getElementById('infoPanel');
+      document.getElementById('iname').innerHTML = `${s.emoji} ${s.name} ${s.hot?'<span class="hot">热门</span>':''} ${s.pro?'<span class="pro">专业收录</span>':''}`;
+      document.getElementById('ipose').textContent = `📍 ${s.spot} — ${s.pose}`;
+      document.getElementById('idets').innerHTML = `
+        <div class="idet"><div class="idet-l">📸 最佳时间</div><div class="idet-v">${s.bt}</div></div>
+        <div class="idet"><div class="idet-l">🗓️ 最佳季节</div><div class="idet-v">${s.bs}</div></div>
+        <div class="idet"><div class="idet-l">💡 提示</div><div class="idet-v">${s.tip}</div></div>`;
+      let extra = '';
+      extra += `<div class="isection"><div class="isec-t">🎯 参照物</div><div class="isec-c">${s.ref}</div></div>`;
+      extra += `<div class="isection"><div class="isec-t">📐 拍摄角度</div><div class="isec-c">${s.angle}</div></div>`;
+      extra += `<div class="isection"><div class="isec-t">🖼️ 构图建议</div><div class="isec-c">${s.compose}</div></div>`;
+      document.getElementById('iExtra').innerHTML = extra;
+      const nav = `https://uri.amap.com/marker?position=${s.lng},${s.lat}&name=${encodeURIComponent(s.nav||s.name)}&callnative=1`;
+      const view = `https://www.amap.com/search?query=${encodeURIComponent(s.nav||s.name+' 青岛')}&city=370200`;
+      document.getElementById('iacts').innerHTML = `
+        <a href="${nav}" target="_blank" class="ibtn p">📍 高德导航</a>
+        <a href="${view}" target="_blank" class="ibtn">🗺️ 高德查看</a>`;
+      p.classList.add('show');
+    }
+
+    document.getElementById('iclose').addEventListener('click', () => { document.getElementById('infoPanel').classList.remove('show'); });
+
+    renderList();
+    initMap();
+    setTimeout(() => { map.invalidateSize(); }, 200);
+    window.addEventListener('resize', () => { map.invalidateSize(); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,2940 @@
+{
+  "version": 1,
+  "groupingVersion": 2,
+  "updatedAt": 1790038764181,
+  "canonicalIndex": {
+    "小盈": {
+      "count": 6,
+      "category": "product",
+      "variants": [],
+      "lastSeen": 1790038764179
+    },
+    "东西": {
+      "count": 3,
+      "category": "location",
+      "variants": [
+        "东南亚",
+        "东非"
+      ],
+      "lastSeen": 1789623686058
+    },
+    "加密": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794182378
+    },
+    "目前": {
+      "count": 9,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794185112
+    },
+    "云图": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794182378
+    },
+    "入门": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794182394
+    },
+    "假期": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182425
+    },
+    "海尔": {
+      "count": 26,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787823122439
+    },
+    "赛季": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182425
+    },
+    "新建": {
+      "count": 9,
+      "category": "location",
+      "variants": [
+        "新鲜度"
+      ],
+      "lastSeen": 1787794184616,
+      "canonical": "新西兰"
+    },
+    "当前": {
+      "count": 18,
+      "category": "date_period",
+      "variants": [
+        "当月",
+        "当代"
+      ],
+      "lastSeen": 1787794185112,
+      "canonical": "当天"
+    },
+    "美加": {
+      "count": 3,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "美洲"
+    },
+    "世界杯": {
+      "count": 10,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "飞书": {
+      "count": 315,
+      "category": "app",
+      "variants": [],
+      "lastSeen": 1787885639021
+    },
+    "早上": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182461
+    },
+    "昨晚": {
+      "count": 13,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182992,
+      "canonical": "昨日"
+    },
+    "新闻联播": {
+      "count": 72,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787885639021
+    },
+    "Python": {
+      "count": 138,
+      "category": "technology",
+      "variants": [],
+      "lastSeen": 1787885639021
+    },
+    "python": {
+      "count": 68,
+      "category": "technology",
+      "variants": [],
+      "lastSeen": 1787885639021
+    },
+    "华为": {
+      "count": 1,
+      "category": "person",
+      "variants": [
+        "华罗庚"
+      ],
+      "lastSeen": 1787794182610
+    },
+    "关联": {
+      "count": 3,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "下次": {
+      "count": 19,
+      "category": "date_period",
+      "variants": [
+        "下来"
+      ],
+      "lastSeen": 1787794185233,
+      "canonical": "下午"
+    },
+    "独立思考": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794182734
+    },
+    "搜集情报": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794182734
+    },
+    "今日": {
+      "count": 28,
+      "category": "date_period",
+      "variants": [
+        "今晚",
+        "今年"
+      ],
+      "lastSeen": 1787794185233
+    },
+    "今晚": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182734,
+      "canonical": "今日"
+    },
+    "青岛": {
+      "count": 9,
+      "category": "location",
+      "variants": [
+        "青岛市"
+      ],
+      "lastSeen": 1787794184864
+    },
+    "中国": {
+      "count": 12,
+      "category": "location",
+      "variants": [
+        "中关村"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "加进来": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794182734,
+      "canonical": "加粗"
+    },
+    "海尔集团": {
+      "count": 1,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794182760
+    },
+    "驾驶证": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794182760
+    },
+    "黑名单": {
+      "count": 1,
+      "category": "person",
+      "variants": [
+        "黑客"
+      ],
+      "lastSeen": 1787794182760
+    },
+    "青岛海尔": {
+      "count": 2,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794182760
+    },
+    "黄岛": {
+      "count": 2,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794182760
+    },
+    "重庆": {
+      "count": 2,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794182760
+    },
+    "当天": {
+      "count": 133,
+      "category": "date_period",
+      "variants": [
+        "当前"
+      ],
+      "lastSeen": 1787885639021
+    },
+    "远近": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182760
+    },
+    "当月": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182760,
+      "canonical": "当前"
+    },
+    "月底": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794182760
+    },
+    "美国": {
+      "count": 8,
+      "category": "location",
+      "variants": [
+        "美加"
+      ],
+      "lastSeen": 1787794184948,
+      "canonical": "美洲"
+    },
+    "上市公司": {
+      "count": 1,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794182814
+    },
+    "五星": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794182857
+    },
+    "四星": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794182857
+    },
+    "澳洲": {
+      "count": 148,
+      "category": "location",
+      "variants": [
+        "澳新"
+      ],
+      "lastSeen": 1787794185304
+    },
+    "三甲胺": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794182905,
+      "canonical": "三星"
+    },
+    "中文": {
+      "count": 16,
+      "category": "other",
+      "variants": [
+        "中信"
+      ],
+      "lastSeen": 1787794185144
+    },
+    "密封": {
+      "count": 3,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "明白": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794182905
+    },
+    "联网": {
+      "count": 2,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183022
+    },
+    "周期": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794183022,
+      "canonical": "周五"
+    },
+    "维修工": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183022
+    },
+    "论文": {
+      "count": 27,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "深度": {
+      "count": 5,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "新鲜度": {
+      "count": 2,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183049,
+      "canonical": "新建"
+    },
+    "后期": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "中信": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183156,
+      "canonical": "中文"
+    },
+    "权威": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "智慧": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183156,
+      "canonical": "智能化"
+    },
+    "集成电路": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "通讯": {
+      "count": 2,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "正文": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "美观": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "白底": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "中华人民共和国": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "公正": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "英文": {
+      "count": 6,
+      "category": "other",
+      "variants": [
+        "英语"
+      ],
+      "lastSeen": 1789719785909
+    },
+    "如下": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794185112
+    },
+    "华罗庚": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183156,
+      "canonical": "华为"
+    },
+    "北京": {
+      "count": 3,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "布什": {
+      "count": 1,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "建华": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "程裕淇": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "永康": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "edge": {
+      "count": 5,
+      "category": "app",
+      "variants": [],
+      "lastSeen": 1787794184717
+    },
+    "小林": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "西安": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183156,
+      "canonical": "西屋"
+    },
+    "西安交通大学": {
+      "count": 1,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794183156
+    },
+    "卡片": {
+      "count": 543,
+      "category": "other",
+      "variants": [
+        "卡扣"
+      ],
+      "lastSeen": 1787885639021
+    },
+    "加粗": {
+      "count": 48,
+      "category": "person",
+      "variants": [
+        "加进来"
+      ],
+      "lastSeen": 1787885639021
+    },
+    "内容简介": {
+      "count": 48,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787885639021
+    },
+    "日期": {
+      "count": 132,
+      "category": "date_period",
+      "variants": [
+        "日历",
+        "日前"
+      ],
+      "lastSeen": 1787885639021
+    },
+    "罗列": {
+      "count": 7,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183540
+    },
+    "上午": {
+      "count": 58,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794185310,
+      "canonical": "上次"
+    },
+    "昨日": {
+      "count": 34,
+      "category": "date_period",
+      "variants": [
+        "昨晚"
+      ],
+      "lastSeen": 1787885639021
+    },
+    "海达": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183412,
+      "canonical": "海信"
+    },
+    "浪涌": {
+      "count": 2,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183412
+    },
+    "青岛市": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183433,
+      "canonical": "青岛"
+    },
+    "崂山区": {
+      "count": 3,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184522
+    },
+    "宝剑": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183472
+    },
+    "开关门": {
+      "count": 2,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "美的": {
+      "count": 139,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794185321
+    },
+    "延时": {
+      "count": 2,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794183645
+    },
+    "英语口语": {
+      "count": 2,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183972
+    },
+    "海信": {
+      "count": 172,
+      "category": "other",
+      "variants": [
+        "海达"
+      ],
+      "lastSeen": 1787794185321
+    },
+    "英语": {
+      "count": 3,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183972,
+      "canonical": "英文"
+    },
+    "山东": {
+      "count": 2,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184864
+    },
+    "论文格式": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183752
+    },
+    "冷凝": {
+      "count": 5,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183870
+    },
+    "漏报": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794183773
+    },
+    "马鞍": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183848
+    },
+    "当代": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794183936,
+      "canonical": "当前"
+    },
+    "养生茶": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183936
+    },
+    "幸福感": {
+      "count": 2,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794183936
+    },
+    "瞬间": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "上市": {
+      "count": 5,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794185144
+    },
+    "上次": {
+      "count": 68,
+      "category": "date_period",
+      "variants": [
+        "上午"
+      ],
+      "lastSeen": 1787794185310
+    },
+    "三星": {
+      "count": 121,
+      "category": "other",
+      "variants": [
+        "三甲胺"
+      ],
+      "lastSeen": 1787794185321
+    },
+    "西屋": {
+      "count": 72,
+      "category": "location",
+      "variants": [
+        "西安"
+      ],
+      "lastSeen": 1787794185321
+    },
+    "明早": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184058
+    },
+    "段时间": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184058
+    },
+    "下午": {
+      "count": 47,
+      "category": "date_period",
+      "variants": [
+        "下次"
+      ],
+      "lastSeen": 1787794185271
+    },
+    "新西兰": {
+      "count": 19,
+      "category": "location",
+      "variants": [
+        "新建"
+      ],
+      "lastSeen": 1787794185310
+    },
+    "傍晚": {
+      "count": 24,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794185198
+    },
+    "React": {
+      "count": 1,
+      "category": "technology",
+      "variants": [],
+      "lastSeen": 1787794184276
+    },
+    "过时": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [
+        "过期"
+      ],
+      "lastSeen": 1787794184426
+    },
+    "腾讯": {
+      "count": 8,
+      "category": "other",
+      "variants": [
+        "腾讯网"
+      ],
+      "lastSeen": 1787794185098
+    },
+    "夜间": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "智能化": {
+      "count": 7,
+      "category": "person",
+      "variants": [
+        "智慧",
+        "智能家居"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "恒温": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "普通": {
+      "count": 2,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "平时": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "广角": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "冰淇淋": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "和暖": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "杜绝": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "尼龙": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184452
+    },
+    "嵌入式": {
+      "count": 3,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "卡扣": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184452,
+      "canonical": "卡片"
+    },
+    "悉尼大学": {
+      "count": 1,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794184522
+    },
+    "申报": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184522
+    },
+    "这三项": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184522
+    },
+    "往年": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184522
+    },
+    "今年": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "今日"
+    },
+    "多少钱": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184522
+    },
+    "安家费": {
+      "count": 2,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184522
+    },
+    "方方正正": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184547
+    },
+    "哈士奇": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184547
+    },
+    "近期": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [
+        "近日"
+      ],
+      "lastSeen": 1787794184601
+    },
+    "本来": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184608,
+      "canonical": "本周"
+    },
+    "中去": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184616
+    },
+    "chrome": {
+      "count": 1,
+      "category": "app",
+      "variants": [],
+      "lastSeen": 1787794184717
+    },
+    "补丁": {
+      "count": 3,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184717
+    },
+    "下来": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184717,
+      "canonical": "下次"
+    },
+    "go": {
+      "count": 10,
+      "category": "technology",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "图里": {
+      "count": 1,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "美洲": {
+      "count": 51,
+      "category": "location",
+      "variants": [
+        "美加",
+        "美国"
+      ],
+      "lastSeen": 1787794184997
+    },
+    "美国市场": {
+      "count": 8,
+      "category": "company",
+      "variants": [
+        "美国通用"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "三星电子": {
+      "count": 5,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "搜狐": {
+      "count": 8,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "新浪网": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "日历": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "日期"
+    },
+    "腾讯网": {
+      "count": 6,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "腾讯"
+    },
+    "近日": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "近期"
+    },
+    "塞进": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "太平洋": {
+      "count": 12,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "除霜": {
+      "count": 5,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "¥16999": {
+      "count": 1,
+      "category": "amount",
+      "variants": [
+        "¥ 7999",
+        "¥5999",
+        "¥4999"
+      ],
+      "lastSeen": 1787794184948,
+      "canonical": "¥9999"
+    },
+    "¥5499": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "¥9999"
+    },
+    "十字": {
+      "count": 5,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "现代": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "新一代": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "¥4588": {
+      "count": 2,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "¥9999": {
+      "count": 2,
+      "category": "amount",
+      "variants": [
+        "¥16999",
+        "¥5499"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "中关村": {
+      "count": 6,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "中国"
+    },
+    "智能家居": {
+      "count": 4,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "智能化"
+    },
+    "双开门": {
+      "count": 6,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "四门": {
+      "count": 3,
+      "category": "location",
+      "variants": [
+        "四区"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "高科技": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "$999.97": {
+      "count": 1,
+      "category": "amount",
+      "variants": [
+        "$299.99",
+        "$999.99"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "$2554.99": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "亚马逊": {
+      "count": 6,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "易购网": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "触摸屏": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "$299.99": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "$999.97"
+    },
+    "$999.99": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "$999.97"
+    },
+    "$299": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "快讯": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "保鲜": {
+      "count": 11,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "京东": {
+      "count": 8,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "惠而浦": {
+      "count": 31,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "¥9499.00": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "¥ 7999": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "¥16999"
+    },
+    "四区": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "四门"
+    },
+    "第六感": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "卓越": {
+      "count": 4,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "荣获": {
+      "count": 1,
+      "category": "person",
+      "variants": [
+        "荣誉"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "荣誉": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "荣获"
+    },
+    "无霜": {
+      "count": 4,
+      "category": "other",
+      "variants": [
+        "无噪音"
+      ],
+      "lastSeen": 1787794184948
+    },
+    "星夜": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "旭日": {
+      "count": 1,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "¥5999": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "¥16999"
+    },
+    "拉斯维加斯": {
+      "count": 3,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "美国通用电气": {
+      "count": 3,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "无噪音": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "无霜"
+    },
+    "美国通用": {
+      "count": 2,
+      "category": "company",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "美国市场"
+    },
+    "¥22500": {
+      "count": 2,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "拉开帷幕": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "¥4999": {
+      "count": 1,
+      "category": "amount",
+      "variants": [],
+      "lastSeen": 1787794184948,
+      "canonical": "¥16999"
+    },
+    "选购指南": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "大力神杯": {
+      "count": 4,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184948
+    },
+    "未来": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794184957
+    },
+    "东南亚": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184997,
+      "canonical": "东西"
+    },
+    "欧洲": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184997
+    },
+    "拉美": {
+      "count": 1,
+      "category": "other",
+      "variants": [],
+      "lastSeen": 1787794184997
+    },
+    "东非": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184997,
+      "canonical": "东西"
+    },
+    "日本": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184997
+    },
+    "南亚": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184997
+    },
+    "满意度": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794184997
+    },
+    "立方体": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794185042
+    },
+    "黑马": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794185098
+    },
+    "黑客": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794185098,
+      "canonical": "黑名单"
+    },
+    "马拉松赛": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794185098
+    },
+    "本周": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [
+        "本来"
+      ],
+      "lastSeen": 1787794185098
+    },
+    "日前": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794185098,
+      "canonical": "日期"
+    },
+    "周五": {
+      "count": 2,
+      "category": "date_period",
+      "variants": [
+        "周期"
+      ],
+      "lastSeen": 1787794185098
+    },
+    "谢谢": {
+      "count": 1,
+      "category": "person",
+      "variants": [],
+      "lastSeen": 1787794185098
+    },
+    "长度": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787794185112
+    },
+    "过期": {
+      "count": 1,
+      "category": "date_period",
+      "variants": [],
+      "lastSeen": 1787794185294,
+      "canonical": "过时"
+    },
+    "澳新": {
+      "count": 1,
+      "category": "location",
+      "variants": [],
+      "lastSeen": 1787817581983,
+      "canonical": "澳洲"
+    }
+  },
+  "prefixIndex": {
+    "小": [
+      "小盈",
+      "小林"
+    ],
+    "小盈": [
+      "小盈"
+    ],
+    "东": [
+      "东西"
+    ],
+    "东西": [
+      "东西"
+    ],
+    "东南": [
+      "东西"
+    ],
+    "东南亚": [
+      "东西"
+    ],
+    "东非": [
+      "东西"
+    ],
+    "加": [
+      "加密",
+      "加粗"
+    ],
+    "加密": [
+      "加密"
+    ],
+    "目": [
+      "目前"
+    ],
+    "目前": [
+      "目前"
+    ],
+    "云": [
+      "云图"
+    ],
+    "云图": [
+      "云图"
+    ],
+    "入": [
+      "入门"
+    ],
+    "入门": [
+      "入门"
+    ],
+    "假": [
+      "假期"
+    ],
+    "假期": [
+      "假期"
+    ],
+    "海": [
+      "海尔",
+      "海尔集团",
+      "海信"
+    ],
+    "海尔": [
+      "海尔",
+      "海尔集团"
+    ],
+    "赛": [
+      "赛季"
+    ],
+    "赛季": [
+      "赛季"
+    ],
+    "世": [
+      "世界杯"
+    ],
+    "世界": [
+      "世界杯"
+    ],
+    "世界杯": [
+      "世界杯"
+    ],
+    "飞": [
+      "飞书"
+    ],
+    "飞书": [
+      "飞书"
+    ],
+    "早": [
+      "早上"
+    ],
+    "早上": [
+      "早上"
+    ],
+    "新": [
+      "新闻联播",
+      "新西兰",
+      "新浪网",
+      "新一代"
+    ],
+    "新闻": [
+      "新闻联播"
+    ],
+    "新闻联": [
+      "新闻联播"
+    ],
+    "新闻联播": [
+      "新闻联播"
+    ],
+    "p": [
+      "Python",
+      "python"
+    ],
+    "py": [
+      "Python",
+      "python"
+    ],
+    "pyt": [
+      "Python",
+      "python"
+    ],
+    "pyth": [
+      "Python",
+      "python"
+    ],
+    "pytho": [
+      "Python",
+      "python"
+    ],
+    "python": [
+      "Python",
+      "python"
+    ],
+    "华": [
+      "华为"
+    ],
+    "华为": [
+      "华为"
+    ],
+    "华罗": [
+      "华为"
+    ],
+    "华罗庚": [
+      "华为"
+    ],
+    "关": [
+      "关联"
+    ],
+    "关联": [
+      "关联"
+    ],
+    "独": [
+      "独立思考"
+    ],
+    "独立": [
+      "独立思考"
+    ],
+    "独立思": [
+      "独立思考"
+    ],
+    "独立思考": [
+      "独立思考"
+    ],
+    "搜": [
+      "搜集情报",
+      "搜狐"
+    ],
+    "搜集": [
+      "搜集情报"
+    ],
+    "搜集情": [
+      "搜集情报"
+    ],
+    "搜集情报": [
+      "搜集情报"
+    ],
+    "今": [
+      "今日"
+    ],
+    "今日": [
+      "今日"
+    ],
+    "今晚": [
+      "今日"
+    ],
+    "今年": [
+      "今日"
+    ],
+    "青": [
+      "青岛",
+      "青岛海尔"
+    ],
+    "青岛": [
+      "青岛",
+      "青岛海尔"
+    ],
+    "青岛市": [
+      "青岛"
+    ],
+    "中": [
+      "中国",
+      "中文",
+      "中华人民共和国",
+      "中去"
+    ],
+    "中国": [
+      "中国"
+    ],
+    "中关": [
+      "中国"
+    ],
+    "中关村": [
+      "中国"
+    ],
+    "海尔集": [
+      "海尔集团"
+    ],
+    "海尔集团": [
+      "海尔集团"
+    ],
+    "驾": [
+      "驾驶证"
+    ],
+    "驾驶": [
+      "驾驶证"
+    ],
+    "驾驶证": [
+      "驾驶证"
+    ],
+    "黑": [
+      "黑名单",
+      "黑马"
+    ],
+    "黑名": [
+      "黑名单"
+    ],
+    "黑名单": [
+      "黑名单"
+    ],
+    "黑客": [
+      "黑名单"
+    ],
+    "青岛海": [
+      "青岛海尔"
+    ],
+    "青岛海尔": [
+      "青岛海尔"
+    ],
+    "黄": [
+      "黄岛"
+    ],
+    "黄岛": [
+      "黄岛"
+    ],
+    "重": [
+      "重庆"
+    ],
+    "重庆": [
+      "重庆"
+    ],
+    "当": [
+      "当天"
+    ],
+    "当天": [
+      "当天"
+    ],
+    "当前": [
+      "当天"
+    ],
+    "远": [
+      "远近"
+    ],
+    "远近": [
+      "远近"
+    ],
+    "月": [
+      "月底"
+    ],
+    "月底": [
+      "月底"
+    ],
+    "上": [
+      "上市公司",
+      "上市",
+      "上次"
+    ],
+    "上市": [
+      "上市公司",
+      "上市"
+    ],
+    "上市公": [
+      "上市公司"
+    ],
+    "上市公司": [
+      "上市公司"
+    ],
+    "五": [
+      "五星"
+    ],
+    "五星": [
+      "五星"
+    ],
+    "四": [
+      "四星",
+      "四门"
+    ],
+    "四星": [
+      "四星"
+    ],
+    "澳": [
+      "澳洲"
+    ],
+    "澳洲": [
+      "澳洲"
+    ],
+    "澳新": [
+      "澳洲"
+    ],
+    "中文": [
+      "中文"
+    ],
+    "中信": [
+      "中文"
+    ],
+    "密": [
+      "密封"
+    ],
+    "密封": [
+      "密封"
+    ],
+    "明": [
+      "明白",
+      "明早"
+    ],
+    "明白": [
+      "明白"
+    ],
+    "联": [
+      "联网"
+    ],
+    "联网": [
+      "联网"
+    ],
+    "维": [
+      "维修工"
+    ],
+    "维修": [
+      "维修工"
+    ],
+    "维修工": [
+      "维修工"
+    ],
+    "论": [
+      "论文",
+      "论文格式"
+    ],
+    "论文": [
+      "论文",
+      "论文格式"
+    ],
+    "深": [
+      "深度"
+    ],
+    "深度": [
+      "深度"
+    ],
+    "后": [
+      "后期"
+    ],
+    "后期": [
+      "后期"
+    ],
+    "权": [
+      "权威"
+    ],
+    "权威": [
+      "权威"
+    ],
+    "集": [
+      "集成电路"
+    ],
+    "集成": [
+      "集成电路"
+    ],
+    "集成电": [
+      "集成电路"
+    ],
+    "集成电路": [
+      "集成电路"
+    ],
+    "通": [
+      "通讯"
+    ],
+    "通讯": [
+      "通讯"
+    ],
+    "正": [
+      "正文"
+    ],
+    "正文": [
+      "正文"
+    ],
+    "美": [
+      "美观",
+      "美的",
+      "美洲",
+      "美国市场",
+      "美国通用电气"
+    ],
+    "美观": [
+      "美观"
+    ],
+    "白": [
+      "白底"
+    ],
+    "白底": [
+      "白底"
+    ],
+    "中华": [
+      "中华人民共和国"
+    ],
+    "中华人": [
+      "中华人民共和国"
+    ],
+    "中华人民": [
+      "中华人民共和国"
+    ],
+    "中华人民共": [
+      "中华人民共和国"
+    ],
+    "中华人民共和": [
+      "中华人民共和国"
+    ],
+    "中华人民共和国": [
+      "中华人民共和国"
+    ],
+    "公": [
+      "公正"
+    ],
+    "公正": [
+      "公正"
+    ],
+    "英": [
+      "英文",
+      "英语口语"
+    ],
+    "英文": [
+      "英文"
+    ],
+    "英语": [
+      "英文",
+      "英语口语"
+    ],
+    "如": [
+      "如下"
+    ],
+    "如下": [
+      "如下"
+    ],
+    "北": [
+      "北京"
+    ],
+    "北京": [
+      "北京"
+    ],
+    "布": [
+      "布什"
+    ],
+    "布什": [
+      "布什"
+    ],
+    "建": [
+      "建华"
+    ],
+    "建华": [
+      "建华"
+    ],
+    "程": [
+      "程裕淇"
+    ],
+    "程裕": [
+      "程裕淇"
+    ],
+    "程裕淇": [
+      "程裕淇"
+    ],
+    "永": [
+      "永康"
+    ],
+    "永康": [
+      "永康"
+    ],
+    "e": [
+      "edge"
+    ],
+    "ed": [
+      "edge"
+    ],
+    "edg": [
+      "edge"
+    ],
+    "edge": [
+      "edge"
+    ],
+    "小林": [
+      "小林"
+    ],
+    "西": [
+      "西安交通大学",
+      "西屋"
+    ],
+    "西安": [
+      "西安交通大学",
+      "西屋"
+    ],
+    "西安交": [
+      "西安交通大学"
+    ],
+    "西安交通": [
+      "西安交通大学"
+    ],
+    "西安交通大": [
+      "西安交通大学"
+    ],
+    "西安交通大学": [
+      "西安交通大学"
+    ],
+    "卡": [
+      "卡片"
+    ],
+    "卡片": [
+      "卡片"
+    ],
+    "卡扣": [
+      "卡片"
+    ],
+    "加粗": [
+      "加粗"
+    ],
+    "加进": [
+      "加粗"
+    ],
+    "加进来": [
+      "加粗"
+    ],
+    "内": [
+      "内容简介"
+    ],
+    "内容": [
+      "内容简介"
+    ],
+    "内容简": [
+      "内容简介"
+    ],
+    "内容简介": [
+      "内容简介"
+    ],
+    "日": [
+      "日期",
+      "日本"
+    ],
+    "日期": [
+      "日期"
+    ],
+    "日历": [
+      "日期"
+    ],
+    "日前": [
+      "日期"
+    ],
+    "罗": [
+      "罗列"
+    ],
+    "罗列": [
+      "罗列"
+    ],
+    "昨": [
+      "昨日"
+    ],
+    "昨日": [
+      "昨日"
+    ],
+    "昨晚": [
+      "昨日"
+    ],
+    "浪": [
+      "浪涌"
+    ],
+    "浪涌": [
+      "浪涌"
+    ],
+    "崂": [
+      "崂山区"
+    ],
+    "崂山": [
+      "崂山区"
+    ],
+    "崂山区": [
+      "崂山区"
+    ],
+    "宝": [
+      "宝剑"
+    ],
+    "宝剑": [
+      "宝剑"
+    ],
+    "开": [
+      "开关门"
+    ],
+    "开关": [
+      "开关门"
+    ],
+    "开关门": [
+      "开关门"
+    ],
+    "美的": [
+      "美的"
+    ],
+    "延": [
+      "延时"
+    ],
+    "延时": [
+      "延时"
+    ],
+    "英语口": [
+      "英语口语"
+    ],
+    "英语口语": [
+      "英语口语"
+    ],
+    "海信": [
+      "海信"
+    ],
+    "海达": [
+      "海信"
+    ],
+    "山": [
+      "山东"
+    ],
+    "山东": [
+      "山东"
+    ],
+    "论文格": [
+      "论文格式"
+    ],
+    "论文格式": [
+      "论文格式"
+    ],
+    "冷": [
+      "冷凝"
+    ],
+    "冷凝": [
+      "冷凝"
+    ],
+    "漏": [
+      "漏报"
+    ],
+    "漏报": [
+      "漏报"
+    ],
+    "马": [
+      "马鞍",
+      "马拉松赛"
+    ],
+    "马鞍": [
+      "马鞍"
+    ],
+    "养": [
+      "养生茶"
+    ],
+    "养生": [
+      "养生茶"
+    ],
+    "养生茶": [
+      "养生茶"
+    ],
+    "幸": [
+      "幸福感"
+    ],
+    "幸福": [
+      "幸福感"
+    ],
+    "幸福感": [
+      "幸福感"
+    ],
+    "瞬": [
+      "瞬间"
+    ],
+    "瞬间": [
+      "瞬间"
+    ],
+    "上次": [
+      "上次"
+    ],
+    "上午": [
+      "上次"
+    ],
+    "三": [
+      "三星",
+      "三星电子"
+    ],
+    "三星": [
+      "三星",
+      "三星电子"
+    ],
+    "三甲": [
+      "三星"
+    ],
+    "三甲胺": [
+      "三星"
+    ],
+    "西屋": [
+      "西屋"
+    ],
+    "明早": [
+      "明早"
+    ],
+    "段": [
+      "段时间"
+    ],
+    "段时": [
+      "段时间"
+    ],
+    "段时间": [
+      "段时间"
+    ],
+    "下": [
+      "下午"
+    ],
+    "下午": [
+      "下午"
+    ],
+    "下次": [
+      "下午"
+    ],
+    "新西": [
+      "新西兰"
+    ],
+    "新西兰": [
+      "新西兰"
+    ],
+    "新建": [
+      "新西兰"
+    ],
+    "傍": [
+      "傍晚"
+    ],
+    "傍晚": [
+      "傍晚"
+    ],
+    "r": [
+      "React"
+    ],
+    "re": [
+      "React"
+    ],
+    "rea": [
+      "React"
+    ],
+    "reac": [
+      "React"
+    ],
+    "react": [
+      "React"
+    ],
+    "过": [
+      "过时"
+    ],
+    "过时": [
+      "过时"
+    ],
+    "过期": [
+      "过时"
+    ],
+    "腾": [
+      "腾讯"
+    ],
+    "腾讯": [
+      "腾讯"
+    ],
+    "腾讯网": [
+      "腾讯"
+    ],
+    "夜": [
+      "夜间"
+    ],
+    "夜间": [
+      "夜间"
+    ],
+    "智": [
+      "智能化"
+    ],
+    "智能": [
+      "智能化"
+    ],
+    "智能化": [
+      "智能化"
+    ],
+    "智慧": [
+      "智能化"
+    ],
+    "智能家": [
+      "智能化"
+    ],
+    "智能家居": [
+      "智能化"
+    ],
+    "恒": [
+      "恒温"
+    ],
+    "恒温": [
+      "恒温"
+    ],
+    "普": [
+      "普通"
+    ],
+    "普通": [
+      "普通"
+    ],
+    "平": [
+      "平时"
+    ],
+    "平时": [
+      "平时"
+    ],
+    "广": [
+      "广角"
+    ],
+    "广角": [
+      "广角"
+    ],
+    "冰": [
+      "冰淇淋"
+    ],
+    "冰淇": [
+      "冰淇淋"
+    ],
+    "冰淇淋": [
+      "冰淇淋"
+    ],
+    "和": [
+      "和暖"
+    ],
+    "和暖": [
+      "和暖"
+    ],
+    "杜": [
+      "杜绝"
+    ],
+    "杜绝": [
+      "杜绝"
+    ],
+    "尼": [
+      "尼龙"
+    ],
+    "尼龙": [
+      "尼龙"
+    ],
+    "嵌": [
+      "嵌入式"
+    ],
+    "嵌入": [
+      "嵌入式"
+    ],
+    "嵌入式": [
+      "嵌入式"
+    ],
+    "悉": [
+      "悉尼大学"
+    ],
+    "悉尼": [
+      "悉尼大学"
+    ],
+    "悉尼大": [
+      "悉尼大学"
+    ],
+    "悉尼大学": [
+      "悉尼大学"
+    ],
+    "申": [
+      "申报"
+    ],
+    "申报": [
+      "申报"
+    ],
+    "这": [
+      "这三项"
+    ],
+    "这三": [
+      "这三项"
+    ],
+    "这三项": [
+      "这三项"
+    ],
+    "往": [
+      "往年"
+    ],
+    "往年": [
+      "往年"
+    ],
+    "多": [
+      "多少钱"
+    ],
+    "多少": [
+      "多少钱"
+    ],
+    "多少钱": [
+      "多少钱"
+    ],
+    "安": [
+      "安家费"
+    ],
+    "安家": [
+      "安家费"
+    ],
+    "安家费": [
+      "安家费"
+    ],
+    "方": [
+      "方方正正"
+    ],
+    "方方": [
+      "方方正正"
+    ],
+    "方方正": [
+      "方方正正"
+    ],
+    "方方正正": [
+      "方方正正"
+    ],
+    "哈": [
+      "哈士奇"
+    ],
+    "哈士": [
+      "哈士奇"
+    ],
+    "哈士奇": [
+      "哈士奇"
+    ],
+    "近": [
+      "近期"
+    ],
+    "近期": [
+      "近期"
+    ],
+    "近日": [
+      "近期"
+    ],
+    "中去": [
+      "中去"
+    ],
+    "c": [
+      "chrome"
+    ],
+    "ch": [
+      "chrome"
+    ],
+    "chr": [
+      "chrome"
+    ],
+    "chro": [
+      "chrome"
+    ],
+    "chrom": [
+      "chrome"
+    ],
+    "chrome": [
+      "chrome"
+    ],
+    "补": [
+      "补丁"
+    ],
+    "补丁": [
+      "补丁"
+    ],
+    "g": [
+      "go"
+    ],
+    "go": [
+      "go"
+    ],
+    "图": [
+      "图里"
+    ],
+    "图里": [
+      "图里"
+    ],
+    "美洲": [
+      "美洲"
+    ],
+    "美加": [
+      "美洲"
+    ],
+    "美国": [
+      "美洲",
+      "美国市场",
+      "美国通用电气"
+    ],
+    "美国市": [
+      "美国市场"
+    ],
+    "美国市场": [
+      "美国市场"
+    ],
+    "美国通": [
+      "美国市场",
+      "美国通用电气"
+    ],
+    "美国通用": [
+      "美国市场",
+      "美国通用电气"
+    ],
+    "三星电": [
+      "三星电子"
+    ],
+    "三星电子": [
+      "三星电子"
+    ],
+    "搜狐": [
+      "搜狐"
+    ],
+    "新浪": [
+      "新浪网"
+    ],
+    "新浪网": [
+      "新浪网"
+    ],
+    "塞": [
+      "塞进"
+    ],
+    "塞进": [
+      "塞进"
+    ],
+    "太": [
+      "太平洋"
+    ],
+    "太平": [
+      "太平洋"
+    ],
+    "太平洋": [
+      "太平洋"
+    ],
+    "除": [
+      "除霜"
+    ],
+    "除霜": [
+      "除霜"
+    ],
+    "十": [
+      "十字"
+    ],
+    "十字": [
+      "十字"
+    ],
+    "现": [
+      "现代"
+    ],
+    "现代": [
+      "现代"
+    ],
+    "新一": [
+      "新一代"
+    ],
+    "新一代": [
+      "新一代"
+    ],
+    "¥": [
+      "¥4588",
+      "¥9999",
+      "¥9499.00",
+      "¥22500"
+    ],
+    "¥4": [
+      "¥4588"
+    ],
+    "¥45": [
+      "¥4588"
+    ],
+    "¥458": [
+      "¥4588"
+    ],
+    "¥4588": [
+      "¥4588"
+    ],
+    "¥9": [
+      "¥9999",
+      "¥9499.00"
+    ],
+    "¥99": [
+      "¥9999"
+    ],
+    "¥999": [
+      "¥9999"
+    ],
+    "¥9999": [
+      "¥9999"
+    ],
+    "¥1": [
+      "¥9999"
+    ],
+    "¥16": [
+      "¥9999"
+    ],
+    "¥169": [
+      "¥9999"
+    ],
+    "¥1699": [
+      "¥9999"
+    ],
+    "¥16999": [
+      "¥9999"
+    ],
+    "¥5": [
+      "¥9999"
+    ],
+    "¥54": [
+      "¥9999"
+    ],
+    "¥549": [
+      "¥9999"
+    ],
+    "¥5499": [
+      "¥9999"
+    ],
+    "双": [
+      "双开门"
+    ],
+    "双开": [
+      "双开门"
+    ],
+    "双开门": [
+      "双开门"
+    ],
+    "四门": [
+      "四门"
+    ],
+    "四区": [
+      "四门"
+    ],
+    "高": [
+      "高科技"
+    ],
+    "高科": [
+      "高科技"
+    ],
+    "高科技": [
+      "高科技"
+    ],
+    "$": [
+      "$999.97",
+      "$2554.99",
+      "$299"
+    ],
+    "$9": [
+      "$999.97"
+    ],
+    "$99": [
+      "$999.97"
+    ],
+    "$999": [
+      "$999.97"
+    ],
+    "$999.": [
+      "$999.97"
+    ],
+    "$999.9": [
+      "$999.97"
+    ],
+    "$999.97": [
+      "$999.97"
+    ],
+    "$2": [
+      "$999.97",
+      "$2554.99",
+      "$299"
+    ],
+    "$29": [
+      "$999.97",
+      "$299"
+    ],
+    "$299": [
+      "$999.97",
+      "$299"
+    ],
+    "$299.": [
+      "$999.97"
+    ],
+    "$299.9": [
+      "$999.97"
+    ],
+    "$299.99": [
+      "$999.97"
+    ],
+    "$999.99": [
+      "$999.97"
+    ],
+    "$25": [
+      "$2554.99"
+    ],
+    "$255": [
+      "$2554.99"
+    ],
+    "$2554": [
+      "$2554.99"
+    ],
+    "$2554.": [
+      "$2554.99"
+    ],
+    "$2554.9": [
+      "$2554.99"
+    ],
+    "$2554.99": [
+      "$2554.99"
+    ],
+    "亚": [
+      "亚马逊"
+    ],
+    "亚马": [
+      "亚马逊"
+    ],
+    "亚马逊": [
+      "亚马逊"
+    ],
+    "易": [
+      "易购网"
+    ],
+    "易购": [
+      "易购网"
+    ],
+    "易购网": [
+      "易购网"
+    ],
+    "触": [
+      "触摸屏"
+    ],
+    "触摸": [
+      "触摸屏"
+    ],
+    "触摸屏": [
+      "触摸屏"
+    ],
+    "快": [
+      "快讯"
+    ],
+    "快讯": [
+      "快讯"
+    ],
+    "保": [
+      "保鲜"
+    ],
+    "保鲜": [
+      "保鲜"
+    ],
+    "京": [
+      "京东"
+    ],
+    "京东": [
+      "京东"
+    ],
+    "惠": [
+      "惠而浦"
+    ],
+    "惠而": [
+      "惠而浦"
+    ],
+    "惠而浦": [
+      "惠而浦"
+    ],
+    "¥94": [
+      "¥9499.00"
+    ],
+    "¥949": [
+      "¥9499.00"
+    ],
+    "¥9499": [
+      "¥9499.00"
+    ],
+    "¥9499.": [
+      "¥9499.00"
+    ],
+    "¥9499.0": [
+      "¥9499.00"
+    ],
+    "¥9499.00": [
+      "¥9499.00"
+    ],
+    "第": [
+      "第六感"
+    ],
+    "第六": [
+      "第六感"
+    ],
+    "第六感": [
+      "第六感"
+    ],
+    "卓": [
+      "卓越"
+    ],
+    "卓越": [
+      "卓越"
+    ],
+    "荣": [
+      "荣获"
+    ],
+    "荣获": [
+      "荣获"
+    ],
+    "荣誉": [
+      "荣获"
+    ],
+    "无": [
+      "无霜"
+    ],
+    "无霜": [
+      "无霜"
+    ],
+    "无噪": [
+      "无霜"
+    ],
+    "无噪音": [
+      "无霜"
+    ],
+    "星": [
+      "星夜"
+    ],
+    "星夜": [
+      "星夜"
+    ],
+    "旭": [
+      "旭日"
+    ],
+    "旭日": [
+      "旭日"
+    ],
+    "拉": [
+      "拉斯维加斯",
+      "拉开帷幕",
+      "拉美"
+    ],
+    "拉斯": [
+      "拉斯维加斯"
+    ],
+    "拉斯维": [
+      "拉斯维加斯"
+    ],
+    "拉斯维加": [
+      "拉斯维加斯"
+    ],
+    "拉斯维加斯": [
+      "拉斯维加斯"
+    ],
+    "美国通用电": [
+      "美国通用电气"
+    ],
+    "美国通用电气": [
+      "美国通用电气"
+    ],
+    "¥2": [
+      "¥22500"
+    ],
+    "¥22": [
+      "¥22500"
+    ],
+    "¥225": [
+      "¥22500"
+    ],
+    "¥2250": [
+      "¥22500"
+    ],
+    "¥22500": [
+      "¥22500"
+    ],
+    "拉开": [
+      "拉开帷幕"
+    ],
+    "拉开帷": [
+      "拉开帷幕"
+    ],
+    "拉开帷幕": [
+      "拉开帷幕"
+    ],
+    "选": [
+      "选购指南"
+    ],
+    "选购": [
+      "选购指南"
+    ],
+    "选购指": [
+      "选购指南"
+    ],
+    "选购指南": [
+      "选购指南"
+    ],
+    "大": [
+      "大力神杯"
+    ],
+    "大力": [
+      "大力神杯"
+    ],
+    "大力神": [
+      "大力神杯"
+    ],
+    "大力神杯": [
+      "大力神杯"
+    ],
+    "未": [
+      "未来"
+    ],
+    "未来": [
+      "未来"
+    ],
+    "欧": [
+      "欧洲"
+    ],
+    "欧洲": [
+      "欧洲"
+    ],
+    "拉美": [
+      "拉美"
+    ],
+    "日本": [
+      "日本"
+    ],
+    "南": [
+      "南亚"
+    ],
+    "南亚": [
+      "南亚"
+    ],
+    "满": [
+      "满意度"
+    ],
+    "满意": [
+      "满意度"
+    ],
+    "满意度": [
+      "满意度"
+    ],
+    "立": [
+      "立方体"
+    ],
+    "立方": [
+      "立方体"
+    ],
+    "立方体": [
+      "立方体"
+    ],
+    "黑马": [
+      "黑马"
+    ],
+    "马拉": [
+      "马拉松赛"
+    ],
+    "马拉松": [
+      "马拉松赛"
+    ],
+    "马拉松赛": [
+      "马拉松赛"
+    ],
+    "本": [
+      "本周"
+    ],
+    "本周": [
+      "本周"
+    ],
+    "本来": [
+      "本周"
+    ],
+    "周": [
+      "周五"
+    ],
+    "周五": [
+      "周五"
+    ],
+    "周期": [
+      "周五"
+    ],
+    "谢": [
+      "谢谢"
+    ],
+    "谢谢": [
+      "谢谢"
+    ],
+    "长": [
+      "长度"
+    ],
+    "长度": [
+      "长度"
+    ]
+  }
+}

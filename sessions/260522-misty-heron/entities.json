@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 978634,
+  "entities": {
+    "海尔": {
+      "count": 2,
+      "category": "company",
+      "lastSeen": 1787794183472
+    },
+    "世界杯": {
+      "count": 2,
+      "category": "other",
+      "lastSeen": 1787794183472
+    },
+    "宝剑": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183472
+    }
+  }
+}

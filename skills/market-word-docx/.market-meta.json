@@ -1,0 +1,34 @@
+{
+  "capabilityId": "cap_47da29dcbf39456eb5be3e1ddb3dbb4e",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": null,
+  "latestCommitId": null,
+  "contentHash": null,
+  "projectUrl": null,
+  "updatedAt": 1787722144572,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_0800b344f1fa460bae8fb91138c19df8",
+  "name": "Word/DOCX文档处理",
+  "capabilityName": "Word/DOCX文档处理",
+  "logoUrl": null,
+  "capabilityDescription": "## 能力简介\r\n\r\nWord文档处理工具，支持创建、检查和编辑Microsoft Word文档和DOCX文件，提供文本编辑、表格操作和格式设置等可靠的文档处理功能。\r\n\r\n## 适用场景\r\n\r\n适用于日常办公和学术工作中的文档处理需求，支持报告撰写、数据整理、演示制作和文档管理等场景。可用于学术论文排版、实验数据汇总、项目汇报准备和团队协作文档编辑等工作。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [],
+  "categories": [],
+  "tags": [
+    "官方"
+  ],
+  "usageExamples": [
+    "帮我把下面这段会议纪要整理成一个Word文档，标题加粗居中，正文用常规字体，直接生成文件发我。",
+    "我有一份产品需求文档的Word初稿，格式有点乱。请帮我把所有标题套用标准的Word标题样式，把功能列表改成自动编号，并且开启\"修订”模式记录你的修改，方便我发给领导审核。",
+    "我们要准备一份50页的年度招投标文件。请用我提供的公司标准Word模板来排版，把旧版标书的内容迁移过来，并且一定要保留旧文件里领导留下的所有批注和修订记录。同时，把几份Excel财务报表转换成Word表格插入到对应章节，设置好表格防断行。最后全面检查多级列表编号、目录更新和分节符，确保最终文件在多人传阅和转PDF时格式绝对不乱。"
+  ],
+  "provisionSignature": "608ab9641b398081659b5d759ef96381",
+  "localInstallFingerprint": "sha256:935f6ea0b3355520606711993c8ed1c651024fe155991e578d43f1b00166967a"
+}

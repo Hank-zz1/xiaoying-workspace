@@ -1,0 +1,160 @@
+[
+  {
+    "role": "user",
+    "content": "{\"input\": {\"query\": \"欧洲26年有什么新品上架官网\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Start",
+          "arguments": "{\"query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"query\": \"欧洲26年有什么新品上架官网\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "意图识别01",
+          "arguments": "{\"query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"classificationId\": 1, \"classificationName\": \"竞品查询\", \"reason\": \"用户查询特定时间（26年）和区域（欧洲）的新品上架情况，属于查询新品动态的意图。\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "大模型01",
+          "arguments": "{\"input\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"region\": \"欧洲\", \"raw_output\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "LLM_Tool",
+          "arguments": "{\"input\": \"{'input': '欧洲26年有什么新品上架官网'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": {\"region\": \"欧洲\", \"raw_output\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码01",
+          "arguments": "{\"input\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"searchResult\": \"[{\\\"brand\\\":\\\"美的\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.midea.com/de/kuehlen-gefrieren\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"海信\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.hisense.com/de/white-goods/refrigerators\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"三星\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"LG\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"松下\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.panasonic.com/de/consumer/refrigerators\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"日立\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}}]\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "JavaScript_Tool",
+          "arguments": "{\"input\": \"{'input': '{\\\"region\\\": \\\"欧洲\\\"}'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": \"{\\\"searchResult\\\":\\\"[{\\\\\\\"brand\\\\\\\":\\\\\\\"美的\\\\\\\",\\\\\\\"region\\\\\\\":\\\\\\\"欧洲\\\\\\\",\\\\\\\"scrape\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"fallback\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.midea.com/de/kuehlen-gefrieren\\\\\\\",\\\\\\\"models\\\\\\\":[],\\\\\\\"model_count\\\\\\\":0,\\\\\\\"articles\\\\\\\":[]},\\\\\\\"ecommerce\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"partial\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"products\\\\\\\":[],\\\\\\\"product_count\\\\\\\":0,\\\\\\\"fallback_articles\\\\\\\":[]},\\\\\\\"news\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"no_results\\\\\\\",\\\\\\\"articles\\\\\\\":[]}},{\\\\\\\"brand\\\\\\\":\\\\\\\"海信\\\\\\\",\\\\\\\"region\\\\\\\":\\\\\\\"欧洲\\\\\\\",\\\\\\\"scrape\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"fallback\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.hisense.com/de/white-goods/refrigerators\\\\\\\",\\\\\\\"models\\\\\\\":[],\\\\\\\"model_count\\\\\\\":0,\\\\\\\"articles\\\\\\\":[]},\\\\\\\"ecommerce\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"partial\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"products\\\\\\\":[],\\\\\\\"product_count\\\\\\\":0,\\\\\\\"fallback_articles\\\\\\\":[]},\\\\\\\"news\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"no_results\\\\\\\",\\\\\\\"articles\\\\\\\":[]}},{\\\\\\\"brand\\\\\\\":\\\\\\\"三星\\\\\\\",\\\\\\\"region\\\\\\\":\\\\\\\"欧洲\\\\\\\",\\\\\\\"scrape\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"search_only\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"models\\\\\\\":[],\\\\\\\"model_count\\\\\\\":0,\\\\\\\"articles\\\\\\\":[]},\\\\\\\"ecommerce\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"partial\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"products\\\\\\\":[],\\\\\\\"product_count\\\\\\\":0,\\\\\\\"fallback_articles\\\\\\\":[]},\\\\\\\"news\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"no_results\\\\\\\",\\\\\\\"articles\\\\\\\":[]}},{\\\\\\\"brand\\\\\\\":\\\\\\\"LG\\\\\\\",\\\\\\\"region\\\\\\\":\\\\\\\"欧洲\\\\\\\",\\\\\\\"scrape\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"search_only\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"models\\\\\\\":[],\\\\\\\"model_count\\\\\\\":0,\\\\\\\"articles\\\\\\\":[]},\\\\\\\"ecommerce\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"partial\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"products\\\\\\\":[],\\\\\\\"product_count\\\\\\\":0,\\\\\\\"fallback_articles\\\\\\\":[]},\\\\\\\"news\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"no_results\\\\\\\",\\\\\\\"articles\\\\\\\":[]}},{\\\\\\\"brand\\\\\\\":\\\\\\\"松下\\\\\\\",\\\\\\\"region\\\\\\\":\\\\\\\"欧洲\\\\\\\",\\\\\\\"scrape\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"fallback\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"https://www.panasonic.com/de/consumer/refrigerators\\\\\\\",\\\\\\\"models\\\\\\\":[],\\\\\\\"model_count\\\\\\\":0,\\\\\\\"articles\\\\\\\":[]},\\\\\\\"ecommerce\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"partial\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"products\\\\\\\":[],\\\\\\\"product_count\\\\\\\":0,\\\\\\\"fallback_articles\\\\\\\":[]},\\\\\\\"news\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"no_results\\\\\\\",\\\\\\\"articles\\\\\\\":[]}},{\\\\\\\"brand\\\\\\\":\\\\\\\"日立\\\\\\\",\\\\\\\"region\\\\\\\":\\\\\\\"欧洲\\\\\\\",\\\\\\\"scrape\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"search_only\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"models\\\\\\\":[],\\\\\\\"model_count\\\\\\\":0,\\\\\\\"articles\\\\\\\":[]},\\\\\\\"ecommerce\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"partial\\\\\\\",\\\\\\\"url\\\\\\\":\\\\\\\"\\\\\\\",\\\\\\\"products\\\\\\\":[],\\\\\\\"product_count\\\\\\\":0,\\\\\\\"fallback_articles\\\\\\\":[]},\\\\\\\"news\\\\\\\":{\\\\\\\"status\\\\\\\":\\\\\\\"no_results\\\\\\\",\\\\\\\"articles\\\\\\\":[]}}]\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码02",
+          "arguments": "{\"input\": \"[{\\\"brand\\\":\\\"美的\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.midea.com/de/kuehlen-gefrieren\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"海信\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.hisense.com/de/white-goods/refrigerators\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"三星\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"LG\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"松下\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.panasonic.com/de/consumer/refrigerators\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"日立\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}}]\", \"user_query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"markdown\": \"# Overseas Refrigerator Radar - 欧洲\\n\\n> 6 brands | Official+Ecom+News\\n\\n\\n## Summary\\n\\n| Brand | Official | Models | Ecom | Products | News |\\n|-------|----------|--------|------|----------|------|\\n| 美的 | Fallback | 0 | Partial | 0 | 0 |\\n| 海信 | Fallback | 0 | Partial | 0 | 0 |\\n| 三星 | Search | 0 | Partial | 0 | 0 |\\n| LG | Search | 0 | Partial | 0 | 0 |\\n| 松下 | Fallback | 0 | Partial | 0 | 0 |\\n| 日立 | Search | 0 | Partial | 0 | 0 |\\n\\n\\n---\\n\\n## 美的\\n\\n### Official\\n\\nFallback no data\\n\\n### Ecommerce\\n\\nPartial no data\\n\\n### News\\n\\nNone\\n\\n\\n---\\n\\n## 海信\\n\\n### Official\\n\\nFallback no data\\n\\n### Ecommerce\\n\\nPartial no data\\n\\n### News\\n\\nNone\\n\\n\\n---\\n\\n## 三星\\n\\n### Official\\n\\nSearch no data\\n\\n### Ecommerce\\n\\nPartial no data\\n\\n### News\\n\\nNone\\n\\n\\n---\\n\\n## LG\\n\\n### Official\\n\\nSearch no data\\n\\n### Ecommerce\\n\\nPartial no data\\n\\n### News\\n\\nNone\\n\\n\\n---\\n\\n## 松下\\n\\n### Official\\n\\nFallback no data\\n\\n### Ecommerce\\n\\nPartial no data\\n\\n### News\\n\\nNone\\n\\n\\n---\\n\\n## 日立\\n\\n### Official\\n\\nSearch no data\\n\\n### Ecommerce\\n\\nPartial no data\\n\\n### News\\n\\nNone\\n\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "JavaScript_Tool",
+          "arguments": "{\"input\": \"{'input': '[{\\\"brand\\\":\\\"美的\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.midea.com/de/kuehlen-gefrieren\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"海信\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.hisense.com/de/white-goods/refrigerators\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"三星\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"LG\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"松下\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"fallback\\\",\\\"url\\\":\\\"https://www.panasonic.com/de/consumer/refrigerators\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}},{\\\"brand\\\":\\\"日立\\\",\\\"region\\\":\\\"欧洲\\\",\\\"scrape\\\":{\\\"status\\\":\\\"search_only\\\",\\\"url\\\":\\\"\\\",\\\"models\\\":[],\\\"model_count\\\":0,\\\"articles\\\":[]},\\\"ecommerce\\\":{\\\"status\\\":\\\"partial\\\",\\\"url\\\":\\\"\\\",\\\"products\\\":[],\\\"product_count\\\":0,\\\"fallback_articles\\\":[]},\\\"news\\\":{\\\"status\\\":\\\"no_results\\\",\\\"articles\\\":[]}}]', 'user_query': '欧洲26年有什么新品上架官网'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": \"{\\\"markdown\\\":\\\"# Overseas Refrigerator Radar - 欧洲\\\\n\\\\n> 6 brands | Official+Ecom+News\\\\n\\\\n\\\\n## Summary\\\\n\\\\n| Brand | Official | Models | Ecom | Products | News |\\\\n|-------|----------|--------|------|----------|------|\\\\n| 美的 | Fallback | 0 | Partial | 0 | 0 |\\\\n| 海信 | Fallback | 0 | Partial | 0 | 0 |\\\\n| 三星 | Search | 0 | Partial | 0 | 0 |\\\\n| LG | Search | 0 | Partial | 0 | 0 |\\\\n| 松下 | Fallback | 0 | Partial | 0 | 0 |\\\\n| 日立 | Search | 0 | Partial | 0 | 0 |\\\\n\\\\n\\\\n---\\\\n\\\\n## 美的\\\\n\\\\n### Official\\\\n\\\\nFallback no data\\\\n\\\\n### Ecommerce\\\\n\\\\nPartial no data\\\\n\\\\n### News\\\\n\\\\nNone\\\\n\\\\n\\\\n---\\\\n\\\\n## 海信\\\\n\\\\n### Official\\\\n\\\\nFallback no data\\\\n\\\\n### Ecommerce\\\\n\\\\nPartial no data\\\\n\\\\n### News\\\\n\\\\nNone\\\\n\\\\n\\\\n---\\\\n\\\\n## 三星\\\\n\\\\n### Official\\\\n\\\\nSearch no data\\\\n\\\\n### Ecommerce\\\\n\\\\nPartial no data\\\\n\\\\n### News\\\\n\\\\nNone\\\\n\\\\n\\\\n---\\\\n\\\\n## LG\\\\n\\\\n### Official\\\\n\\\\nSearch no data\\\\n\\\\n### Ecommerce\\\\n\\\\nPartial no data\\\\n\\\\n### News\\\\n\\\\nNone\\\\n\\\\n\\\\n---\\\\n\\\\n## 松下\\\\n\\\\n### Official\\\\n\\\\nFallback no data\\\\n\\\\n### Ecommerce\\\\n\\\\nPartial no data\\\\n\\\\n### News\\\\n\\\\nNone\\\\n\\\\n\\\\n---\\\\n\\\\n## 日立\\\\n\\\\n### Official\\\\n\\\\nSearch no data\\\\n\\\\n### Ecommerce\\\\n\\\\nPartial no data\\\\n\\\\n### News\\\\n\\\\nNone\\\\n\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "End",
+          "arguments": "{\"query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": \"\"}",
+    "tool_calls": null
+  }
+]

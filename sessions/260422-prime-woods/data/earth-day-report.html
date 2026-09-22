@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌍 今日地球日报 - 2026.4.22</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); min-height: 100vh; color: #fff; padding: 20px; }
+  .container { max-width: 800px; margin: 0 auto; }
+  .header { text-align: center; padding: 30px 0; }
+  .header h1 { font-size: 2.5em; background: linear-gradient(90deg, #00f5a0, #00d9f5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .header .subtitle { color: #aaa; margin-top: 8px; font-size: 1.1em; }
+  .card { background: rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; margin: 20px 0; backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
+  .card h2 { font-size: 1.4em; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .card h2 .icon { font-size: 1.6em; }
+  .weather-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .weather-item { text-align: center; padding: 16px 8px; background: rgba(255,255,255,0.05); border-radius: 12px; }
+  .weather-item .day { color: #888; font-size: 0.9em; }
+  .weather-item .emoji { font-size: 2em; margin: 8px 0; }
+  .weather-item .temp { font-size: 1.2em; font-weight: bold; }
+  .weather-item .wind { color: #aaa; font-size: 0.85em; margin-top: 4px; }
+  .weather-item.today { background: rgba(0,245,160,0.15); border: 1px solid rgba(0,245,160,0.3); }
+  .history-list { list-style: none; }
+  .history-list li { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+  .history-list li:last-child { border: none; }
+  .history-list .year { color: #00f5a0; font-weight: bold; margin-right: 8px; }
+  .mood-section { text-align: center; padding: 30px; }
+  .mood-emojis { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+  .mood-btn { width: 70px; height: 70px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); font-size: 2em; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; }
+  .mood-btn:hover { transform: scale(1.2); border-color: #00f5a0; background: rgba(0,245,160,0.2); }
+  .mood-btn.selected { border-color: #00f5a0; background: rgba(0,245,160,0.3); transform: scale(1.15); }
+  .mood-result { margin-top: 20px; font-size: 1.2em; min-height: 60px; color: #ddd; }
+  .quote-box { font-style: italic; font-size: 1.3em; text-align: center; padding: 30px; color: rgba(255,255,255,0.85); }
+  .quote-box .author { margin-top: 10px; font-size: 0.8em; color: #888; font-style: normal; }
+  .earth-tips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .tip { padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px; }
+  .tip .tip-icon { font-size: 1.5em; }
+  .tip .tip-text { margin-top: 8px; font-size: 0.95em; color: #ccc; }
+  .footer { text-align: center; padding: 30px 0; color: #666; font-size: 0.9em; }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+  .floating { animation: float 3s ease-in-out infinite; display: inline-block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1><span class="floating">🌍</span> 今日地球日报</h1>
+    <div class="subtitle">2026年4月22日 · 星期三 · 第57个世界地球日</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🌤️</span> 青岛天气</h2>
+    <div class="weather-grid">
+      <div class="weather-item today">
+        <div class="day">今天 4/22</div>
+        <div class="emoji">🌧️</div>
+        <div class="temp">11°C ~ 16°C</div>
+        <div class="wind">东风 1-3级</div>
+      </div>
+      <div class="weather-item">
+        <div class="day">明天 4/23</div>
+        <div class="emoji">⛅</div>
+        <div class="temp">11°C ~ 18°C</div>
+        <div class="wind">南风 1-3级</div>
+      </div>
+      <div class="weather-item">
+        <div class="day">周五 4/24</div>
+        <div class="emoji">☀️</div>
+        <div class="temp">13°C ~ 17°C</div>
+        <div class="wind">南风 1-3级</div>
+      </div>
+      <div class="weather-item">
+        <div class="day">周六 4/25</div>
+        <div class="emoji">☀️</div>
+        <div class="temp">12°C ~ 17°C</div>
+        <div class="wind">南风 1-3级</div>
+      </div>
+    </div>
+    <p style="margin-top:12px;color:#888;font-size:0.9em;">💡 今天小雨，出门记得带伞哦~ 后天开始转晴！</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">📜</span> 历史上的今天</h2>
+    <ul class="history-list">
+      <li><span class="year">353年</span> 王羲之书写《兰亭集序》，天下第一行书诞生</li>
+      <li><span class="year">1500年</span> 葡萄牙航海家卡布拉尔到达巴西，成为首批到达的欧洲人</li>
+      <li><span class="year">1509年</span> 亨利八世即位英国国王</li>
+      <li><span class="year">1898年</span> 严复译著《天演论》出版，"物竞天择"思想传入中国</li>
+      <li><span class="year">1970年</span> 首个世界地球日在美国举行，约2000万人参加游行和演讲</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">🌱</span> 地球日主题：珍爱自然资源 守护美丽中国</h2>
+    <div class="earth-tips">
+      <div class="tip"><div class="tip-icon">♻️</div><div class="tip-text">垃圾分类，让资源循环利用</div></div>
+      <div class="tip"><div class="tip-icon">🚲</div><div class="tip-text">绿色出行，减少碳排放</div></div>
+      <div class="tip"><div class="tip-icon">💧</div><div class="tip-text">节约用水，珍惜每一滴水</div></div>
+      <div class="tip"><div class="tip-icon">🌳</div><div class="tip-text">植树护绿，为地球增添一抹绿</div></div>
+      <div class="tip"><div class="tip-icon">🔌</div><div class="tip-text">随手关灯，节约每一度电</div></div>
+      <div class="tip"><div class="tip-icon">🛍️</div><div class="tip-text">减少一次性用品，自带购物袋</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">💬</span> 每日一句</h2>
+    <div class="quote-box">
+      "我们不是从祖先那里继承了地球，而是从子孙那里借来了它。"
+      <div class="author">—— 印第安谚语</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2><span class="icon">😊</span> 今日心情</h2>
+    <div class="mood-section">
+      <p>你今天的心情怎么样？</p>
+      <div class="mood-emojis">
+        <button class="mood-btn" onclick="selectMood(this,'😄','太棒了！今天是个好日子，地球和你都很美好！')">😄</button>
+        <button class="mood-btn" onclick="selectMood(this,'🙂','平平淡淡才是真，就像青岛今天的小雨，也很美~')">🙂</button>
+        <button class="mood-btn" onclick="selectMood(this,'😐','没关系，明天就转晴了，心情也会好起来！')">😐</button>
+        <button class="mood-btn" onclick="selectMood(this,'😔','抱抱你，看看地球日的环保小贴士，做点有意义的事吧~')">😔</button>
+        <button class="mood-btn" onclick="selectMood(this,'🤩','超有活力！今天适合做点改变世界的事！')">🤩</button>
+      </div>
+      <div class="mood-result" id="moodResult"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    由 小盈 为你生成 · 数据来源：高德天气 · 博查搜索<br>
+    🌍 保护地球，从我做起 🌍
+  </div>
+</div>
+
+<script>
+function selectMood(btn, emoji, message) {
+  document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  const result = document.getElementById('moodResult');
+  result.innerHTML = '<span style="font-size:1.5em">' + emoji + '</span><br>' + message;
+}
+</script>
+</body>
+</html>

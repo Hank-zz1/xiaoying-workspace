@@ -1,0 +1,58 @@
+{
+  "capabilityId": "cap_5b351c0e83924969b076b4518e4e7c69",
+  "isMarketProvisioned": true,
+  "version": "1.0.3",
+  "commitId": "c30e95e7643bb615a7ca69c7821ca61f8205439b",
+  "latestCommitId": "c30e95e7643bb615a7ca69c7821ca61f8205439b",
+  "contentHash": null,
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/offical/wanlian_ai_org/ppt-generator",
+  "updatedAt": 1787722144570,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_61b785019dfd4df7b9b6aec2c4a6e267",
+  "name": "PPT演示稿生成器",
+  "capabilityName": "PPT演示稿生成器",
+  "logoUrl": "",
+  "capabilityDescription": "## 能力简介\r\n\r\n一键将用户讲稿生成为乔布斯风极简科技感竖屏 HTML 演示稿。当用户需要生成 PPT、演示文稿、Slides、幻灯片，或要求科技风、极简风、乔布斯风格的演示时触发此技能。输出为单个可直接运行的 HTML 文件，打开即可全屏演示。\r\n\r\n## 适用场景\r\n\r\n适用于多种科研和业务场景中的数据处理和分析需求，支持批量操作和自动化处理，可无缝集成到现有工作流程中。帮助用户提升工作效率和数据处理质量，满足不同类型项目的专业化需求。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [
+    "113",
+    "303",
+    "204"
+  ],
+  "categories": [
+    {
+      "id": "113",
+      "name": "内容营销与传播",
+      "code": "content_marketing",
+      "rootId": "1",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/2089e4128e614ccfa93554d223f54268.png"
+    },
+    {
+      "id": "303",
+      "name": "内容创作",
+      "code": "content_creation",
+      "rootId": "3",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/02c8bdc93c0643a7a8b73d6f22ec7e8c.png"
+    },
+    {
+      "id": "204",
+      "name": "企业通用效能",
+      "code": "enterprise_efficiency",
+      "rootId": "2",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/57afb6851b024bd6bdc1cc66101768ac.png"
+    }
+  ],
+  "tags": [],
+  "usageExamples": [
+    "帮我把下面这段新产品介绍文字，做成那种苹果发布会风格的竖屏幻灯片，直接给我个能在浏览器打开的网页文件就行：我们的新耳机续航提升了50%，重量减轻了20%，售价只要299元。",
+    "我下周要在部门群里做季度业绩分享，这是我的汇报草稿。请先帮我把文案精简提炼一下，让语气更有冲击力；然后再帮我做成那种极简科技风的竖屏幻灯片，方便大家直接在手机上滑动看。我的草稿是：第一季度销售额完成120%，主要靠A产品拉动，第二季度计划主推B产品，目标增长30%。",
+    "公司下个月要办一场线上的年度战略发布会，我准备了一份详细的演讲稿。请你先深度提炼讲稿，把长篇大论改成有冲击力的金句和核心数据；接着规划演示节奏，确保有悬念和高潮，每页只讲一件事；最后输出一套完整的极简科技风竖屏HTML演示稿，要求有高级的动态光斑背景、顺滑的翻页动画，排版严格遵守苹果发布会的高级感标准。以下是我的演讲稿：[此处粘贴你的详细演讲稿]"
+  ],
+  "provisionSignature": "979377870d04d558480dafa2bb77bc0a",
+  "localInstallFingerprint": "sha256:83089b8cfe995f1c38b3c7e521c0cecc63abfc9122b42b7c399427d9c7cf69b0"
+}

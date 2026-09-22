@@ -1,0 +1,34 @@
+{
+  "capabilityId": "cap_6b4d1f04cf6f4cc1be8ad27f28163ad7",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": null,
+  "latestCommitId": null,
+  "contentHash": null,
+  "projectUrl": null,
+  "updatedAt": 1787722144571,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_5f914bc1cc044c179f6db058aac29cb7",
+  "name": "Nano Banana Pro图像生成",
+  "capabilityName": "Nano Banana Pro图像生成",
+  "logoUrl": null,
+  "capabilityDescription": "## 能力简介\r\n\r\nNano Banana Pro图像生成和编辑工具，基于Gemini 3 Pro Image模型，支持文本描述生成图像和现有图像的智能编辑，适用于创意设计和视觉内容制作。\r\n\r\n## 适用场景\r\n\r\n适用于多种科研和业务场景中的数据处理和分析需求，支持批量操作和自动化处理，可无缝集成到现有工作流程中。帮助用户提升工作效率和数据处理质量，满足不同类型项目的专业化需求。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [],
+  "categories": [],
+  "tags": [
+    "官方"
+  ],
+  "usageExamples": [
+    "帮我画一张秋天落叶的风景图，用来做公众号文章的封面，普通清晰度就行。",
+    "我要做一张公司年会的宣传海报，你先帮我生成一张带有科技感和庆祝元素的背景草图看看效果。如果觉得不错，再把清晰度调到最高，并且把画面中间稍微留白，方便我后期加文字。",
+    "我们下周要发布新款\"智能咖啡机”，需要你帮我搞定一套宣传图。先拿我发你的产品白底图，生成3张不同场景（现代厨房、温馨书房、户外露营）的融合图，先出低清草图让我挑。挑好后，把选中的图精修一下，去掉背景杂物、调好光影，最后导出4K高清大图。另外再单独做一张极简风的咖啡豆特写当配图，2K清晰度就行。所有图片记得按时间自动命名，方便我归档。"
+  ],
+  "provisionSignature": "8734d9c41337905eaffcbd7f6548668e",
+  "localInstallFingerprint": "sha256:28caf2e58bf1212a3a56eec5243adc5c6fd7a95888b135c0aa19bc0170993f88"
+}

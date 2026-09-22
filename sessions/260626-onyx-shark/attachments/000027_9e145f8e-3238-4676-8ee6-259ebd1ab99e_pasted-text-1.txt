@@ -1,0 +1,143 @@
+[
+  {
+    "role": "user",
+    "content": "{\"input\": {\"query\": \"欧洲26年有什么新品上架官网\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Start",
+          "arguments": "{\"query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"query\": \"欧洲26年有什么新品上架官网\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "意图识别01",
+          "arguments": "{\"query\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"classificationId\": 1, \"classificationName\": \"竞品查询\", \"reason\": \"用户查询特定区域（欧洲）在特定时间（26年）的新品上架情况，符合‘竞品查询’中关于查询新品的定义。\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "大模型01",
+          "arguments": "{\"input\": \"欧洲26年有什么新品上架官网\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"region\": \"欧洲\", \"raw_output\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "LLM_Tool",
+          "arguments": "{\"input\": \"{'input': '欧洲26年有什么新品上架官网'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": {\"region\": \"欧洲\", \"raw_output\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码01",
+          "arguments": "{\"input\": \"{\\\"region\\\": \\\"欧洲\\\"}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"searchQuery\": \"{\\\"jsonrpc\\\":\\\"2.0\\\",\\\"id\\\":1,\\\"method\\\":\\\"tools/call\\\",\\\"params\\\":{\\\"name\\\":\\\"web_search\\\",\\\"arguments\\\":{\\\"query\\\":\\\"Midea 冰箱 新品 2026 OR Hisense 冰箱 新品 2026 OR Samsung 冰箱 新品 2026 OR LG 冰箱 新品 2026 OR Panasonic 冰箱 新品 2026 OR Hitachi 冰箱 新品 2026\\\",\\\"count\\\":10}}}\", \"region\": \"欧洲\", \"brands\": \"[\\\"Midea\\\",\\\"Hisense\\\",\\\"Samsung\\\",\\\"LG\\\",\\\"Panasonic\\\",\\\"Hitachi\\\"]\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "JavaScript_Tool",
+          "arguments": "{\"input\": \"{'input': '{\\\"region\\\": \\\"欧洲\\\"}'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": \"{\\\"searchQuery\\\":\\\"{\\\\\\\"jsonrpc\\\\\\\":\\\\\\\"2.0\\\\\\\",\\\\\\\"id\\\\\\\":1,\\\\\\\"method\\\\\\\":\\\\\\\"tools/call\\\\\\\",\\\\\\\"params\\\\\\\":{\\\\\\\"name\\\\\\\":\\\\\\\"web_search\\\\\\\",\\\\\\\"arguments\\\\\\\":{\\\\\\\"query\\\\\\\":\\\\\\\"Midea 冰箱 新品 2026 OR Hisense 冰箱 新品 2026 OR Samsung 冰箱 新品 2026 OR LG 冰箱 新品 2026 OR Panasonic 冰箱 新品 2026 OR Hitachi 冰箱 新品 2026\\\\\\\",\\\\\\\"count\\\\\\\":10}}}\\\",\\\"region\\\":\\\"欧洲\\\",\\\"brands\\\":\\\"[\\\\\\\"Midea\\\\\\\",\\\\\\\"Hisense\\\\\\\",\\\\\\\"Samsung\\\\\\\",\\\\\\\"LG\\\\\\\",\\\\\\\"Panasonic\\\\\\\",\\\\\\\"Hitachi\\\\\\\"]\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "HTTP请求01",
+          "arguments": "{\"custom_inputs\": [{\"key\": \"var_d93n9dhb9rseho6vcou0\"}], \"headers\": [{\"key\": \"Content-Type\", \"value\": \" application/json + X-Platform-Access-Key: pk_b1fb70c791093782097c3405bb9854cd18cccfe520714fa89932b20f8239f625\"}]}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "HTTPTool",
+          "arguments": "{\"input\": \"{'custom_inputs': [{'key': 'var_d93n9dhb9rseho6vcou0'}], 'headers': [{'key': 'Content-Type', 'value': ' application/json + X-Platform-Access-Key: pk_b1fb70c791093782097c3405bb9854cd18cccfe520714fa89932b20f8239f625'}]}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "status_code": 200,
+  "response": {
+    "StatusCode": 0,
+    "StatusMessage": "success",
+    "code": 0,
+    "data": {},
+    "msg": "success"
+  },
+  "sent": true,
+  "comparison": {
+    "new_models": [
+      "HRCD483TS",
+      "HRTF325S"
+    ],
+    "missing_from_baseline": [
+      "HRBC113",
+      "HRBC137",
+      "HRBC140",
+      "HRBF125",
+      "HRBF125B",
+      "HRBF125S",
+      "HRBF179",
+      "HRBF179R",
+      "HRBF45",
+      "HRBM418S",
+      "HRCD640TBW",
+      "HRCF144",
+      "HRCF146",
+      "HRCF199",
+      "HRCF201",
+      "HRCF297",
+      "HRCF301",
+      "HRCF500",
+      "HRCF501",
+      "HRSBS519B",
+      "HRSBS540BW",
+      "HRSBS578SW",
+      "HRTF206",
+      "HRTF326",
+      "HRTF326B",
+      "HRTF326S",
+      "HRVF155",
+      "HRVF240",
+      "HRVF384S",
+      "HRWC108B",
+      "HRWC31",
+      "HRWC46",
+      "HRWC46B"
+    ],
+    "today_count": 54,
+    "baseline_count": 85,
+    "has_change": false
+  }
+}

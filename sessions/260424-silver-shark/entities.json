@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 126484,
+  "entities": {
+    "海尔集团": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794182760
+    },
+    "驾驶证": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794182760
+    },
+    "黑名单": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794182760
+    },
+    "青岛海尔": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794182760
+    },
+    "黄岛": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794182760
+    },
+    "海尔": {
+      "count": 7,
+      "category": "company",
+      "lastSeen": 1787794182760
+    },
+    "重庆": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794182760
+    },
+    "当天": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182760
+    },
+    "青岛": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794182760
+    },
+    "远近": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794182760
+    },
+    "当月": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182760
+    },
+    "月底": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182760
+    }
+  }
+}

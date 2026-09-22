@@ -1,0 +1,7 @@
+{"sessionId":"260422-smart-cosmos","lineNumber":1,"kind":"header","text":"飞书机器人发消息"}
+{"sessionId":"260422-smart-cosmos","lineNumber":2,"kind":"message","text":"通过飞书机器人在群内发送：是的"}
+{"sessionId":"260422-smart-cosmos","lineNumber":5,"kind":"message","text":"需要您提供飞书自定义机器人的 **Webhook URL** 才能发送消息到群内。 您可以这样获取： 1. 打开飞书群 → 群设置 → 群机器人 → 添加自定义机器人 2. 复制 Webhook 地址（格式类似 `https://open.feishu.cn/open-apis/bot/v2/hook/xxxxx`） 提供后我会立即帮您发送\"是的\"这条消息。"}
+{"sessionId":"260422-smart-cosmos","lineNumber":6,"kind":"message","text":"https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9"}
+{"sessionId":"260422-smart-cosmos","lineNumber":8,"kind":"message","text":"已成功通过飞书机器人在群内发送消息\"是的\"。"}
+{"sessionId":"260422-smart-cosmos","lineNumber":9,"kind":"message","text":"？ pasted-image-1.png image/png"}
+{"sessionId":"260422-smart-cosmos","lineNumber":16,"kind":"message","text":"之前 `curl` 在 bash 环境下编码有问题导致显示为乱码。已用 Python 重新以 UTF-8 编码发送了\"是的\"，这次应该能正确显示了。请在飞书群中确认一下。"}

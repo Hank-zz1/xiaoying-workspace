@@ -1,0 +1,4 @@
+Expression: Array.from(document.querySelectorAll('.product-item a[href*="/appliances/"], .product-item h3, .product-title, [data-product-model]')).map(el => el.textContent.trim() || el.getAttribute('href')).filter(Boolean).join('\n')
+Result type: string
+
+Result:

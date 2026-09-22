@@ -1,0 +1,376 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 3866755,
+  "entities": {
+    "普通": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "Python": {
+      "count": 1,
+      "category": "technology",
+      "lastSeen": 1787794184948
+    },
+    "go": {
+      "count": 10,
+      "category": "technology",
+      "lastSeen": 1787794184948
+    },
+    "图里": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "深度": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "美洲": {
+      "count": 50,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "三星": {
+      "count": 28,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "美国市场": {
+      "count": 8,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "三星电子": {
+      "count": 5,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "搜狐": {
+      "count": 8,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "美国": {
+      "count": 7,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "新浪网": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "日历": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "腾讯网": {
+      "count": 6,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "近日": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "智能化": {
+      "count": 3,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "塞进": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "太平洋": {
+      "count": 12,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "除霜": {
+      "count": 5,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "¥16999": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "¥5499": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "十字": {
+      "count": 5,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "现代": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "今日": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "新一代": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "¥4588": {
+      "count": 2,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "¥9999": {
+      "count": 2,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "中关村": {
+      "count": 6,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "中国": {
+      "count": 5,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "智能家居": {
+      "count": 4,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "上市": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "双开门": {
+      "count": 6,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "四门": {
+      "count": 3,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "高科技": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "$999.97": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "$2554.99": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "亚马逊": {
+      "count": 6,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "今年": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "瞬间": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "易购网": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "触摸屏": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "腾讯": {
+      "count": 3,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "$299.99": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "$999.99": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "$299": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "快讯": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "保鲜": {
+      "count": 11,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "京东": {
+      "count": 8,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "惠而浦": {
+      "count": 31,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "嵌入式": {
+      "count": 2,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "¥9499.00": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "¥ 7999": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "四区": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184948
+    },
+    "第六感": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "卓越": {
+      "count": 4,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "荣获": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "荣誉": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "无霜": {
+      "count": 4,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "星夜": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794184948
+    },
+    "旭日": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "¥5999": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "海尔": {
+      "count": 4,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "拉斯维加斯": {
+      "count": 3,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "美国通用电气": {
+      "count": 3,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "无噪音": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "美国通用": {
+      "count": 2,
+      "category": "company",
+      "lastSeen": 1787794184948
+    },
+    "¥22500": {
+      "count": 2,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "海信": {
+      "count": 18,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "拉开帷幕": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184948
+    },
+    "世界杯": {
+      "count": 7,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "¥4999": {
+      "count": 1,
+      "category": "amount",
+      "lastSeen": 1787794184948
+    },
+    "选购指南": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "大力神杯": {
+      "count": 4,
+      "category": "other",
+      "lastSeen": 1787794184948
+    },
+    "美加": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794184948
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 25995,
+  "entities": {
+    "深度": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183049
+    },
+    "新鲜度": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183049
+    }
+  }
+}

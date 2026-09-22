@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 177959,
+  "entities": {
+    "昨晚": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182927
+    },
+    "新闻联播": {
+      "count": 2,
+      "category": "other",
+      "lastSeen": 1787794182927
+    },
+    "飞书": {
+      "count": 2,
+      "category": "app",
+      "lastSeen": 1787794182927
+    },
+    "Python": {
+      "count": 1,
+      "category": "technology",
+      "lastSeen": 1787794182927
+    },
+    "python": {
+      "count": 1,
+      "category": "technology",
+      "lastSeen": 1787794182927
+    }
+  }
+}

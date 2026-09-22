@@ -1,0 +1,23 @@
+{
+  "id": "github_a3f8b2c1",
+  "name": "GitHub",
+  "slug": "github",
+  "enabled": true,
+  "provider": "github",
+  "type": "api",
+  "icon": "https://github.githubassets.com/favicons/favicon-dark.svg",
+  "tagline": "GitHub 代码仓库、Issues、Pull Requests 管理",
+  "api": {
+    "baseUrl": "https://api.github.com/",
+    "authType": "bearer",
+    "authScheme": "token",
+    "testEndpoint": {
+      "method": "GET",
+      "path": "user"
+    }
+  },
+  "createdAt": 1745110200000,
+  "updatedAt": 1776650527371,
+  "isAuthenticated": true,
+  "connectionStatus": "connected"
+}

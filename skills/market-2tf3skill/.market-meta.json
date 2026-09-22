@@ -1,0 +1,58 @@
+{
+  "capabilityId": "cap_3a0a44b49a174a2da9b768c455cc644f",
+  "isMarketProvisioned": true,
+  "version": "1.0.1",
+  "commitId": "661a8f32701a0cc69ac7307862ef3feda38e7032",
+  "latestCommitId": "661a8f32701a0cc69ac7307862ef3feda38e7032",
+  "contentHash": null,
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/offical/wanlian_ai_org/skill-creator",
+  "updatedAt": 1787722144574,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_5b6beddc5e044e7f84ac9f5fe1f16280",
+  "name": "技能创建器",
+  "capabilityName": "技能创建器",
+  "logoUrl": "",
+  "capabilityDescription": "## 能力简介\r\n\r\n创建有效技能的指南。当用户想要创建新技能（或更新现有技能） 的能力时使用，可融入专业知识、工作流程或工具集成。\r\n\r\n## 适用场景\r\n\r\n适用于多种科研和业务场景中的数据处理和分析需求，支持批量操作和自动化处理，可无缝集成到现有工作流程中。帮助用户提升工作效率和数据处理质量，满足不同类型项目的专业化需求。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [
+    "111",
+    "303",
+    "204"
+  ],
+  "categories": [
+    {
+      "id": "111",
+      "name": "员工培训与知识管理",
+      "code": "training_knowledge_mgmt",
+      "rootId": "1",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/223500c4109444a5a40165a5b290ebea.png"
+    },
+    {
+      "id": "303",
+      "name": "内容创作",
+      "code": "content_creation",
+      "rootId": "3",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/02c8bdc93c0643a7a8b73d6f22ec7e8c.png"
+    },
+    {
+      "id": "204",
+      "name": "企业通用效能",
+      "code": "enterprise_efficiency",
+      "rootId": "2",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/57afb6851b024bd6bdc1cc66101768ac.png"
+    }
+  ],
+  "tags": [],
+  "usageExamples": [
+    "帮我写个简单的设定，让AI以后每次帮我写工作周报时，都自动按\"本周进度”、\"遇到的问题”和\"下周计划”这三个固定模块来排版。",
+    "我想给AI加个处理客户反馈的专属工作流。第一步让它先分析客户的情绪和核心诉求；第二步结合我马上发给你的《公司售后赔偿标准》文档给出处理建议；第三步自动生成一封语气诚恳的回复邮件草稿。帮我把这套流程整理成AI能直接记住并执行的规则包。",
+    "我们需要为财务部弄一个\"月末自动对账与异常分析”的复杂能力包。具体要求是：首先，AI要能读取并解析特定格式的银行流水CSV和内部ERP账单；其次，严格按照我提供的《财务对账规则手册》进行逐笔核对；如果发现金额或时间不匹配的异常，需要调用我提供的一个Python脚本去历史数据库做二次核验；最后输出一份包含异常明细和调整建议的结构化报告。因为涉及财务数据，容错率极低，请帮我设计这个能力包的完整结构，告诉我怎么写核心指令、怎么组织那些参考文档和脚本，并确保AI执行时不会乱发挥。"
+  ],
+  "provisionSignature": "6021ccf5a23ce7a38cbf61ecbc21a6ae",
+  "localInstallFingerprint": "sha256:4a0347b9f4a3c8eacfc40e7691b2b9cacf40de0e979ef556bb47de321b13b4e9"
+}

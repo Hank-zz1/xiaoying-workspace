@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 2065459,
+  "entities": {
+    "edge": {
+      "count": 3,
+      "category": "app",
+      "lastSeen": 1787794184717
+    },
+    "飞书": {
+      "count": 6,
+      "category": "app",
+      "lastSeen": 1787794184717
+    },
+    "chrome": {
+      "count": 1,
+      "category": "app",
+      "lastSeen": 1787794184717
+    },
+    "补丁": {
+      "count": 3,
+      "category": "other",
+      "lastSeen": 1787794184717
+    },
+    "目前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184717
+    },
+    "下来": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184717
+    }
+  }
+}

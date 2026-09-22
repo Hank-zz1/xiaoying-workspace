@@ -1,0 +1,12 @@
+{
+  "name": "playwright-anti-bot",
+  "version": "1.0.0",
+  "description": "Playwright stealth web scraping with anti-bot bypass",
+  "scripts": {
+    "simple": "node scripts/playwright-simple.js",
+    "stealth": "node scripts/playwright-stealth.js"
+  },
+  "dependencies": {
+    "playwright": "^1.42.0"
+  }
+}

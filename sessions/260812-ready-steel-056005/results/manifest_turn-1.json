@@ -1,0 +1,259 @@
+{
+  "version": 1,
+  "turnId": "turn-1",
+  "totalOriginalChars": 74526,
+  "entries": [
+    {
+      "toolName": "call_source",
+      "contentHash": "0d73b5643c74",
+      "originalChars": 2466,
+      "relativePath": "results/result_call_source_0d73b5643c74.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "42400bd0acc7",
+      "originalChars": 1879,
+      "relativePath": "results/result_call_source_42400bd0acc7.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "252b6cd56079",
+      "originalChars": 2557,
+      "relativePath": "results/result_call_source_252b6cd56079.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "450a3795c09e",
+      "originalChars": 2456,
+      "relativePath": "results/result_call_source_450a3795c09e.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "1255f560bd17",
+      "originalChars": 1829,
+      "relativePath": "results/result_call_source_1255f560bd17.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "d737fbde19f0",
+      "originalChars": 1771,
+      "relativePath": "results/result_call_source_d737fbde19f0.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "f68cab903c70",
+      "originalChars": 8412,
+      "relativePath": "results/result_call_source_f68cab903c70.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "f538a5fc65be",
+      "originalChars": 1932,
+      "relativePath": "results/result_call_source_f538a5fc65be.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "e0d954ed80a3",
+      "originalChars": 2906,
+      "relativePath": "results/result_call_source_e0d954ed80a3.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "ce3e3a38186e",
+      "originalChars": 2526,
+      "relativePath": "results/result_call_source_ce3e3a38186e.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "abe11c6c58eb",
+      "originalChars": 2528,
+      "relativePath": "results/result_call_source_abe11c6c58eb.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "53764acf3ac4",
+      "originalChars": 611,
+      "relativePath": "results/result_call_source_53764acf3ac4.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "a27379c12466",
+      "originalChars": 405,
+      "relativePath": "results/result_call_source_a27379c12466.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "fc663fbcce30",
+      "originalChars": 1370,
+      "relativePath": "results/result_call_source_fc663fbcce30.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "c91d5b610eda",
+      "originalChars": 2420,
+      "relativePath": "results/result_call_source_c91d5b610eda.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "318843c52530",
+      "originalChars": 2509,
+      "relativePath": "results/result_call_source_318843c52530.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "6cbf0507c7c8",
+      "originalChars": 285,
+      "relativePath": "results/result_call_source_6cbf0507c7c8.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "8360849c2096",
+      "originalChars": 285,
+      "relativePath": "results/result_call_source_8360849c2096.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "8e30b0664046",
+      "originalChars": 285,
+      "relativePath": "results/result_call_source_8e30b0664046.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "9c3cf7378c33",
+      "originalChars": 2449,
+      "relativePath": "results/result_call_source_9c3cf7378c33.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "fc4ed0e4e869",
+      "originalChars": 1721,
+      "relativePath": "results/result_call_source_fc4ed0e4e869.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "f1c20e0fbb4f",
+      "originalChars": 8546,
+      "relativePath": "results/result_call_source_f1c20e0fbb4f.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "454024394390",
+      "originalChars": 143,
+      "relativePath": "results/result_call_source_454024394390.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "10dae67e5808",
+      "originalChars": 143,
+      "relativePath": "results/result_call_source_10dae67e5808.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "0c22c8556db1",
+      "originalChars": 143,
+      "relativePath": "results/result_call_source_0c22c8556db1.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "711412266928",
+      "originalChars": 105,
+      "relativePath": "results/result_call_source_711412266928.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "711412266928",
+      "originalChars": 105,
+      "relativePath": "results/result_call_source_711412266928.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "320a11f6850c",
+      "originalChars": 943,
+      "relativePath": "results/result_call_source_320a11f6850c.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "eb880fe01267",
+      "originalChars": 662,
+      "relativePath": "results/result_call_source_eb880fe01267.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "51a2b77155e6",
+      "originalChars": 7864,
+      "relativePath": "results/result_browser_tool_51a2b77155e6.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "b7a36390507a",
+      "originalChars": 3230,
+      "relativePath": "results/result_browser_tool_b7a36390507a.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "0ebb81f59834",
+      "originalChars": 1256,
+      "relativePath": "results/result_browser_tool_0ebb81f59834.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "df0c13f274c6",
+      "originalChars": 597,
+      "relativePath": "results/result_browser_tool_df0c13f274c6.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "0cc8292e2a8f",
+      "originalChars": 3835,
+      "relativePath": "results/result_browser_tool_0cc8292e2a8f.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "3248aa2cd719",
+      "originalChars": 699,
+      "relativePath": "results/result_browser_tool_3248aa2cd719.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "eb118770fc10",
+      "originalChars": 263,
+      "relativePath": "results/result_browser_tool_eb118770fc10.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "9c10e5e4a3e6",
+      "originalChars": 652,
+      "relativePath": "results/result_browser_tool_9c10e5e4a3e6.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "8827c5fc72df",
+      "originalChars": 597,
+      "relativePath": "results/result_browser_tool_8827c5fc72df.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "e15309b166e6",
+      "originalChars": 127,
+      "relativePath": "results/result_browser_tool_e15309b166e6.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "40ca73635b9b",
+      "originalChars": 278,
+      "relativePath": "results/result_call_source_40ca73635b9b.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "36a4ef3573a6",
+      "originalChars": 692,
+      "relativePath": "results/result_browser_tool_36a4ef3573a6.txt"
+    },
+    {
+      "toolName": "browser_tool",
+      "contentHash": "ab2a08342cd3",
+      "originalChars": 44,
+      "relativePath": "results/result_browser_tool_ab2a08342cd3.txt"
+    }
+  ]
+}

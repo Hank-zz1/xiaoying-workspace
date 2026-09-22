@@ -1,0 +1,44 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.track {
+  stroke: rgba(255, 255, 255, 0.12);
+}
+
+.progress {
+  stroke: #6ee7b7;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 1;
+}
+
+.time {
+  font-size: 52px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

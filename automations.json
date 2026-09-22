@@ -1,0 +1,109 @@
+{
+  "version": 2,
+  "automations": {
+    "SchedulerTick": [
+      {
+        "name": "每日新闻播报",
+        "cron": "30 9 * * *",
+        "timezone": "Asia/Shanghai",
+        "permissionMode": "allow-all",
+        "labels": [
+          "research"
+        ],
+        "actions": [
+          {
+            "type": "prompt",
+            "prompt": "搜索新闻和全网热点，整理成每日新闻播报，通过飞书卡片格式发送：\n\n【搜索阶段】\n使用 market-2mzn 的 bocha_ai_search 或 bocha_web_search 搜索以下方向（每个方向获取 3-5 条，去重后保留最相关的内容）：\n1. '新闻联播 昨天 内容摘要'\n2. '昨日 海内外重要新闻'\n3. '微博热搜榜'\n4. '抖音热搜榜'\n5. '百度热搜榜'\n6. '知乎热榜'\n\n【整理格式 - 分成三个板块】\n一、国内外要闻（5-10 条）\n  - 每条包含标题（加粗）+ 1-2 句内容简介（50 字以内）\n二、各平台热搜 Top 5\n  - 标注平台来源和类型（娱乐/社会/科技/财经等）\n三、跨平台热点\n  - 识别多个平台共同关注的话题，每条标注覆盖的平台\n\n【发送阶段 - 飞书卡片格式】\n1. 使用 Python 脚本，通过飞书消息卡片 API 发送\n2. Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9\n3. 卡片标题：「📰 每日新闻播报」+ 当天日期（格式：2026年5月19日）\n4. 卡片采用蓝色（blue）色调，各板块之间用分割线分隔\n5. 卡片底部添加「由 Incaier Agent 自动生成」脚注\n6. 脚本写入临时 .py 文件后执行（不要用 python -c）\n\n【飞书卡片消息格式参考】\n使用 requests 库发送 POST 请求，msg_type 为 \"interactive\"，卡片 JSON 结构：\n{\n  \"config\": { \"wide_screen_mode\": true },\n  \"header\": { \"title\": { \"tag\": \"plain_text\", \"content\": \"标题\" }, \"template\": \"blue\" },\n  \"elements\": [\n    { \"tag\": \"div\", \"fields\": [{\"is_short\": false, \"text\": {\"tag\": \"lark_md\", \"content\": \"**新闻标题**\\n简介内容\"}}] },\n    { \"tag\": \"hr\" }\n  ],\n  \"note\": { \"tag\": \"plain_text\", \"content\": \"脚注\" }\n}"
+          }
+        ],
+        "id": "72160e",
+        "enabled": false
+      },
+      {
+        "name": "澳洲冰箱品牌新品监控-上午巡检",
+        "cron": "23 10 * * 1-5",
+        "timezone": "Asia/Shanghai",
+        "permissionMode": "allow-all",
+        "labels": [
+          "research"
+        ],
+        "actions": [
+          {
+            "type": "prompt",
+            "prompt": "澳洲冰箱品牌新品巡检（上午）- 有变化才推送。\n\n**先读两份文件（工作区根目录 `C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace`）：**\n1. `fridge-report-kit.md` —— 统一抓取契约：固定 Python 路径、各站点 URL 与参数、禁用 firecrawl_scrape/browser_tool 抓官网、LG 限流等待重试、唯一基线约定。\n2. `data/au-fridge-baseline-2026-08-27.md` 的「AUS 市场」部分（唯一基线，不再引用散落在会话目录里的旧基线副本）。\n\n**快速巡检（一律用 fridge_stealth_scrape.py；Python 固定路径 `C:/Users/26011970/AppData/Local/Programs/IncaierAgents/resources/vendor/python/python.exe`，先 cd 到工作区根目录）：**\n1. 海信: `fridge_stealth_scrape.py \"https://hisense.com.au/appliances/fridges-freezers/all\" --mode=hrefs --href-kw=product --retries=2`\n2. 美的: `fridge_stealth_scrape.py \"https://www.binglee.com.au/products/midea\" --mode=hrefs --href-kw=midea --retries=2`（官网 JS 重渲染，用 Bing Lee 替代）\n3. 三星: `fridge_stealth_scrape.py \"https://www.samsung.com/au/refrigerators/all-refrigerators/\" --mode=jsonld --retries=2`（产品在 JSON-LD）\n4. LG: `fridge_stealth_scrape.py \"https://www.lg.com/au/fridges/\" --headed --wait=8 --retries=2`（必须 --headed；Akamai 限流时失败即备注，不要硬冲）\n5. 西屋: `fridge_stealth_scrape.py \"https://www.westinghouse.com.au/fridges-and-freezers/fridges/\" --mode=hrefs --href-kw=westinghouse --retries=2`\n\n**关键检查项：**\n- 是否有之前基线中不存在的全新型号？\n- 美的 MDRT580MTF45AP (413L) 是否从 \"Coming Soon\" 变为可购买状态？\n- 海信是否有新增 \"New\" 标签的型号？\n\n**发送规则：**\n- **仅当发现变化时**才通过飞书 Webhook 发送通知；无变化不发送任何消息\n- Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n- 使用 Python requests 发送蓝色卡片，标题：\"🔔 澳洲冰箱新品巡检 - {当天日期} 上午\"\n- 卡片底部标注：\"由 Incaier Agent 自动巡检\"\n\n**更新基线：** 如有变化，更新 `data/au-fridge-baseline-2026-08-27.md` 的 AUS 部分。"
+          }
+        ],
+        "id": "au-fridge-morning",
+        "enabled": false
+      },
+      {
+        "name": "澳洲冰箱品牌新品监控-下午巡检",
+        "cron": "23 13 * * 1-5",
+        "timezone": "Asia/Shanghai",
+        "permissionMode": "allow-all",
+        "labels": [
+          "research"
+        ],
+        "actions": [
+          {
+            "type": "prompt",
+            "prompt": "澳洲冰箱品牌新品巡检（下午）- 有变化才推送。\n\n**先读两份文件（工作区根目录 `C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace`）：**\n1. `fridge-report-kit.md` —— 统一抓取契约：固定 Python 路径、各站点 URL 与参数、禁用 firecrawl_scrape/browser_tool 抓官网、LG 限流等待重试、唯一基线约定。\n2. `data/au-fridge-baseline-2026-08-27.md` 的「AUS 市场」部分（唯一基线，之前 `au-fridge-baseline-2026-06-15.md` 已合并进此文件，不再单独引用）。\n\n**快速巡检（一律用 fridge_stealth_scrape.py；Python 固定路径 `C:/Users/26011970/AppData/Local/Programs/IncaierAgents/resources/vendor/python/python.exe`，先 cd 到工作区根目录）：**\n1. 海信: `fridge_stealth_scrape.py \"https://hisense.com.au/appliances/fridges-freezers/all\" --mode=hrefs --href-kw=product --retries=2`，提取 /product/ 链接里的 HR 型号\n2. 美的: `fridge_stealth_scrape.py \"https://www.binglee.com.au/products/midea\" --mode=hrefs --href-kw=midea --retries=2`（官网 JS 重渲染放弃，用 Bing Lee 替代）\n3. 三星: `fridge_stealth_scrape.py \"https://www.samsung.com/au/refrigerators/all-refrigerators/\" --mode=jsonld --retries=2`，从 jsonld_items 拿产品名+URL\n4. LG: `fridge_stealth_scrape.py \"https://www.lg.com/au/fridges/\" --headed --wait=8 --retries=2`（必须 --headed；被 Akamai 限流别硬冲，失败就备注）\n5. 西屋: `fridge_stealth_scrape.py \"https://www.westinghouse.com.au/fridges-and-freezers/fridges/\" --mode=hrefs --href-kw=westinghouse --retries=2`\n\n**关键检查项：**\n- 是否有之前基线中不存在的全新型号？\n- 美的 MDRT580MTF45AP (413L) 是否从 \"Coming Soon\" 变为可购买状态（Bing Lee 页有货即已上市）？\n- 海信是否有新增 \"New\" 标签的型号？\n\n**发送规则：**\n- **仅当发现变化时**才通过飞书 Webhook 发送通知；无变化不发送任何消息\n- Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n- 使用 Python requests 发送蓝色卡片，标题：\"🔔 澳洲冰箱新品巡检 - {当天日期} 下午\"\n- 卡片底部标注：\"由 Incaier Agent 自动巡检\"\n\n**更新基线：** 如有变化，更新 `data/au-fridge-baseline-2026-08-27.md` 的 AUS 部分。"
+          }
+        ],
+        "id": "au-fridge-afternoon",
+        "enabled": false
+      },
+      {
+        "name": "澳洲冰箱品牌新品监控-每日汇总",
+        "cron": "7 15 * * *",
+        "timezone": "Asia/Shanghai",
+        "permissionMode": "allow-all",
+        "labels": [
+          "research"
+        ],
+        "actions": [
+          {
+            "type": "prompt",
+            "prompt": "澳洲冰箱品牌新品监控 - 每日汇总报告（下午 3 点）：\n\n**先读两份文件（工作区根目录 `C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace`）：**\n1. `fridge-report-kit.md` —— 统一抓取契约：固定 Python 路径、各站点 URL 与参数、禁用 firecrawl_scrape/browser_tool 抓官网、LG 限流等待重试、唯一基线约定。\n2. `data/au-fridge-baseline-2026-08-27.md` 的「AUS 市场」部分（唯一基线）。\n\n**抓取阶段（每站单独调用 fridge_stealth_scrape.py；Python 固定路径 `C:/Users/26011970/AppData/Local/Programs/IncaierAgents/resources/vendor/python/python.exe`，先 cd 到工作区根目录）：**\n1. 海信: `fridge_stealth_scrape.py \"https://hisense.com.au/appliances/fridges-freezers/all\" --mode=hrefs --href-kw=product --retries=2`\n2. 美的: `fridge_stealth_scrape.py \"https://www.binglee.com.au/products/midea\" --mode=hrefs --href-kw=midea --retries=2`（官网 JS 重渲染，用 Bing Lee 替代确认型号状态）\n3. 三星: `fridge_stealth_scrape.py \"https://www.samsung.com/au/refrigerators/all-refrigerators/\" --mode=jsonld --retries=2`\n4. LG: `fridge_stealth_scrape.py \"https://www.lg.com/au/fridges/\" --headed --wait=8 --retries=2`（必须 --headed；Akamai 限流时失败就备注，不要硬冲）\n5. 西屋: `fridge_stealth_scrape.py \"https://www.westinghouse.com.au/fridges-and-freezers/fridges/\" --mode=hrefs --href-kw=westinghouse --retries=2`\n\n**对比分析：**\n- 将本次抓取的型号与基线逐一对比\n- 重点关注：\n  a. 是否有之前基线中不存在的全新型号？\n  b. 美的 MDRT580MTF45AP (413L) 是否从 \"Coming Soon\" 变为可购买状态（Bing Lee 页有货即已上市）？\n  c. 海信是否有新增 \"New\" 标签的型号？\n  d. 各品牌是否有新增冰箱子品类？\n\n**发送阶段 - 飞书通知：**\n1. **无论是否有变化，都发送每日汇总卡片**\n2. Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n3. 使用 Python requests 发送 msg_type=\"interactive\" 卡片消息\n4. 蓝色模板，分品牌展示变化情况\n5. 有变化时标题：\"🔔 澳洲冰箱新品监控日报 - {当天日期}\"\n6. 无变化时标题：\"✅ 澳洲冰箱新品监控日报 - {当天日期}\"，内容简要说\"今日 5 品牌均无新品上架或状态变更\"\n7. 卡片底部标注：\"由 Incaier Agent 自动监控 | 下次汇总：明天下午 3:07\"\n\n**更新基线：** 如有变化，更新 `data/au-fridge-baseline-2026-08-27.md` 的 AUS 部分。"
+          }
+        ],
+        "id": "au-fridge-daily",
+        "enabled": false
+      },
+      {
+        "name": "澳洲冰箱品牌新品监控-傍晚巡检",
+        "cron": "23 16 * * 1-5",
+        "timezone": "Asia/Shanghai",
+        "permissionMode": "allow-all",
+        "labels": [
+          "research"
+        ],
+        "actions": [
+          {
+            "type": "prompt",
+            "prompt": "澳洲冰箱品牌新品巡检（傍晚）- 有变化才推送。\n\n**先读两份文件（工作区根目录 `C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace`）：**\n1. `fridge-report-kit.md` —— 统一抓取契约：固定 Python 路径、各站点 URL 与参数、禁用 firecrawl_scrape/browser_tool 抓官网、LG 限流等待重试、唯一基线约定。\n2. `data/au-fridge-baseline-2026-08-27.md` 的「AUS 市场」部分（唯一基线，不再引用散落在会话目录里的旧基线副本）。\n\n**快速巡检（一律用 fridge_stealth_scrape.py；Python 固定路径 `C:/Users/26011970/AppData/Local/Programs/IncaierAgents/resources/vendor/python/python.exe`，先 cd 到工作区根目录）：**\n1. 海信: `fridge_stealth_scrape.py \"https://hisense.com.au/appliances/fridges-freezers/all\" --mode=hrefs --href-kw=product --retries=2`\n2. 美的: `fridge_stealth_scrape.py \"https://www.binglee.com.au/products/midea\" --mode=hrefs --href-kw=midea --retries=2`（官网 JS 重渲染，用 Bing Lee 替代）\n3. 三星: `fridge_stealth_scrape.py \"https://www.samsung.com/au/refrigerators/all-refrigerators/\" --mode=jsonld --retries=2`（产品在 JSON-LD）\n4. LG: `fridge_stealth_scrape.py \"https://www.lg.com/au/fridges/\" --headed --wait=8 --retries=2`（必须 --headed；Akamai 限流时失败即备注，不要硬冲）\n5. 西屋: `fridge_stealth_scrape.py \"https://www.westinghouse.com.au/fridges-and-freezers/fridges/\" --mode=hrefs --href-kw=westinghouse --retries=2`\n\n**关键检查项：**\n- 是否有之前基线中不存在的全新型号？\n- 美的 MDRT580MTF45AP (413L) 是否从 \"Coming Soon\" 变为可购买状态？\n- 海信是否有新增 \"New\" 标签的型号？\n\n**发送规则：**\n- **仅当发现变化时**才通过飞书 Webhook 发送通知；无变化不发送任何消息\n- Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n- 使用 Python requests 发送蓝色卡片，标题：\"🔔 澳洲冰箱新品巡检 - {当天日期} 傍晚\"\n- 卡片底部标注：\"由 Incaier Agent 自动巡检\"\n\n**更新基线：** 如有变化，更新 `data/au-fridge-baseline-2026-08-27.md` 的 AUS 部分。"
+          }
+        ],
+        "id": "au-fridge-evening",
+        "enabled": false
+      },
+      {
+        "name": "新西兰冰箱品牌新品监控-每周巡检",
+        "cron": "23 10 * * 3",
+        "timezone": "Asia/Shanghai",
+        "permissionMode": "allow-all",
+        "labels": [
+          "research"
+        ],
+        "actions": [
+          {
+            "type": "prompt",
+            "prompt": "新西兰冰箱品牌新品巡检（每周三上午）- 有变化才推送。\n\n**先读两份文件（都在工作区根目录 `C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace`）：**\n1. `fridge-report-kit.md` —— 统一抓取模式契约：固定 Python 路径、各站点 URL 与参数、禁用 firecrawl_scrape/browser_tool 抓官网、LG 被限流时等待重试、基线约定。\n2. `data/au-fridge-baseline-2026-08-27.md` —— 唯一基线，读其中「NZ 市场」部分获取上次记录。\n\n**巡检方式（一律用 fridge_stealth_scrape.py）：**\n1. 海信 Hisense NZ: `python fridge_stealth_scrape.py \"https://hisense.co.nz/appliances/fridge/\" --mode=hrefs --href-kw=product --retries=2`，从 hrefs 提取全部 /product/ 链接\n2. 三星 Samsung NZ: `python fridge_stealth_scrape.py \"https://www.samsung.com/nz/refrigerators/all-refrigerators/\" --mode=jsonld --retries=2`，从 jsonld_items 拿产品名+URL\n3. LG NZ: `python fridge_stealth_scrape.py \"https://www.lg.com/nz/fridges/\" --headed --wait=8 --retries=2`（必须 --headed；Akamai 限流时不要硬冲，本次失败就在报告中备注）\n\n**Python 路径（固定）：** `C:/Users/26011970/AppData/Local/Programs/IncaierAgents/resources/vendor/python/python.exe`，执行前先 `cd C:/Users/26011970/.incaier-agent/workspaces/my-workspace`。\n输出为单行 JSON；`nav_error` 非空 = 抓取失败，该品牌回退 bocha_web_search 并备注。\n\n**关键检查项：**\n- 是否出现基线中不存在的全新型号/产品？\n- 是否有新品发布或促销活动？\n- LG NZ 若本次抓通，将其产品清单补入基线（基线 LG NZ 目前是空白）。\n\n**发送规则：**\n- **仅当发现变化时**才通过飞书 Webhook 发送通知；无变化不发送任何消息\n- Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n- 使用 Python requests 发送蓝色卡片，标题：\"🔔 新西兰冰箱新品巡检 - {当天日期}\"\n- 卡片底部标注：\"由 Incaier Agent 自动巡检 | NZ 市场每周三巡检\"\n\n**更新基线：** 如有变化，更新 `data/au-fridge-baseline-2026-08-27.md` 中的 NZ 部分（此文件是唯一基线，不要新建/引用其他基线副本）。"
+          }
+        ],
+        "id": "nz-fridge-weekly",
+        "enabled": false
+      }
+    ]
+  }
+}

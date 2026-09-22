@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 472747,
+  "entities": {
+    "五星": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794182857
+    },
+    "四星": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794182857
+    },
+    "澳洲": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794182857
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 776416,
+  "entities": {
+    "冷凝": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183773
+    },
+    "漏报": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183773
+    }
+  }
+}

@@ -1,0 +1,2 @@
+{"op":"header_update","patch":{"enabledSourceSlugs":["market-2bum-ocr","market-2e65","market-2jdh","market-2mzn","market-fetch3hil","market-pdf31vx"]},"unset":["userDisabledSourceSlugs"]}
+{"op":"header_update","patch":{"connectionLocked":false},"unset":["llmConnection"]}

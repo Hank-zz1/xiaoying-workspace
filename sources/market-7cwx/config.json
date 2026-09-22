@@ -1,0 +1,62 @@
+{
+  "id": "market-7cwx_ebf3dc42",
+  "name": "更新在线静态资源网站内容",
+  "slug": "market-7cwx",
+  "enabled": true,
+  "provider": "capability-market",
+  "type": "api",
+  "api": {
+    "baseUrl": "https://market.haierfhtech.com/prod-api/capabilitymarket/api/v1/proxy/cap_6dc013392621440e927b0f4bcade5ca5/",
+    "authType": "header",
+    "headerName": "X-Platform-Access-Key"
+  },
+  "icon": "🔌",
+  "tagline": "能力简介：\n\n本能力支持用户基于已有的静态资源预览地址，一键完成线上内容替换与更新，无需重新发布、无需记忆内部资源 ID，实现「原链接、新内容」的无缝迭代体验。\n\n用户只需传入此前部署成功时获得的公网预览 URL（如 https://ind.haierfhtech.com/fKK59/ ），系统将自动解析 URL 中的短链标识，精准匹配已部署的静态资源记录，并在此基础上完成内容覆盖。更新过程支持以下三种输入方式，与上传能力保持一致：\n\n完整站点压缩包（.zip）：上传包含完整 HTML 站点目录结构的新版本压缩包，系统将自动解压并替换原站点内容，适用于整站改版、多页面联动更新等复杂场景；\n单个 HTML 文件（.html）：直接上传新的 index.html 文件，系统自动完成目录替换与部署，适用于单页内容的快速修订、文案调整或样式更新；\n原始 HTML 文本内容：直接传入新的 HTML 源码字符串，无需准备任何文件，平台自动完成内容替换，适用于由程序动态生成页面后的即时更新或在线编辑发布场景。\n更新完成后，原预览地址保持不变，用户无需更换链接即可立即在浏览器中访问最新内容，原有分享链接、嵌入引用均可继续生效。同时，用户可按需同步更新资源名称、备注、分类等元数据信息。平台将返回更新后的资源信息（含原 shortLink、资源 ID 及元数据字段），便于调用方确认更新结果。\n\n整个过程无需服务器运维介入，显著降低静态资源持续迭代与线上维护门槛，适用于产品展示页内容刷新、活动页热更新、原型快速验证等需要「固定链接、动态内容」的业务场景。",
+  "isAuthenticated": true,
+  "credentialStatus": "present",
+  "capabilityId": "cap_6dc013392621440e927b0f4bcade5ca5",
+  "isMarketProvisioned": true,
+  "provisionSignature": "aa4dfb9ab4cd582842603a15de8bd33d",
+  "capabilityVersion": "1.0.1",
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "subscriptionId": "sub_0db9a2d9c7354752b28ccd3e9c1272e3",
+  "logoUrl": "",
+  "capabilityDescription": "能力简介：\n\n本能力支持用户基于已有的静态资源预览地址，一键完成线上内容替换与更新，无需重新发布、无需记忆内部资源 ID，实现「原链接、新内容」的无缝迭代体验。\n\n用户只需传入此前部署成功时获得的公网预览 URL（如 https://ind.haierfhtech.com/fKK59/ ），系统将自动解析 URL 中的短链标识，精准匹配已部署的静态资源记录，并在此基础上完成内容覆盖。更新过程支持以下三种输入方式，与上传能力保持一致：\n\n完整站点压缩包（.zip）：上传包含完整 HTML 站点目录结构的新版本压缩包，系统将自动解压并替换原站点内容，适用于整站改版、多页面联动更新等复杂场景；\n单个 HTML 文件（.html）：直接上传新的 index.html 文件，系统自动完成目录替换与部署，适用于单页内容的快速修订、文案调整或样式更新；\n原始 HTML 文本内容：直接传入新的 HTML 源码字符串，无需准备任何文件，平台自动完成内容替换，适用于由程序动态生成页面后的即时更新或在线编辑发布场景。\n更新完成后，原预览地址保持不变，用户无需更换链接即可立即在浏览器中访问最新内容，原有分享链接、嵌入引用均可继续生效。同时，用户可按需同步更新资源名称、备注、分类等元数据信息。平台将返回更新后的资源信息（含原 shortLink、资源 ID 及元数据字段），便于调用方确认更新结果。\n\n整个过程无需服务器运维介入，显著降低静态资源持续迭代与线上维护门槛，适用于产品展示页内容刷新、活动页热更新、原型快速验证等需要「固定链接、动态内容」的业务场景。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [
+    "204",
+    "303",
+    "114"
+  ],
+  "categories": [
+    {
+      "id": "204",
+      "name": "企业通用效能",
+      "code": "enterprise_efficiency",
+      "rootId": "2",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/57afb6851b024bd6bdc1cc66101768ac.png"
+    },
+    {
+      "id": "303",
+      "name": "内容创作",
+      "code": "content_creation",
+      "rootId": "3",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/02c8bdc93c0643a7a8b73d6f22ec7e8c.png"
+    },
+    {
+      "id": "114",
+      "name": "综合管理与运营",
+      "code": "general_mgmt_operation",
+      "rootId": "1",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/2ab931764cda4f878853f3d836b21a74.png"
+    }
+  ],
+  "createdAt": 1787809636778,
+  "updatedAt": 1787813101491,
+  "connectionStatus": "connected",
+  "lastTestedAt": 1787813101491
+}

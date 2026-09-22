@@ -1,0 +1,11 @@
+{
+  "total_pages": 1,
+  "pages_with_text": 1,
+  "pages": [
+    {
+      "page": 1,
+      "text": "检测类型：AIGC文档检测（刘子涵_基于运行过程特征和机器学习的冰\n箱制冷系统多故障识别）\n字数：9,802字\n段落数：141段\n句子数：381句\n报告时间：2026-06-04 10:45:34\n报告编号：AIGC202606041045317523\n检测范围： ChatGPT-3.5 ChatGPT-5.1 Gemini Claude 文心一言 通义千问 智谱AI 豆包 Kimi o1-mini o1-preview Deepseek\nAIGC疑似率：21.4%\n高度疑似AIGC占全文比：20.3%\n中度疑似AIGC占全文比：4.6%\n低度疑似AIGC占全文比：46.4%\n不予检测文字占全文比：28.7%\n版权所有 www.paperyy.com\n扫码查看报告\n",
+      "chars": 337
+    }
+  ]
+}

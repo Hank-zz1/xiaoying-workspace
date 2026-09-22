@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 1166209,
+  "entities": {
+    "海信": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794183956
+    },
+    "澳洲": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794183956
+    },
+    "上市": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183956
+    },
+    "中国": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183956
+    }
+  }
+}

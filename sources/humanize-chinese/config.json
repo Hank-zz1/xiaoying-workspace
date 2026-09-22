@@ -1,0 +1,17 @@
+{
+  "id": "humanize-chinese_a1b2c3d4",
+  "name": "Humanize Chinese",
+  "slug": "humanize-chinese",
+  "enabled": true,
+  "provider": "humanize-chinese",
+  "type": "local",
+  "icon": "📝",
+  "tagline": "中文 AI 文本检测与去痕工具 - 检测 AIGC 痕迹、改写去 AI 味、学术论文降重、风格转换",
+  "local": {
+    "path": "C:/Users/26011970/.incaier-agent/workspaces/my-workspace/sources/humanize-chinese/repo"
+  },
+  "isAuthenticated": true,
+  "connectionStatus": "connected",
+  "createdAt": 1749006000000,
+  "updatedAt": 1749006000000
+}

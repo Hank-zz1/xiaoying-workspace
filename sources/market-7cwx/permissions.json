@@ -1,0 +1,14 @@
+{
+  "allowedApiEndpoints": [
+    {
+      "method": "GET",
+      "path": ".*",
+      "comment": "Allow all GET requests (read-only)"
+    },
+    {
+      "method": "POST",
+      "path": ".*",
+      "comment": "Allow all POST requests (API proxy)"
+    }
+  ]
+}

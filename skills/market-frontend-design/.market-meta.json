@@ -1,0 +1,34 @@
+{
+  "capabilityId": "cap_8779c547eb9b4cd092fe342da8693e21",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": null,
+  "latestCommitId": null,
+  "contentHash": null,
+  "projectUrl": null,
+  "updatedAt": 1787722144571,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_651508515ccc4ee8a65948f9f8340c15",
+  "name": "前端UI设计",
+  "capabilityName": "前端UI设计",
+  "logoUrl": null,
+  "capabilityDescription": "## 能力简介\r\n\r\n前端UI设计指南工具，提供创建美观、现代化用户界面的设计原则和最佳实践，支持响应式布局、组件设计和视觉风格定义。\r\n\r\n## 适用场景\r\n\r\n适用于多种科研和业务场景中的数据处理和分析需求，支持批量操作和自动化处理，可无缝集成到现有工作流程中。帮助用户提升工作效率和数据处理质量，满足不同类型项目的专业化需求。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [],
+  "categories": [],
+  "tags": [
+    "官方"
+  ],
+  "usageExamples": [
+    "帮我设计一个公司新产品的登录页面，要那种现在流行的高级简约风，顺便把网页代码也给我。",
+    "我们要给新出的AI写作工具做个官网首页。你先给我画个简单的排版草图看看，然后定一下颜色、字体，记得要支持深色模式，最后把能直接用的网页代码写出来。",
+    "公司要重构SaaS数据分析后台的界面。你先帮我规划下左侧菜单和右侧数据看板的排版草图，接着定一套完整的主题规范（包括深浅色模式、按钮和卡片样式），再设计一下鼠标悬停时的微动效，最后输出完整的前端代码，整体感觉要像Linear那样现代、极简又高级。"
+  ],
+  "provisionSignature": "e81a668fe5086561ee1347614083aea3",
+  "localInstallFingerprint": "sha256:79e8d46bc13d904af640255036968e204d86e132f7bf621976dafccf973043f2"
+}

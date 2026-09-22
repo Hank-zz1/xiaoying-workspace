@@ -1,0 +1,1 @@
+{"normalized":true,"kind":"search_fallback_exhausted","target":"market-fetch3hil.firecrawl_search","instruction":"The initial search and one different-source fallback both returned no usable evidence. Stop searching and report that verified current information is unavailable."}

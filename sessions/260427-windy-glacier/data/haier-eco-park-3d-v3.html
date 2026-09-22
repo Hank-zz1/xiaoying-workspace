@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>海尔科创生态园 - 3D精细版</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { overflow: hidden; font-family: 'Microsoft YaHei', sans-serif; background: #0a0a2e; }
+        #canvas { width: 100vw; height: 100vh; display: block; }
+        .title-panel {
+            position: fixed; top: 16px; left: 50%; transform: translateX(-50%);
+            z-index: 100; background: rgba(0,50,150,0.88); padding: 12px 32px;
+            border-radius: 10px; color: white; text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3); backdrop-filter: blur(8px);
+        }
+        .title-panel h1 { font-size: 20px; margin-bottom: 3px; letter-spacing: 2px; }
+        .title-panel p { font-size: 11px; opacity: 0.7; }
+        .controls {
+            position: fixed; top: 90px; left: 16px; z-index: 100;
+            display: flex; flex-direction: column; gap: 6px;
+        }
+        .ctrl-btn {
+            background: rgba(255,255,255,0.85); border: none; padding: 8px 16px;
+            border-radius: 6px; cursor: pointer; font-size: 13px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15); transition: all 0.2s;
+        }
+        .ctrl-btn:hover { background: rgba(0,100,255,0.85); color: white; }
+        .info-panel {
+            position: fixed; right: 16px; top: 90px; width: 300px; z-index: 100;
+            background: rgba(255,255,255,0.95); border-radius: 10px; padding: 18px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2); display: none;
+            max-height: 70vh; overflow-y: auto; backdrop-filter: blur(8px);
+        }
+        .info-panel.show { display: block; }
+        .info-panel h3 { color: #0050aa; margin-bottom: 12px; font-size: 16px; border-bottom: 2px solid #0050aa; padding-bottom: 8px; }
+        .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #eee; font-size: 13px; }
+        .info-label { color: #888; }
+        .info-value { color: #333; font-weight: 600; }
+        .stats-bar {
+            position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+            z-index: 100; background: rgba(255,255,255,0.92); padding: 10px 28px;
+            border-radius: 10px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            display: flex; gap: 30px; backdrop-filter: blur(8px);
+        }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 18px; font-weight: 700; color: #0050aa; }
+        .stat-label { font-size: 11px; color: #888; margin-top: 2px; }
+        .loading {
+            position: fixed; inset: 0; background: linear-gradient(135deg, #003296, #0066ff);
+            display: flex; justify-content: center; align-items: center; z-index: 9999;
+            color: white; font-size: 20px; flex-direction: column; gap: 16px;
+        }
+        .loading.hidden { display: none; }
+        .loading-spinner {
+            width: 40px; height: 40px; border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: white; border-radius: 50%; animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <div class="loading-spinner"></div>
+        <div>正在加载海尔科创生态园3D场景...</div>
+    </div>
+    <div class="title-panel">
+        <h1>海尔科创生态园 3D精细版</h1>
+        <p>青岛市崂山区海尔路1号 | 经纬度: 120.424932°E, 36.129963°N</p>
+    </div>
+    <div class="controls">
+        <button class="ctrl-btn" onclick="toggleDayNight()">🌓 昼夜切换</button>
+        <button class="ctrl-btn" onclick="resetCamera()">🎯 默认视角</button>
+        <button class="ctrl-btn" onclick="setView('bird')">🦅 鸟瞰</button>
+        <button class="ctrl-btn" onclick="setView('front')">🏢 正面</button>
+        <button class="ctrl-btn" onclick="setView('side')">📐 侧面</button>
+        <button class="ctrl-btn" onclick="toggleLabels()">🏷️ 标签</button>
+        <button class="ctrl-btn" onclick="toggleRotate()">🔄 旋转</button>
+    </div>
+    <div class="info-panel" id="infoPanel">
+        <h3 id="infoTitle">建筑信息</h3>
+        <div id="infoContent"></div>
+    </div>
+    <div class="stats-bar">
+        <div class="stat-item"><div class="stat-num">1100亩</div><div class="stat-label">总占地</div></div>
+        <div class="stat-item"><div class="stat-num">38.5万㎡</div><div class="stat-label">二期建面</div></div>
+        <div class="stat-item"><div class="stat-num">1.2万人</div><div class="stat-label">办公容量</div></div>
+        <div class="stat-item"><div class="stat-num">7+1栋</div><div class="stat-label">主体建筑</div></div>
+    </div>
+    <canvas id="canvas"></canvas>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/renderers/CSS2DRenderer.js"></script>
+    <script>
+    (function() {
+        // === 初始化 ===
+        const canvas = document.getElementById('canvas');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(50, innerWidth/innerHeight, 0.1, 2000);
+        camera.position.set(180, 130, 180);
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+        renderer.setSize(innerWidth, innerHeight);
+        renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.2;
+
+        // CSS2D标签
+        const labelRenderer = new THREE.CSS2DRenderer();
+        labelRenderer.setSize(innerWidth, innerHeight);
+        labelRenderer.domElement.style.position = 'absolute';
+        labelRenderer.domElement.style.top = '0';
+        labelRenderer.domElement.style.pointerEvents = 'none';
+        document.body.appendChild(labelRenderer.domElement);
+
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.06;
+        controls.maxPolarAngle = Math.PI / 2.05;
+        controls.minDistance = 40;
+        controls.maxDistance = 500;
+        controls.target.set(0, 5, 0);
+
+        // === 光照 ===
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.55);
+        scene.add(ambientLight);
+        const sunLight = new THREE.DirectionalLight(0xfff5e6, 0.85);
+        sunLight.position.set(80, 120, 60);
+        sunLight.castShadow = true;
+        sunLight.shadow.mapSize.set(4096, 4096);
+        sunLight.shadow.camera.near = 1;
+        sunLight.shadow.camera.far = 400;
+        sunLight.shadow.camera.left = -180;
+        sunLight.shadow.camera.right = 180;
+        sunLight.shadow.camera.top = 180;
+        sunLight.shadow.camera.bottom = -180;
+        sunLight.shadow.bias = -0.001;
+        scene.add(sunLight);
+        const fillLight = new THREE.DirectionalLight(0x8888ff, 0.15);
+        fillLight.position.set(-60, 40, -80);
+        scene.add(fillLight);
+
+        // === 天空 ===
+        const skyGeo = new THREE.SphereGeometry(900, 32, 16);
+        const skyMat = new THREE.ShaderMaterial({
+            uniforms: {
+                topColor: { value: new THREE.Color(0x0055cc) },
+                bottomColor: { value: new THREE.Color(0xcce0f0) },
+                offset: { value: 30 }, exponent: { value: 0.5 }
+            },
+            vertexShader: `varying vec3 vWP; void main(){ vec4 wp = modelMatrix * vec4(position,1.0); vWP=wp.xyz; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+            fragmentShader: `uniform vec3 topColor; uniform vec3 bottomColor; uniform float offset; uniform float exponent; varying vec3 vWP; void main(){ float h=normalize(vWP+offset).y; gl_FragColor=vec4(mix(bottomColor,topColor,max(pow(max(h,0.0),exponent),0.0)),1.0); }`,
+            side: THREE.BackSide
+        });
+        scene.add(new THREE.Mesh(skyGeo, skyMat));
+
+        // === 材质工厂 ===
+        const matCache = {};
+        function mat(color, opts={}) {
+            const k = color + JSON.stringify(opts);
+            if (!matCache[k]) matCache[k] = new THREE.MeshStandardMaterial({ color, roughness: opts.r||0.7, metalness: opts.m||0.1, ...opts });
+            return matCache[k];
+        }
+
+        // === 创建玻璃幕墙纹理 ===
+        function createGlassCurtainWall(w, h) {
+            const c = document.createElement('canvas');
+            c.width = 512; c.height = 512;
+            const ctx = c.getContext('2d');
+
+            // 玻璃幕墙背景
+            ctx.fillStyle = '#d8e8f0';
+            ctx.fillRect(0, 0, 512, 512);
+
+            // 楼层分隔
+            const floors = Math.max(3, Math.floor(h / 4));
+            const floorH = 512 / floors;
+
+            for (let f = 0; f < floors; f++) {
+                // 楼层分隔线
+                ctx.fillStyle = '#a0b8c8';
+                ctx.fillRect(0, f * floorH, 512, 3);
+
+                // 玻璃面板
+                const glassY = f * floorH + 3;
+                const glassH = floorH - 3;
+
+                // 玻璃分割
+                const panelsPerFloor = Math.max(4, Math.floor(w / 5));
+                const panelW = 512 / panelsPerFloor;
+
+                for (let p = 0; p < panelsPerFloor; p++) {
+                    // 玻璃面板渐变
+                    const grd = ctx.createLinearGradient(p * panelW, glassY, (p+1) * panelW, glassY + glassH);
+                    grd.addColorStop(0, '#c8e0f0');
+                    grd.addColorStop(0.5, '#e0f0f8');
+                    grd.addColorStop(1, '#b0d0e0');
+                    ctx.fillStyle = grd;
+                    ctx.fillRect(p * panelW + 2, glassY + 2, panelW - 4, glassH - 4);
+
+                    // 窗框
+                    ctx.strokeStyle = '#8098a8';
+                    ctx.lineWidth = 1.5;
+                    ctx.strokeRect(p * panelW + 2, glassY + 2, panelW - 4, glassH - 4);
+                }
+
+                // 玻璃反射效果
+                ctx.fillStyle = 'rgba(255,255,255,0.15)';
+                ctx.fillRect(50, glassY + glassH * 0.3, 100, glassH * 0.4);
+            }
+
+            // 垂直分隔线
+            ctx.strokeStyle = '#7090a8';
+            ctx.lineWidth = 2;
+            const vLines = Math.max(4, Math.floor(w / 5));
+            const vLineSpacing = 512 / vLines;
+            for (let i = 0; i <= vLines; i++) {
+                ctx.beginPath();
+                ctx.moveTo(i * vLineSpacing, 0);
+                ctx.lineTo(i * vLineSpacing, 512);
+                ctx.stroke();
+            }
+
+            const tex = new THREE.CanvasTexture(c);
+            tex.wrapS = tex.wrapT = THREE.RepeatWrapping;
+            return tex;
+        }
+
+        // === 创建建筑体块（层叠式设计）===
+        function createSteppedBuilding(x, z, w, dp, h, color, info, options = {}) {
+            const group = new THREE.Group();
+            const steps = options.steps || 3;
+            const stepH = h / steps;
+
+            // 创建层叠式体块
+            for (let i = 0; i < steps; i++) {
+                const stepW = w * (1 - i * 0.15);
+                const stepD = dp * (1 - i * 0.1);
+                const y = i * stepH;
+
+                const geo = new THREE.BoxGeometry(stepW, stepH, stepD);
+                const glassTex = createGlassCurtainWall(stepW, stepH);
+                const bodyMat = new THREE.MeshStandardMaterial({
+                    map: glassTex,
+                    roughness: 0.3,
+                    metalness: 0.4
+                });
+
+                const mesh = new THREE.Mesh(geo, bodyMat);
+                mesh.position.y = y + stepH / 2;
+                mesh.castShadow = true;
+                mesh.receiveShadow = true;
+                group.add(mesh);
+
+                // 白色线条装饰
+                const lineGeo = new THREE.BoxGeometry(stepW + 0.5, 0.3, stepD + 0.5);
+                const lineMesh = new THREE.Mesh(lineGeo, mat('#f0f0f0', {r:0.4}));
+                lineMesh.position.y = y + stepH;
+                group.add(lineMesh);
+            }
+
+            // 建筑基座
+            const baseGeo = new THREE.BoxGeometry(w + 4, 2, dp + 4);
+            const baseMesh = new THREE.Mesh(baseGeo, mat('#e0e0e0', {r:0.6}));
+            baseMesh.position.y = 1;
+            baseMesh.receiveShadow = true;
+            group.add(baseMesh);
+
+            // 屋顶装饰（体现"山顶"理念）
+            if (h > 40) {
+                // 金字塔形屋顶装饰
+                const roofGeo = new THREE.ConeGeometry(Math.min(w, dp) * 0.2, 6, 4);
+                const roofMat = mat('#c0d0e0', {r:0.2, m:0.5});
+                const roof = new THREE.Mesh(roofGeo, roofMat);
+                roof.position.y = h + 3;
+                roof.rotation.y = Math.PI / 4;
+                roof.castShadow = true;
+                group.add(roof);
+
+                // 避雷针
+                const rodGeo = new THREE.CylinderGeometry(0.15, 0.15, 8);
+                const rod = new THREE.Mesh(rodGeo, mat('#888', {m:0.5}));
+                rod.position.y = h + 10;
+                group.add(rod);
+            }
+
+            group.position.set(x, 0, z);
+            return group;
+        }
+
+        // === 真实建筑数据 ===
+        const buildingData = [
+            {
+                name: '中央研究院',
+                id: 'C01',
+                x: 0, z: 0,
+                width: 90, depth: 50, height: 68,
+                color: '#1a3a5c',
+                info: {
+                    '编号': 'C01',
+                    '名称': '中央研究院',
+                    '定位': '集团核心研发机构，国家级科研平台',
+                    '建筑面积': '约8万㎡',
+                    '楼层': '约16层',
+                    '高度': '68m',
+                    '容纳': '约3000人',
+                    '特色': '并联全球"10+N"创新生态体系，链接2.3万研发人员'
+                }
+            },
+            {
+                name: 'C02 空气生态创新中心',
+                id: 'C02',
+                x: 95, z: -55,
+                width: 65, depth: 38, height: 50,
+                color: '#2e6b9e',
+                info: {
+                    '编号': 'C02',
+                    '名称': '空气生态创新中心',
+                    '定位': '空气生态与暖通技术创新',
+                    '建筑面积': '约5万㎡',
+                    '楼层': '约12层',
+                    '高度': '50m',
+                    '特色': '智慧空气解决方案研发'
+                }
+            },
+            {
+                name: 'C03 食联生态创新中心',
+                id: 'C03',
+                x: -95, z: -55,
+                width: 62, depth: 36, height: 48,
+                color: '#2d7a4f',
+                info: {
+                    '编号': 'C03',
+                    '名称': '食联生态创新中心',
+                    '定位': '食品生态链创新研发',
+                    '建筑面积': '约5万㎡',
+                    '楼层': '约11层',
+                    '高度': '48m',
+                    '特色': '食品产业数字化转型与生态创新'
+                }
+            },
+            {
+                name: 'C04 衣联&水联生态创新中心',
+                id: 'C04',
+                x: 95, z: 55,
+                width: 60, depth: 35, height: 46,
+                color: '#6b3fa0',
+                info: {
+                    '编号': 'C04',
+                    '名称': '衣联&水联生态创新中心',
+                    '定位': '衣物护理与水生态创新',
+                    '建筑面积': '约4.5万㎡',
+                    '楼层': '约11层',
+                    '高度': '46m',
+                    '特色': '衣物洗护生态与水联网技术'
+                }
+            },
+            {
+                name: 'C05 食联生态实验大楼',
+                id: 'C05',
+                x: -95, z: 55,
+                width: 52, depth: 30, height: 36,
+                color: '#3a8c5e',
+                info: {
+                    '编号': 'C05',
+                    '名称': '食联生态实验大楼',
+                    '定位': '食品生态实验与测试中心',
+                    '建筑面积': '约3.5万㎡',
+                    '楼层': '约8层',
+                    '高度': '36m',
+                    '特色': '国际先进实验设备'
+                }
+            },
+            {
+                name: 'C06 空气实验大楼',
+                id: 'C06',
+                x: 140, z: 0,
+                width: 48, depth: 30, height: 34,
+                color: '#4a90c4',
+                info: {
+                    '编号': 'C06',
+                    '名称': '空气实验大楼',
+                    '定位': '空气技术实验与验证',
+                    '建筑面积': '约3万㎡',
+                    '楼层': '约8层',
+                    '高度': '34m',
+                    '特色': '环境模拟与空气品质测试'
+                }
+            },
+            {
+                name: 'C07 综合配套楼',
+                id: 'C07',
+                x: -140, z: 0,
+                width: 58, depth: 32, height: 40,
+                color: '#6b7b8d',
+                info: {
+                    '编号': 'C07',
+                    '名称': '综合配套楼',
+                    '定位': '园区综合服务与办公',
+                    '建筑面积': '约4万㎡',
+                    '楼层': '约10层',
+                    '高度': '40m',
+                    '特色': '会议、展示、行政办公'
+                }
+            },
+            {
+                name: '员工阳光餐厅',
+                id: 'D01',
+                x: 0, z: 115,
+                width: 55, depth: 45, height: 14,
+                color: '#d4883a',
+                isRestaurant: true,
+                info: {
+                    '编号': 'D01',
+                    '名称': '员工阳光餐厅',
+                    '定位': '园区餐饮服务',
+                    '建筑面积': '约1.5万㎡',
+                    '楼层': '3层',
+                    '高度': '14m',
+                    '容纳': '同时2000人就餐',
+                    '特色': '智能化管理，阳光玻璃顶'
+                }
+            }
+        ];
+
+        // === 建筑组 ===
+        const buildingGroup = new THREE.Group();
+        scene.add(buildingGroup);
+        const clickableMeshes = [];
+        const labels = [];
+
+        buildingData.forEach(d => {
+            let bldgGroup;
+
+            if (d.isRestaurant) {
+                // 阳光餐厅 - 特殊设计
+                bldgGroup = new THREE.Group();
+                const { width: w, depth: dp, height: h } = d;
+
+                // 基座
+                const baseGeo = new THREE.BoxGeometry(w + 4, 2, dp + 4);
+                const baseMesh = new THREE.Mesh(baseGeo, mat('#e8d8c0', {r:0.6}));
+                baseMesh.position.y = 1;
+                baseMesh.receiveShadow = true;
+                bldgGroup.add(baseMesh);
+
+                // 主楼体（玻璃幕墙）
+                const glassTex = createGlassCurtainWall(w, h);
+                const bodyGeo = new THREE.BoxGeometry(w, h - 2, dp);
+                const bodyMat = new THREE.MeshStandardMaterial({
+                    map: glassTex, roughness: 0.3, metalness: 0.4
+                });
+                const body = new THREE.Mesh(bodyGeo, bodyMat);
+                body.position.y = 2 + (h - 2) / 2;
+                body.castShadow = true;
+                body.receiveShadow = true;
+                bldgGroup.add(body);
+                clickableMeshes.push({ mesh: body, data: d });
+
+                // 阳光玻璃屋顶
+                const roofGeo = new THREE.ConeGeometry(Math.min(w, dp) * 0.35, 5, 4);
+                const roofMat = new THREE.MeshStandardMaterial({
+                    color: '#f0e080', transparent: true, opacity: 0.85,
+                    roughness: 0.1, metalness: 0.6
+                });
+                const roof = new THREE.Mesh(roofGeo, roofMat);
+                roof.position.y = h + 2.5;
+                roof.rotation.y = Math.PI / 4;
+                roof.castShadow = true;
+                bldgGroup.add(roof);
+            } else {
+                // 其他建筑 - 层叠式设计
+                bldgGroup = createSteppedBuilding(d.x, d.z, d.width, d.depth, d.height, d.color, d.info, { steps: 3 });
+
+                // 添加点击检测
+                bldgGroup.traverse(child => {
+                    if (child.isMesh && child.material.map) {
+                        clickableMeshes.push({ mesh: child, data: d });
+                    }
+                });
+            }
+
+            if (!d.isRestaurant) {
+                bldgGroup.position.set(d.x, 0, d.z);
+            }
+            buildingGroup.add(bldgGroup);
+
+            // CSS2D标签
+            const div = document.createElement('div');
+            div.textContent = d.name;
+            div.style.cssText = `background:rgba(0,60,140,0.82);color:#fff;padding:3px 10px;border-radius:5px;font-size:11px;font-family:Microsoft YaHei;white-space:nowrap;pointer-events:auto;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.25);`;
+            div.addEventListener('click', () => showInfo(d.info));
+            const lbl = new THREE.CSS2DObject(div);
+            lbl.position.set(0, d.height + 12, 0);
+            bldgGroup.add(lbl);
+            labels.push(lbl);
+        });
+
+        // === 地面 ===
+        const groundGeo = new THREE.PlaneGeometry(700, 700);
+        const groundMat = mat('#b8b0a0', {r:0.95});
+        const ground = new THREE.Mesh(groundGeo, groundMat);
+        ground.rotation.x = -Math.PI / 2;
+        ground.receiveShadow = true;
+        scene.add(ground);
+
+        // 绿化基底
+        const grassGeo = new THREE.PlaneGeometry(550, 480);
+        const grass = new THREE.Mesh(grassGeo, mat('#5a8c3c', {r:0.98}));
+        grass.rotation.x = -Math.PI / 2;
+        grass.position.y = 0.02;
+        grass.receiveShadow = true;
+        scene.add(grass);
+
+        // === 道路系统 ===
+        function addRoad(x, z, w, l, axis) {
+            const geo = new THREE.PlaneGeometry(axis === 'x' ? l : w, axis === 'x' ? w : l);
+            const m = new THREE.Mesh(geo, mat('#5a5a5a', {r:0.8}));
+            m.rotation.x = -Math.PI / 2;
+            m.position.set(x, 0.04, z);
+            m.receiveShadow = true;
+            scene.add(m);
+            // 中线
+            const lg = new THREE.PlaneGeometry(axis === 'x' ? l*0.92 : 0.15, axis === 'x' ? 0.15 : l*0.92);
+            const lm = new THREE.Mesh(lg, mat('#ffcc00', {r:0.5}));
+            lm.rotation.x = -Math.PI / 2;
+            lm.position.set(x, 0.05, z);
+            scene.add(lm);
+        }
+        // 主干道
+        addRoad(0, 0, 14, 380, 'x');
+        addRoad(0, 0, 14, 380, 'z');
+        // 次干道
+        addRoad(0, -115, 10, 300, 'x');
+        addRoad(0, 115, 10, 300, 'x');
+        addRoad(-140, 0, 10, 260, 'z');
+        addRoad(140, 0, 10, 260, 'z');
+        // 环路
+        addRoad(0, -55, 8, 190, 'x');
+        addRoad(0, 55, 8, 190, 'x');
+
+        // === 停车场 ===
+        function addParking(x, z, cols, rows) {
+            const g = new THREE.Group();
+            const pg = new THREE.PlaneGeometry(cols*6+2, rows*10+2);
+            const pm = new THREE.Mesh(pg, mat('#4a4a4a', {r:0.75}));
+            pm.rotation.x = -Math.PI/2;
+            pm.receiveShadow = true;
+            g.add(pm);
+            for (let i = 0; i < cols; i++) {
+                for (let j = 0; j < rows; j++) {
+                    const sg = new THREE.PlaneGeometry(5, 9);
+                    const sm = new THREE.Mesh(sg, mat(Math.random()>0.4?'#555':'#444', {r:0.7}));
+                    sm.rotation.x = -Math.PI/2;
+                    sm.position.set(i*6-cols*3+3, 0.02, j*10-rows*5+5);
+                    g.add(sm);
+                }
+            }
+            g.position.set(x, 0.06, z);
+            return g;
+        }
+        scene.add(addParking(-185, -110, 5, 3));
+        scene.add(addParking(185, -110, 5, 3));
+        scene.add(addParking(-185, 110, 5, 3));
+
+        // === 广场 ===
+        const plaza = new THREE.Mesh(
+            new THREE.CircleGeometry(28, 32),
+            mat('#c4a87a', {r:0.65})
+        );
+        plaza.rotation.x = -Math.PI/2;
+        plaza.position.set(0, 0.07, 82);
+        plaza.receiveShadow = true;
+        scene.add(plaza);
+
+        // 广场喷泉
+        const fb = new THREE.Mesh(
+            new THREE.CylinderGeometry(7, 9, 1.8, 24),
+            mat('#8ab4c8', {r:0.15, m:0.4})
+        );
+        fb.position.set(0, 0.9, 82);
+        scene.add(fb);
+
+        // 水柱动画
+        const waterMesh = new THREE.Mesh(
+            new THREE.CylinderGeometry(0.4, 0.8, 7, 12),
+            new THREE.MeshStandardMaterial({color:0x88ccee, transparent:true, opacity:0.65, roughness:0.05})
+        );
+        waterMesh.position.set(0, 5, 82);
+        scene.add(waterMesh);
+
+        // === 树木 ===
+        function addTree(x, z, s=1) {
+            const g = new THREE.Group();
+            const tk = new THREE.Mesh(
+                new THREE.CylinderGeometry(0.4*s, 0.7*s, 3.5*s, 6),
+                mat('#7a4e2a', {r:0.9})
+            );
+            tk.position.y = 1.75*s;
+            tk.castShadow = true;
+            g.add(tk);
+            [[2.8, 5.5], [2.2, 7.2], [1.5, 8.5]].forEach(([r, y]) => {
+                const cr = new THREE.Mesh(
+                    new THREE.SphereGeometry(r*s, 7, 6),
+                    mat('#2d7a3a', {r:0.85})
+                );
+                cr.position.y = y*s;
+                cr.castShadow = true;
+                g.add(cr);
+            });
+            g.position.set(x, 0, z);
+            return g;
+        }
+        const treePos = [];
+        for (let i = -170; i <= 170; i += 25) {
+            treePos.push([i, -82]);
+            treePos.push([i, 82]);
+        }
+        for (let i = -130; i <= 130; i += 30) {
+            treePos.push([-82, i]);
+            treePos.push([82, i]);
+        }
+        for (let a = 0; a < 360; a += 20) {
+            const rad = a * Math.PI / 180;
+            treePos.push([Math.cos(rad)*195, Math.sin(rad)*160]);
+        }
+        treePos.forEach(([x, z]) => {
+            if (Math.abs(x) < 45 && Math.abs(z) < 45) return;
+            scene.add(addTree(x + (Math.random()-0.5)*5, z + (Math.random()-0.5)*5, 0.7 + Math.random()*0.5));
+        });
+
+        // === 信息面板 ===
+        window.showInfo = function(info) {
+            const panel = document.getElementById('infoPanel');
+            document.getElementById('infoTitle').textContent = info['名称'] || info['建筑名称'] || '建筑信息';
+            let html = '';
+            for (const [k, v] of Object.entries(info)) {
+                if (k !== '名称' && k !== '建筑名称')
+                    html += `<div class="info-row"><span class="info-label">${k}</span><span class="info-value">${v}</span></div>`;
+            }
+            document.getElementById('infoContent').innerHTML = html;
+            panel.classList.add('show');
+        };
+
+        // 点击交互
+        const raycaster = new THREE.Raycaster();
+        const mouse = new THREE.Vector2();
+        renderer.domElement.addEventListener('click', e => {
+            mouse.x = (e.clientX / innerWidth) * 2 - 1;
+            mouse.y = -(e.clientY / innerHeight) * 2 + 1;
+            raycaster.setFromCamera(mouse, camera);
+            clickableMeshes.forEach(({mesh, data}) => {
+                if (raycaster.intersectObject(mesh).length > 0) {
+                    showInfo(data.info);
+                    const origColor = mesh.material.emissive ? mesh.material.emissive.getHex() : 0;
+                    mesh.material.emissive = new THREE.Color(0x334466);
+                    setTimeout(() => { mesh.material.emissive = new THREE.Color(origColor); }, 500);
+                }
+            });
+        });
+
+        // 控制功能
+        let isNight = false;
+        window.toggleDayNight = function() {
+            isNight = !isNight;
+            if (isNight) {
+                ambientLight.intensity = 0.15;
+                sunLight.intensity = 0.05;
+                renderer.toneMappingExposure = 0.6;
+                skyMat.uniforms.topColor.value.set(0x050520);
+                skyMat.uniforms.bottomColor.value.set(0x0a0a30);
+            } else {
+                ambientLight.intensity = 0.55;
+                sunLight.intensity = 0.85;
+                renderer.toneMappingExposure = 1.2;
+                skyMat.uniforms.topColor.value.set(0x0055cc);
+                skyMat.uniforms.bottomColor.value.set(0xcce0f0);
+            }
+        };
+
+        window.resetCamera = function() {
+            camera.position.set(180, 130, 180);
+            controls.target.set(0, 5, 0);
+        };
+
+        window.setView = function(v) {
+            if (v === 'bird') { camera.position.set(0, 280, 0.1); controls.target.set(0, 0, 0); }
+            else if (v === 'front') { camera.position.set(0, 40, 220); controls.target.set(0, 25, 0); }
+            else if (v === 'side') { camera.position.set(220, 40, 0); controls.target.set(0, 25, 0); }
+        };
+
+        let labelsVisible = true;
+        window.toggleLabels = function() {
+            labelsVisible = !labelsVisible;
+            labels.forEach(l => l.visible = labelsVisible);
+        };
+
+        window.toggleRotate = function() {
+            controls.autoRotate = !controls.autoRotate;
+            controls.autoRotateSpeed = 1.5;
+        };
+
+        // 窗口缩放
+        addEventListener('resize', () => {
+            camera.aspect = innerWidth / innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(innerWidth, innerHeight);
+            labelRenderer.setSize(innerWidth, innerHeight);
+        });
+
+        // 动画
+        let t = 0;
+        function animate() {
+            requestAnimationFrame(animate);
+            t += 0.015;
+            waterMesh.scale.y = 1 + Math.sin(t * 4) * 0.25;
+            waterMesh.position.y = 5 + Math.sin(t * 4) * 0.8;
+            controls.update();
+            renderer.render(scene, camera);
+            labelRenderer.render(scene, camera);
+        }
+
+        document.getElementById('loading').classList.add('hidden');
+        animate();
+    })();
+    </script>
+</body>
+</html>

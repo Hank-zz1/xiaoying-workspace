@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 604214,
+  "entities": {
+    "澳洲": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184010
+    },
+    "海信": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184010
+    },
+    "美的": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184010
+    },
+    "三星": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184010
+    },
+    "西屋": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184010
+    }
+  }
+}

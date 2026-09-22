@@ -1,0 +1,322 @@
+{
+  "version": 1,
+  "candidates": [
+    {
+      "slug": "online-bb60d8fd",
+      "name": "万链Online飞书文档读取",
+      "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki内容时，先尝试lark-cli授权读取，未授权时改用browser_tool绕过登录",
+      "draftSkillMd": "---\nname: \"万链Online飞书文档读取\"\ndescription: \"当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki内容时，先尝试lark-cli授权读取，未授权时改用browser_tool绕过登录\"\nversion: 1.0.0\n---\n\n# 万链Online飞书文档读取\n\n## When to Use\n当任务涉及访问或读取 ihaier.feishu.cn（万链Online）上的飞书文档、wiki 节点内容时加载本技能。适用于 lark-cli 已授权或未授权两种情况。\n\n## Procedure\n1. 优先尝试使用 lark-cli 读取飞书内容。若用户尚未授权（用户身份未授权），lark-cli 无法访问 ihaier.feishu.cn 文档。\n2. 引导用户完成授权：执行 `\"$HOME/.lark-cli/lark-cli\" auth login` 生成二维码，让用户扫码完成万链Online飞书 OAuth 授权。\n3. 授权完成后即可通过 lark-cli 读取飞书 wiki 节点内容，docx/wikispaces 等 API 均可调用，无需用户手动复制内容。\n4. 如果当前无法完成授权，则改用 browser_tool 直接 navigate 目标文档 URL 绕过登录读取正文内容（会跳转到 iamd.haier.net SSO 登录页后再渲染文档）。\n\n## Commands\n```bash\n\"$HOME/.lark-cli/lark-cli\" auth login\n```\n\n## Pitfalls\n- lark-cli 用户身份未授权时无法通过 CLI 访问 ihaier.feishu.cn（万链Online）文档，需先完成扫码授权。\n- 使用 browser_tool 访问时会先跳转到 iamd.haier.net SSO 登录页，需等待其完成登录后再渲染文档正文。\n\n## Verification\n- 授权路径：lark-cli 能成功调用 docx/wikispaces 等 API 读取到 wiki 节点内容。\n- 浏览器路径：browser_tool 能读取到文档正文内容。",
+      "sourceMemoryIds": [
+        "4b9c1f0a",
+        "11c598bf"
+      ],
+      "triggerSessionCount": 2,
+      "createdAt": 1789722950398,
+      "updatedAt": 1789959959692,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "sku-9d1d44a2",
+      "name": "新西兰冰箱市场SKU抓取",
+      "description": "在新西兰冰箱市场监控会话中，仅依赖海信/三星官网直抓与 web_search/ai_search 间接搜索采集 SKU 基线时使用",
+      "draftSkillMd": "---\nname: \"新西兰冰箱市场SKU抓取\"\ndescription: \"在新西兰冰箱市场监控会话中，仅依赖海信/三星官网直抓与 web_search/ai_search 间接搜索采集 SKU 基线时使用\"\nversion: 1.0.0\n---\n\n# 新西兰冰箱市场 SKU 抓取\n\n## When to Use\n- 用户要求监控或采集新西兰 (NZ) 冰箱市场的品牌与 SKU 列表\n- 需要更新或比对 NZ 冰箱基线文件\n- 会话涉及海信 NZ、三星 NZ、LG NZ 官网抓取，或需要判断美的/西屋在新西兰的可查性\n\n## Procedure\n1. 明确市场规模前提：NZ 冰箱市场仅有 3 个公开可查品牌——海信 / 三星 / LG。美的和西屋在新西兰无独立官网及零售页面，不要浪费步骤去抓取其 NZ 站点。\n2. 抓取海信 NZ：使用实际有效 URL `https://hisense.co.nz/appliances/fridge/`，可提取 44 款产品。\n3. 抓取三星 NZ：访问 `https://www.samsung.com/nz/refrigerators`，使用 `--mode=jsonld` 提取 JSON-LD 产品数据，可提取 13 款产品。\n4. 处理 LG NZ：官网 `https://lg.com/nz/fridges/` 被 Akamai 从 IP 层限流，即便使用有头模式也会 `ERR_CONNECTION_TIMED_OUT`。不要反复直抓，改用 web_search 间接搜索 LG NZ 冰箱新闻/媒体信息。\n5. 对无法直抓的品牌（如 LG NZ）统一回退到 web_search 和 ai_search，通过新闻/媒体信息间接采集，不要试图绕过反爬。\n6. 若 IP 层被限流，先退避重试；重试仍失败则直接回退到 Web 搜索替代方案，不要长时间卡在官网抓取上。\n7. 将结果统一写入唯一基线文件 `data/au-fridge-baseline-2026-08-27.md`（含海信 44 款 + 三星 13 款），不要散落到多个会话目录。\n\n## Commands\n```bash\n# 海信 NZ 官网（可提取 44 款）\nhttps://hisense.co.nz/appliances/fridge/\n\n# 三星 NZ 官网 + JSON-LD 模式（可提取 13 款）\n--mode=jsonld https://www.samsung.com/nz/refrigerators\n```\n\n## Pitfalls\n- 海信启用 `document_antibot` 反爬，不能按普通静态页面直抓。\n- 三星采用 JS 动态渲染，普通抓取会返回空数据；必须使用 `--mode=jsonld`。\n- LG 强反爬保护，官网 `lg.com/nz/fridges/` 和 LG AU 官网在特定时段被 Akamai 从 IP 层限流，有头模式也会 `ERR_CONNECTION_TIMED_OUT`，无法直接抓取。\n- 不要假设澳洲方案可平移：NZ 三品牌官网均存在反爬拦截或 JS 动态渲染问题，无法像澳洲那样直接抓取 SKU 列表。\n- 美的和西屋在新西兰无独立官网及零售页面，无需尝试。\n\n## Verification\n- 海信 NZ 提取到 44 款产品。\n- 三星 NZ 通过 `--mode=jsonld` 提取到 13 款产品。\n- 基线文件已统一写入 `data/au-fridge-baseline-2026-08-27.md`，无散落的会话目录副本。\n- LG NZ 数据来自 web_search/ai_search 间接来源，并已记录官网直抓失败原因。",
+      "sourceMemoryIds": [
+        "fe52992c",
+        "34a73499",
+        "3f1e80ae",
+        "dc130820",
+        "bb43df3c",
+        "164db212"
+      ],
+      "triggerSessionCount": 3,
+      "createdAt": 1787816960458,
+      "updatedAt": 1789959959692,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-4a31253b",
+      "name": "澳洲冰箱品牌新品监控",
+      "description": "定时巡检澳洲 5 大冰箱品牌（海信/美的/三星/LG/西屋）官网及零售商新品与库存变化，并推送飞书卡片汇总",
+      "draftSkillMd": "---\nname: \"澳洲冰箱品牌新品监控\"\ndescription: \"定时巡检澳洲 5 大冰箱品牌（海信/美的/三星/LG/西屋）官网及零售商新品与库存变化，并推送飞书卡片汇总\"\nversion: 1.0.0\n---\n\n# 澳洲冰箱品牌新品监控\n\n## When to Use\n当需要巡检澳洲冰箱品牌（海信、美的、三星、LG、西屋）新品上架、型号变化或库存状态变动时加载本技能。典型触发场景：SchedulerTick 定时任务（工作日 10:23/13:23/16:23 巡检，每日 15:07 汇总）执行，或用户要求监控澳洲冰箱市场新品动态。\n\n## Procedure\n1. **读取基线**：加载基线文件 `data/au-fridge-baseline-2026-06-15.md`，获取上次记录的各品牌型号清单作为对比基准。\n2. **抓取海信官网**：访问分页 URL（注意 `currentPage` 起始页为 **0**）：\n   `https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0`\n   海信官网产品一般可直接抓取，无需特殊处理。\n3. **抓取美的数据**：同时监控两个渠道判断库存状态：\n   - 官网 `midea.com/au`（含 Top Mount 子页面）\n   - Bing Lee 零售商页面\n   官网 Top Mount 子页面为 JS 动态渲染，首次抓取若返回 `No Relevant Product` 需**二次重试**确认，避免误判下架。\n4. **抓取三星数据**：三星官网 (samsung.com/au) 为深度 JS 动态渲染，`firecrawl_scrape` 无法获取完整列表。改用替代方案：\n   - `web_search` 间接搜索型号；\n   - 观察页面底部促销信息提取 SKU 列表（曾识别出 23 款在售型号）。\n5. **获取 LG 数据**：LG 官网有 `document_antibot` 反爬保护，所有直接抓取（`firecrawl_scrape`）均失败。改用 `bocha_web_search` 搜索 `'new LG Australia fridge 2026'` 获取 GF-/GS- 系列型号，并持续监控 The Good Guys / Harvey Norman / Bing Lee 等零售商页面。\n6. **抓取西屋数据**：按常规渠道巡检西屋品牌新品。\n7. **对比基线判断变化**：\n   - 巡检任务（10:23/13:23/16:23）：仅当检测到变化时才推送；\n   - 汇总任务（15:07）：始终推送。\n8. **发送飞书通知**：如有变化（或到汇总时间），用 Python `requests` 发送 interactive 卡片到飞书 Webhook：\n   `https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4`\n9. **更新基线**：推送后将最新型号清单写回 `data/au-fridge-baseline-2026-06-15.md`。\n\n## Commands\n```bash\n# 海信官网最新排序（currentPage 从 0 开始）\nhttps://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0\n```\n\n```bash\n# LG 间接搜索新品型号\nbocha_web_search query=\"new LG Australia fridge 2026\"\n```\n\n```bash\n# 飞书 Webhook（Python requests 发送 interactive 卡片）\nhttps://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n```\n\n## Pitfalls\n- **海信分页起始页为 0 而非 1**：误用 `currentPage=1` 会取到第二页数据，导致漏掉真正的最新款。\n- **美的 Top Mount 抓取误报**：JS 动态渲染页面首次抓取可能返回 `No Relevant Product` 假下架，必须二次重试 + 双渠道（官网 + Bing Lee）交叉验证。注意美的 Top Mount 系列在官网及 Bing Lee 均有销售，并非全部下架；但历史上 MDRT580MTF45AP (413L) 从未进入可购买状态即消失，需关注是否退市。\n- **三星官网不可直接抓取**：`firecrawl_scrape` 仅返回空占位符，`firecrawl_map` 返回空链接，`firecrawl_agent` 调用失败，API 端点需认证或被反爬拦截——不要浪费次数反复尝试直接抓取。\n- **LG 官网反爬**：`document_antibot` 保护导致所有直接抓取失败；`bocha_web_search` 结果中如 sourceforge.net 等链接为无效匹配，**需人工验证**型号真实性。\n- **三星/LG 建议转向零售商**：The Good Guys / Harvey Norman / Bing Lee 获取数据更可靠。\n\n## Verification\n- 确认飞书群收到 interactive 卡片：巡检任务仅在检测到变化时出现，汇总任务每日 15:07 必达。\n- 确认基线文件 `data/au-fridge-baseline-2026-06-15.md` 已更新为本次最新型号清单。\n- 对三星/LG/美的的疑似变化进行二次确认（重试或人工验证）后再推送，避免误报。",
+      "sourceMemoryIds": [
+        "1c37b7da",
+        "28baa449",
+        "cd83863a",
+        "877c793c",
+        "b1a86c87",
+        "4ad45083",
+        "95ef9c84",
+        "17fcac00",
+        "e30d622a"
+      ],
+      "triggerSessionCount": 4,
+      "createdAt": 1789722950398,
+      "updatedAt": 1789959959692,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-9b09f677",
+      "name": "澳新冰箱品牌新品监控",
+      "description": "监控澳洲/新西兰冰箱品牌（海信/三星/LG/美的）新品与在售型号，当直接抓取被反爬或 JS 渲染阻断时，回退到官网上报参数、jsonld 模式、零售商页面与网络搜索的混合方案",
+      "draftSkillMd": "---\nname: \"澳新冰箱品牌新品监控\"\ndescription: \"监控澳洲/新西兰冰箱品牌（海信/三星/LG/美的）新品与在售型号，当直接抓取被反爬或 JS 渲染阻断时，回退到官网上报参数、jsonld 模式、零售商页面与网络搜索的混合方案\"\nversion: 1.0.0\n---\n\n# 澳新冰箱品牌新品监控\n\n## When to Use\n当需要抓取或监控澳洲 (AU) / 新西兰 (NZ) 市场的冰箱品牌（海信、三星、LG、美的、西屋）的在售型号与新品动态时加载本技能。适用于官网存在 Akamai 反爬、document_antibot 保护、JS 深度动态渲染导致 `firecrawl_scrape` 返回空结果，或官网被 IP 层限流的场景。若直接抓取失败，必须按本技能的回退方案执行，不要反复重试同一失败手段。\n\n## Procedure\n1. **海信澳洲官网抓取**：使用分页参数 URL 抓取，注意 `currentPage` 起始页为 **0**（非 1）。最新排序 URL：\n   `https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0`\n   海信官网一般可直接抓取产品列表。新西兰站点使用有效 URL：`hisense.co.nz/appliances/fridge/`（可提取约 44 款产品）。注意：海信 NZ 也可能启用 document_antibot，需准备回退。\n2. **三星官网抓取**：三星 AU (`samsung.com/au`) 和 NZ (`samsung.com/nz/refrigerators`) 列表页为深度 JS 动态渲染，`firecrawl_scrape` 普通模式返回空占位符。使用 `--mode=jsonld` 参数提取 JSON-LD 产品数据（NZ 站可成功提取 13 款）。若仍失败，改用网络搜索间接获取型号，或观察页面底部促销信息提取 SKU 列表（AU 站曾识别出 23 款在售型号）。\n3. **LG 官网处理**：LG AU (`lg.com/au`) 与 LG NZ (`lg.com/nz/fridges/`) 有严格反爬（document_antibot / Akamai IP 层限流），所有直接抓取方式均失败，有头模式也返回 `ERR_CONNECTION_TIMED_OUT`。**不要直接抓取 LG 官网**，改为：\n   - 使用 `bocha_web_search` 搜索间接获取型号，如 `new LG Australia fridge 2026`，关注 `GF-`/`GS-` 系列型号；\n   - 从澳洲零售商页面获取数据：The Good Guys / Harvey Norman / Bing Lee。\n   - 搜索到的低质结果（如 sourceforge.net 链接）需人工验证有效性。\n4. **美的澳洲官网抓取**：`midea.com/au` 的 Top Mount 子页面为 JS 动态渲染，首次 `firecrawl_scrape` 可能返回 'No Relevant Product' 误报。设置**二次重试机制**确认状态，并同时从官网 + Bing Lee 双渠道判断库存状态，避免误判下架。\n5. **新西兰市场约束**：NZ 冰箱市场仅有 3 个公开可查品牌——海信/三星/LG；美的和西屋在 NZ 无独立官网及零售页面。三品牌官网均有反爬或 JS 渲染障碍，NZ 方案主要依赖 `web_search` 和 `ai_search` 间接搜索新闻/媒体信息，以及 `--mode=jsonld` 抓取三星 NZ。\n6. **退避重试**：遇 Akamai IP 层限流时，退避后重试或直接回退到网络搜索替代方案，避免在同一站点反复失败。\n\n## Commands\n```bash\n# 海信 AU 最新排序（currentPage 从 0 开始）\nfirecrawl_scrape \"https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0\"\n\n# 海信 NZ\nfirecrawl_scrape \"https://hisense.co.nz/appliances/fridge/\"\n\n# 三星 NZ JSON-LD 模式提取产品\nfirecrawl_scrape \"https://samsung.com/nz/refrigerators\" --mode=jsonld\n\n# LG 回退：网络搜索间接获取型号\nbocha_web_search \"new LG Australia fridge 2026\"\n```\n\n## Pitfalls\n- **海信分页起始页**：`currentPage` 从 **0** 开始，误用 `currentPage=1` 会抓到第二页，导致\"第一款产品\"错误。\n- **三星 AU 抓取**：`firecrawl_scrape` 普通模式返回空；API 端点需认证；`firecrawl_agent` 调用失败；`firecrawl_map` 返回空链接。必须用 `--mode=jsonld` 或搜索回退。\n- **LG 反爬**：document_antibot 与 Akamai IP 层限流导致所有直接抓取失败，有头模式也超时，不要浪费时间直接抓取官网。\n- **美的误报**：Top Mount 首次抓取可能返回 'No Relevant Product'，需二次重试 + 双渠道（官网 + Bing Lee）确认，误导为全部下架。\n- **搜索结果低质**：网络搜索可能返回无效匹配（如 sourceforge.net），需人工验证。\n- **NZ 市场极小**：美的/西屋在 NZ 无官网及零售页面，不要尝试抓取。\n\n## Verification\n- 海信 AU/NZ：确认提取到的产品列表非空，且分页为从第 0 页开始的最新排序结果。\n- 三星 NZ：确认 `--mode=jsonld` 返回约 13 款产品；AU 站可从促销信息识别 SKU 列表（约 23 款）。\n- 美的：必须同时有官网与 Bing Lee 双渠道证据，或二次重试确认，才可判定库存状态。\n- LG：确认型号来自有效搜索结果或零售商页面（The Good Guys / Harvey Norman / Bing Lee），并人工验证搜索结果有效性。\n- NZ：确认仅针对海信/三星/LG 三品牌执行，且方案为搜索间接获取或 jsonld 抓取。",
+      "sourceMemoryIds": [
+        "28baa449",
+        "cd83863a",
+        "fe52992c",
+        "b1a86c87",
+        "4ad45083",
+        "34a73499",
+        "877c793c",
+        "17fcac00",
+        "3f1e80ae",
+        "bb43df3c",
+        "164db212",
+        "95ef9c84"
+      ],
+      "triggerSessionCount": 6,
+      "createdAt": 1789884863592,
+      "updatedAt": 1789884863592,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-721ab2a3",
+      "name": "澳新冰箱品牌新品监控",
+      "description": "在澳洲/新西兰市场定期监控海信、美的、三星、LG、西屋冰箱新品时使用，处理定时巡检推送、品牌官网反爬与JS渲染抓取、基线对比及飞书通知。",
+      "draftSkillMd": "---\nname: \"澳新冰箱品牌新品监控\"\ndescription: \"在澳洲/新西兰市场定期监控海信、美的、三星、LG、西屋冰箱新品时使用，处理定时巡检推送、品牌官网反爬与JS渲染抓取、基线对比及飞书通知。\"\nversion: 1.0.0\n---\n\n# 澳新冰箱品牌新品监控\n\n## When to Use\n当需要执行或维护澳洲/新西兰冰箱品牌（海信、美的、三星、LG、西屋）新品监控任务时加载本技能，包括：\n- 通过 SchedulerTick 定时巡检 4 个任务（工作日 10:23/13:23/16:23 变化推送，每日 15:07 汇总推送）\n- 从各品牌官网或零售商页面抓取冰箱 SKU 并与基线文件对比\n- 遇到反爬/JS 动态渲染时选择替代方案\n- 有变化时发送飞书 interactive 卡片并更新基线\n\n## Procedure\n\n1. **读取基线文件**：读取当前基线（澳洲：`data/au-fridge-baseline-2026-06-15.md`；新西兰：`data/au-fridge-baseline-2026-08-27.md`，含海信 44 款 + 三星 13 款，统一管理不再散落多个会话目录）。\n\n2. **抓取各品牌数据**（按品牌选择最终可用方案）：\n   - **海信 AU**：使用最新排序分页 URL，注意 `currentPage` 从 **0** 开始（非 1）：\n     `https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0`\n   - **海信 NZ**：使用 URL `hisense.co.nz/appliances/fridge/`，可提取 44 款产品。\n   - **三星 NZ**：使用 `--mode=jsonld` 从 `samsung.com/nz/refrigerators` 提取 JSON-LD 数据（可获取 13 款产品）。\n   - **三星 AU**：官网深度 JS 渲染，`firecrawl_scrape` 返回空。改用 web_search 间接搜索型号，或观察页面底部促销信息提取 SKU 列表。\n   - **美的 AU**：同时监控官网 `midea.com/au` 的 Top Mount 子页面 **和** Bing Lee 两个渠道判断库存状态；Top Mount 子页面为 JS 渲染，首次抓取可能误报 `No Relevant Product`，需二次重试确认。\n   - **LG**：官网（AU/NZ）有 `document_antibot` 反爬与 Akamai IP 层限流，直接抓取失败。改用 `bocha_web_search` 搜索 `'new LG Australia fridge 2026'` 获取 GF-/GS- 系列型号，并持续监控 The Good Guys / Harvey Norman / Bing Lee 等零售商页面。\n   - **西屋**：仅澳洲有售；新西兰无独立官网及零售页面。\n\n3. **对比基线**：将抓取结果与基线文件比对，检测新增/下架型号。若官网与零售商结果矛盾（如美的 Top Mount），以双渠道交叉验证为准，避免误判。\n\n4. **发送飞书通知**（仅在有变化或每日汇总时）：用 Python `requests` 发送 interactive 卡片到 Webhook：\n   `https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4`\n   - 工作日 10:23/13:23/16:23 巡检：**仅变化时**推送\n   - 每日 15:07 汇总：**始终**推送\n\n5. **更新基线**：推送成功后，将本次结果写回对应基线文件。\n\n## Commands\n\n```bash\n# 海信 AU 最新排序（currentPage 从 0 开始）\nhttps://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0\n\n# 海信 NZ（可提取 44 款）\nhttps://hisense.co.nz/appliances/fridge/\n\n# 三星 NZ JSON-LD 模式（可提取 13 款）\n# 使用 --mode=jsonld 抓取：\nhttps://samsung.com/nz/refrigerators\n\n# 美的 AU Top Mount 官网（需二次重试）\nhttps://midea.com/au\n\n# LG 间接搜索（官网被 document_antibot 拦截）\n# bocha_web_search: 'new LG Australia fridge 2026'\n\n# 飞书 Webhook\nhttps://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n```\n\n## Pitfalls\n- **海信 AU 分页**：`currentPage` 从 0 起始；误用 `currentPage=1` 会抓到第二页数据，导致错误的“第一款产品”。\n- **三星 AU**：`firecrawl_scrape` 返回空占位符和分类导航；`firecrawl_agent` 调用失败；`firecrawl_map` 返回空链接；API 端点需认证。\n- **美的 AU Top Mount**：JS 渲染，首次抓取可能误报 `No Relevant Product`；不可仅凭官网判断下架，必须结合 Bing Lee 双渠道验证（如 MDRT580MTF45AP 曾误判下架，实际 Bing Lee 有售）。\n- **LG**：AU/NZ 官网有 Akamai IP 层限流，有头模式也连接超时（`ERR_CONNECTION_TIMED_OUT`），需退避重试或回退 Web 搜索。\n- **搜索结果噪音**：`bocha_web_search` 可能返回 sourceforge.net 等无效匹配，需人工验证型号有效性。\n- **新西兰市场范围**：仅海信/三星/LG 三个品牌有公开页面；美的和西屋在 NZ 无独立官网及零售页面，不要为其在 NZ 做无用抓取。\n\n## Verification\n- 确认基线文件已更新，且无散落的多会话目录文件（NZ 统一使用 `data/au-fridge-baseline-2026-08-27.md`）。\n- 飞书 Webhook 返回成功（interactive 卡片已送达）。\n- 抓取计数符合预期：海信 NZ 约 44 款、三星 NZ 约 13 款；异常空结果需二次重试确认后再判定。\n- 若官网抓取失败，确认已回退至 web_search / 零售商页面方案并记录原因。",
+      "sourceMemoryIds": [
+        "1c37b7da",
+        "28baa449",
+        "cd83863a",
+        "e30d622a",
+        "877c793c",
+        "fe52992c",
+        "b1a86c87",
+        "95ef9c84",
+        "34a73499",
+        "4ad45083",
+        "17fcac00",
+        "3f1e80ae",
+        "dc130820",
+        "bb43df3c",
+        "164db212"
+      ],
+      "triggerSessionCount": 6,
+      "createdAt": 1789873070164,
+      "updatedAt": 1789873070164,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-54a6b63a",
+      "name": "海尔智家黑客松情绪冰仓路演物料生成",
+      "description": "当用户需要为海尔智家黑客松制冷产业「情绪冰仓」项目生成 AI 产品图或路演 PPT 时，按既定设计规范与优先级执行",
+      "draftSkillMd": "---\nname: \"海尔智家黑客松情绪冰仓路演物料生成\"\ndescription: \"当用户需要为海尔智家黑客松制冷产业「情绪冰仓」项目生成 AI 产品图或路演 PPT 时，按既定设计规范与优先级执行\"\nversion: 1.0.0\n---\n\n# 海尔智家黑客松情绪冰仓路演物料生成\n\n## When to Use\n当会话涉及海尔智家黑客马拉松制冷产业项目（「情绪冰仓·一杯饮尽松弛感」冷柜/冰吧方向），需要生成产品视觉素材、AI 产品配图或路演 PPT，并需遵循 Apple 极简设计语言与既定功能优先级时加载本技能。\n\n## Procedure\n1. 确认产品定位为「情绪补给站」而非传统冷藏工具，竞品分析强调与「冷藏工具」的差异化。\n2. 核心功能按以下三档优先级组织内容：\n   - P1 必做（不可妥协）：专业制冰能力、精准恒温 4-10℃、透明展示门 + 内部灯光。\n   - P2 强烈建议：场景化分区、便捷取用动线、高颜值外观融入家居。\n   - P3 增值项：补货提醒智能联动、静音设计、模块化内胆。\n3. 产品四大功能关键词需覆盖：分温精储、四种情绪模式、RGB 氛围灯、透明视窗、社交独处双适配。\n4. 生成路演 PPT 时严格遵循 Apple 设计风格：\n   - 纯黑底 + 白字，每页仅一句话。\n   - 大字体 + 大量留白，产品图为绝对视觉主角，文字退居辅助。\n   - 配色仅使用纯白 → 浅灰 → 深灰三阶灰度。\n   - 移除圆角卡片、彩色强调线、霓虹色数字等所有装饰元素。\n5. 调用 AI 图像生成服务生成产品图，接口返回 OSS URL 格式的图片地址，将该地址嵌入 PPT 或作为产品视觉素材使用。\n\n## Commands\n```\n# AI 图像生成服务返回格式（示例）\n# Response: OSS URL 格式图片地址，例如 https://<bucket>.oss-<region>.aliyuncs.com/<path>.png\n```\n\n## Pitfalls\n- 不要将产品定位写成「冷藏工具」，这会丢失情绪补给站的核心差异化。\n- 不要违反 P1 必做项：专业制冰、4-10℃ 精准恒温、透明展示门 + 内部灯光不可妥协。\n- PPT 设计不要引入圆角卡片、彩色强调线或霓虹色数字，会破坏 Apple 极简风格。\n- AI 图像服务返回的是 OSS URL，需按 URL 处理，不要当作本地文件路径。\n\n## Verification\n- 检查内容是否覆盖「情绪补给站」定位与 P1/P2/P3 三档功能。\n- 检查 PPT 是否符合纯黑底 + 白字、每页一句、仅三阶灰度、无装饰元素。\n- 确认产品图使用 AI 服务返回的 OSS URL 图像地址。",
+      "sourceMemoryIds": [
+        "973c4a62",
+        "0cd6a6d8",
+        "97752d38"
+      ],
+      "triggerSessionCount": 2,
+      "createdAt": 1789722950398,
+      "updatedAt": 1789722950398,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-6898179e",
+      "name": "澳洲冰箱新品定时监控与飞书推送",
+      "description": "当需要巡检澳洲冰箱品牌（海信/美的/三星/LG/西屋）新品或库存变化并通过飞书推送时使用，覆盖 SchedulerTick 定时任务配置、基线比对与双渠道验证流程。",
+      "draftSkillMd": "---\nname: \"澳洲冰箱新品定时监控与飞书推送\"\ndescription: \"当需要巡检澳洲冰箱品牌（海信/美的/三星/LG/西屋）新品或库存变化并通过飞书推送时使用，覆盖 SchedulerTick 定时任务配置、基线比对与双渠道验证流程。\"\nversion: 1.0.0\n---\n\n# 澳洲冰箱新品定时监控与飞书推送\n\n## When to Use\n- 用户要求监控澳洲冰箱品牌（海信、美的、三星、LG、西屋）的新品上线或库存变化。\n- 需要按固定时间巡检并仅在有变化时推送，或每日固定时间汇总推送。\n- 涉及美的 Top Mount 系列库存状态判断，需要同时核对官方站与 Bing Lee 渠道。\n- 需要与基线文件比对并更新基线。\n\n## Procedure\n1. 读取基线文件 `data/au-fridge-baseline-2026-06-15.md`，作为本次比对的唯一基线（NZ 场景统一使用 `data/au-fridge-baseline-2026-08-27.md`，含海信 44 款 + 三星 13 款，不再散落多个会话目录）。\n2. 通过 `automations.json` 的 `SchedulerTick` 配置共 4 个定时任务：\n   - 工作日 `10:23`、`13:23`、`16:23` 巡检（仅变化推送）。\n   - 每日 `15:07` 汇总（始终推送）。\n3. 按顺序巡检 5 个品牌：海信、美的（含 Bing Lee）、三星、LG（搜索）、西屋。\n4. 对美的 Top Mount 系列，必须同时监控 `midea.com/au` 官网与 Bing Lee 两个渠道来判断库存状态，不要因单一渠道结果下结论。\n5. 对美的澳洲官网 Top Mount 子页面（JS 动态渲染），若 Firecrawl_scrape 首次返回 `No Relevant Product`，执行二次重试确认状态，避免误报。\n6. 与基线比对，判断是否有新增/下架/状态变化。\n7. 若有变化，用 Python `requests` 发送飞书 interactive 卡片到 Webhook：\n   `https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4`\n8. 发送成功后更新基线文件，记录本次状态。\n\n## Commands\n```\n# 飞书 Webhook 推送（Python requests, interactive 卡片）\nPOST https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n```\n\n```\n# 美的 Top Mount 页面抓取（JS 动态渲染，需二次重试）\nFirecrawl_scrape → midea.com/au（Top Mount 子页面）\n首次返回 \"No Relevant Product\" 时重试一次再判定\n```\n\n## Pitfalls\n- 美的澳洲官网 Top Mount 子页面为 JS 动态渲染，Firecrawl_scrape 首次抓取可能返回 `No Relevant Product` 误报，必须二次重试确认。\n- 仅看单一渠道会导致误判库存状态，美的必须官网 + Bing Lee 双渠道交叉验证。\n- 美的澳洲官网 Top Mount 系列可能整体下架（如 MDRT580MTF45AP 413L 从未进入可购买状态就直接消失），不能简单认为是抓取失败。\n- 基线文件散落多个会话目录会导致比对错误，NZ 场景统一使用 `data/au-fridge-baseline-2026-08-27.md`。\n\n## Verification\n- 定时任务按 4 个时间点（工作日 10:23/13:23/16:23、每日 15:07）正确触发。\n- 有变化时飞书 interactive 卡片成功送达 Webhook 地址。\n- 巡检后基线文件已更新且内容与本次抓取结果一致。",
+      "sourceMemoryIds": [
+        "1c37b7da",
+        "dc130820",
+        "95ef9c84",
+        "e30d622a",
+        "17fcac00"
+      ],
+      "triggerSessionCount": 3,
+      "createdAt": 1789722434753,
+      "updatedAt": 1789722434753,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-d9996687",
+      "name": "澳洲冰箱品牌新品监控",
+      "description": "通过定时任务监控澳洲（海信/美的/三星/LG/西屋）冰箱新品，变化时推送飞书卡片并更新基线文件",
+      "draftSkillMd": "---\nname: \"澳洲冰箱品牌新品监控\"\ndescription: \"通过定时任务监控澳洲（海信/美的/三星/LG/西屋）冰箱新品，变化时推送飞书卡片并更新基线文件\"\nversion: 1.0.0\n---\n\n# 澳洲冰箱品牌新品监控\n\n## When to Use\n当需要执行或维护澳洲冰箱品牌（海信、美的含Bing Lee、三星、LG、西屋）的新品监控任务时，即根据 automations.json 中的 SchedulerTick 配置自动触发巡检或汇总流程。\n\n## Procedure\n1. 读取基线文件 `data/au-fridge-baseline-2026-06-15.md` 获取当前已知产品列表。\n2. 按以下方式采集各品牌数据：\n   - 海信：使用 firecrawl_scrape 获取 `https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0`，注意分页参数 currentPage 从 0 开始。\n   - 美的：使用 firecrawl_scrape 抓取官网冰箱页面，若首次返回'No Relevant Product'则执行二次重试；同时从 Bing Lee 官网抓取美的冰箱列表，双渠道判断库存状态。\n   - 三星：使用 web_search 间接搜索型号（如 'new Samsung fridge Australia 2026'）或从页面底部促销信息提取 SKU 列表；若 firecrawl_scrape 失败则避免直接抓取。\n   - LG：使用 bocha_web_search 搜索 'new LG Australia fridge 2026' 获取 GF-/GS- 系列型号；避免直接抓取 LG 官网；建议持续监控 The Good Guys、Harvey Norman、Bing Lee 等零售商页面。\n   - 西屋：使用 firecrawl_scrape 抓取官网冰箱产品列表。\n3. 对比当前数据与基线，识别新增/下架产品。\n4. 若有变化：使用 Python requests 发送飞书 interactive 卡片消息到 Webhook `https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4`，并更新基线文件。\n5. 定时任务安排：\n   - 工作日 10:23、13:23、16:23 执行巡检（仅变化时推送）。\n   - 每日 15:07 执行汇总（始终推送完整报告）。\n\n## Commands\n```python\nimport requests\nurl = \"https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\"\npayload = {\n    \"msg_type\": \"interactive\",\n    \"card\": {\n        \"header\": {\"title\": {\"tag\": \"plain_text\", \"content\": \"澳洲冰箱新品监控\"}},\n        \"elements\": [{\"tag\": \"markdown\", \"content\": \"变化详情\"}]\n    }\n}\nrequests.post(url, json=payload)\n```\n\n## Pitfalls\n- 三星官网列表页为深度 JS 动态渲染，firecrawl_scrape 直接抓取返回空结果，API 需认证，firecrawl_agent 和 firecrawl_map 均失败，须改用 web_search 或页面促销信息提取。\n- LG 官网有 document_antibot 反爬保护，所有直接抓取方式（firecrawl_scrape）均失败，须改用 bocha_web_search 搜索型号或零售商页面。\n- 海信分页参数 currentPage 从 0 开始，误用 1 会导致获取第二页数据从而错误识别第一页产品。\n- 美的官网 Top Mount 子页面首次 firecrawl_scrape 可能返回'No Relevant Product'误报，需二次重试确认。\n- 搜索到的 LG 结果中可能包含无效链接（如 sourceforge.net），需人工验证。\n\n## Verification\n- 确认飞书收到卡片消息（巡检日应仅在变化时收到，汇总日每日收到）。\n- 确认基线文件 `data/au-fridge-baseline-2026-06-15.md` 内容已更新并与实际官网数据一致。\n- 各品牌产品列表无遗漏或误报（尤其注意三星和 LG 的替代数据源可靠性）。",
+      "sourceMemoryIds": [
+        "1c37b7da",
+        "28baa449",
+        "cd83863a",
+        "877c793c",
+        "b1a86c87",
+        "4ad45083",
+        "17fcac00",
+        "95ef9c84"
+      ],
+      "triggerSessionCount": 4,
+      "createdAt": 1786502291892,
+      "updatedAt": 1787907497229,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-a91f1433",
+      "name": "新西兰冰箱市场品牌信息间接搜索",
+      "description": "当新西兰冰箱市场品牌官网存在反爬或JS渲染障碍时，使用web_search和ai_search间接搜索新闻/媒体信息",
+      "draftSkillMd": "---\nname: \"新西兰冰箱市场品牌信息间接搜索\"\ndescription: \"当新西兰冰箱市场品牌官网存在反爬或JS渲染障碍时，使用web_search和ai_search间接搜索新闻/媒体信息\"\nversion: 1.0.0\n---\n\n# 新西兰冰箱市场品牌信息间接搜索\n\n## When to Use\n当需要获取新西兰冰箱市场品牌信息，且目标品牌（海信、三星、LG）官网因反爬、JS动态渲染或强反爬保护而无法直接抓取SKU列表时，应使用本技能，依赖web_search和ai_search间接搜索新闻/媒体信息。\n\n## Procedure\n1. 确认目标市场为新西兰冰箱市场，且已知公开品牌为海信、三星、LG（美的和西屋在新西兰无独立官网及零售页面，不纳入搜索范围）。\n2. 尝试直接访问目标品牌官网：海信官网（启用document_antibot反爬）、三星官网（JS动态渲染返回空数据）、LG官网（强反爬保护）。若均无法直接抓取，则放弃直接抓取方法。\n3. 改用web_search，使用关键词（如“New Zealand refrigerator brand news”或“新西兰 冰箱 品牌 信息”）进行搜索，获取新闻、媒体文章或第三方报告。\n4. 若web_search结果不足，使用ai_search补充搜索，使用相同或类似关键词，提取相关品牌信息。\n5. 汇总搜索结果，整理出新西兰冰箱市场的品牌信息。\n\n## Commands\n```bash\nweb_search query=\"New Zealand refrigerator brand news\"\n```\n\n```bash\nweb_search query=\"新西兰 冰箱 品牌 信息\"\n```\n\n```bash\nai_search query=\"New Zealand refrigerator brand market information\"\n```\n\n## Pitfalls\n- 海信官网启用document_antibot反爬，无法直接抓取。\n- 三星官网采用JS动态渲染，直接请求返回空数据。\n- LG官网有强反爬保护，无法直接抓取。\n- 美的和西屋在新西兰无独立官网及零售页面，搜索时需排除。\n\n## Verification\n通过web_search或ai_search获得至少一个相关新闻或媒体文章，确认已获取品牌信息。",
+      "sourceMemoryIds": [
+        "fe52992c",
+        "34a73499"
+      ],
+      "triggerSessionCount": 2,
+      "createdAt": 1786502291892,
+      "updatedAt": 1787814542782,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-fc74ef24",
+      "name": "情绪冰仓冰吧产品设计技能",
+      "description": "当需要定义海尔智家制冷产业冷柜/冰吧方向的黑客马拉松参赛产品概念与设计时使用，包含主题、核心功能、竞品定位、需求优先级、以及AI生成图像的处理方式。",
+      "draftSkillMd": "---\nname: \"情绪冰仓冰吧产品设计技能\"\ndescription: \"当需要定义海尔智家制冷产业冷柜/冰吧方向的黑客马拉松参赛产品概念与设计时使用，包含主题、核心功能、竞品定位、需求优先级、以及AI生成图像的处理方式。\"\nversion: 1.0.0\n---\n\n# 情绪冰仓冰吧产品设计\n\n## When to Use\n当需要进行海尔智家制冷产业（冷柜/冰吧方向）的黑客马拉松参赛产品概念设计，且主题已确定为「情绪冰仓·一杯饮尽松弛感」时，加载并使用本技能。\n\n## Procedure\n1. 确认产品主题：「情绪冰仓·一杯饮尽松弛感」，方向为冷柜/冰吧，核心功能包括：分温精储、四种情绪模式、RGB氛围灯、透明视窗、社交独处双适配。\n2. 进行竞品分析时，强调差异化定位：传统冷柜是「冷藏工具」，该产品定位为「情绪补给站」。\n3. 依据三档优先级整理需求清单：\n   - P1 必做（不可妥协）：专业制冰能力、精准恒温4-10℃、透明展示门+内部灯光。\n   - P2 强烈建议：场景化分区、便捷取用动线、高颜值外观融入家居。\n   - P3 增值项：补货提醒智能联动、静音设计、模块化内胆。\n4. 当使用AI图像生成服务时，接收返回的图片地址，保存为OSS URL格式（例如：`https://<bucket>.oss-<region>.aliyuncs.com/<path>`）。\n\n## Commands\n```bash\n# 接收AI图像生成服务返回的图片地址\n# 格式为OSS URL，例如：https://<bucket>.oss-<region>.aliyuncs.com/<path>\n```\n\n## Pitfalls\n- 避免将P1需求降级为可选，P1为不可妥协项。\n- 竞品分析时切勿弱化情绪价值定位，需始终强调“情绪补给站”而非“冷藏工具”。\n\n## Verification\n- 确认产品主题、核心功能、差异化定位已准确记录。\n- 确认三档优先级需求清单已完整制定。\n- 确认AI图像生成服务返回的图片地址已保存为OSS URL格式。",
+      "sourceMemoryIds": [
+        "973c4a62",
+        "0cd6a6d8"
+      ],
+      "triggerSessionCount": 2,
+      "createdAt": 1786502291892,
+      "updatedAt": 1786502291892,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-7070fda1",
+      "name": "澳洲冰箱品牌新品监控",
+      "description": "定时巡检海信、美的、三星、LG、西屋澳洲官网新品，通过飞书卡片推送变化，适用于市场竞品情报自动化场景",
+      "draftSkillMd": "---\nname: \"澳洲冰箱品牌新品监控\"\ndescription: \"定时巡检海信、美的、三星、LG、西屋澳洲官网新品，通过飞书卡片推送变化，适用于市场竞品情报自动化场景\"\nversion: 1.0.0\n---\n\n# 澳洲冰箱品牌新品监控\n\n## When to Use\n当需要监控澳洲市场冰箱品牌（海信/Hisense、美的/Midea、三星/Samsung、LG、西屋/Westinghouse）官网是否有新品上架，并通过飞书推送通知时使用。该技能通过 automations.json 配置的 SchedulerTick 定时任务驱动。\n\n## Procedure\n\n### 1. 配置定时任务\n在 `automations.json` 的 `onSchedulerTick` 中配置以下 4 个任务：\n- **工作日巡检 1** — `cron: \"23 10 * * 1-5\"`，仅变化推送\n- **工作日巡检 2** — `cron: \"23 13 * * 1-5\"`，仅变化推送\n- **工作日巡检 3** — `cron: \"23 16 * * 1-5\"`，仅变化推送\n- **每日汇总** — `cron: \"7 15 * * *\"`，始终推送完整汇总\n\n### 2. 加载基线文件\n读取 `data/au-fridge-baseline-2026-06-15.md` 作为品牌型号基线数据。\n\n### 3. 按品牌采集数据\n\n#### 海信 (Hisense)\n- 直接抓取海信澳洲官网冰箱产品页（firecrawl_scrape）\n- 解析产品型号和名称列表\n- 与基线对比识别新品\n\n#### 美的 (Midea)\n- 抓取美的澳洲官网产品页（注意 Top Mount 子页面为 JS 动态渲染）\n- **首次抓取若返回 'No Relevant Product'，需执行二次重试确认**\n- 同时抓取 Bing Lee 网站上的 Midea 冰箱列表作为辅助判断\n- 从官方站 + Bing Lee 双渠道判断产品库存/上架状态\n\n#### 三星 (Samsung)\n- 三星官网 JS 动态渲染严重，firecrawl_scrape/map/agent 均无法提取数据\n- **改用 web_search 间接搜索**三星澳洲冰箱型号（如 `site:samsung.com/au/refrigerators new model 2026`）\n- 或搜索澳洲比价网站（如 StaticICE、ShopBot）获取三星冰箱价格和型号信息\n\n#### LG\n- LG 官网有 `document_antibot` 反爬保护，所有直接抓取方式均失败\n- **改用 bocha_web_search** 搜索 `new LG Australia fridge 2026` 获取 GF-/GS- 系列型号\n- **注意**：搜索结果中的 sourceforge.net 等无关链接为无效匹配，需人工验证\n- 建议同时监控 The Good Guys、Harvey Norman 零售商页面获取 LG 新品\n\n#### 西屋 (Westinghouse)\n- 直接抓取西屋澳洲官网冰箱产品页\n\n### 4. 对比基线并推送变化\n- 对比当前采集的型号列表与基线文件\n- 发现新型号时：使用 Python `requests` 库发送飞书 interactive 卡片到 Webhook：\n  ```\n  https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4\n  ```\n- 巡检任务（10:23/13:23/16:23）仅在检测到变化时推送\n- 汇总任务（15:07）无论有无变化均推送完整汇总\n\n### 5. 更新基线\n- 确认变化有效后，更新 `data/au-fridge-baseline-*-*.md` 基线文件\n- 使用新日期命名，保留旧基线作为历史记录\n\n## Pitfalls\n\n1. **三星官网不可直接抓取** — 列表页全 JS 动态渲染，firecrawl_scrape 返回空；API 端点需认证或被反爬拦截；firecrawl_agent 调用失败；firecrawl_map 返回空链接。必须用 web_search 或第三方比价网站。\n\n2. **LG 官网 document_antibot 保护** — 所有 firecrawl_scrape 直接抓取均失败，必须间接搜索。搜索结果中 sourceforge.net 等链接是无效匹配，需人工验证。\n\n3. **美的 Top Mount 误报** — 子页面为 JS 动态渲染，firecrawl_scrape 首次可能返回 'No Relevant Product' 误报。必须设置二次重试。\n\n4. **LG 搜索结果验证** — bocha_web_search 找到的 GF-/GS- 系列需人工验证型号有效性。\n\n## Verification\n\n1. 确认所有 4 个定时任务在 automations.json 中正确配置\n2. 确认基线文件存在并可读\n3. 飞书群聊中确认收到推送卡片（巡检有变化时推送，汇总每日 15:07 推送）\n4. 新基线文件已更新并保存",
+      "sourceMemoryIds": [
+        "1c37b7da",
+        "28baa449",
+        "cd83863a",
+        "4ad45083",
+        "17fcac00"
+      ],
+      "triggerSessionCount": 4,
+      "createdAt": 1783327186885,
+      "updatedAt": 1783503501822,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "ai-6a4e93f8",
+      "name": "每日新闻与AI日报发送",
+      "description": "使用 bocha_ai_search 搜索多方向热点新闻或AI资讯，整理后通过飞书Webhook发送interactive卡片消息",
+      "draftSkillMd": "---\nname: \"每日新闻与AI日报发送\"\ndescription: \"使用 bocha_ai_search 搜索多方向热点新闻或AI资讯，整理后通过飞书Webhook发送interactive卡片消息\"\nversion: 1.0.0\n---\n\n# 每日新闻与AI日报发送\n\n## When to Use\n当用户要求发送每日新闻播报、AI日报、新闻简报，或通过飞书机器人推送每日资讯时使用。支持两种模式：**通用新闻播报**（多平台热搜+国内外要闻）和 **AI日报**（AI产品/技术/行业动态）。\n\n## Procedure\n\n### 模式A：AI日报\n1. 使用 `bocha_ai_search` 搜索以下三个方向，每个方向获取 **5 条**结果：\n   - AI产品发布（如：\"2026年最新AI产品发布\"）\n   - 大模型技术突破（如：\"2026年大模型技术突破\"）\n   - AI应用行业动态（如：\"2026年AI应用行业动态\"）\n2. 手动筛选去重，整理为 **10 条**新闻简报\n3. 构造飞书 interactive 卡片消息，使用 **绿色** 模板（`\"template\": \"green\"`）\n4. 卡片包含：标题、简介、来源/日期，底部添加脚注 `\"Incaier Agent自动生成\"`\n5. 发送 POST 请求到 Webhook URL\n\n### 模式B：每日新闻播报\n1. 使用 `bocha_ai_search` 搜索以下 **6 个方向**，搜索时必须指定准确日期（如 `2026 年 7 月 8 日`），确保新闻时效性：\n   - 新闻联播要闻\n   - 海内外新闻\n   - 微博热搜\n   - 抖音热搜\n   - 百度热搜\n   - 知乎热搜\n2. 整理为 **三个板块**：\n   - 国内外要闻（5-10条）\n   - 各平台热搜 Top5（每个平台取前5）\n   - 跨平台热点（多平台同时热议的话题）\n3. 构造飞书 interactive 卡片消息，使用 **蓝色** 模板（`\"template\": \"blue\"`），`msg_type` 设为 `\"interactive\"`\n4. 发送 POST 请求到 Webhook URL\n\n### 通用步骤\n- Webhook URL: `https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9`\n- 请求方法: POST\n- Content-Type: `application/json`\n- 卡片格式为飞书 interactive 消息，使用 `msg_type: \"interactive\"`\n\n## Commands\n\n### 发送飞书 Webhook 消息\n```bash\n# 使用 curl 发送 interactive 卡片消息\ncurl -X POST https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9 \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"msg_type\": \"interactive\",\n    \"card\": {\n      \"config\": { \"wide_screen_mode\": true },\n      \"header\": {\n        \"title\": { \"tag\": \"plain_text\", \"content\": \"📰 每日新闻播报\" },\n        \"template\": \"blue\"\n      },\n      \"elements\": [\n        {\n          \"tag\": \"markdown\",\n          \"content\": \"**新闻内容**\"\n        },\n        {\n          \"tag\": \"hr\"\n        },\n        {\n          \"tag\": \"note\",\n          \"elements\": [\n            { \"tag\": \"plain_text\", \"content\": \"Incaier Agent自动生成\" }\n          ]\n        }\n      ]\n    }\n  }'\n```\n\n### bocha_ai_search 搜索示例\n```\nbocha_ai_search 查询:\"2026 年 7 月 8 日 新闻联播要闻\" count:5\nbocha_ai_search 查询:\"2026 年 7 月 8 日 微博热搜\" count:5\n```\n\n## Pitfalls\n- **新闻时效性**：搜索时必须指定准确日期（如 `2026 年 7 月 8 日`），否则可能获取过时新闻。发布前需确认每条新闻为当日内容\n- **GBK编码问题**：Windows终端下 Python `print()` 可能因 GBK 编码报错，但飞书 API 请求体使用 UTF-8 编码不受影响，可直接发送\n- **去重**：AI日报三个搜索方向之间可能存在重复结果，需手动筛选去重确保最终列表为 10 条不重复新闻\n- **卡片模板颜色**：AI日报使用 `green`，每日新闻播报使用 `blue`，不可混淆\n\n## Verification\n- 确认飞书群聊中已收到机器人发送的卡片消息\n- 确认卡片格式正确（标题、内容分区、脚注完整）\n- 确认新闻均为当日内容（检查每条新闻的日期/时效性）\n- 确认 AI 日报为 10 条去重后的新闻；确认新闻播报三个板块内容完整",
+      "sourceMemoryIds": [
+        "b0807f5c",
+        "cafe4e2a",
+        "d73cf925"
+      ],
+      "triggerSessionCount": 1,
+      "createdAt": 1783327186885,
+      "updatedAt": 1783503501822,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "online-c9f2a00e",
+      "name": "飞书/万链Online集成工作流",
+      "description": "当用户需要与飞书（Feishu/Lark）进行集成开发时使用，包括OAuth授权、文档读取、机器人消息发送及@自动回复",
+      "draftSkillMd": "---\nname: \"飞书/万链Online集成工作流\"\ndescription: \"当用户需要与飞书（Feishu/Lark）进行集成开发时使用，包括OAuth授权、文档读取、机器人消息发送及@自动回复\"\nversion: 1.0.0\n---\n\n# 飞书/万链Online集成开发工作流\n\n## When to Use\n当用户需要：\n- 通过飞书OAuth授权访问万链Online资源（飞书wiki文档、docx、wikispaces等）\n- 使用飞书机器人发送消息（替代curl以解决编码问题）\n- 实现飞书群内@机器人自动回复功能\n- 读取飞书文档内容进行程序化处理\n\n## Procedure\n\n### 1. 飞书OAuth授权（万链Online）\n1. 执行授权登录命令生成二维码：\n   ```\n   \"$HOME/.lark-cli/lark-cli\" auth login\n   ```\n2. 用户使用飞书扫码完成授权\n3. 授权后可通过lark-cli直接调用飞书API读取wiki节点内容（docx、wikispaces等），无需手动复制内容\n\n### 2. 飞书机器人消息发送\n1. 使用Python实现消息发送逻辑（不使用curl，避免编码问题）\n2. 通过飞书Bot API发送消息到指定群聊\n3. 获取并配置飞书应用的 `app_id` 和 `app_secret`\n4. 实现获取tenant_access_token的逻辑\n5. 调用消息发送API（`/open-apis/im/v1/messages`）\n\n### 3. 飞书群内@自动回复\n1. 创建飞书应用，获取 `app_id` 和 `app_secret`\n2. 在飞书应用配置中开启 `im.message.receive_v1` 事件订阅\n3. 配置事件回调URL，指向已部署的后台服务\n4. 部署后台服务处理事件回调（推荐使用云服务器，内网穿透在公司网络下可行性低）\n5. 后台服务解析回调消息中的 `event_type` 和消息内容\n6. 根据消息内容构造回复消息并调用API发送\n\n### 4. 读取飞书文档内容\n1. 完成OAuth授权后，使用飞书API调用文档内容接口\n2. API类型包括但不限于：docx、wikispaces等\n3. 如无法通过API直接访问，则提示用户手动复制内容或下载为本地文件\n\n## Commands\n\n```bash\n# 飞书OAuth授权登录（生成二维码）\n\"$HOME/.lark-cli/lark-cli\" auth login\n```\n\n```python\n# 飞书机器人消息发送示例\nimport requests\nimport json\n\nAPP_ID = \"your_app_id\"\nAPP_SECRET = \"your_app_secret\"\n\ndef get_tenant_access_token():\n    url = \"https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal\"\n    resp = requests.post(url, json={\n        \"app_id\": APP_ID,\n        \"app_secret\": APP_SECRET\n    })\n    return resp.json().get(\"tenant_access_token\")\n\ndef send_message(token, receive_id, content, msg_type=\"text\"):\n    url = f\"https://open.feishu.cn/open-apis/im/v1/messages?receive_id_type=open_id\"\n    headers = {\n        \"Authorization\": f\"Bearer {token}\",\n        \"Content-Type\": \"application/json\"\n    }\n    payload = {\n        \"receive_id\": receive_id,\n        \"msg_type\": msg_type,\n        \"content\": json.dumps({\"text\": content})\n    }\n    resp = requests.post(url, headers=headers, json=payload)\n    return resp.json()\n```\n\n## Pitfalls\n- **编码问题**：使用curl发送飞书机器人消息时可能出现编码错误，应使用Python等编程语言实现\n- **内网穿透不可行**：在企业网络环境下，内网穿透方案实现飞书事件回调的可行性低，推荐使用云服务器部署桥接服务\n- **文档访问限制**：当前工作区可能无法直接通过API访问所有飞书文档，需备选方案（手动复制或下载本地文件）\n- **OAuth授权依赖**：读取飞书文档前必须完成OAuth授权流程（扫码登录lark-cli）\n\n## Verification\n- 飞书OAuth授权：执行任意飞书API调用（如读取wiki文档），确认返回正常数据而非权限错误\n- 机器人消息发送：在目标群聊中确认消息已成功送达\n- @自动回复：在群内@机器人发送消息，确认机器人正确回复\n- 文档读取：确认通过API读取的文档内容完整且正确",
+      "sourceMemoryIds": [
+        "11c598bf",
+        "a354eee9",
+        "8e9adc48",
+        "66ad1a63",
+        "091f2b88"
+      ],
+      "triggerSessionCount": 1,
+      "createdAt": 1783503501822,
+      "updatedAt": 1783503501822,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-a6b01d1e",
+      "name": "飞书机器人集成与自动化",
+      "description": "实现飞书OAuth授权、Wiki内容读取、群聊@自动回复及机器人消息发送的完整工作流",
+      "draftSkillMd": "---\nname: \"飞书机器人集成与自动化\"\ndescription: \"实现飞书OAuth授权、Wiki内容读取、群聊@自动回复及机器人消息发送的完整工作流\"\nversion: 1.0.0\n---\n\n# 飞书机器人集成与自动化\n\n## When to Use\n当用户需要对接飞书开放平台进行以下操作时使用：\n- 通过扫码授权读取飞书Wiki文档内容（docx/wikispaces）\n- 实现飞书群内@机器人的自动回复\n- 通过Python脚本发送飞书机器人消息\n- 部署飞书事件回调服务\n\n## Procedure\n\n### 1. Lark CLI 授权（读取飞书内容）\n1. 执行授权命令生成二维码：\n   ```bash\n   \"$HOME/.lark-cli/lark-cli\" auth login\n   ```\n2. 用户扫码完成飞书OAuth授权\n3. 授权后通过lark-cli调用飞书API读取Wiki节点内容（支持docx、wikispaces等API）\n\n### 2. 创建飞书应用并配置事件订阅（@自动回复）\n1. 在[飞书开放平台](https://open.feishu.cn)创建一个企业自建应用\n2. 为应用添加机器人能力\n3. 配置事件订阅：订阅 `im.message.receive_v1` 事件\n4. 在事件回调配置中指向部署的后台服务地址\n5. 发布应用版本并等待管理员审核\n\n### 3. 部署桥接服务\n1. 在**云服务器**上部署后台服务，接收飞书事件回调\n2. 服务处理 `im.message.receive_v1` 事件，解析 @ 消息内容\n3. 根据消息内容生成回复，调用飞书API发送消息\n4. 注意：**不推荐内网穿透方案**（在公司网络环境下可行性低）\n\n### 4. 使用Python发送飞书机器人消息\n使用Python实现消息发送（替代curl以解决编码问题）：\n\n```python\nimport requests\nimport json\n\ndef send_feishu_message(webhook_url, content):\n    \"\"\"发送飞书机器人消息\"\"\"\n    payload = {\n        \"msg_type\": \"text\",\n        \"content\": {\n            \"text\": content\n        }\n    }\n    headers = {\n        \"Content-Type\": \"application/json; charset=utf-8\"\n    }\n    response = requests.post(webhook_url, headers=headers, data=json.dumps(payload))\n    return response.json()\n```\n\n## Commands\n\n**飞书扫码授权**\n```bash\n\"$HOME/.lark-cli/lark-cli\" auth login\n```\n\n**Python发送飞书消息**\n```python\nimport requests, json\ndef send_msg(url, text):\n    return requests.post(url,\n        headers={\"Content-Type\": \"application/json; charset=utf-8\"},\n        data=json.dumps({\"msg_type\": \"text\", \"content\": {\"text\": text}})\n    ).json()\n```\n\n## Pitfalls\n- **编码问题**：使用curl发送飞书消息可能存在编码问题，应优先使用Python的 `requests` 库并显式指定 `charset=utf-8`\n- **内网穿透限制**：在公司网络环境下内网穿透方案可行性低，应直接使用云服务器部署桥接服务\n- **事件订阅验证**：配置飞书事件回调时需确保服务端能正确处理飞书的Challenge验证请求\n- **应用发布**：飞书应用的配置修改（事件订阅、权限等）需要发布新版本并通过审核后才能生效\n\n## Verification\n- 授权成功后可通过lark-cli调用飞书API成功返回 Wiki 文档内容\n- 在飞书群内@机器人，确认机器人能在合理时间内自动回复\n- Python脚本发送消息后，检查目标群聊是否收到正确内容的消息",
+      "sourceMemoryIds": [
+        "11c598bf",
+        "8e9adc48",
+        "66ad1a63",
+        "a354eee9"
+      ],
+      "triggerSessionCount": 1,
+      "createdAt": 1783490390083,
+      "updatedAt": 1783490390083,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-4b058fc9",
+      "name": "自动发现的工作区流程",
+      "description": "从跨会话重复记忆中自动提炼的可复用工作区步骤。",
+      "draftSkillMd": "---\nname: \"自动发现的工作区流程\"\ndescription: \"从跨会话重复记忆中自动提炼的可复用工作区步骤。\"\n---\n\n# Instructions\n\nWhen the user request matches this recurring workspace pattern, follow these remembered steps and commands.\n\n## Steps\n\n1. AI日报发送流程：使用 bocha_ai_search 搜索三个方向（AI产品发布、大模型技术突破、AI应用行业动态），各获取5条结果，人工筛选去重后整理为10条新闻简报，通过飞书Webhook发送绿色卡片消息。卡片包含标题、简介、来源/日期，底部有\"Incaier Agent自动生成\"脚注。Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9\n2. 每日新闻播报工作流程：1) 使用 market-2mzn 的 bocha_ai_search 搜索6个方向（新闻联播/海内外新闻/微博/抖音/百度/知乎热搜）；2) 整理为三个板块：国内外要闻（5-10条）、各平台热搜Top5、跨平台热点；3) 通过飞书Webhook URL (https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9) 以 interactive 卡片格式发送，蓝色模板，msg_type为interactive。注意Windows终端Python print有GBK编码问题，但飞书API不受影响。\n3. 每日新闻播报需严格验证新闻时效性：使用 bocha_ai_search 搜索时必须指定准确日期（如'2026 年 6 月 22 日'），发布前确认新闻为当日内容，避免过时信息。\n4. 飞书机器人消息发送使用Python实现，替代原curl命令解决编码问题\n\n## Provenance\n\nMemory IDs: b0807f5c, cafe4e2a, d73cf925, a354eee9\nSessions: 260623-open-grove\n",
+      "sourceMemoryIds": [
+        "b0807f5c",
+        "cafe4e2a",
+        "d73cf925",
+        "a354eee9"
+      ],
+      "triggerSessionCount": 1,
+      "createdAt": 1783409968332,
+      "updatedAt": 1783409968332,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-b3b17a84",
+      "name": "飞书集成与自动化操作",
+      "description": "用户需要操作飞书文档（万链Online）、配置飞书OAuth授权、实现飞书群@自动回复或访问飞书wiki节点内容时使用",
+      "draftSkillMd": "---\nname: \"飞书集成与自动化操作\"\ndescription: \"用户需要操作飞书文档（万链Online）、配置飞书OAuth授权、实现飞书群@自动回复或访问飞书wiki节点内容时使用\"\nversion: 1.0.0\n---\n\n# 飞书（Feishu/Lark）集成与自动化操作指南\n\n## When to Use\n当用户需要执行以下操作时加载本技能：\n- 需要通过扫码完成飞书OAuth授权以访问飞书文档\n- 需要读取飞书wiki节点内容（docx/wikispaces）\n- 需要实现飞书群内@自动回复功能\n- 需要配置飞书应用的事件订阅和后台服务\n\n## Procedure\n\n### 1. 飞书OAuth授权（获取API访问能力）\n\n1. 确认 `$HOME/.lark-cli/lark-cli` 工具已安装\n2. 执行授权命令生成二维码：\n   ```bash\n   \"$HOME/.lark-cli/lark-cli\" auth login\n   ```\n3. 用户使用飞书（万链Online）扫码完成授权\n4. 授权成功后，通过 lark-cli 可调用飞书API读取wiki节点内容（docx、wikispaces等）\n\n### 2. 读取飞书文档/wikispaces内容\n\n授权完成后，使用 lark-cli 提供的命令读取指定wiki节点或文档内容。具体命令参数参考 lark-cli 帮助文档。\n\n### 3. 实现飞书群@自动回复机器人\n\n1. **创建飞书应用**：在飞书开放平台创建应用，获取 App ID 和 App Secret\n2. **配置事件订阅**：启用 `im.message.receive_v1` 事件订阅，配置回调地址\n3. **部署后台服务**：\n   - 在云服务器上部署桥接服务（推荐方案）\n   - 服务需处理飞书事件回调，解析@机器人的消息并返回响应\n   - 内网穿透方案在公司网络环境下可行性低，不推荐使用\n\n## Commands\n\n### 飞书OAuth授权登录\n```bash\n\"$HOME/.lark-cli/lark-cli\" auth login\n```\n\n## Pitfalls\n\n- 当前工作区环境无法直接访问飞书文档，必须通过 lark-cli 授权或手动复制内容/下载本地文件\n- 飞书@自动回复的桥接服务推荐部署在云服务器上，公司网络环境下内网穿透方案可行性低\n- 使用 lark-cli 前需确认工具已安装在 `$HOME/.lark-cli/` 目录下\n\n## Verification\n\n- 授权成功后，lark-cli 应能成功调用飞书API（如文档读取、wiki节点查询等）\n- @自动回复机器人部署完成后，在飞书群内@机器人应能收到预期响应",
+      "sourceMemoryIds": [
+        "11c598bf",
+        "091f2b88",
+        "8e9adc48",
+        "66ad1a63"
+      ],
+      "triggerSessionCount": 1,
+      "createdAt": 1783409968332,
+      "updatedAt": 1783409968332,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "auto-skill-b7e49847",
+      "name": "海外冰箱竞品雷达多源采集工作流",
+      "description": "当需要采集海外冰箱品牌的竞品信息（官网产品、电商评论、中文新闻）时，执行多源并行架构工作流",
+      "draftSkillMd": "---\nname: 海外冰箱竞品雷达多源采集工作流\ndescription: 当需要采集海外冰箱品牌的竞品信息（官网产品、电商评论、中文新闻）时，执行多源并行架构工作流\nversion: 1.0.0\n---\n\n# 海外冰箱竞品雷达多源采集工作流\n\n## When to Use\n当用户要求执行\"海外冰箱竞品雷达\"或\"overseas fridge radar\"工作流，需要采集海外冰箱品牌（三星、LG、惠而浦、博世、松下等）的竞品数据时使用。该工作流适用于多区域（美洲、欧洲、日韩、澳洲）的冰箱产品信息采集。\n\n## Procedure\n\n1. **设置品牌-区域映射表**\n   按区域配置品牌及对应官网URL：\n   - 美洲：三星US (https://www.samsung.com/us), 惠而浦US (https://www.whirlpool.com), LG US (https://www.lg.com/us), GE Appliances (https://www.geappliances.com), Frigidaire (https://www.frigidaire.com)\n   - 欧洲：博世DE (https://www.bosch-home.com/de), 西门子DE (https://www.siemens-home.bsh-group.com/de), 伊莱克斯 (https://www.electrolux.com), BEKO (https://www.beko.com), Gorenje (https://www.gorenje.com)\n   - 日韩：松下JP (https://www.panasonic.com/jp), 日立JP (https://www.hitachi.co.jp), 东芝JP (https://www.toshiba.co.jp), 大宇KR (https://www.daewoo.com), 酷晨KR (https://www.cuchen.com)\n   - 澳洲：三星AU (https://www.samsung.com/au), Fisher & Paykel (https://www.fisherpaykel.com/au), Westinghouse (https://www.westinghouse.com.au)\n\n2. **为每个品牌执行3路并行采集**\n   在HiAgent代码节点中使用统一mcp_call()助手函数，对每个品牌同时发起3个独立请求，任一成功即可获取数据：\n\n   a. **官网产品抓取**：通过Firecrawl MCP调用，抓取品牌官网冰箱/冷藏产品页面\n   b. **电商搜索**：通过Firecrawl /v1/search API搜索Amazon等电商平台的冰箱产品信息\n   c. **中文新闻搜索**：通过博查MCP搜索中文行业新闻（使用能力市场MCP端点）\n\n3. **Firecrawl MCP调用方法（官网抓取）**\n   - 调用Firecrawl MCP的scrape接口抓取品牌官网页面\n   - 响应为SSE流格式（`event:message\\ndata:{json}`），不可直接使用`resp.json()`\n   - 需使用`resp.text()`获取全文，按`'\\n\\n'`分割提取data行，再`JSON.parse(data行)`获取结果\n\n4. **博查MCP调用方法（中文新闻搜索）**\n   - URL：`https://market.haierfhtech.com/prod-api/capabilitymarket/mcp/http/cap_66abf82820f1468dbf60175c3f529670`\n   - Header：添加`X-Platform-Access-Key`，使用平台已配置的博查凭证\n   - Body：JSON-RPC格式，调用`web_search`方法，传参`query`（搜索词）和`count=10`\n   - 搜索词使用中文（如`三星 冰箱 新品 2026`），所有非澳洲区域均使用中文搜索词\n   - 澳洲区域搜索词可使用英文\n\n5. **Firecrawl /v1/search API调用方法（电商搜索）**\n   - 通过HTTP请求节点调用Firecrawl的`/v1/search` API\n   - 使用同一Firecrawl Key统一管理\n   - 搜索词使用品牌英文名 + refrigerator/cooling相关关键词\n\n6. **数据合并与输出**\n   对每个品牌的3路结果进行合并去重，优先使用结构化数据。任一源成功即视为该品牌数据采集成功，避免单源失败导致空结果。\n\n## Commands\n```javascript\n// Firecrawl MCP SSE流解析模板\nasync function callFirecrawlMCP(url, payload) {\n  const resp = await fetch(url, {\n    method: 'POST',\n    headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${FIRECRAWL_KEY}` },\n    body: JSON.stringify(payload)\n  });\n  const text = await resp.text();\n  const lines = text.split('\\n\\n');\n  let result = null;\n  for (const line of lines) {\n    if (line.startsWith('data:')) {\n      result = JSON.parse(line.replace('data:', '').trim());\n      break;\n    }\n  }\n  return result;\n}\n```\n\n```http\n### 博查MCP JSON-RPC请求格式\nPOST https://market.haierfhtech.com/prod-api/capabilitymarket/mcp/http/cap_66abf82820f1468dbf60175c3f529670\nX-Platform-Access-Key: {{BOCHA_ACCESS_KEY}}\nContent-Type: application/json\n\n{\n  \"jsonrpc\": \"2.0\",\n  \"method\": \"web_search\",\n  \"params\": {\n    \"query\": \"三星 冰箱 新品 2026\",\n    \"count\": 10\n  },\n  \"id\": 1\n}\n```\n\n```javascript\n// 统一mcp_call助手函数（伪代码）\nasync function mcp_call(type, brand, region, params) {\n  const tasks = [];\n  if (type === 'all' || type === 'scrape') {\n    tasks.push(firecrawl_scrape(brand.url)); // 官网抓取\n  }\n  if (type === 'all' || type === 'search') {\n    tasks.push(firecrawl_news_search(brand.name, region)); // 电商搜索\n  }\n  if (type === 'all' || type === 'news') {\n    tasks.push(bocha_news_search(brand.chineseName)); // 中文新闻\n  }\n  return Promise.any(tasks); // 任一成功即返回\n}\n```\n\n```javascript\n// 按区域确定搜索词语言\nfunction getSearchTerm(brandName, region) {\n  if (region === 'au') {\n    return `${brandName} refrigerator 2026`; // 澳洲用英文\n  }\n  return `${brandName} 冰箱 新品 2026`; // 其他区域统一用中文\n}\n```\n\n## Pitfalls\n1. **Firecrawl MCP返回SSE流而非标准JSON**：响应格式为`event:message\\ndata:{...}\\n\\n`，直接调用`resp.json()`会解析失败返回空结果。必须用`resp.text()`获取全文后手动解析。\n2. **Firecrawl Search不可用于非中文搜索**：Firecrawl Search（`firecrawl_search`）对所有区域和语言的冰箱查询均返回空结果，不可作为搜索方案。搜索回退统一使用博查MCP或Firecrawl /v1/search API。\n3. **博查API Key不可直接使用**：Bocha API Key不可用，需通过HiAgent能力市场MCP端点调用（使用平台统一采购的凭证），而非直接调用博查原始API。\n4. **非澳洲区域Firecrawl Search也无效**：欧洲等区域使用英文查询同样返回空，所有非澳洲区域统一使用中文搜索词通过博查MCP搜索。\n\n## Verification\n1. 确认每个品牌至少有一个数据源返回非空结果（避免因单源失败导致品牌数据缺失）\n2. 验证Firecrawl MCP返回的数据已正确解析（非SSE原始格式）\n3. 确认区域映射正确：美洲/欧洲/日韩品牌对应正确官网URL\n4. 确认搜索词语言正确：非澳洲区域使用中文，澳洲区域可使用英文\n5. 检查博查MCP返回的中文新闻是否包含冰箱行业相关内容",
+      "sourceMemoryIds": [
+        "49921607",
+        "72680676",
+        "07564e1a",
+        "c67ff175",
+        "ec7d3e5f",
+        "c14ed074",
+        "15eb03c1",
+        "53cf19e2"
+      ],
+      "triggerSessionCount": 2,
+      "createdAt": 1783387224016,
+      "updatedAt": 1783387224016,
+      "source": "auto_skill"
+    },
+    {
+      "slug": "hiagent-741b0ae8",
+      "name": "HiAgent智能体开发与海外竞品雷达工作流配置",
+      "description": "当用户询问HiAgent平台智能体开发、HTTP节点变量绑定、海外冰箱竞品雷达工作流配置或上线部署流程时使用",
+      "draftSkillMd": "---\nname: \"HiAgent智能体开发与海外竞品雷达工作流配置\"\ndescription: \"当用户询问HiAgent平台智能体开发、HTTP节点变量绑定、海外冰箱竞品雷达工作流配置或上线部署流程时使用\"\nversion: 1.0.0\n---\n\n# HiAgent智能体开发与海外竞品雷达工作流配置\n\n## When to Use\n用户询问以下相关内容时加载本技能：\n- HiAgent平台智能体开发流程（测试账号申请、环境部署、生产上线）\n- HiAgent工作流中HTTP请求节点的变量绑定配置\n- 海外冰箱竞品雷达工作流的大模型节点参数配置\n- HiAgent跨环境迁移（测试→生产）\n\n## Procedure\n\n### 1. HTTP请求节点变量绑定配置\n1. 在**输入参数区域**声明变量名，并引用源节点的输出（如 `searchQuery` 引用代码01节点的 `searchQuery` 输出）\n2. 在**Body**中使用 `{{变量名}}` 占位符引用声明的变量\n3. 注意：缺少输入参数声明会导致 `ValidationError(Field required for value)`\n\n### 2. 海外冰箱竞品雷达工作流 - 大模型01节点（提取搜索词）\n1. **输入参数 `input`** 应引用 **Start节点** 的 `query`（用户原始输入）\n2. 切勿引用意图识别01节点的 `classificationName`（分类结果），否则无法提取正确的搜索关键词\n\n### 3. 海外冰箱竞品雷达工作流 - 大模型02节点\n1. **输入参数 `input`** 引用 **HTTP请求01** 节点的 `body`\n2. **系统提示词** 需包含以下内容：\n   - 7区域市场概览表\n   - 各品牌官网抓取策略：\n     - 海信：直接抓取\n     - 三星：JS渲染需搜索方式\n     - LG：反爬机制需走零售商渠道\n     - 美的：官网覆盖不均等\n   - 各区域零售商备用渠道\n   - 严格结构化输出格式（按品牌列表 + 表格）\n3. **用户提示词** 设为 `{{input}}`\n4. **超时设置**：120秒\n5. **重试次数**：0\n\n### 4. 智能体开发上线六步骤\n1. **申请测试账号**：填写申请表 https://ihaier.feishu.cn/share/base/form/shrcnLF3X4yiUjMMcgkT6St4OJe （每日17:30审批）\n2. **测试环境开发调试**：访问 agents-test.haier.net 进行开发和调试\n3. **生产申报**：填写申请表 https://ihaier.feishu.cn/share/base/form/shrcndhZAEuI9IFc4lkrpKhWBqe\n4. **跨环境迁移**：从测试环境导出 → 导入到生产环境\n5. **发布智能体**：在生产环境点击\"发布智能体\"，由管理员审批（每日17:30）\n6. **接入业务系统**：审批通过后接入业务系统上线\n\n## Pitfalls\n- HTTP请求节点**必须同时在两处**配置变量绑定：输入参数区域声明 + Body中使用`{{}}`占位符，缺一不可\n- 大模型01节点的 `input` 必须引用Start节点的 `query`，而非意图识别节点的 `classificationName`\n- 测试账号审批和生产环境发布审批均在每日17:30进行，需注意时间节点\n- 大模型02节点超时建议设为120秒，重试设为0，避免超时累积导致工作流失败\n- 生产申报必须在测试环境开发调试完成后、正式迁移前完成\n\n## Verification\n- HTTP请求节点配置完成后，检查输入参数区域变量声明与Body中`{{}}`占位符是否一一对应\n- 大模型01节点验证：输入不同query测试是否能准确提取搜索关键词\n- 大模型02节点验证：检查输出是否符合结构化格式要求（按品牌列表+表格）\n- 上线验证：生产环境发布后，确认智能体在业务系统中可正常调用并返回正确结果",
+      "sourceMemoryIds": [
+        "85d4cc8b",
+        "06695894",
+        "edf55a01",
+        "4597d052"
+      ],
+      "triggerSessionCount": 1,
+      "createdAt": 1783387224016,
+      "updatedAt": 1783387224016,
+      "source": "auto_skill"
+    }
+  ]
+}

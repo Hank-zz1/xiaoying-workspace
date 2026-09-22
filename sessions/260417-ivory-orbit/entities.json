@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 580093,
+  "entities": {
+    "小盈": {
+      "count": 1,
+      "category": "product",
+      "lastSeen": 1787794182378
+    },
+    "东西": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794182378
+    },
+    "加密": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794182378
+    },
+    "目前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182378
+    },
+    "云图": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794182378
+    }
+  }
+}

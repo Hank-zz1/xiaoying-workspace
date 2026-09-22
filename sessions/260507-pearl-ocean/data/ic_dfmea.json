@@ -1,0 +1,222 @@
+{
+  "title": "制冰间室(IC) D-FMEA 设计失效模式与影响分析",
+  "columns": [
+    {
+      "key": "item",
+      "label": "编号",
+      "type": "text"
+    },
+    {
+      "key": "function",
+      "label": "功能",
+      "type": "text"
+    },
+    {
+      "key": "failureMode",
+      "label": "失效模式",
+      "type": "text"
+    },
+    {
+      "key": "failureEffect",
+      "label": "失效影响",
+      "type": "text"
+    },
+    {
+      "key": "severity",
+      "label": "严重度S",
+      "type": "number"
+    },
+    {
+      "key": "failureCause",
+      "label": "失效原因",
+      "type": "text"
+    },
+    {
+      "key": "occurrence",
+      "label": "频度O",
+      "type": "number"
+    },
+    {
+      "key": "currentControl",
+      "label": "现行控制措施",
+      "type": "text"
+    },
+    {
+      "key": "detection",
+      "label": "探测度D",
+      "type": "number"
+    },
+    {
+      "key": "rpn",
+      "label": "RPN",
+      "type": "number"
+    },
+    {
+      "key": "recommendAction",
+      "label": "建议改进措施",
+      "type": "text"
+    },
+    {
+      "key": "resp",
+      "label": "责任人",
+      "type": "text"
+    },
+    {
+      "key": "targetDate",
+      "label": "目标日期",
+      "type": "text"
+    }
+  ],
+  "rows": [
+    {
+      "item": "01",
+      "function": "制冰能力",
+      "failureMode": "日制冰量不足，低于目标值",
+      "failureEffect": "用户冰块不够用，投诉制冰慢/制冰少",
+      "severity": 7,
+      "failureCause": "①风机风量不足 ②风道设计不合理导致ΔT过小 ③蒸发温度偏高 ④制冰机自身能力不足",
+      "occurrence": 5,
+      "currentControl": "①热力学计算确定风量 ≥15m³/h ②CFD仿真优化风道 ③制冰机选型确认 ④样机实测验证",
+      "detection": 4,
+      "rpn": 140,
+      "recommendAction": "①明确制冰量规格目标（周一确认）②按3-5kg/day设计风道，预留20%风量裕度 ③样机阶段进行制冰量全工况测试",
+      "resp": "设计/企划",
+      "targetDate": "样机评审前"
+    },
+    {
+      "item": "02",
+      "function": "噪音控制",
+      "failureMode": "制冰间室运行噪音 ≥35dB(A)",
+      "failureEffect": "用户感知噪音大，影响使用体验，可能退货/投诉",
+      "severity": 7,
+      "failureCause": "①离心风机转速过高 ②风道气流噪声 ③制冰机脱冰/进水动作噪声 ④结构共振",
+      "occurrence": 6,
+      "currentControl": "①PWM调速控制在40-60%占空比 ②100mm离心风机选型 ③隔音棉/减振垫配置",
+      "detection": 3,
+      "rpn": 126,
+      "recommendAction": "①风机PWM调速曲线标定 ②风道出口增加导流降噪结构 ③制冰机动作时序优化（夜间静音模式）④样机在半消声室实测噪音",
+      "resp": "设计/噪音",
+      "targetDate": "样机评审前"
+    },
+    {
+      "item": "03",
+      "function": "存冰温度",
+      "failureMode": "存冰区温度高于-10°C，冰块融化粘连",
+      "failureEffect": "冰块结块无法取出，出冰口堵塞，用户体验极差",
+      "severity": 8,
+      "failureCause": "①风量分配不合理，存冰区冷量不足 ②门封泄漏热空气 ③频繁开门导致温度回升 ④化霜周期温度波动",
+      "occurrence": 5,
+      "currentControl": "①存冰区独立风道供冷 ②门封双气囊+磁条密封 ③存冰区温度传感器监控",
+      "detection": 4,
+      "rpn": 160,
+      "recommendAction": "①明确存冰处目标温度（周一确认，建议≤-15°C）②增加蓄冷板(PCM)缓冲温度波动 ③设置化霜后优先供冷策略 ④门封50Pa泄漏量≤0.5L/min验证",
+      "resp": "设计/制冷",
+      "targetDate": "设计评审"
+    },
+    {
+      "item": "04",
+      "function": "风道防霜",
+      "failureMode": "风道/蒸发器结霜堵塞",
+      "failureEffect": "冷量无法输送，制冰停止，间室温度回升",
+      "severity": 8,
+      "failureCause": "①化霜周期设置不合理 ②风道隔热不足导致外壁凝霜 ③湿空气进入风道 ④排水口冰堵",
+      "occurrence": 5,
+      "currentControl": "①电动风门隔离化霜 ②风道保温层设计 ③化霜时序控制",
+      "detection": 3,
+      "rpn": 120,
+      "recommendAction": "①化霜周期设定为每6-8小时一次 ②化霜前预冷间室至-20°C以补偿温升 ③风道保温层≥15mm ④排水管增加加热丝防冰堵",
+      "resp": "设计/制冷",
+      "targetDate": "设计评审"
+    },
+    {
+      "item": "05",
+      "function": "风机可靠性",
+      "failureMode": "离心风机卡死/转速异常/停转",
+      "failureEffect": "制冰间室无冷量供应，制冰完全停止",
+      "severity": 9,
+      "failureCause": "①低温结冰卡住叶片 ②电机轴承润滑失效 ③PWM控制电路故障 ④线束接触不良",
+      "occurrence": 3,
+      "currentControl": "①风机选型确认低温(-25°C)工况可用 ②PWM调速控制 ③故障自检报警",
+      "detection": 3,
+      "rpn": 81,
+      "recommendAction": "①风机进行-30°C低温耐久测试(1000h) ②增加风机转速反馈监测，异常时系统报警 ③风机安装位置避免冷凝水滴落",
+      "resp": "设计/电控",
+      "targetDate": "样机评审前"
+    },
+    {
+      "item": "06",
+      "function": "间室密封",
+      "failureMode": "门封/箱体密封失效，热湿空气进入",
+      "failureEffect": "①间室结霜加剧 ②存冰融化 ③能耗增加 ④门体外部凝露",
+      "severity": 7,
+      "failureCause": "①门封材料低温老化变硬 ②门体变形导致间隙 ③密封条安装不到位 ④长期使用后弹性衰减",
+      "occurrence": 4,
+      "currentControl": "①硅橡胶/EPDM密封材料(-40°C耐温) ②双气囊+磁条结构 ③门封拉力测试",
+      "detection": 4,
+      "rpn": 112,
+      "recommendAction": "①门封材料耐低温老化测试(-25°C×72h压缩永久变形≤30%) ②32°C/85%RH凝露试验 ③50Pa气密性测试泄漏≤0.5L/min ④增加门开关耐久测试(10万次)",
+      "resp": "设计/品质",
+      "targetDate": "设计评审"
+    },
+    {
+      "item": "07",
+      "function": "化霜排水",
+      "failureMode": "化霜水排水不畅或冰堵",
+      "failureEffect": "化霜水溢出/积存，再次结冰堵塞风道，可能漏到其他间室",
+      "severity": 7,
+      "failureCause": "①排水管坡度不足 ②排水口处再次结冰 ③排水管隔热不足 ④异物堵塞",
+      "occurrence": 4,
+      "currentControl": "①排水管设计 ②排水加热丝配置",
+      "detection": 3,
+      "rpn": 84,
+      "recommendAction": "①排水管坡度≥5° ②排水口加热丝功率确认（≥3W）③排水管外壁增加保温层 ④排水路径避开风机/电器件",
+      "resp": "设计",
+      "targetDate": "设计评审"
+    },
+    {
+      "item": "08",
+      "function": "温度传感器",
+      "failureMode": "温度传感器漂移/失效/读数异常",
+      "failureEffect": "①制冷控制异常导致温度过高或过低 ②化霜时机错误 ③系统误报警",
+      "severity": 7,
+      "failureCause": "①传感器受潮短路 ②线束断裂 ③NTC特性漂移 ④接插件松动",
+      "occurrence": 3,
+      "currentControl": "①NTC温度传感器选型 ②控制系统温度异常报警",
+      "detection": 4,
+      "rpn": 84,
+      "recommendAction": "①传感器IP67防水等级 ②传感器冗余设计（存冰区2个传感器交叉校验）③线束接插件增加防水护套 ④温度读数偏差＞3K触发报警",
+      "resp": "电控",
+      "targetDate": "样机评审前"
+    },
+    {
+      "item": "09",
+      "function": "供水系统",
+      "failureMode": "制冰机供水不足或漏水",
+      "failureEffect": "①制冰量减少甚至无法制冰 ②漏水导致间室结冰或漏到外部 ③电气安全隐患",
+      "severity": 9,
+      "failureCause": "①水管接头松动/老化 ②进水阀故障 ③水管冻结 ④水压过低/过高",
+      "occurrence": 4,
+      "currentControl": "①快插式水管接头 ②进水阀选型 ③水压适配范围确认",
+      "detection": 3,
+      "rpn": 108,
+      "recommendAction": "①水管接头增加二次锁定结构 ②进水阀寿命≥5万次 ③水管在IC内段增加保温层防冻结 ④增加漏水检测传感器(底部积水报警)",
+      "resp": "设计/品质",
+      "targetDate": "设计评审"
+    },
+    {
+      "item": "10",
+      "function": "制冰机总成",
+      "failureMode": "制冰机脱冰失败/冰盘不翻转/马达堵转",
+      "failureEffect": "冰块无法脱落，制冰机卡死，需人工干预",
+      "severity": 8,
+      "failureCause": "①冰盘表面结冰粘附 ②脱冰加热不足 ③马达力矩不够/过载 ④冰盘转轴卡涩",
+      "occurrence": 4,
+      "currentControl": "①制冰机总成外购选型 ②加热脱冰控制时序",
+      "detection": 3,
+      "rpn": 96,
+      "recommendAction": "①制冰机总成规格确认（含脱冰成功率≥99.5%）②增加脱冰异常检测（电流监测）异常时自动重试脱冰 ③冰盘涂层选型确认（不粘涂层）",
+      "resp": "设计/采购",
+      "targetDate": "供应商定点前"
+    }
+  ]
+}

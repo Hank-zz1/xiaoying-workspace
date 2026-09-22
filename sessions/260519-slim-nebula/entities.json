@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 132704,
+  "entities": {
+    "飞书": {
+      "count": 4,
+      "category": "app",
+      "lastSeen": 1787794183271
+    },
+    "卡片": {
+      "count": 8,
+      "category": "other",
+      "lastSeen": 1787794183271
+    },
+    "加粗": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183271
+    },
+    "内容简介": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183271
+    },
+    "Python": {
+      "count": 1,
+      "category": "technology",
+      "lastSeen": 1787794183271
+    },
+    "当天": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794183271
+    },
+    "日期": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794183271
+    },
+    "python": {
+      "count": 1,
+      "category": "technology",
+      "lastSeen": 1787794183271
+    }
+  }
+}

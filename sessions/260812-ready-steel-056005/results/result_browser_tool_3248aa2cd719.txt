@@ -1,0 +1,19 @@
+Navigated to: https://hisense.com.au/appliances/fridges-freezers/all?page=2
+Title: Hisense Fridge & Freezer Appliances | Explore Now
+Elapsed: 57866ms
+URL changed: true
+Recent failed requests: 4
+Viewport: 1266x763, scroll=(0, 0)
+Interactive elements: 219 (refs @e1..@e219 injected)
+Key elements:
+  @e1 [button] Skip to Header
+  @e2 [button] Skip to Main Content
+  @e3 [button] Skip to Footer
+  @e5 [button] Postcode
+  @e6 [button] Search
+  @e48 [button] Filters
+  @e49 [button] Filter by Type
+  @e56 [button] Show more, button, clicking on this button will show all options for the active 
+  @e57 [button] Filter by Storage Volume
+  @e63 [button] Filter by Price
+Run "snapshot" for full element list.

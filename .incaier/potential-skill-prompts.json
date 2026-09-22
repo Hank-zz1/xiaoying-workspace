@@ -1,0 +1,1236 @@
+{
+  "version": 1,
+  "prompts": [
+    {
+      "id": "2cf38005-c56d-4899-a600-785fe07fa776",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260921-soft-poplar-204392",
+      "createdAt": 1789959959951,
+      "expiresAt": 1789960019951,
+      "status": "active",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-4a31253b",
+        "sku-9d1d44a2",
+        "online-bb60d8fd"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-4a31253b",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "定时巡检澳洲 5 大冰箱品牌（海信/美的/三星/LG/西屋）官网及零售商新品与库存变化，并推送飞书卡片汇总",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "877c793c",
+            "b1a86c87",
+            "4ad45083",
+            "95ef9c84",
+            "17fcac00",
+            "e30d622a"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "sku-9d1d44a2",
+          "name": "新西兰冰箱市场SKU抓取",
+          "description": "在新西兰冰箱市场监控会话中，仅依赖海信/三星官网直抓与 web_search/ai_search 间接搜索采集 SKU 基线时使用",
+          "sourceMemoryIds": [
+            "fe52992c",
+            "34a73499",
+            "3f1e80ae",
+            "dc130820",
+            "bb43df3c",
+            "164db212"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-bb60d8fd",
+          "name": "万链Online飞书文档读取",
+          "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki内容时，先尝试lark-cli授权读取，未授权时改用browser_tool绕过登录",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-4a31253b",
+        "sku-9d1d44a2",
+        "online-bb60d8fd"
+      ]
+    },
+    {
+      "id": "b6178a18-d3af-4fee-9899-b70590debb98",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260918-early-thunder-899547",
+      "createdAt": 1789890141204,
+      "expiresAt": 1789890201204,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-4a31253b",
+        "auto-skill-9d1d44a2",
+        "online-bb60d8fd"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-4a31253b",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "当需要巡检澳洲冰箱品牌（海信/美的/三星/LG/西屋）新品或价格变化、推送飞书汇总时使用；按 SchedulerTick 定时任务抓取各品牌官网与零售商页面并与基线文件对比。",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "e30d622a",
+            "877c793c",
+            "b1a86c87",
+            "95ef9c84",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-9d1d44a2",
+          "name": "新西兰冰箱市场抓取与基线维护",
+          "description": "当需要抓取新西兰(NZ)冰箱市场SKU数据并维护基线文件时使用，处理海信/三星/LG三品牌官网反爬与限流问题",
+          "sourceMemoryIds": [
+            "fe52992c",
+            "34a73499",
+            "3f1e80ae",
+            "dc130820",
+            "bb43df3c",
+            "164db212"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-bb60d8fd",
+          "name": "万链Online飞书文档访问",
+          "description": "当需要读取 ihaier.feishu.cn (万链Online) 飞书文档内容时，优先尝试 lark-cli 授权，未授权则用 browser_tool 绕过登录读取",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-4a31253b",
+        "auto-skill-9d1d44a2",
+        "online-bb60d8fd"
+      ]
+    },
+    {
+      "id": "5119eb05-dd18-4849-abc7-6b14c62384f2",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260918-early-thunder-899547",
+      "createdAt": 1789884863983,
+      "expiresAt": 1789884923983,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-9b09f677",
+        "online-bb60d8fd"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-9b09f677",
+          "name": "澳新冰箱品牌新品监控",
+          "description": "监控澳洲/新西兰冰箱品牌（海信/三星/LG/美的）新品与在售型号，当直接抓取被反爬或 JS 渲染阻断时，回退到官网上报参数、jsonld 模式、零售商页面与网络搜索的混合方案",
+          "sourceMemoryIds": [
+            "28baa449",
+            "cd83863a",
+            "fe52992c",
+            "b1a86c87",
+            "4ad45083",
+            "34a73499",
+            "877c793c",
+            "17fcac00",
+            "3f1e80ae",
+            "bb43df3c",
+            "164db212",
+            "95ef9c84"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-bb60d8fd",
+          "name": "万链Online飞书文档访问",
+          "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书文档/wiki节点内容时使用，根据 lark-cli 授权状态选择 CLI 或 browser_tool 方式",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-9b09f677",
+        "online-bb60d8fd"
+      ]
+    },
+    {
+      "id": "dae2b5d5-bc10-44e8-ac9f-b589347c6d7a",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260918-early-thunder-899547",
+      "createdAt": 1789882542436,
+      "expiresAt": 1789882602436,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "online-bb60d8fd"
+      ],
+      "candidates": [
+        {
+          "slug": "online-bb60d8fd",
+          "name": "万链Online飞书文档访问与授权",
+          "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书 wiki/docx 文档内容时使用：优先通过 lark-cli 授权读取，未授权时用 browser_tool 绕过登录读取正文。",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "online-bb60d8fd"
+      ]
+    },
+    {
+      "id": "1a2f3068-19e2-4038-b2d1-f53896f56c2e",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260918-early-thunder-899547",
+      "createdAt": 1789873070615,
+      "expiresAt": 1789873130615,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-721ab2a3",
+        "online-cli-bb60d8fd"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-721ab2a3",
+          "name": "澳新冰箱品牌新品监控",
+          "description": "在澳洲/新西兰市场定期监控海信、美的、三星、LG、西屋冰箱新品时使用，处理定时巡检推送、品牌官网反爬与JS渲染抓取、基线对比及飞书通知。",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "e30d622a",
+            "877c793c",
+            "fe52992c",
+            "b1a86c87",
+            "95ef9c84",
+            "34a73499",
+            "4ad45083",
+            "17fcac00",
+            "3f1e80ae",
+            "dc130820",
+            "bb43df3c",
+            "164db212"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-cli-bb60d8fd",
+          "name": "万链Online飞书文档 CLI 授权与访问",
+          "description": "当需要读取 ihaier.feishu.cn (万链Online) 的飞书文档时，先完成 lark-cli OAuth 授权，否则用 browser_tool 绕过登录读取正文。",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-721ab2a3",
+        "online-cli-bb60d8fd"
+      ]
+    },
+    {
+      "id": "6c7b60fa-f505-441b-b8bf-088fc7a2d199",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260918-early-thunder-899547",
+      "createdAt": 1789722950850,
+      "expiresAt": 1789723010850,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-4a31253b",
+        "auto-skill-9d1d44a2",
+        "online-bb60d8fd",
+        "auto-skill-54a6b63a"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-4a31253b",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "当需要巡检或汇总澳洲冰箱（海信/美的/三星/LG/西屋）新品与库存变化时使用，含定时任务配置、各品牌抓取策略与飞书推送流程",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "e30d622a",
+            "877c793c",
+            "b1a86c87",
+            "95ef9c84",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-9d1d44a2",
+          "name": "新西兰冰箱市场品牌抓取",
+          "description": "在新西兰NZ冰箱市场监控任务中，抓取海信/三星/LG三品牌官网SKU列表并更新基线文件时使用",
+          "sourceMemoryIds": [
+            "fe52992c",
+            "34a73499",
+            "3f1e80ae",
+            "dc130820",
+            "bb43df3c",
+            "164db212"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-bb60d8fd",
+          "name": "万链Online飞书文档读取",
+          "description": "当需要读取 ihaier.feishu.cn（万链Online）飞书 wiki/docx 文档内容时，按 lark-cli 授权状态选择 lark-cli 授权读取或 browser_tool 绕过 SSO 登录读取",
+          "sourceMemoryIds": [
+            "4b9c1f0a",
+            "11c598bf"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-54a6b63a",
+          "name": "海尔智家黑客松情绪冰仓路演物料生成",
+          "description": "当用户需要为海尔智家黑客松制冷产业「情绪冰仓」项目生成 AI 产品图或路演 PPT 时，按既定设计规范与优先级执行",
+          "sourceMemoryIds": [
+            "973c4a62",
+            "0cd6a6d8",
+            "97752d38"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-4a31253b",
+        "auto-skill-9d1d44a2",
+        "online-bb60d8fd",
+        "auto-skill-54a6b63a"
+      ]
+    },
+    {
+      "id": "95f407c8-9310-4f6f-8e82-98ecdf4acd8f",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260918-early-thunder-899547",
+      "createdAt": 1789722435064,
+      "expiresAt": 1789722495064,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-6898179e"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-6898179e",
+          "name": "澳洲冰箱新品定时监控与飞书推送",
+          "description": "当需要巡检澳洲冰箱品牌（海信/美的/三星/LG/西屋）新品或库存变化并通过飞书推送时使用，覆盖 SchedulerTick 定时任务配置、基线比对与双渠道验证流程。",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "dc130820",
+            "95ef9c84",
+            "e30d622a",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-6898179e"
+      ]
+    },
+    {
+      "id": "094305ec-60a7-4221-b34e-e19417d88630",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260828-ready-flint-705177",
+      "createdAt": 1787907497460,
+      "expiresAt": 1787907557460,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-9d1d44a2"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-d9996687",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "通过定时任务监控澳洲（海信/美的/三星/LG/西屋）冰箱新品，变化时推送飞书卡片并更新基线文件",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "877c793c",
+            "b1a86c87",
+            "4ad45083",
+            "17fcac00",
+            "95ef9c84"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-9d1d44a2",
+          "name": "新西兰冰箱市场数据抓取技能",
+          "description": "当需要抓取新西兰冰箱市场的产品数据，且已知仅有海信、三星、LG三个品牌，各品牌官网存在反爬或动态渲染问题时，使用此技能进行数据抓取",
+          "sourceMemoryIds": [
+            "fe52992c",
+            "34a73499",
+            "3f1e80ae",
+            "dc130820",
+            "bb43df3c",
+            "164db212"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-9d1d44a2"
+      ]
+    },
+    {
+      "id": "df718a7d-48df-4e86-9793-7f801383ccd2",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260812-safe-birch-885719",
+      "createdAt": 1787816960787,
+      "expiresAt": 1787817020787,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-9d1d44a2"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-d9996687",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "监控海信、美的、三星、LG、西屋等品牌在澳洲冰箱市场的新品发布，通过定时任务巡检并推送飞书通知",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "877c793c",
+            "b1a86c87",
+            "4ad45083",
+            "17fcac00",
+            "95ef9c84"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-9d1d44a2",
+          "name": "新西兰冰箱市场数据采集",
+          "description": "当需要采集新西兰（NZ）冰箱市场品牌产品数据时，使用此技能。当前仅支持海信、三星、LG三个品牌，各品牌官网存在反爬或限流问题，需采用特定抓取策略。",
+          "sourceMemoryIds": [
+            "fe52992c",
+            "34a73499",
+            "dc130820",
+            "bb43df3c",
+            "164db212",
+            "3f1e80ae"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-9d1d44a2"
+      ]
+    },
+    {
+      "id": "49df5dbe-98bb-45eb-a034-777c3699b97c",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260812-safe-birch-885719",
+      "createdAt": 1787814543078,
+      "expiresAt": 1787814603078,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-a91f1433"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-d9996687",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "监控澳洲冰箱品牌新品，配置定时任务，使用飞书推送通知",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "877c793c",
+            "b1a86c87",
+            "17fcac00",
+            "4ad45083",
+            "95ef9c84"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-a91f1433",
+          "name": "新西兰冰箱市场品牌信息间接搜索",
+          "description": "当新西兰冰箱市场品牌官网存在反爬或JS渲染障碍时，使用web_search和ai_search间接搜索新闻/媒体信息",
+          "sourceMemoryIds": [
+            "fe52992c",
+            "34a73499"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-a91f1433"
+      ]
+    },
+    {
+      "id": "3294abf6-4555-4f98-87e5-bbd80a77f643",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260812-young-summit-121696",
+      "createdAt": 1786502292086,
+      "expiresAt": 1786502352086,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-a91f1433",
+        "auto-skill-fc74ef24"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-d9996687",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "监控澳洲市场5个冰箱品牌（海信、美的、三星、LG、西屋）的官网新品，通过定时任务巡检并推送飞书通知",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "877c793c",
+            "b1a86c87",
+            "4ad45083",
+            "17fcac00",
+            "95ef9c84"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-a91f1433",
+          "name": "新西兰冰箱市场品牌调研",
+          "description": "当需要调研新西兰冰箱市场品牌及官网可抓取性时，使用此技能分析品牌列表及反爬情况",
+          "sourceMemoryIds": [
+            "fe52992c",
+            "34a73499"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-fc74ef24",
+          "name": "情绪冰仓冰吧产品设计技能",
+          "description": "当需要定义海尔智家制冷产业冷柜/冰吧方向的黑客马拉松参赛产品概念与设计时使用，包含主题、核心功能、竞品定位、需求优先级、以及AI生成图像的处理方式。",
+          "sourceMemoryIds": [
+            "973c4a62",
+            "0cd6a6d8"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-d9996687",
+        "auto-skill-a91f1433",
+        "auto-skill-fc74ef24"
+      ]
+    },
+    {
+      "id": "a8001a51-8376-4455-83d3-e2bc60a96958",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260708-ready-gust",
+      "createdAt": 1783503501977,
+      "expiresAt": 1783503561977,
+      "status": "dismissed",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "ai-6a4e93f8",
+        "online-c9f2a00e"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "定时巡检海信、美的、三星、LG、西屋澳洲官网新品，通过飞书卡片推送变化，适用于市场竞品情报自动化场景",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "ai-6a4e93f8",
+          "name": "每日新闻与AI日报发送",
+          "description": "使用 bocha_ai_search 搜索多方向热点新闻或AI资讯，整理后通过飞书Webhook发送interactive卡片消息",
+          "sourceMemoryIds": [
+            "b0807f5c",
+            "cafe4e2a",
+            "d73cf925"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "online-c9f2a00e",
+          "name": "飞书/万链Online集成工作流",
+          "description": "当用户需要与飞书（Feishu/Lark）进行集成开发时使用，包括OAuth授权、文档读取、机器人消息发送及@自动回复",
+          "sourceMemoryIds": [
+            "11c598bf",
+            "a354eee9",
+            "8e9adc48",
+            "66ad1a63",
+            "091f2b88"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "ai-6a4e93f8",
+        "online-c9f2a00e"
+      ]
+    },
+    {
+      "id": "9870c2af-7f49-4137-aed3-fd385f1dcc40",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260708-wild-tide",
+      "createdAt": 1783490390212,
+      "expiresAt": 1783490450212,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-a6b01d1e",
+        "auto-skill-6a4e93f8"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "定时监控海信/美的/三星/LG/西屋澳洲冰箱新品，通过飞书卡片推送变化并更新基线文件",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-a6b01d1e",
+          "name": "飞书机器人集成与自动化",
+          "description": "实现飞书OAuth授权、Wiki内容读取、群聊@自动回复及机器人消息发送的完整工作流",
+          "sourceMemoryIds": [
+            "11c598bf",
+            "8e9adc48",
+            "66ad1a63",
+            "a354eee9"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-6a4e93f8",
+          "name": "飞书每日新闻播报",
+          "description": "通过 bocha_ai_search 搜索多方向新闻，整理为结构化卡片通过飞书 Webhook 发送每日简报",
+          "sourceMemoryIds": [
+            "b0807f5c",
+            "cafe4e2a",
+            "d73cf925"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-a6b01d1e",
+        "auto-skill-6a4e93f8"
+      ]
+    },
+    {
+      "id": "bdb58b5d-5a43-4580-a3a7-718a2abe3668",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260707-golden-bobcat",
+      "createdAt": 1783409968530,
+      "expiresAt": 1783410028530,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-4b058fc9",
+        "auto-skill-b3b17a84"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "监控澳洲市场5大冰箱品牌新品上架情况，通过定时任务巡检并推送飞书卡片通知",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-4b058fc9",
+          "name": "自动发现的工作区流程",
+          "description": "从跨会话重复记忆中自动提炼的可复用工作区步骤。",
+          "sourceMemoryIds": [
+            "b0807f5c",
+            "cafe4e2a",
+            "d73cf925",
+            "a354eee9"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-b3b17a84",
+          "name": "飞书集成与自动化操作",
+          "description": "用户需要操作飞书文档（万链Online）、配置飞书OAuth授权、实现飞书群@自动回复或访问飞书wiki节点内容时使用",
+          "sourceMemoryIds": [
+            "11c598bf",
+            "091f2b88",
+            "8e9adc48",
+            "66ad1a63"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-4b058fc9",
+        "auto-skill-b3b17a84"
+      ]
+    },
+    {
+      "id": "bfd55ed9-e27b-47e9-9052-de2d772dab01",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260706-fine-salmon",
+      "createdAt": 1783387224297,
+      "expiresAt": 1783387284297,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-b7e49847",
+        "hiagent-741b0ae8"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "定时巡检澳洲市场五大冰箱品牌（海信、美的、三星、LG、西屋）官网及零售商网站，通过飞书卡片推送新品信息并更新基线文件",
+          "sourceMemoryIds": [
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00",
+            "1c37b7da"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-b7e49847",
+          "name": "海外冰箱竞品雷达多源采集工作流",
+          "description": "当需要采集海外冰箱品牌的竞品信息（官网产品、电商评论、中文新闻）时，执行多源并行架构工作流",
+          "sourceMemoryIds": [
+            "49921607",
+            "72680676",
+            "07564e1a",
+            "c67ff175",
+            "ec7d3e5f",
+            "c14ed074",
+            "15eb03c1",
+            "53cf19e2"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "hiagent-741b0ae8",
+          "name": "HiAgent智能体开发与海外竞品雷达工作流配置",
+          "description": "当用户询问HiAgent平台智能体开发、HTTP节点变量绑定、海外冰箱竞品雷达工作流配置或上线部署流程时使用",
+          "sourceMemoryIds": [
+            "85d4cc8b",
+            "06695894",
+            "edf55a01",
+            "4597d052"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-b7e49847",
+        "hiagent-741b0ae8"
+      ]
+    },
+    {
+      "id": "ed459afd-4862-46a6-ac08-62373d18d997",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260706-fine-salmon",
+      "createdAt": 1783327187074,
+      "expiresAt": 1783327247074,
+      "status": "dismissed",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-20de54fa",
+        "ai-6a4e93f8"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "定时巡检澳洲海信/美的/三星/LG/西屋冰箱新品，检测变化后通过飞书卡片推送并更新基线文件",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-20de54fa",
+          "name": "海外冰箱竞品雷达工作流配置",
+          "description": "在HiAgent平台上配置海外冰箱竞品雷达多源数据采集工作流，含博查搜索、Firecrawl官网抓取和Amazon电商搜索的并行采集",
+          "sourceMemoryIds": [
+            "15eb03c1",
+            "c14ed074",
+            "06695894",
+            "edf55a01",
+            "85d4cc8b",
+            "49921607",
+            "ec7d3e5f",
+            "72680676",
+            "53cf19e2",
+            "07564e1a"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "ai-6a4e93f8",
+          "name": "每日新闻播报与AI日报发送",
+          "description": "每天搜索并整理国内外要闻、热搜榜单及AI行业动态，通过飞书Webhook发送格式化卡片消息",
+          "sourceMemoryIds": [
+            "d73cf925",
+            "b0807f5c",
+            "cafe4e2a"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "auto-skill-20de54fa",
+        "ai-6a4e93f8"
+      ]
+    },
+    {
+      "id": "4be8e825-a136-49c2-a626-db682a453357",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260626-onyx-shark",
+      "createdAt": 1783316593612,
+      "expiresAt": 1783316653612,
+      "status": "dismissed",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "hiagent-a0d5fa37",
+        "ai-6a4e93f8"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "定时监控澳洲5大冰箱品牌（海信/美的/三星/LG/西屋）新品上架，通过飞书推送变化通知并更新基线文件",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "hiagent-a0d5fa37",
+          "name": "HiAgent海外冰箱竞品雷达智能体开发",
+          "description": "在HiAgent平台上开发海外冰箱竞品雷达工作流，包括博查搜索HTTP节点配置、大模型节点配置、变量绑定及智能体上线全流程",
+          "sourceMemoryIds": [
+            "15eb03c1",
+            "06695894",
+            "edf55a01",
+            "85d4cc8b",
+            "4597d052",
+            "07564e1a"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "ai-6a4e93f8",
+          "name": "每日新闻与AI日报播报",
+          "description": "每天定时搜索新闻热搜和AI动态，整理后通过飞书Webhook发送交互式卡片消息",
+          "sourceMemoryIds": [
+            "d73cf925",
+            "cafe4e2a",
+            "b0807f5c"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "hiagent-a0d5fa37",
+        "ai-6a4e93f8"
+      ]
+    },
+    {
+      "id": "030d9843-b111-48d7-ac8c-b078d677ba97",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260626-onyx-shark",
+      "createdAt": 1783067668685,
+      "expiresAt": 1783067728685,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "hiagent-c47a6a28",
+        "auto-skill-4b058fc9"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "按定时任务巡检澳洲冰箱新品（海信/美的/三星/LG/西屋），检测有变化时推送飞书卡片并更新基线文件",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "hiagent-c47a6a28",
+          "name": "HiAgent海外冰箱竞品雷达工作流配置",
+          "description": "配置HiAgent平台上的海外冰箱竞品雷达多源搜索工作流，包括HTTP请求、代码节点、大模型节点及变量绑定的完整设置",
+          "sourceMemoryIds": [
+            "15eb03c1",
+            "c14ed074",
+            "06695894",
+            "edf55a01",
+            "85d4cc8b",
+            "49921607",
+            "ec7d3e5f",
+            "07564e1a"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "auto-skill-4b058fc9",
+          "name": "飞书每日新闻播报",
+          "description": "每日定时搜索多方向新闻/AI资讯，整理后通过飞书Webhook发送interactive卡片消息",
+          "sourceMemoryIds": [
+            "b0807f5c",
+            "cafe4e2a",
+            "a354eee9",
+            "d73cf925"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "hiagent-c47a6a28",
+        "auto-skill-4b058fc9"
+      ]
+    },
+    {
+      "id": "30aba432-9cfb-4283-8df4-72afd6b843e5",
+      "workspaceId": "555a4004-fcc3-a5b3-5cdf-978f33283798",
+      "sessionId": "260626-onyx-shark",
+      "createdAt": 1783045212416,
+      "expiresAt": 1783045272416,
+      "status": "auto_aborted",
+      "source": "recent_conversations",
+      "candidateSlugs": [
+        "auto-skill-7070fda1",
+        "hiagent-8ebbfeec",
+        "ai-7a5deba0"
+      ],
+      "candidates": [
+        {
+          "slug": "auto-skill-7070fda1",
+          "name": "澳洲冰箱品牌新品监控",
+          "description": "定时监控海信、美的、三星、LG、西屋等品牌在澳洲市场的新品冰箱，通过飞书Webhook推送变化",
+          "sourceMemoryIds": [
+            "1c37b7da",
+            "28baa449",
+            "cd83863a",
+            "4ad45083",
+            "17fcac00"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "hiagent-8ebbfeec",
+          "name": "HiAgent海外冰箱竞品雷达工作流配置",
+          "description": "在HiAgent平台上配置海外冰箱竞品雷达多源工作流，包括LLM节点、HTTP请求节点、多源并行架构和搜索策略",
+          "sourceMemoryIds": [
+            "06695894",
+            "edf55a01",
+            "85d4cc8b",
+            "49921607",
+            "15eb03c1",
+            "ec7d3e5f",
+            "c14ed074"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        },
+        {
+          "slug": "ai-7a5deba0",
+          "name": "飞书AI日报发送",
+          "description": "使用 bocha_ai_search 搜索 AI 新闻并通过飞书 Webhook 发送绿色卡片消息",
+          "sourceMemoryIds": [
+            "a354eee9",
+            "b0807f5c"
+          ],
+          "dedupe": {
+            "decision": "new",
+            "score": 0,
+            "reasons": []
+          }
+        }
+      ],
+      "selectedSlugs": [
+        "auto-skill-7070fda1",
+        "hiagent-8ebbfeec",
+        "ai-7a5deba0"
+      ]
+    }
+  ]
+}

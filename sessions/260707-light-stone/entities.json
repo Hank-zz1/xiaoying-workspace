@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 407489,
+  "entities": {
+    "澳洲": {
+      "count": 3,
+      "category": "location",
+      "lastSeen": 1787794185016
+    },
+    "下午": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794185016
+    },
+    "上次": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794185016
+    },
+    "海信": {
+      "count": 2,
+      "category": "other",
+      "lastSeen": 1787794185016
+    },
+    "美的": {
+      "count": 2,
+      "category": "person",
+      "lastSeen": 1787794185016
+    },
+    "三星": {
+      "count": 2,
+      "category": "other",
+      "lastSeen": 1787794185016
+    },
+    "西屋": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794185016
+    },
+    "飞书": {
+      "count": 1,
+      "category": "app",
+      "lastSeen": 1787794185016
+    },
+    "卡片": {
+      "count": 3,
+      "category": "other",
+      "lastSeen": 1787794185016
+    },
+    "Python": {
+      "count": 1,
+      "category": "technology",
+      "lastSeen": 1787794185016
+    },
+    "当天": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794185016
+    },
+    "日期": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794185016
+    },
+    "今日": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794185016
+    },
+    "下次": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794185016
+    }
+  }
+}

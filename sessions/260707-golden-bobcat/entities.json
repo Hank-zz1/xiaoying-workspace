@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 1942048,
+  "entities": {
+    "澳洲": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794184997
+    },
+    "海尔": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794184997
+    },
+    "美洲": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184997
+    },
+    "东南亚": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184997
+    },
+    "欧洲": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184997
+    },
+    "拉美": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184997
+    },
+    "东非": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184997
+    },
+    "日本": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184997
+    },
+    "南亚": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184997
+    },
+    "满意度": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184997
+    }
+  }
+}

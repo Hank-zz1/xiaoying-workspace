@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 318096,
+  "entities": {
+    "海尔": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794182814
+    },
+    "上市公司": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794182814
+    }
+  }
+}

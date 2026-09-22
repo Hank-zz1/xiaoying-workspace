@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "data": {
+    "products": [
+      {
+        "model": "WHE6874SA",
+        "name": "609L French door fridge - Stainless steel",
+        "type": "French Door",
+        "capacity": "609L",
+        "status": "Discontinued"
+      },
+      {
+        "model": "WHE5204SC",
+        "name": "491L French door fridge - Stainless steel",
+        "type": "French Door",
+        "capacity": "491L",
+        "status": ""
+      },
+      {
+        "model": "WBE4504SC",
+        "name": "425L bottom freezer fridge - Stainless steel",
+        "type": "Bottom Mount",
+        "capacity": "425L",
+        "status": ""
+      },
+      {
+        "model": "WBE5300BC",
+        "name": "496L bottom freezer fridge - Dark stainless steel",
+        "type": "Bottom Mount",
+        "capacity": "496L",
+        "status": ""
+      },
+      {
+        "model": "WQE6000SB",
+        "name": "541L quad door fridge - Stainless steel",
+        "type": "Quad Door",
+        "capacity": "541L",
+        "status": ""
+      }
+    ]
+  },
+  "status": "completed",
+  "expiresAt": "2026-08-12T08:27:10.000Z",
+  "tokensUsed": 463,
+  "creditsUsed": 31,
+  "warnings": [
+    "/v2/extract/:jobId is deprecated. Use /v2/scrape with formats including a 'json' format object."
+  ],
+  "replacement": "/v2/scrape"
+}
+
+[SYSTEM] 任务已完成，但本次工具结果未返回可展示的图片 URL 或路径。不得输出图片 Markdown、图片地址或猜测 URL；请如实说明结果缺少图片引用。

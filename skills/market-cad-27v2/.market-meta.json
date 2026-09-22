@@ -1,0 +1,37 @@
+{
+  "capabilityId": "cap_9a14dbc8a74c4aab9f382fcc52416ff4",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": "6ef3f3a3bca91517e0a606a23f808e9b7ffda5cf",
+  "latestCommitId": "6ef3f3a3bca91517e0a606a23f808e9b7ffda5cf",
+  "contentHash": "sha256:a54b1278464ba3b8ea63e061dd17855ad1bb83220c7f498c0cb1cf213fa10be0",
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/personal/25066116/cad-reader-nx54",
+  "updatedAt": 1787728467276,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_098358db17a3407ab96ac07e1d4bcebf",
+  "name": "CAD 文件读取",
+  "capabilityName": "CAD 文件读取",
+  "logoUrl": null,
+  "capabilityDescription": "读取 AutoCAD DWG 文件，提取图层、几何图形、标注、文字等信息，支持转换为 DXF/PDF 格式",
+  "publisherName": "秦露露",
+  "official": false,
+  "orgName": null,
+  "needApproval": false,
+  "categoryIds": [
+    "301"
+  ],
+  "categories": [
+    {
+      "id": "301",
+      "name": "数据分析",
+      "code": "data_analysis",
+      "rootId": "3",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/5e29d0677721479faa860f0a340569e7.png"
+    }
+  ],
+  "usageExamples": null,
+  "provisionSignature": "076d40c22ba5be248a4bec5102b66121",
+  "localInstallFingerprint": "sha256:d53bd142aeb6f263360c49f0e3f0dea32654646a9548e76da740e0cfad971ea5"
+}

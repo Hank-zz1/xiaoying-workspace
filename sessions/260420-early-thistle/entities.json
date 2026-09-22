@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 365941,
+  "entities": {
+    "美加": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794182441
+    },
+    "世界杯": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794182441
+    }
+  }
+}

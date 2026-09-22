@@ -1,0 +1,5 @@
+{
+  "allowedApiEndpoints": [
+    { "method": "GET", "path": ".*", "comment": "所有 GET 请求均为只读（图片生成+模型列表）" }
+  ]
+}

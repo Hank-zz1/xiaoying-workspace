@@ -1,0 +1,43 @@
+{
+  "id": "ws_91686901",
+  "name": "My Workspace",
+  "slug": "my-workspace",
+  "defaults": {
+    "permissionMode": "ask",
+    "cyclablePermissionModes": [
+      "safe",
+      "ask",
+      "allow-all"
+    ],
+    "enabledSourceSlugs": [
+      "market-2bum-ocr",
+      "market-2e65",
+      "market-2jdh",
+      "market-2mzn",
+      "market-fetch3hil",
+      "market-pdf31vx",
+      "github",
+      "market-ai23ng",
+      "market-mcp-create-webapp",
+      "market-3n9s",
+      "market-375y",
+      "market-incaier-wikiyn0",
+      "market-7cwx",
+      "market-4nux",
+      "market-5fhm"
+    ]
+  },
+  "localMcpServers": {
+    "enabled": true
+  },
+  "createdAt": 1776409198127,
+  "updatedAt": 1789718022503,
+  "deletedCapabilityIds": [
+    "local-aa6e91a1-896b-4f6f-b0dc-83c55546892e",
+    "local-549aca75-b60d-4e42-826e-464030a5f785",
+    "local-0214d31c-8c66-4712-abe5-671a40a20ff0",
+    "local-913f66cd-4759-4d0e-95e6-1203095bce9a",
+    "cap_262c300bff65443b9adf1c2b0b6419ab",
+    "cap_acd072db18d64b71ab119e3c33f4c62a"
+  ]
+}

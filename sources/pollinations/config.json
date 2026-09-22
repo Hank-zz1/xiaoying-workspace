@@ -1,0 +1,16 @@
+{
+  "id": "pollinations_a1b2c3d4",
+  "name": "Pollinations AI 图像生成",
+  "slug": "pollinations",
+  "enabled": true,
+  "provider": "pollinations",
+  "type": "api",
+  "icon": "https://pollinations.ai/favicon.ico",
+  "tagline": "免费 AI 文生图，无需注册或 API Key",
+  "api": {
+    "baseUrl": "https://image.pollinations.ai/",
+    "authType": "none"
+  },
+  "createdAt": 1747903440000,
+  "updatedAt": 1747903440000
+}

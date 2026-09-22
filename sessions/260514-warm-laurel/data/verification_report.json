@@ -1,0 +1,371 @@
+{
+  "checks": [
+    {
+      "name": "1872000 = 1300 × 1440",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "13类 × 100 = 1300",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "特征数=136 (17×8)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "训练集=1040 (80%)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "测试集=260 (20%)",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "每类测试样本=20",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "二分类: 测试正常=20, 故障=240",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "二分类正常:故障 = 1:12",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "逻辑回归 准确率",
+      "status": "PASS",
+      "detail": "计算=0.8577, 表中=0.8577"
+    },
+    {
+      "name": "逻辑回归 精确率",
+      "status": "PASS",
+      "detail": "计算=0.9903, 表中=0.9903"
+    },
+    {
+      "name": "逻辑回归 F1",
+      "status": "PASS",
+      "detail": "计算=0.9172, 表中=0.9172"
+    },
+    {
+      "name": "逻辑回归 平衡准确率",
+      "status": "PASS",
+      "detail": "计算=0.8771, 表中=0.8771"
+    },
+    {
+      "name": "逻辑回归 召回率=故障识别率",
+      "status": "PASS",
+      "detail": "计算=0.8542, 表中=0.8542"
+    },
+    {
+      "name": "决策树 准确率",
+      "status": "PASS",
+      "detail": "计算=0.7538, 表中=0.7538"
+    },
+    {
+      "name": "决策树 精确率",
+      "status": "PASS",
+      "detail": "计算=0.9632, 表中=0.9632"
+    },
+    {
+      "name": "决策树 F1",
+      "status": "PASS",
+      "detail": "计算=0.8512, 表中=0.8512"
+    },
+    {
+      "name": "决策树 平衡准确率",
+      "status": "PASS",
+      "detail": "计算=0.7063, 表中=0.7063"
+    },
+    {
+      "name": "决策树 召回率=故障识别率",
+      "status": "PASS",
+      "detail": "计算=0.7625, 表中=0.7625"
+    },
+    {
+      "name": "随机森林 准确率",
+      "status": "PASS",
+      "detail": "计算=0.9000, 表中=0.9"
+    },
+    {
+      "name": "随机森林 精确率",
+      "status": "PASS",
+      "detail": "计算=0.9315, 表中=0.9315"
+    },
+    {
+      "name": "随机森林 F1",
+      "status": "PASS",
+      "detail": "计算=0.9467, 表中=0.9467"
+    },
+    {
+      "name": "随机森林 平衡准确率",
+      "status": "PASS",
+      "detail": "计算=0.5563, 表中=0.5563"
+    },
+    {
+      "name": "随机森林 召回率=故障识别率",
+      "status": "PASS",
+      "detail": "计算=0.9625, 表中=0.9625"
+    },
+    {
+      "name": "XGBoost 准确率",
+      "status": "PASS",
+      "detail": "计算=0.8654, 表中=0.8654"
+    },
+    {
+      "name": "XGBoost 精确率",
+      "status": "PASS",
+      "detail": "计算=0.9680, 表中=0.968"
+    },
+    {
+      "name": "XGBoost F1",
+      "status": "PASS",
+      "detail": "计算=0.9237, 表中=0.9237"
+    },
+    {
+      "name": "XGBoost 平衡准确率",
+      "status": "PASS",
+      "detail": "计算=0.7667, 表中=0.7667"
+    },
+    {
+      "name": "XGBoost 召回率=故障识别率",
+      "status": "PASS",
+      "detail": "计算=0.8833, 表中=0.8833"
+    },
+    {
+      "name": "逻辑回归 多分类F1合理性",
+      "status": "PASS",
+      "detail": "F1=0.894 应在 P=0.8935 和 R=0.8962 之间"
+    },
+    {
+      "name": "逻辑回归 多分类加权F1=宏F1(等样本)",
+      "status": "PASS",
+      "detail": "加权=0.894, 宏=0.894"
+    },
+    {
+      "name": "逻辑回归 宏F1与宏P/R关系",
+      "status": "PASS",
+      "detail": "2PR/(P+R)=0.8948, 表中=0.894"
+    },
+    {
+      "name": "决策树 多分类F1合理性",
+      "status": "PASS",
+      "detail": "F1=0.6335 应在 P=0.6611 和 R=0.6231 之间"
+    },
+    {
+      "name": "决策树 多分类加权F1=宏F1(等样本)",
+      "status": "PASS",
+      "detail": "加权=0.6335, 宏=0.6335"
+    },
+    {
+      "name": "决策树 宏F1与宏P/R关系",
+      "status": "PASS",
+      "detail": "2PR/(P+R)=0.6415, 表中=0.6335"
+    },
+    {
+      "name": "随机森林 多分类加权F1=宏F1(等样本)",
+      "status": "PASS",
+      "detail": "加权=0.7423, 宏=0.7423"
+    },
+    {
+      "name": "随机森林 宏F1与宏P/R关系",
+      "status": "PASS",
+      "detail": "2PR/(P+R)=0.7493, 表中=0.7423"
+    },
+    {
+      "name": "XGBoost 多分类F1合理性",
+      "status": "PASS",
+      "detail": "F1=0.7359 应在 P=0.7539 和 R=0.7346 之间"
+    },
+    {
+      "name": "XGBoost 多分类加权F1=宏F1(等样本)",
+      "status": "PASS",
+      "detail": "加权=0.7359, 宏=0.7359"
+    },
+    {
+      "name": "XGBoost 宏F1与宏P/R关系",
+      "status": "PASS",
+      "detail": "2PR/(P+R)=0.7441, 表中=0.7359"
+    },
+    {
+      "name": "摘要: LR二分类准确率0.8577",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "摘要: LR二分类平衡准确率0.8771",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "摘要: LR二分类AUC 0.9138",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "摘要: LR多分类准确率0.8962",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "摘要: LR多分类F1 0.8940",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "摘要: LR多分类AUC 0.9930",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.1: RF准确率0.9000, 故障识别率0.9625, 正常识别率0.1500",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.1: LR准确率0.8577, 正常识别率0.9000, 平衡准确率0.8771, AUC 0.9138",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.1: XGBoost准确率0.8654, 故障识别率0.8833",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.2: LR多分类准确率0.8962, 宏精确率0.8935, 宏召回率0.8962, 宏F1 0.8940, 宏AUC 0.9930",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.3: LR多分类CV准确率0.9038, F1 0.9033, std 0.0135/0.0137",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.3: LR二分类CV平衡准确率0.8887, AUC 0.9167",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.4: 每类20样本, 13类共260",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.4: 冷凝严重污染→不可凝气体=10个",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.4: 不可凝气体→冷凝严重污染=8个",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "4.4: LR总错误27, 已知混淆18, 其余9",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "结论(2): LR二分类准确率=0.8577",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "结论(2): LR二分类平衡准确率=0.8771",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "结论(2): LR二分类AUC=0.9138",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "结论(3): LR多分类准确率=0.8962",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "结论(3): LR多分类F1=0.8940",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "结论(3): LR多分类AUC=0.9930",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "结论(3): 混淆集中在冷凝严重污染↔不可凝气体",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "CV多分类准确率与单次接近",
+      "status": "PASS",
+      "detail": "CV=0.9038, 单次=0.8962"
+    },
+    {
+      "name": "CV二分类平衡准确率与单次接近",
+      "status": "PASS",
+      "detail": "CV=0.8887, 单次=0.8771"
+    },
+    {
+      "name": "CV二分类AUC与单次接近",
+      "status": "PASS",
+      "detail": "CV=0.9167, 单次=0.9138"
+    },
+    {
+      "name": "LR ROC AUC: 图0.914 vs 表0.9138",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "DT ROC AUC: 图0.702 vs 表0.7018",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "RF ROC AUC: 图0.861 vs 表0.8608",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "XGB ROC AUC: 图0.861 vs 表0.8610",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "二分类样本比=1:12",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "name": "宏AUC 0.9930 在one-vs-rest下合理",
+      "status": "PASS",
+      "detail": "11类完全正确(AUC=1.0), 2类混淆但ovr AUC仍很高"
+    }
+  ],
+  "issues": [
+    {
+      "name": "随机森林 多分类F1合理性",
+      "status": "FAIL",
+      "detail": "F1=0.7423 应在 P=0.7487 和 R=0.75 之间"
+    }
+  ],
+  "summary": {
+    "total_checks": 72,
+    "passed": 71,
+    "failed": 1
+  }
+}

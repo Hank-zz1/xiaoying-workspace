@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "turnId": "turn-1",
+  "totalOriginalChars": 18757,
+  "entries": [
+    {
+      "toolName": "call_source",
+      "contentHash": "0d73b5643c74",
+      "originalChars": 2466,
+      "relativePath": "results/result_call_source_0d73b5643c74.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "fd81f3aa0ea4",
+      "originalChars": 1907,
+      "relativePath": "results/result_call_source_fd81f3aa0ea4.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "450a3795c09e",
+      "originalChars": 2456,
+      "relativePath": "results/result_call_source_450a3795c09e.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "ea61c7afa0c6",
+      "originalChars": 2455,
+      "relativePath": "results/result_call_source_ea61c7afa0c6.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "d11df20a2a46",
+      "originalChars": 6567,
+      "relativePath": "results/result_call_source_d11df20a2a46.txt"
+    },
+    {
+      "toolName": "call_source",
+      "contentHash": "e0d954ed80a3",
+      "originalChars": 2906,
+      "relativePath": "results/result_call_source_e0d954ed80a3.txt"
+    }
+  ]
+}

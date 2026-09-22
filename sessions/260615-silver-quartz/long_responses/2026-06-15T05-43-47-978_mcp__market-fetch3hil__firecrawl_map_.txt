@@ -1,0 +1,4849 @@
+{
+  "links": [
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/bar-freezers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/chest-freezers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/upright-freezers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/features"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/french-door-fridges"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/vertical-fridges"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/bottom-mount-fridges"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/top-mount-fridges"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/bar-fridges"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/quad-door"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/side-by-side-fridge-freezers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/personalise-fridge-features-for-families"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/foolproof-fridge-stacking-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/fridge-stacking-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/fridge-water-filter-home-delivery-subscriptions"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/fridge-spacious-mary-poppins"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/fridge-vs-pantry"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/the-australian-fridge-stacking-personality-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/how-to-dad-fridge-leftovers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/fridges-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezer-accessories"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridge-accessories"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wrb5004sc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wrb5004sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wrb5004wc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wrb5004wc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wrm2400wf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wfm0900wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wim1000wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wim1200ae"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wim1200wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wrm1400wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbb3100ak-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbb3100wk-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbb3400ak-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbb3400wk-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe4302ac-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe4302ac-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe4302bc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe4302wc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe4302wc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe4504sc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe4504sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe5300bc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe5300sc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe5300sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe5300wc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe5300wc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe5304bc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wbe5304sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtb2300wh-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtb2800wh-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtb3100ak-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtb4604sc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtb5400sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtb5404sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm2500aa-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm2500ba-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm2500wa-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm3100sl-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm3100wl-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm3400wl-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm4302wd-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm4302wd-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm5002sd-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm5002wd-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wtm5002we-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wse6200sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wse6200wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wse6240bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wse6640ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wse6670ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wse6670sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/whe5204sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/whe5600sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/whe5650sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/whe6000sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/whe6060sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/whe6170bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/whe6170sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe4900aa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe4900ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe4960aa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe4960ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5400bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5400sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5600ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5600bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5660ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5700bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5750bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe5760bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe6000bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe6000sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe6170bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe6870ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/fridges/wqe6870sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wcm1400we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wcm2000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wcm3000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wcm5000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wcm7000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wfb2804wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wfb4204sc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wfb4204sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wfb4204wc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wfb4204wc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezers/wfm1700we-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/fridges-and-freezers/freezer-accessories/acc197"
+    },
+    {
+      "url": "https://www.westinghouse.com.au"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/airfry-ovens/recipes-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/adulting/laundry"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/adulting/home-appliance-hacks"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/adulting/mastering-mealtime"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/heat-pump-dryers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/vented-dryers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/features"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/condenser-dryers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/front-loader-washing-machines"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/top-loader-washing-machines"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/features"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/built-in-microwaves"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/freestanding-microwaves"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/convection-microwaves"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/canopy-rangehoods"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/undermount-rangehoods"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/slide-out-rangehoods"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/fixed-rangehoods"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/60cm-rangehoods"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/90cm-rangehoods"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/features"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/steam-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/features"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/airfry-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/pyrolytic-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/double-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/gas-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/60cm-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/90cm-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/90cm-freestanding-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/gas-cooktops"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/induction-cooktops"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/ceramic-cooktops"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/electric-cooktops"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/60cm-cooktops"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/90cm-cooktops"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/features"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/pure-water-peace-of-mind"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/cleaning-replacing-rangehood-filters"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/back-to-school-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/kitchen-laundry-trends-2024"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/christmas-feast-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/summer-entertainment-season-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/christmas-hosting-ideas"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/healthy-recipes-winter-dinners"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/preserve-winter-leftover-food"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/tips-meal-prep-katie-lolas"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/home-renovation-design-lessons"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/modern-australian-built-ovens-cookers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/kids-in-the-kitchen"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/dishwasher-mistakes"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/dishwasher-stacking-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/save-grocery-money-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/christmas-hosting-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/aussie-laundry-behaviours"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/laundry-basket-zero-with-anita-birges"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/laundry-habit-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/wash-dry-clothes-winter"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/butlers-pantry-kitchen-design"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/steam-oven-cooking-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/5-laundry-hacks-protect-clothes"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/stay-at-home-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/how-i-airfry"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/air-fryer-guy-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/how-to-get-the-kids-to-eat-their-veggies"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/declutter-your-kitchen-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/recipe-collection"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/quick-tips-to-clean-your-home-fast"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/australian-kitchen-appliances"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/oven-cleaning-rules-pyroclean"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/how-to-avoid-cooking-fatigue"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/sweet-treats-culinary-advice"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/remove-mould-from-clothes-fabric"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/five-steps-to-stir-fry-mastery"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/spring-cleaning-wardrobe-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/bed-linen-washing-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/dos-donts-cooktop-cooking"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/snacks-for-the-school-holidays"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/cooking-hosting-hacks"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/laundry-hacks-protect-clothes"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/laundry-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/kids-colouring-pages-australian-animals"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/the-ultimate-moving-house-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/preparing-for-house-guests"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/christmas-organisation-hacks"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/using-leftovers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/basic-brilliance-in-the-kitchen"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/time-and-money-saving-hacks"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/the-great-aussie-family-grocery-list"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/really-clever-food-storage-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/five-home-micro-resolutions"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/air-fry-bench-top-vs-built-in"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/why-kitchen-is-thenew-man-cave"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/saints-partnership-healthy-recipes"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/8-ways-to-make-meal-prep-a-breeze"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/travelling-with-kids"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/split-your-household-admin"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/black-top-load-washer"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/dishwashing-vs-handwashing"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/choosing-ideal-home-appliances"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/cosy-warm-winter-reverse-cycle-air-conditioner"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/dining-in-westinghouse-appliances"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/washing-clothes-laundry-room"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/reverse-cycle-air-conditioner-tips"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/westinghouse-mrs-macs-pies-partnership"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/freestanding-dishwasher-every-occasion"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/mastering-dishwasher-stacking"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/air-conditioners"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/steam-oven-overview"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/laundry-guide-young-aussies"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles/meal-prep-ideas-young-aussies"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/school-lunchbox-pizza-scrolls"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/beef-n-bean-nachos-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/salami-supreme-pizza-scrolls-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/salmon-spinach-filo-parcels-with-salad-and-dressing"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/sticky-date-pudding-with-caramel-sauce"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/steam-roast-lamb-shoulder"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/strawberry-tiramisu"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/meatloaf-with-crunchy-potatoes-and-salad-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/crackle-and-pop-cones-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/sticky-chicken-drumsticks-with-asian-slaw-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/miso-pork-with-black-rice-and-stir-fried-greens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/little-jelly-lamingtons-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/chicken-pesto-lasagna-pockets"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/caramel-deconstructed-smores"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/one-tray-ham-cheese-sliders"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/spicy-panko-crumbed-carrots"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/indian-spiced-potatoes"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/crispy-roast-pork-with-pumpkin"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/spinach-mozzarella-arancini-roast-tomato-sauce"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/sweet-soy-pork-belly-with-greens-and-baked-rice"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/portuguese-roast-chicken-with-sweet-potato-fries"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/morgan-hipworth-strawberry-panna-cotta"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/chicken-schnitzel-with-rocket-salad"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/macaroni-and-cheese-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/sweet-and-sour-pork-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/scrambled-eggs-with-bacon-on-waffles-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/ricotta-gnocchi-served-with-fresh-peas-and-crispy-prosciutto"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/katie-lolas-maple-tahini-chickpeas-with-roast-veg"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/pulled-pork-san-choi-bau-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/gooey-chocolate-pancakes-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/morgan-hipworth-golden-syrup-steamed-pudding"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/valentines-day-peanut-butter-cookies"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/mums-steak-diane-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/homemade-sausage-rolls-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/spiced-lamb-meatball-bake-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/wonton-and-noodle-soup"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/fish-tacos"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/lamb-souvlaki-skewers-with-pita-bread"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/chicken-corn-fried-dumplings-ginger-dipping-sauce"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/pancetta-and-vegetable-fritters-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/chocolate-and-banana-french-toast-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/berry-donuts"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/sicilian-chilli-tuna-pasta-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/vegetable-pasta-with-garlic-chilli-and-olive-oil"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/morgan-hipworth-crispy-pork-belly-bao"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/crumbed-buttermilk-chicken-wings-and-slaw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/nutty-chicken-schnitzel-with-white-veggie-mash"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/katie-lolas-speedy-sesame-chicken-pasta"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/churros-with-chocolate-dipping-sauce-recipe"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes/apple-hand-pies"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/refrigeration-capacity-energy-ratings"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/warranty-information"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/faqs-page"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/service-centres"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/privacy-policy"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/terms-and-conditions"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/product-installation"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/product-recall"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/user-manuals"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/where-to-buy"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/spare-part-distributor"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/contact-us"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/air-conditioning-connectivity"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/air-conditioning-app"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/commercial/bim-content"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/rangehoods-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/ovens-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/dryers-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/cooktops-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/microwaves-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/top-loaders-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/front-loaders-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/washer-dryers-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/air-conditioner-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides/dishwashers-buying-guide"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/articles"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/recipes"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/videos"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/adulting"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy/st-kilda-football-club"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooking-accessories"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/happy-to-help/air-conditioning"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/features"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/accessories/other-accessories"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washer-dryer-combo"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/accessories"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/promotions/stacking-kit-promotion"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/promotions/ratings--reviews-2026"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/accessories"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/buying-guides"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsj638s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsk963s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsk965s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsn635w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsp635w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsp963s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsp965s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gek1385w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gsn625w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gsp625w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gsp627s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guc622w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guc624fw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug502r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug511b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug511hw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug511w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug525b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug528w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug534w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug581"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guh411w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guh412w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guh418w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj412w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj416w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj510w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj527w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj537w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guk525w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf140w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf151g"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf171n"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf501r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf504r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf509r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf518w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf519g"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf521w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf526b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf539n"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah440w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah451w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah804w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah805w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah808w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj140w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj143w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj144w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj501r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj501rs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj509r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj521w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj529b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj808w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc644sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc742ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc744ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc933bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc942ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc942bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc943bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc943bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc944ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg639bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg640sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg640sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg640wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg640wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg641sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg642sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg644sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg644sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg645sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg645wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg646wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg648sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg758sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg951sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg951sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg955wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg956sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg956sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg959bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi323bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi324ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi634bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi635be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi641bca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi643bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi644ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi645ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi645bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi645be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi743bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi743bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi744ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi745ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi942be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi943bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi944ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi945bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi954ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi955bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whs642sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whs642wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whs642wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rp342q"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rp342t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rp372v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rp432v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrb3504ab"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak140w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak144w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak161b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak509r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak509rc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak529b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak557w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak806w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pak808w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pcf507b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pek1370w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/psn632s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/psn632w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wde132wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wde143wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wde143wcb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wde147wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe532wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe542sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe542scb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe547sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe616dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe616sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe619sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe619wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe642wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe646dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe646dscb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe647wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe904sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe911sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe914sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe915sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe946sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe946sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe946sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe9515sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe9546sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfe9756dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfep9717dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfg612sch"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfg612wch"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfg617sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfg617wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle522wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle524wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle525wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle527wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrb5004sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrb5004sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrb5004wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrb5004wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrm2400wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrm2400we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrm3700pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrm3700pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrm4300sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ra122t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ra123t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ra140s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ra141s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ra142s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ra143s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rp131t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rp142s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rt144s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm0900wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm0900wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wim1000wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wim1200sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wim1200wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wim1200wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrm1400wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj274s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj383v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj385v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj423s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj423t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj425s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj425t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj434v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj503s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj505s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/bj514v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3100ak"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3400ag"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3400ah"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3400ak"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3400wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3400wf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3400wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3700ah"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3700pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3700pf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbb3700wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4500sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4500sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4500wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4500wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4500wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4502sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle532wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle533wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle535wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle537wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle622wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle622wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle624wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle625wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle625wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle626wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle642wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle642wcb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle645wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wle645wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wlg503wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wlg510wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wlg510wch"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wlg512wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wlg512wch"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wlg517wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wlg517wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/cu600s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/efg540g--a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/efg750x--a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrc613s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrc614sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrc614sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrc902sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrc904sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrc914sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrc924dsd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrcg914bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrcg930sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrcg932sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrcg933s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrcg940sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrcg943sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf600cs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf600uk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf601us"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf602aw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf603uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf605iw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf609es"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf610is"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf610iw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf610sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf610wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf613uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf616uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf900cs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf900uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf901us"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf905iw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf910sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf910wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf913sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf913uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf913wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4504bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4504sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4504sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe4514sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5100sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5100sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5160sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5300sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5300wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5300wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5304bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5304bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbe5360sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm3700wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm4300wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm4304sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm5100pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm5100sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm5100wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm5100wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wbm5104sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj212s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj213t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj215m"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj242t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj280m"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj340m"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj340p"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj392v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj393v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj422s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj422t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj425v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj442v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj443v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj445v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj452s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj452t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj453t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj456t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj522v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj525v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj532s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj532t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rj536t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2000wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300pf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300wg"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2300wh-x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2500pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2500pc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2500wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2500wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf921cs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf922cs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrf930cs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg600uk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg602aw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg602kw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg610is"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg680is"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg900uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg905iw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg910is"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg910iw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg920fgs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg930cw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg950cgs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg970cs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrg980cgs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh600uk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh600us"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh600uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh602aw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh602kw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh603uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh608ik"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh608is"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh900uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh903uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh908ik"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh908is"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrh908iw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wri500db"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wri515sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wri520ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wri525bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wri814bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wri815sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wri824bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrj903uw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrj911us"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrr604sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrr614wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrr626sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wrr926sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pm28swa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pm34ewa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmb2522dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmb2522sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2500wg"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800ag"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800ah"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800pc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800wg"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb2800wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3100ak"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3100pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3100wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3100wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3100wk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3400ag"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3400pf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3400wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3400wf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3700ag"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3700wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb3700wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb4600sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb4600sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb4600wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb4600wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb4604sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb4604sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb4604sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb5400sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb5400wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb5404sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtb5404sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wte4200sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm2500wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm2800pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm2800wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm2900wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm3000pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm3000wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm3400wl"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm4200pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm4200pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm4200wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm4302wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm4400wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm5002sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm5002we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm5200pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm5200sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm5200wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmb4425dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmb4425sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmb4425sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmf2302sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmf2302wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmf2503ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmf2905ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmf4102ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmf4505ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wmg281sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wms281sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wms281wf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/abd610"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/abt600"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc041"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc123"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc124"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc260"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc290"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/accw160"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar125b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar125cf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar125f"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar125fj"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar125fjd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar150fd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar500cf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar500fs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ar500rk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/arcfd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/arcufs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/arcurk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/arssfi"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/arssfo"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/art2000f"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/artd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ckclk1"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ckgclk1"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/mt3s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/mtw3k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/mtw3w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/psk1"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/spk600s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/vpk543"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ggr475w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gol472w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gol476s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gon474s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gon476s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gop474s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gop474w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gop476s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gor474w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gor476s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gor476w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh472w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh476k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh476s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh540s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh540w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wtm5204sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs592v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs612v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs625s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs642s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs643v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs645v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs663v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs695v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/rs825s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6070pb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6070sf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6100pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6100pf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6100sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6100sf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6100wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6200wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6630sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6630wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6640ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6670sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6870sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6900sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6900wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6970pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6970sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6970se"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6970sf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6970wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse6970we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse7000pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse7000sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wse7000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe5000sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe5100sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe5200sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe5200wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe5204sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe6000sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe6060sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe6060sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe6170bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe6200sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe6874ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whe7670sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc073"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc083"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/acc096"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ik007"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ik008"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh645k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh745s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gwh745w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxl540s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxl540w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxl650k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxl650s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxl650w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxn650s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxn650w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxr650s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gxr650w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdl790s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdl794s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdn790s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdn790w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdn794s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdp790w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdp794s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdp794w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdr790w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pdr794w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pgl657w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pgl659s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pgl659w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pgn657s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pgn659w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pgp657s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pgp659w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh660w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh662k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh662s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh667k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh668s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh678k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh776k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh776s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh777k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh777w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh782s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poh967s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/poj787a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pol660s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pol662w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pol667w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pol781s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ik010"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wme3600sf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe4900ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe4960ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe5400bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe5600ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe5700bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe5750bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe5760bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6000bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6000sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6000sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6060bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6060sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6060sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6170bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wqe6870ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fd152es"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fd153s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fd212es"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm1400wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm2000wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm2000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm2100wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm2900wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm3000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm3200wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm5000wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm5000wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm5000wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm7000wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wcm7000we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fj208s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fj302v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fj362v"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fj383t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fr121s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/fr181t"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfb2804sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfb4204sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfb4204wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfb4204wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfb4204wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm0700wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm1700we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm1800wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm1800wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm3000pa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm3600sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wfm3600sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdu903sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsu6603xr"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb905wg"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb905wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb907sj"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pol783s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pon663s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pons663w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pons667w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pop667s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pop667w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pop668s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pop668w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pop783s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pop883s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pops663w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/por667s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/por667w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/por668w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/por783s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/por881s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/por883w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pors663s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pors668w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/povj782w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ppl778s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ppn776s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ppn776w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ppn778w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ppp776s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxl688w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxl698w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxn688w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxn698s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxn698w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxp688s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxp698w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxr688s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pxr698w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve607s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve613dsca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve613s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve613sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve613sca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve614sc--sku"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve614wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve614wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve615dsca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve615sh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve615wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb908wl"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb915kj"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb920wg"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb921ke"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb921sh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb921we"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb921wh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb925sj"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb926sk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb926wk"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb931sh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/sb932sh"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdf902sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6602wr"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6604xa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6605wr"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6605xr"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6606w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6608x"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6608xa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lf651d"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lf652d"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lf700a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lf708b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lf708c"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lf711c"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lt609sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lt758sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lt809sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lt809sau"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lt819sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lt908sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/lt959sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwf1044m7sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwf1044m7sas"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwf7025eqwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwf7524n3wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwt1084c7sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwt1084c7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwt1184c7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwt1284m7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwt7055lmwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwt8084j7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwt9084c7sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ld353a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ld500b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ld503a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve617w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve625sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve626s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6314dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6314sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve636s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve636sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve636w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve645s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6515dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6515sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6516dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6525sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6526dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve655s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve655sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve655wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve6565sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve665s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve915sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve916sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve9515sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve9516dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve9915dda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wve9915sda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep615s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep615sc--sku"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep615w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep615wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep617dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep618dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep627dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep627s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep6717dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep916sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep9716sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvep9917dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wves613s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wves613sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wves613wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wves6314sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg613w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg613wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg615s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg6314sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg655s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg665s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg665w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wvg665wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh10w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh11k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh11s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh16k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ld505a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ld515a"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ld605eb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdc804m5wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdh704n4wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdh804n7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdh804n8wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdh904n7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdv556n3wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wdv656n3wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/www9024m5sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/www9024m5wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/n1wyhsk6"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd27hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd27hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd36hwa-i"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd51hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd51hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd51hwa-i"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd73hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd73hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsd91hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwh16cwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwh22hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wwh39cwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6604xc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6606kxc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6606xb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6606xc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6608kxb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6608w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf6608xb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/wsf67381s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx102"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx103"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx104"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx106"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx109"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx110"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx151"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx152"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx221"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx250"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ulx253"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh16s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh17s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh17w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh18s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh30w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh44k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh44w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh92k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh95k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh95s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghh95w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghk11w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghk16w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghk17w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghk90w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghk92k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghk92s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghk95w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl11s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl11w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl12w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl17s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl17w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl26w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl44w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl46w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl795s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl795w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl90w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl92s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl95s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghl95w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghm12w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghp16w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghp17w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghp95s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghr12w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghr765s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghr775s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghr795s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghr95s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghvj765s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghvj795s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghvj795w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghvk765s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/ghvk765w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh164w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh222k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh255k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh255w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh266k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh284u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh285s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh364k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh365k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh394u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh466k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh564k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phh564s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phhy564w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl255k"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl255w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl285s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl285w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl564s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl564w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl668u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl768u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phl798u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phm394u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phn284u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phn285s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phn395u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phn744du"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phn768u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phn798u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phn944du"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/php255w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/php284u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/php285s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/php285w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/php395u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phr255w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phr285s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/phr395u"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc322ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc633bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc642bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc642sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsl635s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsl635w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsl638s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsn635s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/dsp635s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/geg1022b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/geg1022w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/geg1034b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/geg1034w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gek1235w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gsn625s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gsn627s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gsp625s"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guc624fb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug162b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug523r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug524w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug582"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug583"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/gug584"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guh415w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj411w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj418w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guj517w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guk511w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guk512w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guk517w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/guk527w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf143w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf144w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf161b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf501rs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf504rs"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf520w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paf529b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah439w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah444w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/pah806w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj161b"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj509rc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj518w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj520w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj558w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj804w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/paj805w"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc643be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc644ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc742bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc933bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whc934ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg635bca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg640sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg640wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg643sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg643sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg645sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg646sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg646sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg756sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg756sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg952sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg952sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg953sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg954sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg955bca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg955sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg956wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg958bca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whg958sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi323bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi323be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi632be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi633bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi634ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi635bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi641bea"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi642be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi643bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi643be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi645bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi943bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whi955bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/support/whs642sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/commercial"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/unglossy"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/happy-to-help"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/built-in-australia"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/about-westinghouse"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/maintenance-alert"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/aussies-laundry-secrets"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/promotions"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/winners"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/water-filter-auto-delivery"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioner-sizing-tool"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/mrs-macs-pie-pop-up"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/accessories/other-accessories/sta9gd3"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/accessories/other-accessories/sta9gw3"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/accessories/other-accessories/ulx201"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wde132wc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wde132wc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wde143wcb-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wde143wcb-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wde143wc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wde143wc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wdg110wcng-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wdg110wcng-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wdg112wcng-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wdg112wcng-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe512sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe532wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe542sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe542scb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe612sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe614sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe616dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe642scb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe642wcb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe646dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe646dscb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe911sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe915sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe916dsd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe946sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe9515sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe9516dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe9546sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfe9756dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfep917dsd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfep9717dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfep9757dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfg612sch"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wfg612wcng"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wle522wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wle530wca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wle532wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wle543wcb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wle642wcb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wlg510wcang"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wlg510wch"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wlg510wcng"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wlg512wch"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wlg512wcng"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/freestanding-ovens/wlg517wbng"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc614sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc902sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc904sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc914sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc914sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc924dsd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc924sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrc924sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrcg932sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrcg940sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf610sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf610wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf613sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf613wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf910sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf910wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf913sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrf913wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrh605is"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrh605iw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri500db"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri500sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri514bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri515sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri525bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri700sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri814bb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri815sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wri825bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrr604sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrr614sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrr626sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrr904sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrr914sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/rangehoods/wrr926sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmb2522dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmb2522sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmb4425dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmb4425sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmc4207ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmf2302sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmf2302wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmf2503ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmf2905ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmf4102ba"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/microwaves/wmf4505ga"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooking-accessories/acc042"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooking-accessories/acc044"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooking-accessories/ar125cf"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooking-accessories/ar125wv"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooking-accessories/ar400fw"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve613dsca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve613sca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve613wca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve615sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve615sca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6313sda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6313wda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6314dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6314sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6314wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6515dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6515dda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6515sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6515sda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6516dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6516sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6525sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6526dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6555sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve655sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve655wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6565sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve6565wd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve915sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve915sca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve9515sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve9516dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve9915dda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wve9915sda"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep615sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep617dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep6716dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep6716sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep6717dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep6727dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep6918dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep916sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep917dsc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep9716sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvep9917dd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wves613sc-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wves613sc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wves613wc-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wves6314sd-l"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wves6314sd-r"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvg6314sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvg6515sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvg6555sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvg655sclp"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvg6565sd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/ovens/wvg665wclp"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc322bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc633bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc633be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc642bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc642sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc643bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc643be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc742bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc933bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc933bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc942bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc943bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whc943bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg635bca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg639bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg640sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg640wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg643sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg644sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg645sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg648sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg758sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg953sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg954sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg955bca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg955sb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg958sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whg959bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi323bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi323bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi323be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi632be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi635be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi641bca"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi641bea"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi642be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi643bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi643be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi645bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi645be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi743bc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi743bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi942be"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi943bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whi955bd"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whs642sc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/cooking/cooktops/whs642wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf1044m7sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf1044m7sas"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf1044m7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf1044m7was"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf7524n3wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf7524n3was"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf8024m5wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf9024m5sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf9024m5sas"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf9024m5wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwf9024m5was"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt1084c7sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt1084c7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt1184c7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt1284m7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt6084j5wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt7084j5wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt8084j7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt9084c7sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washing-machines/wwt9084c7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdh704n4wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdh804n7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdh804n8sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdh904n7sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdh904n7wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdv457h3wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdv556n3wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/dryers/wdv656n3wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washer-dryer-combo/www9024m5sa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washer-dryer-combo/www9024m5sas"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washer-dryer-combo/www9024m5wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/laundry/washer-dryer-combo/www9024m5was"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6602wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6602wc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6602xb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6602xc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6604wa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6604wb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6604xb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6604xc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6606kxa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6606kxb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6606kxc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6606xa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6606xb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6606xc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6608kxb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6608kxc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6608xa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6608xb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsf6608xc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsu6608kxb"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsu6608kxc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/dishwashing/dishwashers/wsu6608xc"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd27hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd27hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd27hwa-i"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd36hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd36hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd36hwa-i"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd51hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd51hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd51hwa-i"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd73hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd73hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd73hwa-i"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd91hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd91hwa-e"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wsd91hwa-i"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh16cwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh22cwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh22hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh27cwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh27hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh39cwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh39hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh52hwa"
+    },
+    {
+      "url": "https://www.westinghouse.com.au/air-conditioning/air-conditioners/wwh60hwa"
+    }
+  ]
+}

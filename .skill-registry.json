@@ -1,0 +1,23 @@
+{
+  "local-c82a00a3-a23e-4752-893e-82af3aa0c06e": {
+    "capabilityId": null,
+    "localId": "local-c82a00a3-a23e-4752-893e-82af3aa0c06e",
+    "slug": "overseas-fridge-radar",
+    "sourceType": "unpublished",
+    "activeVersion": "dev",
+    "online": null,
+    "dev": {
+      "status": "EDITING",
+      "baseVersion": null,
+      "baseContentHash": null,
+      "baseCommitId": null,
+      "devContentHash": "sha256:a73a4bfff5fa0a7ec307631993f50e147d10af78c120f39b3d270d246c83cc9d",
+      "lastSavedCommitId": null,
+      "lastSubmittedCommitId": null,
+      "submittedContentHash": null,
+      "submissionId": null,
+      "submittedAt": null,
+      "dir": "C:\\Users\\26011970\\.incaier-agent\\workspaces\\my-workspace\\skills-dev\\local-c82a00a3-a23e-4752-893e-82af3aa0c06e"
+    }
+  }
+}

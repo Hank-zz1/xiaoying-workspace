@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 2599204,
+  "entities": {
+    "目前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182734
+    },
+    "独立思考": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794182734
+    },
+    "搜集情报": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794182734
+    },
+    "今日": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182734
+    },
+    "今晚": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182734
+    },
+    "青岛": {
+      "count": 3,
+      "category": "location",
+      "lastSeen": 1787794182734
+    },
+    "中国": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794182734
+    },
+    "加进来": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794182734
+    }
+  }
+}

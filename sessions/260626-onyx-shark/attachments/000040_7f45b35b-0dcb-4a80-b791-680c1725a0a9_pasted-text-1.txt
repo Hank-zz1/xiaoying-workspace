@@ -1,0 +1,143 @@
+[
+  {
+    "role": "user",
+    "content": "{\"input\": {\"query\": \"澳洲海信26年产品给我列出\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Start",
+          "arguments": "{\"query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"query\": \"澳洲海信26年产品给我列出\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "意图识别01",
+          "arguments": "{\"query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"classificationId\": 1, \"classificationName\": \"竞品查询\", \"reason\": \"用户查询特定品牌（海信）在特定区域（澳洲）的未来新品信息，属于竞品查询中的新品查询。\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "大模型01",
+          "arguments": "{\"input\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"region\": \"澳洲\", \"brands\": [{\"name\": \"海信\", \"mode\": \"scrape\", \"url\": \"https://hisense.com.au/appliances/fridges-freezers/all\", \"search_cn\": \"2026 海信 澳洲 冰箱 新品 上市\"}], \"raw_output\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "LLM_Tool",
+          "arguments": "{\"input\": \"{'input': '澳洲海信26年产品给我列出'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": {\"region\": \"澳洲\", \"brands\": [{\"name\": \"海信\", \"mode\": \"scrape\", \"url\": \"https://hisense.com.au/appliances/fridges-freezers/all\", \"search_cn\": \"2026 海信 澳洲 冰箱 新品 上市\"}], \"raw_output\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码01",
+          "arguments": "{\"input\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"searchResult\": \"[{\\\"brand\\\": \\\"海信\\\", \\\"mode\\\": \\\"scrape\\\", \\\"models_found\\\": 13, \\\"models\\\": [\\\"HRBM419SW\\\", \\\"HRVF155\\\", \\\"HRCD615TBWV\\\", \\\"HRBM503E\\\", \\\"HRCD483G\\\", \\\"HRBM419BW\\\", \\\"HRCD483TBW\\\", \\\"HRFD535BW\\\", \\\"HRBM500TBW\\\", \\\"HRCF702\\\", \\\"HRFD537SW\\\", \\\"HRBM419B\\\", \\\"HRCD640TBW\\\"], \\\"summary\\\": \\\"Skip to Header Skip to Main Content Skip to Footer\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\"}]\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Python_Tool",
+          "arguments": "{\"input\": \"{'input': '{\\\\n  \\\"region\\\": \\\"澳洲\\\",\\\\n  \\\"brands\\\": [\\\\n    {\\\\n      \\\"name\\\": \\\"海信\\\",\\\\n      \\\"mode\\\": \\\"scrape\\\",\\\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\\\n    }\\\\n  ]\\\\n}'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": \"{\\\"searchResult\\\": \\\"[{\\\\\\\"brand\\\\\\\": \\\\\\\"海信\\\\\\\", \\\\\\\"mode\\\\\\\": \\\\\\\"scrape\\\\\\\", \\\\\\\"models_found\\\\\\\": 13, \\\\\\\"models\\\\\\\": [\\\\\\\"HRBM419SW\\\\\\\", \\\\\\\"HRVF155\\\\\\\", \\\\\\\"HRCD615TBWV\\\\\\\", \\\\\\\"HRBM503E\\\\\\\", \\\\\\\"HRCD483G\\\\\\\", \\\\\\\"HRBM419BW\\\\\\\", \\\\\\\"HRCD483TBW\\\\\\\", \\\\\\\"HRFD535BW\\\\\\\", \\\\\\\"HRBM500TBW\\\\\\\", \\\\\\\"HRCF702\\\\\\\", \\\\\\\"HRFD537SW\\\\\\\", \\\\\\\"HRBM419B\\\\\\\", \\\\\\\"HRCD640TBW\\\\\\\"], \\\\\\\"summary\\\\\\\": \\\\\\\"Skip to Header Skip to Main Content Skip to Footer\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\\\\\"}]\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码02",
+          "arguments": "{\"input\": \"[{\\\"brand\\\": \\\"海信\\\", \\\"mode\\\": \\\"scrape\\\", \\\"models_found\\\": 13, \\\"models\\\": [\\\"HRBM419SW\\\", \\\"HRVF155\\\", \\\"HRCD615TBWV\\\", \\\"HRBM503E\\\", \\\"HRCD483G\\\", \\\"HRBM419BW\\\", \\\"HRCD483TBW\\\", \\\"HRFD535BW\\\", \\\"HRBM500TBW\\\", \\\"HRCF702\\\", \\\"HRFD537SW\\\", \\\"HRBM419B\\\", \\\"HRCD640TBW\\\"], \\\"summary\\\": \\\"Skip to Header Skip to Main Content Skip to Footer\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\"}]\", \"user_query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "JavaScript_Tool",
+          "arguments": "{\"input\": \"{'input': '[{\\\"brand\\\": \\\"海信\\\", \\\"mode\\\": \\\"scrape\\\", \\\"models_found\\\": 13, \\\"models\\\": [\\\"HRBM419SW\\\", \\\"HRVF155\\\", \\\"HRCD615TBWV\\\", \\\"HRBM503E\\\", \\\"HRCD483G\\\", \\\"HRBM419BW\\\", \\\"HRCD483TBW\\\", \\\"HRFD535BW\\\", \\\"HRBM500TBW\\\", \\\"HRCF702\\\", \\\"HRFD537SW\\\", \\\"HRBM419B\\\", \\\"HRCD640TBW\\\"], \\\"summary\\\": \\\"Skip to Header Skip to Main Content Skip to Footer\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\"}]', 'user_query': '澳洲海信26年产品给我列出'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"error\": \"server internal error\"}",
+    "tool_calls": null
+  }
+]

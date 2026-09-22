@@ -1,0 +1,412 @@
+# Long-term Memory
+
+### Workspace Fact
+
+- [id:5d7483cf] 10.200.17.83 的 27000 端口运行的是 ZWSOFT（中望）网络许可服务：license file 位于 C:\Program Files\ZWSOFT\ZWSOFT Network License Manager\LicenseFile.lic，vendor daemon 为 zwflex，提供 ZW2D_PRO 等中望授权，并非 NX 许可。
+- [id:20e06074] NX 1867 报错 'License Error: Feature has expired. [-10]' 说明客户端已能连通许可服务器，问题在于服务器端 NX 许可（gateway）已于 2022-11-15 过期；10.163.248.200 上 ugslmd 不可达属服务器故障，需联系 IT 修复。
+- [id:9fa3e3d2] NX 1867 已安装完成并验证可正常启动运行，许可从在线西门子许可服务器 10.200.17.83 成功获取；正确许可配置已写入用户级环境变量，重启后仍生效。
+- [id:5655f94f] 许可服务器端口探测结论：10.163.248.200 的 7788/28000 开放、27000 关闭（守护进程故障）；10.163.137.118 仅 7788 开放；10.200.72.65 与 10.200.17.83 的 7788/28000 均开放，其中 10.200.17.83 的 27000 也开放，是最完整的在线许可服务器。
+- [id:8cae5140] NX 1867 静默安装包内的 NX_Silent_Install.bat 默认许可配置为 LICENSESERVER=28000@10.163.248.200，安装参数为 SiemensNX.msi /qn ADDLOCAL=all LANGUAGE=simpl_chinese INSTALLDIR=D:\Siemens\NX。
+- [id:42f72c32] 海尔网络NX许可服务器：手册指定的28000@10.163.248.200（主机名iZg23yhnmwye20Z，需hosts映射）ugslmd常故障；在线的西门子许可服务器是28000@10.200.17.83（zwcad.haier.net，splm9.lic，ugslmd UP，gateway_id 1000许可）。NX 1867装在D:\Siemens\NX，用户26011970，用户级环境变量已指向10.200.17.83。
+- [id:17be0fb4] D:\Creo4Workdir 为 Creo 卸载后残留的空目录，删除时被系统临时句柄占用无法删除，重启后会自动消失，可忽略。
+- [id:08ad56bb] Creo 4.0 M140（含 TCUA ipem 集成与 JT 转换器）已安装完成；Siemens NX 1867 静默安装包已下载解压至 D:\Install\nx，尚未开始安装。NX 与 Creo 是两个不同厂商产品，NX 即 UG。
+- [id:328ca034] 海尔社区等级中心成长任务示例：创建海尔辞典词条(+3/+10)、发布长文章(+10/+50)、发布视频(+10/+50)、参与#第二届AI原生大赛#互动(+5/+10)等，完成可获得海力值。
+- [id:0178c7b1] 海尔社区平台（xue.hilook.com.cn）等级中心可直接访问无需登录，飞书AppLink跳转需登录。等级中心包含成长任务和专属勋章两个板块，共5个等级（新秀/达人/精英/专家/大师），当前海力值155/200（Lv1新秀）。
+- [id:3f1e80ae] LG NZ官网 (lg.com/nz/fridges/) 和 LG AU 官网在特定时段被Akamai从IP层限流，有头模式也连接超时 (ERR_CONNECTION_TIMED_OUT)，需退避重试或回退到Web搜索替代方案
+- [id:dc130820] NZ冰箱监控唯一基线文件路径：data/au-fridge-baseline-2026-08-27.md，含海信44款+三星13款，统一管理不再散落多个会话目录
+- [id:42f8af67] 已创建通用隐身Playwright抓取脚本 fridge_stealth_scrape.py 和工作区契约 fridge-report-kit.md，统一管理澳新冰箱监控任务的URL参数、模式契约和基线文件
+- [id:bb43df3c] 新西兰NZ冰箱市场抓取方案更新：海信NZ官网有效的实际URL为 hisense.co.nz/appliances/fridge/，可提取44款产品；三星NZ用 --mode=jsonld 可提取13款产品；LG NZ官网 (lg.com/nz/fridges) 被Akamai IP层限流，即便有头模式也连接超时
+- [id:164db212] 三星新西兰官网 (samsung.com/nz/refrigerators) 通过 --mode=jsonld 可成功提取 JSON-LD 产品数据，共提取到 13 款产品
+- [id:1651d90f] LG NZ官网无头模式被Akamai拦截（Access Denied），必须HEADLESS=false有头模式才能通过，通过后产品数据在页面1MB HTML内含约9个GF-型号标记，需从HTML正则解析提取
+- [id:80a0f267] 新西兰三星NZ官网产品数据在JS内渲染，需从HTML内嵌JSON-LD提取产品名和链接
+- [id:7902901d] 海信新西兰官网正确URL为 hisense.co.nz/appliances/fridge/，非 hisense.co.nz/kitchen-appliances/fridges/（返回404）
+- [id:0125b137] 冰柜产品有-30℃深冷速冻功能，但冰箱产品线需进一步确认
+- [id:c77bf8a9] 海尔冰箱2025年中国市场份额为46.4%（GfK中怡康数据），全球市场份额22.8%（欧睿国际数据）；海尔连续17年全球销量第一；EPP超净系统除菌率为99.999%
+- [id:9e4cb650] 参赛作品需聚焦海外产品企划场景，可围绕竞品分析、多语种生成、需求预测或全流程自动化设计
+- [id:4d29605c] 小盈由AI价值中心团队开发，具备文件处理、海外产品企划、数据查询等多类任务处理能力
+- [id:bf97f401] 企划部门负责产品组合管理，涵盖新品型号统计、生命周期管控、效率效益分析及多维度数据拆解
+- [id:74ddaed4] 研发新品型号数指标统计范围为实际时间在一年内的PA/PE型号，可按产业、品牌、产品组等维度拆解
+- [id:9dab165e] 报告包含海尔、美的、格力、TCL、海信、长虹六大企业对比，使用ECharts交互图表可视化
+- [id:162851a5] 海尔海外澳新冰箱型号命名规则：H=Haier，R=Refrigerator，F=法式/风冷，数字=容积等级，尾缀C/S代表面板颜色材质
+- [id:d8237f0b] HRF680YZC/S型号尾缀区别：C为特定颜色/经典款面板，S通常代表不锈钢门板或银色，功能配置完全相同
+- [id:0a67d5a1] 企划负责产品规格定义、市场计划、成本BOM等决策类工作；研发负责3D设计、DFMEA、模具制作、测试验证等工程实现类工作
+- [id:8653c282] 家电产品上市前需通过三大安全标准：GB4706.1/13 21项基础安全、Q/HR 0202 002 19项内部加码标准、EMC 10项电磁兼容试验
+- [id:d42793e0] 故障识别论文综合评分7.8/10，审稿结论为修改后收录，最大短板是数据来自Kaggle模拟数据集非真实产品数据
+- [id:b129dc9e] 已为冰箱海外产品企划竞赛生成「冰睿研销」OPC完整参赛方案，包含5个AI Agent的全链路流程设计
+- [id:b2753bdf] skills目录下已有product-manager、product-trend-researcher等产品相关角色，最贴近产品企划经理角色
+- [id:3af6df34] agency-agents-zh包含约170个角色，覆盖工程(24)、设计(8)、营销(31)、产品(5)、项目管理(6)、销售(8)、测试(8)、客服(8)、游戏开发(20)、策略(16)、专项(29+)等11个分类
+- [id:f26dd553] 海尔赞助世界杯全案由4个Agent角色协作生成（趋势研究员、产品经理、增长黑客、品牌守护者），核心策略为'看球用海尔智慧家'以差异化对抗海信
+- [id:52bac0e8] 已生成冰箱领域全品牌全型号对比分析报告，覆盖8大维度、10大品牌、30+代表性型号
+- [id:e288174d] 冰箱全品牌全型号对比分析报告保存路径为data/冰箱全品牌全型号对比分析报告.md，包含产品经理、销售教练、内容创作者多视角输出
+- [id:33454041] 三花集团是国内冰箱电磁阀主要供应商，海尔冰箱大量使用其品牌产品
+- [id:ed5d939b] 冰箱产品安全检查规范.xls 是一个包含290行、21列的大型安全检查表，涵盖17个主要检查类别。文件位于 attachments/000014_96d8c2b7-d380-420e-b902-ea7edd976334_冰箱产品安全检查规范.xls。表格结构：序号 | 字母编号 | 项目 | 检查要求 | 检查结果(严重5-1/中等5-1/轻微5-1) | 备注。原始文件是旧版.xls格式，用pandas读取时出现乱码，但通过openpyxl引擎成功提取了大部分中文内容。
+- [id:4e8785a4] 工作区已有cad技能(基于build123d生成STEP/DXF)、ai-overseas-product-planning技能(海外产品企划)，但无专门冰箱研发技能支撑制冰/制冷系统等工程开发工作
+- [id:6eafdb3b] PPT 核心方案为'心有灵犀'基于 AI 情绪感知的新一代智能家电生态，提出情绪感知空调、陪伴音箱、睡眠系统、家庭情绪中枢四大产品
+- [id:43b68835] 海信澳洲型号命名规则：HRBM 为 419L 底部冷冻法式门冰箱系列，尾缀 BW=White(白), SW=Silver(银)
+- [id:ee3dff1c] 美的于2024年6月在墨尔本开设办公室才正式进入澳洲市场，目前在澳洲主要销售空调产品
+- [id:de116ec9] 关于澳洲冰箱市场搜索的经验总结：
+1. 海信(Hisense) HRBM419B-UM/BW/SW 系列：在公开网络找不到上市时间，需要联系海信澳洲官方或零售商
+2. 美的(Midea) MDRT 系列冰箱：Midea 2024年6月才开设墨尔本办公室，目前在澳洲官网(midea.com/au)主要展示空调产品，冰箱产品线信息极少
+3. Midea MDRT 型号命名规律：MDRT = Midea Double-door Refrigerator Top-mount，在其他市场（墨西哥、印尼、埃及）有此系列但型号不同
+4. Midea MDRT580MTF45AP 和 MDRT307MTF28AP：这些型号在公开网络（包括搜索引擎、零售商网站、能源评级数据库）完全找不到任何信息
+5. 可能原因：这些可能是尚未上市的新品，或特定渠道专供型号，或仅存在于内部产品目录中
+6. 澳洲主要家电零售商：JB Hi-Fi、The Good Guys、Harvey Norman、Bing Lee、Appliances Online
+7. 澳洲能源评级网站 energyrating.gov.au 可查询已注册的电器型号
+- [id:71141d66] 澳洲冰箱搜索经验：1. 海信 HRBM419B-UM 找不到上市时间 2. 美的 MDRT 系列在澳洲公开网络完全搜索不到（搜索引擎、零售商网站、能源评级数据库均无结果）3. 美的2024年6月才开设墨尔本办公室，澳洲官网目前主要展示空调，冰箱产品线信息极少 4. 澳洲主要家电零售商：JB Hi-Fi、The Good Guys、Harvey Norman、Bing Lee、Appliances Online 5. 澳洲能源评级网站 energyrating.gov.au 可查已注册电器
+- [id:f9359e3c] 美的澳洲官网 (midea.com/au) 冰箱板块已上线，包含法式门/四门/对开门/Top Mount/Bottom Mount/车载/冷柜七大系列
+- [id:4516292f] MDRT580MTF45AP(413L) 和 MDRT307MTF28AP(203L) 两款 Top Mount 型号在官网详情页返回 404，CDN 存在产品图但尚未正式上架
+- [id:112b5b95] Bing Lee 是黎巴嫩裔创始人于 1950 年代在悉尼创立的澳洲电子零售商，与美的澳洲有合作，非中国人名字
+- [id:18c5fb83] 美的澳洲官网 MDRT580MTF45AP(413L) Top Mount 型号状态明确为'Coming Soon'未开售；MDRT307MTF28AP(203L) 和 MDRT490MTF45AP(338L) 已开售，通过 Bing Lee 销售
+- [id:877c793c] 海信澳洲官网使用 currentPage 参数进行分页，起始页为 0（非从 1 开始），最新排序 URL 格式：https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0。之前抓取到错误的第一款产品是因为误用 currentPage=1 获取了第二页数据。
+- [id:e30d622a] 美的澳洲官网 Top Mount 系列冰箱全部下架，包括之前追踪的 MDRT580MTF45AP (413L)。该型号从未进入可购买状态就直接消失，需关注是否因销售不佳退市或战略调整。
+- [id:4623ef25] 海信官网年份筛选功能验证显示：标注⚠️New 标签的产品 HRBM503E、HRCD483TBW 等未出现在 2026 年筛选结果中，可能实为 2025 年发布。New 标签时效性与页面筛选逻辑不完全一致，监控时需结合两个维度判断。
+- [id:95ef9c84] 美的 Top Mount 系列在澳洲官网 (midea.com/au) 和 Bing Lee 均有销售，不是全部下架。需同时监控官网 + Bing Lee 两个渠道判断库存状态。
+- [id:271c464b] 冰箱作为情绪感知设备的产品洞察：开门频次高且每天必开，是家庭最高频触点的家电；面板屏幕天然适合展示反馈；食材数据储备使推荐更具个性化。具体方案：开门瞬间完成表情 + 语音情绪识别，端侧推理不依赖联网，避免隐私泄露风险。
+- [id:973c4a62] 2026 年海尔智家黑客马拉松制冷产业项目主题已确定为「情绪冰仓·一杯饮尽松弛感」(冷柜/冰吧方向)。核心功能：分温精储、四种情绪模式、RGB 氛围灯、透明视窗、社交独处双适配。竞品分析方向强调差异化：传统冷柜是「冷藏工具」，该产品定位为「情绪补给站」。
+- [id:97752d38] Apple 设计风格核心原则：纯黑底 + 白字，每页只有一句话，大字体 + 大量留白，产品图为绝对视觉主角，文字退居辅助；配色仅用纯白→浅灰→深灰三阶灰度；去掉圆角卡片、彩色强调线、霓虹色数字等所有装饰元素。用于路演 PPT 生成时遵循此设计语言。
+- [id:fb442d87] 情绪冰仓路演 PPT 已扩展至 23 页，新增 5 页产品细节：08 工业设计语言 (极简无把手/按压弹开/纯平钢化玻璃/隐藏触控/月岩灰配色/Low-E 防雾视窗)、09 六温区详解 (啤酒 2-4°C/功能饮料 4-6°C/白葡萄酒 6-8°C/零卡 8-10°C/养生饮品 10-14°C/红酒 14-18°C)、10 App 交互、11 使用场景流、12 完整规格参数表
+- [id:9ceba685] 2026-06-17 澳洲冰箱品牌新品巡检结果：美的新增 MERS791MYEDXAP(592L) 不锈钢对开门型号（BCD592-S 的不锈钢版）；海信 53 款产品中 2026 年款 5 款；三星/LG/西屋无变化。三款 Coming Soon 状态未变：MDRT580MTF45AP、MDRS925FIM45AP、MDRF923FIM45AP。
+- [id:4ef91b3f] 美的澳洲官网型号 MERS791MYEDXAP (BCD592-S Stainless, 592L) 已于之前上线销售，非 2026-06-17 新增型号；它是 MDRS791MYM45AP(Dark Stainless)的Stainless版本
+- [id:85ad42a2] 美的澳洲官网 Top Mount 子页面为 JS 动态渲染，Firecrawl 首次抓取可能返回"No Relevant Product"误报，需二次抓取确认；MDRT580MTF45AP(413L) 型号从 Coming Soon 变为 Shop Now+Where To Buy 按钮，表示首次正式上架销售
+- [id:fe52992c] 新西兰 (NZ) 冰箱市场仅有 3 个品牌：海信/三星/LG；美的和西屋在新西兰无独立官网及零售页面。三款品牌官网均存在严重抓取障碍：海信启用 document_antibot 反爬、三星采用 JS 动态渲染返回空数据、LG 强反爬保护无法直接抓取，需改用 web_search 间接搜索。
+- [id:b1a86c87] 三星澳洲官网 (samsung.com/au) 冰箱产品页为深度 JS 动态渲染架构，Firecrawl_scrape 直接抓取无法获取完整产品列表，仅返回空的内容占位符和分类导航链接。替代方案：1) 用 firecrawl_agent 异步自主导航；2) web_search 间接搜索型号；3) 观察页面底部促销信息提取 SKU 列表（曾从中识别出 23 款在售型号）。
+- [id:31e59ab9] 嵌入式开发三大工具定位：J-Link用于开发阶段调试和高速烧录；ToolForOta用于售后阶段通过串口(波特率9600)远程升级已出货设备，支持HEX转BIN、多文件合并、加密处理、批量底板烧写；Clock Programmer用于硬件调试修改时钟芯片(I2C接口)频率，避免手工更换物理晶振。三个工具覆盖产品开发生命周期不同环节。
+- [id:ecf9b1f8] 澳洲冰箱新品监控中误判案例：HRCD483TSW被误报为新增型号，实为基线从sitemap提取时漏掉的旧型号（评论可追溯至一年前）。验证方案：需结合产品评论发布时间等辅助信号确认是否为真正新品，避免仅依赖页面存在性判断。
+- [id:34a73499] 新西兰 (NZ) 冰箱市场仅有 3 个公开可查品牌：海信/三星/LG；美的和西屋在新西兰无独立官网及零售页面。三品牌官网均存在反爬拦截或 JS 动态渲染问题，无法像澳洲那样直接抓取 SKU 列表。实际可行的方案仅依赖 web_search 和 ai_search 间接搜索新闻/媒体信息。
+- [id:0cd6a6d8] 情绪冰仓冰吧产品设计三档优先级：P1 必做（不可妥协）=专业制冰能力/精准恒温 4-10℃/透明展示门 + 内部灯光；P2 强烈建议 = 场景化分区/便捷取用动线/高颜值外观融入家居；P3 增值项 = 补货提醒智能联动/静音设计/模块化内胆。AI 图像生成服务返回 OSS URL 格式图片地址。
+- [id:783640f1] GitHub 上缺乏高质量的产品命名/品牌命名开源 skill 或项目，现有的品牌名生成器（如 brandGenerator）质量较低，不如直接通过 call_llm 调用 LLM 做创意命名效果更好
+- [id:45211bb0] 情绪冰仓Chillo项目产品确认圆柱形冰吧造型，首发Pro版，底部增加可移动弹出仓支持APP控制送饮料路线
+- [id:ba6c7e1f] 全球最贵家用冰箱品牌为Gaggenau嘉格纳（起步¥20万，定制超¥100万）和Sub-Zero PRO 48（约$15,000-20,000/¥10-20万+），是冰箱行业顶级竞品标杆
+- [id:d2a813cd] 伊莱克斯ESE6319GA对开门冰箱645L，风冷双变频1级能效，光合离子养鲜技术，实际成交价¥3,700-5,000（非ZOL显示的¥15万，该数据为录入错误）
+- [id:207c2297] 用户场景PPT建议分2页：第1页展示3类用户画像+一天时间轴（6个情绪冰饮时刻）；第2页展示3个核心场景故事板（下班松弛/追剧电竞/周末微醺）
+- [id:16043ed7] 对话记录和配置文件存储在本地C:\Users\26011970\.incaier-agent\路径下
+- [id:8b7c4648] 项目已通过Docker部署，支持配置文件分离和私有化托管，便于团队协作
+- [id:632052b6] 小盈由AI价值中心团队开发，底层调用通义千问模型，支持多任务处理
+- [id:cf60ce88] H-work是海尔集团的办公平台，'我负责的流程'指需要用户亲自处理的待办流程任务
+- [id:bddcb22e] 项目通过Incaier Agent平台调用通义千问模型，支持多任务处理，底层为qwen3.6-plus-a模型
+- [id:d2c07d81] 系统提示显示当前模型为deepseek-v4-pro，与历史记忆中记录的qwen3.6-plus-a存在差异，模型配置可能已更新
+- [id:55567cf7] 海尔2026Q1营收736.87亿元同比-6.86%，归母净利润46.52亿同比-15.22%，冰箱份额47.3%同比+2.8pct
+- [id:af1362f0] PPT为海尔日本研发中心(NODA)将905冰箱门体制冰技术移植到830T冰箱的技术开发资料
+- [id:531dcf85] 830T冰箱比905窄37.5mm，制冰系统需重新设计，涉及制冰间室、蒸发器、化霜加热丝和风机变更
+- [id:cd8b3977] 飞书Webhook机器人仅支持单向消息推送，实现@自动回复需创建飞书应用并配置im.message.receive_v1事件订阅
+- [id:4d92e35b] HRF680YZC/HRF680YZS日制冰量官方数据未公布，基于同类型法式门冰箱工程估算为2-5 kg/天
+- [id:2b8b5f92] 主流家用冰箱制冷剂为R600a（异丁烷），替代已禁用的R12和R134a，HRF680YZC充注量为75g
+- [id:37a2b058] HRF680YZC法式门风冷冰箱仅有一个蒸发器（位于冷冻室），靠风道+风门分配冷量至冷藏和制冰间室
+- [id:d16b283c] 冰箱食材新鲜度智能检测论文采用无实验方案，使用公开数据集(Fruit-360/Food-101)结合仿真气体数据验证
+- [id:93d1ddf8] 论文选题为'基于深度学习与多传感器融合的冰箱食材新鲜度智能检测方法研究'，采用综述+算法设计结合路径
+- [id:8a3391c2] 综述论文方向从深度学习转为传统ML方法（SVM/RF/KNN/PCA等）在冰箱食材新鲜度检测中的应用
+- [id:c8e733a2] 传统ML方法在冰箱嵌入式场景的优势：模型KB级可在MCU运行、无需GPU、可解释性强、小样本鲁棒
+- [id:b71ddea1] 论文《模型预测控制在冰箱温度控制中的应用》由海尔集团冰箱研发中心发表，采用NARX+MPC方法实现比PID节能31%-43%
+- [id:e1ecccdd] 论文四大创新贡献：以run_id为单位划分样本避免数据泄漏、构建二分类+13类识别双任务评价体系、提出限值保护+模型识别分层架构、提供基于公开数据集的可复现基准框架
+- [id:b31a0554] 《家电科技》期刊接受方法验证型论文，重点关注AI与大数据、先进制冷技术等方向，完全匹配冰箱故障诊断论文主题
+- [id:bbbcc430] MPC论文为工程应用型论文，核心创新为应用创新（将MPC引入家用冰箱温度控制），非理论/方法原创
+- [id:9b029f70] 冰箱故障诊断推荐分层架构：端侧MCU做安全保护与轻量推理，云端做复杂训练与模型管理，App/售后做用户预警与工单联动
+- [id:6ba84c3b] Pollinations文生图源已在工作区配置完成，支持通过markdown图片语法展示生成的图片
+- [id:d8d64de8] Pollinations源配置文件位于sources/pollinations/目录，包含config.json、guide.md和permissions.json
+- [id:a11b4ea5] 2026年5月GitHub趋势：Skills文件配置化+Subagent编排为开发主流范式，多条路径清晰
+- [id:b3323a0b] 冰箱箱体发泡使用环戊烷发泡的硬质聚氨酯泡沫，导热系数约 0.022 W/m·K
+- [id:f3a94568] R600a 为异丁烷制冷剂，ASHRAE A3 级（低毒高可燃），沸点 -11.7°C，爆炸极限 1.8%-8.4%，家用冰箱充注量通常≤60g
+- [id:26fb9ab4] 自动化霜系统核心组件：主控板控制定时、化霜加热器 200-500W、双金属化霜温控器（断开温度 10-13°C）、化霜保险丝（熔断温度 65-75°C）
+- [id:d0e54812] D-SNR是冰箱化霜温度传感器（Defrost Sensor），用于实时监测蒸发器表面温度并反馈给主控板，化霜终止温度通常设定为10-15°C
+- [id:059482be] 冰箱化霜触发条件综合三变量：环境温度（RT）、压缩机累计运行时间（t累计）、开门累计时间（t开门）。当环境温度高或压缩机会长时间运行时，开门门槛阈值会降低甚至设为0s强制化霜
+- [id:1005486c] 冰箱频繁开关门会通过增加湿气进入间接导致化霜更频繁，但不开门次数作为直接触发条件较少见。若每天化霜超过5-6次，应检查门封条是否漏气或化霜系统故障
+- [id:13c51e0f] 化霜预冷是冰箱进入正式化霜程序前，主控板延长压缩机运行 30-60 分钟，降低箱内温度建立'冷量储备'，补偿化霜期间温度回升
+- [id:d6707ecf] 冰箱化霜优先级排序：强制化霜＞上电化霜＞速冻化霜＞传感器故障化霜＞故障化霜＞保护化霜＞正常化霜，高优先级条件满足时中断其他化霜
+- [id:85d51562] PWM 控制在冰箱中的应用：变频压缩机调速 (1200-4500rpm)、冷藏/冷冻/冷凝风机转速控制、电子膨胀阀开度调节、照明 LED 调光
+- [id:f1f42e99] 论文投稿系统注册信息：登录账号 liuzihan.bx@haier.com，单位名称 青岛海尔电冰箱有限公司，联系人 刘子涵，手机 15288962335，邮箱 liuzihan.bx@haier.com（与登录账号相同不可修改）。论文标题：《基于运行过程特征和机器学习的冰箱制冷系统多故障识别》。
+- [id:bf25305e] 论文投稿系统登录账号 liuzihan.bx@haier.com，单位名称青岛海尔电冰箱有限公司，联系人刘子涵，手机 15288962335，邮箱不可修改
+- [id:f66d0b4c] AIGC 检测报告文件路径：file:///C:/Users/26011970/Downloads/刘子涵_基于运行过程特征和机器学习的冰箱制冷系统多故障识别-AIGC 检测报告 -20260604/AIGC 检测报告/AIGC 检测报告.html
+- [id:34a99eb8] 用户论文《基于运行过程特征和机器学习的冰箱制冷系统多故障识别》拟投稿中国家用电器技术大会，授权书要求全体作者（张伟、刘子涵、吴海滨）手写签名
+- [id:3141e49c] "电源连接方式（X、Y、Z）" 来自 IEC 60335-1 / GB 4706.1 家用电器安全标准。X型：容易更换电源线（普通工具即可）；Y型：需专用工具才能更换（由专业人员操作）；Z型：必须破坏器具才能更换（模压一体式，如充电器）。冰箱通常为 X 型或 Y 型连接。
+- [id:212db0a3] "防鼠簧"并非标准独立零件名称，通常指空调/冰箱防鼠装置中的弹簧组件。常见于空调室内机铜管过孔处的防鼠装置，利用弹簧弹力使锥形橡胶套紧贴铜管，堵住鼠类进入通道。也有部分冰箱压缩机仓防鼠结构中用弹簧做弹性支撑或密封。专利 CN 201621228905 描述了典型结构：不锈钢外壳（圆锥部+圆柱部）、橡胶锥套、大弹簧、磁铁等组成，弹簧用于保持锥形开口对铜管的弹性闭合。
+- [id:828cc39a] "防鼠簧"并非标准独立零件名称，通常指空调防鼠装置中的弹簧组件。专利 CN201621228905 描述了典型结构：不锈钢外壳（圆锥部+圆柱部）、橡胶锥套、大弹簧、磁铁。弹簧用于使锥形开口弹性闭合，紧贴穿过铜管和线缆，堵住鼠类进入空调室内机的通道。冰箱领域则多用"防鼠板"（金属板/网罩）防护压缩机仓底部空隙。
+- [id:3798dc78] 双温双控冰箱常用二位三通电磁阀实现冷藏/冷冻回路切换，阀口通径Φ0.8mm适配冰箱R600a系统
+- [id:657bfe7e] 冰箱温控器是温度控制核心部件，检测温度并控制压缩机启停以维持设定温度范围
+- [id:88a1ffa3] 冰箱温控器分为三类：机械式（感温包热胀冷缩，精度±2~3°C）、电子式 NTC（±0.5~1°C）、智能温控多传感器+MCU+算法±0.1~0.3°C
+- [id:366af59b] 二分类任务中正常与故障样本比例为1:12，采用类别权重平衡策略减轻不平衡影响；多分类为13类运行状态识别
+- [id:9d03b8fa] 逻辑回归在故障二分类任务中最优，AUC=0.914，对正常类和故障类均有稳定区分能力
+- [id:0a442603] 路演 PPT 文件已保存至 data/心有灵犀_AI 情绪感知智能家电_路演 PPT.pptx，采用午夜商务配色，共 10 页 7 大章节
+- [id:41081724] Clock Programmer 是 Cypress/Infineon 官方可编程时钟芯片配置软件，用于烧录频率配置到 CY254xx/CY2570x/CY274xx 等系列时钟芯片。通过 I2C 接口（通常地址 0x69）与 USB-I2C 桥接器连接，加载.jed 配置文件即可烧录，替代传统更换物理晶振的硬件方式，常用于电路板调试场景。
+- [id:19dc944e] 海外冰箱竞品雷达技能(overseas-fridge-radar)已创建为独立技能草稿，与现有澳洲冰箱定时监控完全隔离，使用独立数据目录(data/overseas-fridge-radar/)和独立飞书Webhook
+- [id:027b1b1c] 海外冰箱竞品雷达智能体为流程编排型，工作流名称为'海外企划-竞品雷达'（非'海外冰箱竞品监控'），智能体名称为'海外冰箱竞品雷达'，工作空间为Personal-26011970，需先创建工作流再关联到智能体
+- [id:663c0ea3] 2026年5月GitHub热门趋势为AI Agent技能配置化(Skills生态)爆发，Claude Code/DeepSeek双线并跑，开发从'写代码'转向'给AI配技能'
+- [id:2b2f7106] Bridge Control Panel 1.23.0是Cypress/Infineon官方USB桥接芯片调试工具，通过GUI与CY7C65211等桥接芯片交互通信，可发送接收I2C/SPI/UART数据、控制GPIO引脚、配置通信速率参数。典型场景是硬件调试时直接通过USB与板载传感器EEPROM等外设通信，无需额外编写代码。
+- [id:764adb20] 飞书机器人已实现三个主要自动化场景：1) 每日新闻播报（每天 9:30 自动推送国内外要闻 + 平台热搜 + 跨平台热点）；2) AI 日报（搜索 AI 领域动态整理成简报）；3) 澳洲冰箱品牌新品监控（监控 5 品牌官网新品上架）。均通过飞书 Webhook 发送交互式卡片消息。
+- [id:cb6fc224] 飞书 iHaier 群 Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9
+用于通过飞书自定义机器人向 iHaier 群组发送消息通知。
+- [id:ecd32f73] 文生图MCP备选方案：Stability AI MCP Server、Flux MCP (acedata.cloud)、Cloudflare Workers AI自建
+- [id:72c7673c] 海尔智能体市场注册表单第二步下拉选项：创建平台含Hiagent/第三方平台/自建/小海/本地高码/定制SaaS服务/Dify/智擎智能体平台；支持协议含A2A/MCP/HTTP/WebSocket；智能决策等级含无智能决策/L1感知与定位/L2洞察与预测/L3决策与建议
+- [id:79bba4e4] 品牌信息在输出中可被替换为占位符[品牌A] & [品牌B]以实现脱敏处理
+- [id:62bf9dab] 宣发效率对比：小米效率最高（广告费不到营收2%、每元费用创收13.77元），华为重金投品牌，海尔体育IP全球化
+- [id:7b84bce4] 海尔世界杯赞助方案总预算约$1.2亿，预期12个月回本，品牌价值提升$8亿，推荐FIFA官方赞助商层级
+- [id:e8d1f675] Incaier Agent桌面版UI代码打包在app.asar中，无custom.css或theme.json等自定义样式机制
+- [id:52eb98b7] Incaier Agent 支持解析 .hex 固件文件，可读取格式、转换 BIN 文件、提取版本信息、校验数据完整性
+- [id:fe7c5a6d] 海尔邮箱 mailcli 工具 (market-haier-mail-2) 在邮箱首次使用前需先在 OWA 网页端 (https://tao-mail.haier.com/owa) 登录初始化，否则 CLI 查询已发送文件夹返回空结果。发送命令返回 {"action":"success","result":"sent"} 表示服务器确认发送成功。
+- [id:4e26b67d] lark-cli bot能力限制：可读特定文档(docs fetch/获取节点信息)，但无法列出wiki空间所有节点(权限拒绝131006)和无法搜索文档(drive search不支持bot模式)
+- [id:13abdbe1] 100mm离心风机PWM降速至40%-60%占空比，风量24-36 m³/h仍可满足2-5kg/天制冰量，安全余量3倍
+- [id:4bcaa16c] IC供水系统在D-FMEA中严重度评分为9(最高)，涉及漏水安全风险
+- [id:48bfb0a3] 技术实现方式包括Python+Selenium/Playwright、RPA平台和手机模拟器自动化脚本
+- [id:0918a21b] 项目使用Python编写，包含BUFF163和Steam市场API客户端，支持多游戏比价
+- [id:c98c92b6] iHaier 是海尔集团的移动办公平台，提供即时沟通和音视频会议功能
+- [id:8cd465f7] BBA全系对标对比报告使用Wikimedia Commons的640px图片，确保图片链接稳定可长期访问
+- [id:e7de5b44] 飞书机器人通过Webhook URL发送消息，需使用UTF-8编码以避免乱码
+- [id:229ba9cd] 当前工作区实际使用模型为qwen3.6-plus-a（通义千问），非Claude Opus 4.6
+- [id:219320a9] 当前工作区通过Incaier Agent平台使用Qwen3.6-Plus模型，计费由公司统一采购管理，不按API用量直接扣费
+- [id:320c9ba9] 公司通过Incaier Agent平台内部调用Qwen3.6-Plus模型，每次会话成本约0.004至0.6元，由公司统一采购API额度池覆盖
+- [id:01014bdf] 当前工作区使用Qwen3.6-Plus模型，由公司统一采购API额度池覆盖，会话成本约0.004至0.6元
+- [id:9eedf395] H-work elearn平台使用Vue SPA架构，内容需通过带Bearer Token的API请求获取，无法直接爬取静态HTML
+- [id:9f5c6150] 故障识别论文定位为方法验证型，使用经典ML算法(LR/DT/RF/XGBoost)配合Kaggle模拟数据集，创新性偏弱但方法规范
+- [id:a1a4514c] 故障诊断论文定位为方法验证型论文（非工程应用型），使用Kaggle模拟数据验证ML方法可行性，无实测验证
+- [id:ff6ac836] 工程应用型论文需具备：实测数据、行业方法对比、经济价值量化；方法验证型论文使用公开数据、方法内部对比即可
+- [id:c18abecd] 故障诊断论文使用宏平均F1(0.8940)和宏平均AUC(0.9930)作为13类状态识别评价指标，每类故障权重相同
+- [id:c68aabfc] 边缘智能分层架构的高引用综述文献：Zhou Z等"Edge Intelligence"(Proceedings of the IEEE, 2019, DOI:10.1109/JPROC.2019.2918951)，支持端-云-应用三层协同诊断论述
+- [id:a9b82257] 若会议偏'智慧/智能化'主题，ML+故障识别论文排名会更高，因完全契合智慧主题方向
+- [id:da43807c] 中望CAD 2020已安装在D:\ZWCAD 2020目录，可通过COM ProgID "ZWCAD.Application"使用pywin32访问
+- [id:7f66c72d] ZWCAD中文显示方案：使用SHX大字体(txt.shx+gbcbig.shx)替代TTF字体，可解决中文字符???乱码问题
+- [id:ccff24cd] ezdxf使用GBK编码写入中文字符，ZWCAD读取DXF时内部渲染正常，终端readback乱码不影响实际显示
+- [id:b7c351dc] Polymarket技能提供预测市场数据查询功能，支持trending/search/movers/calendar/digest/watch及模拟交易操作，使用公开Gamma API无需认证
+- [id:f1791dec] agency-agents-zh相比原版增加了44个中国原创角色，涵盖小红书、抖音、B站等中国平台
+- [id:664302e1] 已获取Agent/Skills项目分类：Skills聚合平台、浏览器操控Agent、非Claude Agent平台、垂直领域Agent及工具链
+- [id:114f22a4] 万链Online是海尔内部飞书平台，使用海尔飞书账号(accounts.feishu.cn)授权，不需要单独的万链账号
+- [id:1c34f274] 久坐提醒App(sit-reminder)已创建，使用React+TypeScript+Vite构建，gzip仅53KB
+- [id:83cafb6c] toolforota 是海尔内部使用的 OTA 文件格式转换和通信测试工具（版本 20190807V1.2），用于嵌入式设备固件升级
+- [id:5d802d03] 海尔中央研究院成立于1998年，位于青岛海尔工业园海尔路1号，拥有1.2万㎡研发大楼和1.6万㎡中试基地。面向10-15年远期技术，重点领域：制冷技术、网络家电、控制技术、集成电路、环保节能、智能家居、新材料、工业设计。
+- [id:d95e801e] AI 图像生成服务使用能力市场 market-ai23ng 服务，基于极致模型提供文生图能力
+- [id:a4a31242] AI 图像生成服务每日调用限额为 3 次，每天 00:00 自动重置，该配额由平台侧设置无法直接控制
+- [id:20638b5d] 当前环境已安装 CoolProp v7.2.0，可直接使用
+- [id:ef80f7b4] 参赛队伍来自制冷平台，参加海尔智家'创无限·AI 无界'创新大赛黑马赛道'家电 + 情绪价值'方向
+- [id:ba2282c0] Kiro IDE 官网 kiro.dev 国内访问可能受限，CSDN 有文章标题显示'Kiro 国内不让用了嘛？'，下载客户端时可能需要科学上网。但登录使用 AWS 账号后，日常使用理论上不需要一直挂着 VPN，AWS 控制台在国内有中国区可正常访问。
+- [id:e1634ca4] 海尔HiAgent智能体访问地址格式为 https://agents.haier.net/product/llm/chat/{agentId}，agentId在平台创建智能体时自动生成
+- [id:30ff71b5] 海尔HiAgent帮助中心知识库文档位于飞书wiki：https://ihaier.feishu.cn/wiki/RTfswXxfLiYaD3kxTF3cdxkDnZg，包含基础功能导览和平台使用说明等创建智能体的指引
+- [id:adc35fd4] 指南文件包含50多个快捷键速查表和推荐的学习资源
+- [id:bdd6e8eb] BUFF脚本主要分为自动交易、比价机器人和游戏内增益脚本三类
+- [id:5a4591e3] 工作区的skills目录位于C:\Users\26011970\.incaier-agent\workspaces\my-workspace\skills\
+- [id:a4b808ec] 工具调用主要涉及文件读写、Git操作和API请求，总计约30次
+- [id:21f7a1af] 云图消息无法访问，需提供具体文件或截图才能分析
+- [id:558c73a3] iHaier 客户端可通过官方下载页面 https://app.haier.net/pc.html 获取
+- [id:73451172] 住宿和津贴费用按出差天数和单日标准计算，可分别得出小计金额
+- [id:8f883362] 最终输出为HTML格式文件，支持内嵌真实车辆图片并展示在浏览器中
+- [id:6247d18d] Qwen3.6-Plus在阿里云百炼的输入价格为2元/百万Tokens，缓存命中时最低可达0.08元/百万Tokens
+- [id:422f6f24] 飞书文档需登录权限才能访问，外部无法直接抓取，建议复制内容或截图发送
+- [id:e4b89c50] 家电行业2026Q1对比报告保存路径：sessions/260430-nimble-current/data/家电行业2026Q1财报分析报告.html
+- [id:515e2429] 2025年年报对比：华为营收8,809亿规模最大，小米增速25%最快，海尔全球化最成熟
+- [id:1e8c2666] 法务策略对比：华为进攻型（170+国合规官、16.5万专利、12亿美元许可收入），海尔防守稳健，小米精简应对
+- [id:612ec904] 治理结构对比：华为员工共治（16.9万员工持股）、海尔规范治理（A+H+D三地上市）、小米创始人驱动（雷军IP深度绑定）
+- [id:b8a8932a] 股权激励量级对比：华为ESOP分红超723亿元收益率18%、小米8,344万股零对价10年归属期、海尔注销未达标期权2,526万份
+- [id:7a2d777a] 核心隐藏风险：华为两项美国刑诉未计提拨备、海尔273亿商誉+核心IP依赖零对价许可、小米汽车单车利润仅约2,190元
+- [id:6fe47abc] 当前飞书Webhook机器人仅支持单向消息发送，无法接收群消息或被@后自动回复
+- [id:65aa85eb] 公司内网防火墙阻止外部入站连接，本地PC无法直接接收飞书服务器HTTP回调请求
+- [id:9be51434] 制冰间室风量需求估算：家用制冰量2-5kg/天时，推荐风量范围12-25 m³/h（约7-15 CFM）
+- [id:0004eed2] 制冰间室化霜推荐电动风门+硅胶密封圈联动方案，配合化霜前预冷和错峰化霜控制策略
+- [id:e4c5d7dc] 制冰间室密封采用双气囊硅橡胶密封条+磁条（≥50g/cm²吸力）+迷宫式搭接结构设计
+- [id:50914e46] 制冰间室(IC)设计D-FMEA已创建，最高风险项为存冰温度(RPN=160)和制冰能力(RPN=140)，均需周一确认
+- [id:ad328887] 密封制冰蒸发器仓将制冰蒸发器独立封闭，减少结霜、稳定温度、防止串味，对应D-FMEA中多项高风险项
+- [id:74c2f23e] 故障识别论文的方法规范性在家电行业论文中属上乘，5折分层交叉验证+多指标评价体系显著优于行业平均水平
+- [id:2a4903b9] 故障识别论文提出'限值保护+模型识别'分层架构，轻量模型易部署到嵌入式MCU，有工程落地价值
+- [id:5a66a8d9] 故障识别论文综合评分从7.8修正为8.0/10，审稿结论改为直接收录(Accept with Minor Edits)，仅需补充模拟数据差异分析和完善表格
+- [id:ca0ae218] 故障识别论文创新性综合得分8.1/10，在家电行业工程技术期刊层面创新点足够，方法规范性和工程创新性为主要贡献
+- [id:881ab306] 《家电科技》暂不收审稿费，录用后按页面收取版面费，理事单位享有免费页面
+- [id:6d05a006] 数据标准化需先在训练集上拟合均值/方差再转换测试集，避免测试集信息泄漏到训练过程中
+- [id:fc77b444] 宏平均指标对每个类别的指标取算术平均，适用于故障诊断场景中各类别样本数不均衡的情况
+- [id:c428310a] 故障诊断论文参考文献[5]（制冷原理教材）在正文中无引用处，导致scikit-learn等工具类引用编号整体偏移一位
+- [id:c8be91e1] 随机森林RF在故障诊断中的高AUC具有欺骗性——其正常识别率仅0.15%，实质将所有样本判为故障
+- [id:277b1140] 故障诊断论文中图2二分类ROC曲线数据与表5完全一致，经交叉验证无数据bug
+- [id:c050550c] 决策树ROC曲线因sklearn roc_curve函数在阈值点较少时采用线性插值而呈现平滑直线，非实现错误
+- [id:a64e7cb7] 故障诊断论文核心论点：特征构建质量比模型复杂度更重要，轻量模型(逻辑回归)结合充分特征工程即可达到最优综合表现
+- [id:3106c12c] 故障诊断论文实验对比4个模型(LR/DT/RF/XGBoost)，验证了平衡准确率比准确率更能评估故障识别性能
+- [id:93a41d94] 故障诊断论文在26篇论文中综合排名第5-6名，属于中上游水平
+- [id:b45c1d29] 故障诊断论文优势：完整实验流程、清晰方法论、可复现公开数据集；劣势：模拟数据非实测、无新算法、缺消融实验
+- [id:4cbb1881] DWG/DXF文件中尺寸标注数值为纯数字，在任何字体方案下均能正常显示，不受中文字体影响
+- [id:900bc582] text-to-cad技能已在skills目录下安装，支持自然语言转STEP/DXF等格式的CAD模型生成
+- [id:eb4906f8] cad技能依赖build123d、cadquery-ocp、trimesh、ezdxf等库，支持STEP/STL/DXF/GLB格式导出
+- [id:ec420679] ZWCAD对STEP 3D实体格式支持有限（仅2024+版），DXF格式完全兼容可直接在ZWCAD中打开
+- [id:0b87a693] ZWCAD自动打开DXF通过PowerShell Start-Process命令实现，DXF为2D俯视投影图
+- [id:c17edb2d] 已成功测试生成支架(bracket)和法兰盘(flange)两种机械零件，支持STEP 3D和DXF 2D双格式输出
+- [id:28c83325] 法兰盘多视图DXF经机械制图验证几何结构正确，外径120mm、中心孔40mm、厚度12mm、8个M8螺栓孔
+- [id:f3f27f94] Polymarket在中国大陆被屏蔽，本地技能脚本无法直接调用API获取实时数据
+- [id:b6824753] cad技能渲染策略升级：$cad-explorer重命名为$render，从条件渲染改为分级视觉审查+快照诊断
+- [id:1fd3b493] 已创建cad-beginner-guide技能，引导CAD小白通过四步流程（识别类型→引导尺寸→确认汇总→输出英文prompt）绘制零件
+- [id:c62604a9] cad-beginner-guide技能安装路径：C:\Users\26011970\.incaier-agent\workspaces\my-workspace\skills\cad-beginner-guide\SKILL.md
+- [id:ad0e7ee4] text-to-CAD工作流已成功扩展到电子元器件领域，可生成2x5排母连接器（PCB插座）等带引脚级精度的电子零件
+- [id:4befbff5] 10P双排2.54mm间距排母连接器座体12.7×5.0×8.5mm，引脚长度3.3mm，直插DIP安装方式
+- [id:ebb6826a] agency-agents项目以Markdown角色定义文件形式存在，类似Incaier Agent生态中的Skills（可复用指令集）而非MCP Agent
+- [id:f735dd7e] agency-agents仓库地址：https://github.com/msitarzewski/agency-agents，MIT开源协议，包含144个垂直领域AI专家角色定义文件
+- [id:1d98b94d] agency-agents-zh（jnMetaCode维护）已完整安装到工作区skills目录，共175个中文Agent角色
+- [id:7c24cbbc] incaier-pdf技能支持专业排版（等线+Arial字体、蓝色主题表头、斑马纹表格、Markdown内联解析），用于生成高质量PDF
+- [id:f4ef0c7c] Incaier Agent当前版本暂不支持隐藏AI数字人形象，需向AI价值中心团队反馈需求
+- [id:95b194a8] 当前环境缺少uv、GEMINI_API_KEY及Nano Banana Pro脚本，无法直接运行文生图功能
+- [id:75c9a658] Pollinations.ai提供完全免费、无需注册的文生图API（GET请求），可作为MCP数据源快速接入
+- [id:fae83459] mattpocock/skills是2026年5月最热门的Claude Skills实战项目，周增Star 1,520+
+- [id:9b990e78] 用户对GitHub上Agent和Skills生态热门项目有强烈兴趣，已获取两批项目清单
+- [id:9d71f5e2] sit-reminder功能包括SVG环形倒计时、桌面通知、5档时长选择、工作/休息模式切换和今日统计
+- [id:b57bfafe] agency-agents-zh已安装到工作区skills目录，实际包含190个角色（较先前记录的175个有更新）
+- [id:416ecce2] agency-agents-zh中product-trend-researcher角色因system prompt较长与底层模型存在兼容问题，两次调用均返回空响应
+- [id:a3fde6f7] 步进电机驱动方案：PN7719Q/LM1909M采用双四拍驱动(333PPS)，DRV8847S/PN7716采用八拍单双拍驱动(666PPS)
+- [id:b23404e3] 数据流完全在海尔内部流通：文件上传→本地会话存储→OCR(海尔能力市场 market.haierfhtech.com)→公司采购的Qwen3.6-Plus API，不会流出到公有云或第三方
+- [id:a24d701b] T模式最可能是Turbo模式(强力制冷/速冻模式)，压缩机以最高频率3000-4500rpm持续运行，用于快速降温，耗电量是正常2-3倍
+- [id:8faf551d] toolforota 主要功能：HEX 转 BIN、多文件合并、加密处理、串口烧录、通信测试，波特率 9600
+- [id:1db48380] toolforota 界面包含 HEX 升级/通信监视/校验和计算三个选项卡，支持添加文件、设置目标 BIN 文件、生成 DB 文件
+- [id:236bf550] 家电科技投稿论文模板全局格式：A4 纸张，上下边距 2.40cm，左右边距 2.50cm，1.5 倍行距
+- [id:4dfc3adf] 论文中文标题区格式：中文标题宋体 18pt(小二号)加粗居中 1.5 倍行距；作者姓名/单位楷体_GB2312
+- [id:eeab2b4d] 摘要关键词格式：摘要正文和关键词用黑体加粗两端对齐，首行缩进 2 字符(约 0.74cm)，长度 300~800 字
+- [id:f1e91f79] 家电科技论文模板中，正文段落实际行距为 1.5 倍多倍行距，但绝大多数正文段落未设置段前/段后间距（均为 0），导致段落间视觉分界不明显，上一段末行与下一段首行之间无额外间距，看起来像"吞行"。
+- [id:878aa3d8] 论文模板"吞行"问题根因：1) 文档开启了"对齐到文档网格"(docGrid type=lines, linePitch=312)，强制每行文字对齐到网格线；2) 所有正文段落段前/段后间距均为0pt，段落间无任何额外间距；3) 1.5倍行距的段落最后一行末尾与下一段首行之间仅靠行距本身分隔，网格对齐导致视觉上"吞行"。解决：关闭"对齐到文档网格"或在正文段落中设置段后间距3-6pt。
+- [id:ec142b55] 家电科技论文模板段落'吞行'问题根因：启用了文档网格 (linePitch=312twips) + 所有正文段落段前/段后间距均为 0pt；解决方式：取消勾选'如果定义了文档网格，则对齐到网格'或在正文段落中设置段后间距 3-6pt
+- [id:88b24160] 海尔研发现状：累计研发投入超千亿，拥有200余项原创科技，全球"10+N"开放式创新体系、20+研发中心、链接超25万专家。连续12年蝉联全球智慧家庭发明专利榜首。2025年SKU效率提升20.7%，设计成本降6.26%，研发流程提效12%。
+- [id:da820319] 海尔研发部门英文简称 R&D (Research & Development)，中文"研发"。
+- [id:686ca22e] 海尔集团研发部门的英文简称 R&D (Research & Development)，中文"研发"。
+- [id:1e2e04f4] 用户询问是否有降低AIGC检测率的skill。当前工作区和能力市场中均无此类技能。外部存在大量第三方工具：言笔AI、笔灵AI、火龙果写作、SpeedAI、千笔AI、靠岸妙写、AIGCleaner等。
+- [id:9d0acc5c] GitHub 上开源 AIGC 降重项目：1) yukinotech/humanize-chinese - 免费本地中文 AI 文本去痕迹工具，基于 N-gram 困惑度分析，支持 Claude Code 斜杠命令，最新更新 2026年4月；2) HShiDianLu/LunarBypasser - Qt GUI 绕过 AI 检测工具；3) Daisy-Zhang/Awesome-AIGC-Detection - AIGC 检测论文合集；4) 学术论文 MASH (arXiv:2601.08564) - 基于风格迁移绕过黑盒 AIGC 检测。开源项目较少，主流工具多为商业闭源。
+- [id:547e1516] GitHub 上 AIGC 降重开源项目很少：1) yukinotech/humanize-chinese - 免费本地中文 AI 文本去痕迹工具，基于 N-gram 困惑度分析，支持 Claude Code 斜杠命令 detect/humanize/academic，最新更新 2026年4月；2) HShiDianLu/LunarBypasser - Qt GUI 绕过 AI 检测；3) Daisy-Zhang/Awesome-AIGC-Detection - AIGC 检测论文合集；4) MASH 学术论文 (arXiv:2601.08564) - 基于风格迁移绕过黑盒 AIGC 检测。其余主流降 AIGC 工具均为商业闭源（言笔AI、笔灵AI、SpeedAI、火龙果写作等）。
+- [id:b56f9564] humanize-chinese 已接入工作区为 local 类型 source，路径 workspace/sources/humanize-chinese/，脚本位于 repo/scripts/
+- [id:872852b5] humanize-chinese 基于 N-gram 困惑度分析实现中文 AI 文本去痕迹检测与改写，支持 detect/humanize/academic/style/compare 五个功能模块
+- [id:13625f12] GitHub 开源降 AIGC 项目极少，主流工具多为商业闭源，yukinotech/humanize-chinese 是较少见的本地免费中文方案，2026年4月仍在更新
+- [id:4418be0c] 报告检测结果：高度疑似 AIGC 20.3%、中度疑似 4.6%、低度疑似 46.4%，无纯 AI 生成部分
+- [id:7dd800fe] 双点电磁阀=双稳态电磁阀，脉冲驱动+磁保持，切换后无需持续通电，节能且减少线圈发热
+- [id:151852f7] 用户粘贴了一张 GitHub 开源许可证选择界面的截图，OCR 识别出文本包含：许可证、全部、MIT、Apache-2.0、GPL-3.0。这是 GitHub 仓库中创建 LICENSE 文件时弹出的 "Choose a license template" 界面。
+- [id:740b5e64] SolidWorks 自动化技能已安装到工作区: C:\Users\26011970\.incaier-agent\workspaces\my-workspace\skills\solidworks-automation\。该技能通过 Python COM 接口 (pywin32) 控制已安装的 SolidWorks 实例，支持零件建模、装配体、工程图、钣金、焊件、仿真、文件导出等。需要 SolidWorks 2020-2025 已安装并运行，Python 3.8+，pywin32 已预装。核心脚本: sw_connect.py (连接), sw_part.py (零件), sw_assembly.py (装配体), sw_drawing.py (工程图), sw_export.py (导出)。
+- [id:0114435a] SolidWorks自动化技能从GitHub仓库ysysjyyyqk/klm_solidworks-automation-skill安装到工作区，路径为C:\Users\26011970\.incaier-agent\workspaces\my-workspace\skills\solidworks-automation\
+- [id:5e9b4dcc] solidworks-automation技能依赖Python COM接口(pywin32)控制已安装的SolidWorks实例，不支持直接运行，需先安装SolidWorks 2020-2025软件
+- [id:0feafdad] CoolProp 核心函数：CP.PropsSI(输出, 输入 1, 值 1, 输入 2, 值 2, 流体名)，支持 T/P/Q/H/S/D 等参数键
+- [id:6d72b216] 制冷循环四态点计算示例：Te=-25°C,Tc=40°C,SH=10K时，Pe=0.584bar,Pc=5.31bar,PR=9.09,COP=2.805,排气温度=47.0°C
+- [id:27468c4d] 温控器关键参数：开机点、停机点、温差（回差），用于控制压缩机启停防止频繁开关
+- [id:2a85c66b] 故障诊断实验对比4种模型：逻辑回归（C=10, 迭代5000, 基准模型）、决策树（max_depth=8/12）、随机森林（n_estimators=200, max_depth=12/16）、XGBoost（n_estimators=100, max_depth=3, learning_rate=0.08）
+- [id:e9e295ef] 采用5折分层交叉验证保证结果稳定性，评价指标包含准确率、平衡准确率、正常识别率、故障识别率和AUC五个维度
+- [id:4ee21894] 故障诊断论文二分类实验中，随机森林准确率最高(90%)但正常识别率仅15%，说明类别严重不均衡时准确率会误导
+- [id:246658e0] TBD = To Be Determined / To Be Decided（待定），类似缩写：TBC 待确认，TBA 待公布
+- [id:19d32d35] ToolForOta是海尔内部OTA工具(version 20190807V1.2)，支持HEX转BIN、多文件合并、加密处理、串口烧录、通信测试，波特率9600。用于已售出设备的远程固件空中升级，无需拆机即可更新程序。
+- [id:4f41fbcb] SEGGER J-Link License.exe 包含多个授权选项：RDI(第三方 IDE 接口)、FlashBP(无限 Flash 断点)、FlashDownload(高速烧录)、J-Flash(量产烧录工具)。高级功能需购买授权后才可用。
+
+### Decision
+
+- [id:0160258a] 情绪冰仓产品设计原则：核心功能优先级为可视化分区、低噪夜间体验、DIY 小料/冰杯适配、家居化外观；智能化功能（语音交互、屏幕显示、复杂温控）定位为后续增强功能，不应喧宾夺主
+- [id:c56b4a07] 心有灵犀 AI 情绪感知冰箱方案专为制冷平台定制，强调四大优势：技术底座、1 亿台设备数据、食联网生态、厨房场景闭环
+- [id:ca17395c] 论文定位为纯综述论文，无需实验、无需代码、无需GPU，仅需文献调研和对比表格分析
+- [id:e04ac624] AI提效作品需遵守智家AI信息安全要求，禁止使用外部大模型
+- [id:a14f7831] 100mm离心风机全速风量约40-65 m³/h偏大2-3倍，需PWM降速至40-60%后使用，或改用80-92mm规格
+- [id:a493763a] 无法确定对话数据是否会上报至远程服务器或被公司访问
+- [id:89f6a90c] 企业批量采购大模型API通常享有阶梯定价和显著折扣，用量越大单价越低
+- [id:66ad1a63] 推荐通过云服务器部署桥接服务来实现飞书@自动回复，内网穿透方案在公司网络下可行性低
+- [id:e93f999c] IC噪音规格已确认为<35dB(A)，100mm离心风机PWM调速后可满足此要求
+- [id:a4acc8aa] 故障识别论文投稿目标从《家电科技》期刊改为2026年中国家用电器技术大会
+- [id:7d90dfb6] cad-beginner-guide技能中所有对话用中文，最终输出给text-to-cad的prompt用英文，每个参数提供参考值
+- [id:67d6453c] 修改app.asar隐藏数字人可行但每次更新会丢失，且可能影响应用签名和稳定性
+- [id:1254f179] 论文授权书填写规范：论文题名附后写在授权书末尾空白处，全体作者需手写签名后扫描上传系统
+- [id:6137a3ef] 类别不平衡场景下不能仅看准确率，需综合考察故障识别率、正常识别率、平衡准确率和AUC四个指标
+- [id:b35306de] 用户参与海尔智家'创无限·AI 无界'创新大赛（黑马赛道），从四个方向中选择'家电 + 情绪价值'赛道
+
+### Procedure
+
+- [id:89ba5871] 小盈数据迁移工具已创建于工作区根目录：迁移小盈数据.bat（自动备份 sessions/、config.json、automations.json、memory/、skills/、skills-dev/、sources/ 到桌面「小盈数据备份_时间戳」文件夹）和《小盈数据迁移指南.md》；此外全局技能位于 C:\Users\26011970\.incaier-agent\skills\，技能注册表为 my-workspace\skill-registry.json。
+- [id:a49f54ce] 小盈历史对话数据存储于 C:\Users\26011970\.incaier-agent\workspaces\my-workspace\sessions\ 目录（每会话一个文件夹，内含 session.jsonl）；迁移到新机时需一并复制 config.json、automations.json、memory/、skills/、sources/，保持路径一致或更新配置内的路径引用。
+- [id:3277e472] 查询 FlexLM 许可状态命令：在 D:/Siemens/NX/UGFLEXLM 下执行 ./lmutil.exe lmstat -a -c "27000@10.200.17.83"，可查看 license server 与 vendor daemon 的 UP/Feature usage 信息。
+- [id:c2644028] NX 1867 安装完成后需在桌面及公共桌面创建 NX.lnk 快捷方式，并完成海尔定制配置（界面、菜单、角色、字体库）；首次启动需连接公司许可服务器，耗时较长属正常现象。
+- [id:36d9014d] Siemens NX 1867 静默安装脚本分 4 步执行并写入日志 D:\nx_install.log：步骤 1 安装 NX MSI（耗时 20-40 分钟，rc=0 表示成功），步骤 2 安装 NDP461（.NET 4.6.1，可选组件，安装包内文件为 NDP461-KB3102436-x86-x64-AllOS-ENU.exe）。
+- [id:5fc5d653] Teamcenter 12 静默安装：安装包解压在 D:\Install\tc，执行命令 powershell Start-Process cmd.exe -ArgumentList '/c cd /d D:\Install\tc & call tcinstall.bat > D:\Install\tc_run.txt 2>&1' -Verb RunAs。安装耗时约 5-6 分钟（xcopy 拷贝约 11755 个文件），安装完成后 D:\Siemens\Teamcenter 约 2.1GB，Java 装在 C:\Java（jdk8/jre8），日志末尾显示 'Teamcenter insall finished / Install finished'。
+- [id:b27f3b90] 海尔TCUA/NX/Creo安装：内网软件服务器 http://10.200.162.75:8080/InstallFiles/ 目录含 PTCCreo(4-M140/5-050)、NX(Full/NX1867静默包6839MB)、TCUA(Full/000_tcinstall_202606.zip 1511MB)、StartAppV4(58.6MB)、Java/8(jre-8u11)。Creo4安装包 Creo4_20260814.zip 4118MB，装到 D:\PTC\Creo4_M140。集成安装包 ipem_11.5.2_WIN64.zip 和 JT translator 在飞书文档附件里。前置要求：管理员权限(portal申请IT软件使用备案)、联系加密团队(赵军A0000093/梁飞风A0015773)停加密、删环境变量PTC_D_LICENSE_FILE、D:\Creo4Workdir缓存目录、Teamcenter 12先装。
+- [id:4b9c1f0a] ihaier.feishu.cn (万链Online) 文档在 lark-cli 用户身份未授权时无法通过 CLI 访问，但可用 browser_tool 直接 navigate 绕过登录读取正文内容（会跳转到 iamd.haier.net SSO 登录页后再渲染文档）。
+- [id:0a19a625] AI 图像生成服务 (market-ai23ng.generate_image) 为异步模式：调用后返回 taskId，需轮询 query_task_result（建议每 3 秒一次）直到 completed/failed，耗时 30-600 秒；生成多张图应在同一次调用中设置 n 参数，不可重复调用 n=1。编辑图片用 edit_image 工具，原图须通过 image_url 传入互联网可下载地址。
+- [id:26cfc1e2] Playwright 反爬技能(market-playwright-2kk5)在无 Node.js 环境的可行用法：用自带 Python (C:/Users/26011970/AppData/Local/Programs/IncaierAgents/resources/vendor/python/python.exe) + 已装的 playwright 库 + ms-playwright 已有 chromium（无需 npm install）。实测结论：海信NZ官网真实路径为 hisense.co.nz/appliances/fridge/（无反爬，直接抓）；三星NZ用 JSON-LD 提取产品列表；LG NZ 无头模式被 Akamai 拦(Access Denied)，必须 HEADLESS=false 有头模式才能过，成功后可 page.evaluate fetch retrieveProductList API。脚本保存在 sessions/260812-safe-birch-885719/data/stealth_retry.py 和 stealth_network.py。
+- [id:fa70397e] 海外产品企划AI方案可集成市场数据爬取、多语种生成、需求预测与自动化报告生成能力
+- [id:36773547] 工作区skills目录下已注册"ai-overseas-product-planning"技能（SKILL.md路径：C:\Users\26011970\.incaier-agent\workspaces\my-workspace\skills\ai-overseas-product-planning\SKILL.md）。该技能提供AI驱动的海外产品企划全流程自动化工作流，覆盖情报搜集→竞品分析→需求预测→企划文档→汇报PPT五大模块。使用时通过bocha搜索API采集数据，transform_data+python-docx/pptx生成文档。每次执行产出：.docx企划报告、.pptx汇报PPT、.html数据看板、.json竞品/预测数据。
+- [id:c1b58344] 海尔P0-P6产品开发流程中，企划主导P0全部阶段，研发主导P2-P3全部阶段，P1/P4/P5研发为主但企划部分参与，P6由企划负责
+- [id:059ca4e5] 产品开发P1-P3阶段由系统团队(大脑)、结构团队(身体)和电控团队(神经系统)三条战线并行推进，通过专用号系统和评审节点协同
+- [id:5f026fe9] P0阶段核心交付物包括企划书、产品对阵表、POD立项报告、差异分析报告和外观效果图及创意评审会
+- [id:b0807f5c] AI日报发送流程：使用 bocha_ai_search 搜索三个方向（AI产品发布、大模型技术突破、AI应用行业动态），各获取5条结果，人工筛选去重后整理为10条新闻简报，通过飞书Webhook发送绿色卡片消息。卡片包含标题、简介、来源/日期，底部有"Incaier Agent自动生成"脚注。Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9
+- [id:28baa449] 澳洲冰箱品牌监控总结：海信/美的一般可直接抓取官网产品；三星官网大量采用 JS 动态渲染，Firecrawl JSON 模式无法提取完整数据；LG 官网有严格反爬保护 (document_antibot)，建议改用澳洲零售商页面（The Good Guys/Harvey Norman/Bing Lee）获取数据
+- [id:cd83863a] 澳洲冰箱品牌新品监控 - LG 官网因 document_antibot 反爬保护导致所有直接抓取方式（firecrawl_scrape）失败，改为使用 bocha_web_search 间接搜索 'new LG Australia fridge 2026' 获取 GF-/GS- 系列型号；搜索到的结果如 sourceforge.net 链接为无效匹配，需人工验证；建议持续监控 The Good Guys/Harvey Norman 等澳洲零售商页面获取 LG 新品信息。
+- [id:1c37b7da] 澳洲冰箱品牌新品监控通过 automations.json 的 SchedulerTick 配置，共 4 个定时任务：工作日 10:23/13:23/16:23 巡检（仅变化推送），每日 15:07 汇总（始终推送）。监控 5 品牌：海信/美的 (含 Bing Lee)/三星/LG(搜索)/西屋。基线文件 data/au-fridge-baseline-2026-06-15.md，飞书 Webhook: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4，有变化用 Python requests 发送 interactive 卡片并更新基线。
+- [id:87383a47] 情绪冰仓路演 PPT (bento-all-slides.html) 共 18 页完整结构：01 封面、02 目录、03 痛点、04 概念、05 用户画像 (22-35 岁独居青年)、06 竞品对比 (传统冷柜 vs 迷你冰箱)、07 技术亮点 (±0.5°C温控/RGB 氛围灯/35dB静音/A+ 能效)、08 双模式场景 (独处静谧/派对社交)、09 价格区间、10 渠道策略、11 风险预案、12 营销策略 (种草→口碑→出圈)、13 产品路线 (MVP→生态→品牌)、14 财务预测、15 融资计划、16 团队介绍、17 里程碑、18 愿景升华
+- [id:4ad45083] 三星澳洲官网是极难抓取的站点之一：列表页 JS 动态渲染导致 firecrawl_scrape 返回空结果；API 端点需认证或反爬拦截；firecrawl_agent 调用失败；firecrawl_map 返回空链接。建议改用 web_search 间接搜索型号或澳洲比价网站获取价格信息。
+- [id:ac05fe15] web_search（博查 AI 搜索引擎）是间接搜索监控替代方案，当目标网站存在反爬保护时用于查找产品型号和零售商信息。调用方式：call_source(source="market-2mzn", tool_name="web_search", arguments={"query": "关键词", "count": 10})。适合场景：获取原始网页链接来源、需要实时联网搜索。与 ai_search 区别在于输出是原始网页列表而非 AI 总结答案。
+- [id:d559bd9a] 澳洲冰箱监控基线管理注意事项：当目标基线文件 (如 data/au-fridge-baseline-2026-06-15.md) 不在当前会话目录下时，可能误判为不存在而重建基线，导致数据退化丢失。建议显式指定绝对路径引用基线文件，或在多品牌对比前先验证历史基线是否可访问。
+- [id:17fcac00] 美的澳洲官网 Top Mount 子页面为 JS 动态渲染结构，Firecrawl_scrape 首次抓取可能返回'No Relevant Product'误报。需设置二次重试机制确认状态，并从官方站 +Bing Lee 双渠道判断产品库存状态以避免误判。
+- [id:5057a7d8] 首次执行澳洲冰箱新品监控时，基线文件 data/au-fridge-baseline-2026-06-15.md 不存在会自动创建初始基线，后续基于此文件进行增量变化检测。每日汇总无论有无变化都发送飞书卡片通知。
+- [id:e147fce5] 海尔智能体市场(agentmarket.haier.net)注册表单分三步：基础信息→属性信息→审核信息。基础信息必填：智能体名称、业务负责人、隶属组织(V01460312冰箱产业生态小微)、使用范围(内部员工/外部用户)、产品负责人、功能描述(含面向用户/核心能力/解决问题/实现效果四项)、开放范围(所有人可见或指定部门)
+- [id:a4e23d2e] 新西兰冰箱品牌每周三上午巡检流程：BoCha web_search 搜索海信(Hisense NZ fridge new model 2026)、三星(Samsung NZ refrigerator 2026)、LG(LG NZ fridge 2026)，对比基线 data/au-fridge-baseline-2026-06-15.md 的 NZ 部分，仅发现变化时推送飞书通知，无变化不发送。
+- [id:183408a8] 海外竞品雷达HiAgent工作流标准架构为三节点串行：大模型01(区域识别)→代码01(搜索执行)→大模型02(主分析)，由SchedulerTick定时触发
+- [id:6c535f53] 项目支持通过配置文件设置关键词过滤、利润阈值和导出格式，具备防封号请求频率控制
+- [id:784c92af] 自定义skills需在skills目录下创建以SKILL.md文件命名的目录，并包含YAML frontmatter配置
+- [id:a3f5707c] 出差任务费用明细包含签证费、保险费、机票、住宿和津贴等项目，支持按天计算小计
+- [id:9e4df217] 已创建定时任务 OpenOutlookDaily9AM，每天早上9:00自动启动Outlook
+- [id:a1df4ba1] 830T冰箱制冰开发要求12月18日前完成，包括梳理变更点、D-FMEA、三次图纸评审和最终方案评审
+- [id:8e9adc48] 实现飞书群内@自动回复需要创建飞书应用、配置im.message.receive_v1事件订阅并部署后台服务
+- [id:6fa61285] agency-agents-zh支持多角色协作工作流：编排者将任务拆解为子任务，匹配角色，编排串行/并行/条件分支执行，最终整合交付
+- [id:cd1a54ee] 2026年6月1日，为用户填写了海尔集团论文备案表。论文标题：《基于运行过程特征和机器学习的冰箱制冷系统多故障识别》。备案表已保存至 data/2026年海尔集团论文备案表_已填.xlsx。论文中使用了占位符（作者1 作者2、作者公司全称），作者、单位、拟投期刊、申请平台等字段无法填写，留空待用户补充。
+- [id:c6537abc] changedetection.io 是推荐的开源网页监控工具（GitHub: dgtlmoon/changedetection.io），支持 Docker 部署，可配置 CSS Selector 精准定位监控区域，通过飞书 Webhook 发送变化通知，内置 Chrome 浏览器支持 JS 动态页面抓取
+- [id:bbc053fd] 澳洲冰箱新品监控每日 15:07 汇总即使无变化也发送空结果通知：飞书卡片标题显示'✅ 澳洲冰箱新品监控日报 - {日期}'，内容说明今日 5 品牌均无新品上架或状态变更，卡片底部标注下次汇总时间。确保用户明确知晓监控正常运行。
+- [id:4552ba34] 海外冰箱竞品雷达各区域零售商备用渠道策略：澳洲(Good Guys/Harvey Norman/Bing Lee/JB Hi-Fi/Appliances Online)、美洲(Best Buy/Home Depot/Lowe's/Costco)、东南亚(Lazada/Shopee/Central Online)、南亚(Flipkart/Amazon India/Reliance Digital)、中东非(Amazon UAE/Noon/Jumia)
+- [id:573a5e13] 项目通过GitHub API创建仓库并推送代码，支持私有仓库配置
+- [id:f88ffb41] 每日新闻播报定时任务已配置在 automations.json 中，每天早上9:30（Asia/Shanghai）自动执行。包含三个板块：国内外要闻（10条）、各平台热搜Top5（微博/百度/抖音/知乎）、跨平台热点。使用飞书卡片格式发送，Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9。发送方式：使用 transform_data 工具运行 Python 脚本，通过 requests 库 POST 飞书消息卡片 API，msg_type 为 interactive，卡片模板为蓝色。注意：必须 import sys 且使用 sys.argv[-1] 获取输出文件路径。
+- [id:cafe4e2a] 每日新闻播报工作流程：1) 使用 market-2mzn 的 bocha_ai_search 搜索6个方向（新闻联播/海内外新闻/微博/抖音/百度/知乎热搜）；2) 整理为三个板块：国内外要闻（5-10条）、各平台热搜Top5、跨平台热点；3) 通过飞书Webhook URL (https://open.feishu.cn/open-apis/bot/v2/hook/608c82a6-6355-4bcb-b0b0-5c097602d2c9) 以 interactive 卡片格式发送，蓝色模板，msg_type为interactive。注意Windows终端Python print有GBK编码问题，但飞书API不受影响。
+- [id:e1735542] Web scraping反爬绕过方案三路径：1) 商业API服务-Bright Data(7200万住宅IP、MCP集成、2026年5月确认可用)、ScrapingBee、ScrapingAnt；2) 开源自建-Playwright+Stealth指纹伪装，Browser Use/Skyvern等AI浏览器自动化；3) 已有工具-已存在于market-fetch3hil的Firecrawl Interact但依赖未启用的fire-engine引擎。适合反爬严格的海外电商网站抓取场景。
+- [id:525fc877] 企划工作核心包括监控立项、开发、上市准时率，以及新品销量达标率和海外业务表现
+- [id:7bc2f590] 安全建议：高度机密文件不建议上传或需脱敏；内部资料可上传但注意OCR服务会上传图片到能力市场；公开资料可安全上传
+- [id:a354eee9] 飞书机器人消息发送使用Python实现，替代原curl命令解决编码问题
+- [id:cf339511] 模型计费由Incaier Agent平台或公司统一管理，具体策略需咨询IT部门
+- [id:7fe5afed] 企业内部使用AI模型时，具体配额和用量限制需咨询IT部门或查看平台设置
+- [id:d73cf925] 每日新闻播报需严格验证新闻时效性：使用 bocha_ai_search 搜索时必须指定准确日期（如'2026 年 6 月 22 日'），发布前确认新闻为当日内容，避免过时信息。
+- [id:11c598bf] 用户通过扫码完成万链Online飞书OAuth授权后，lark-cli可以读取飞书wiki节点内容（docx/wikispaces等API均可调用），不再需要用户手动复制内容。授权方式：执行 "$HOME/.lark-cli/lark-cli" auth login 生成二维码。
+- [id:fe35ca25] CAD学习指南包含7个阶段，涵盖从界面认知到实战项目的完整路径
+- [id:290f42b5] 学习建议包括每天1-2小时动手练习、记忆快捷键和进行临摹练习
+- [id:713afec9] 建议通过IT部门确认Agent的数据流向和隐私策略
+- [id:8f217152] GitHub凭据已加密保存，源已成功连接，可浏览仓库、Issues、PR和提交记录
+- [id:aa0ff30b] iHaier 应用程序未在系统中找到，需确认安装状态或提供完整路径
+- [id:dcf53615] 报告中所有车型图片已从占位符替换为真实车辆图片，覆盖奔驰15款、宝马17款、奥迪13款
+- [id:091f2b88] 当前工作区无法直接访问飞书文档，需用户手动复制内容或下载为本地文件
+- [id:96fea023] 《家电科技》投稿方式：在线投稿(www.jdkjjournal.com)，正文字数3000-8000字，双盲外审，处理时间不超过3个月
+- [id:86bd020a] 技术大会投稿要求：查重率≤15%，需英文题目/作者/摘要/关键词、第一作者简介(100字)、通讯作者联系方式
+- [id:8423dc78] text-to-CAD工作流已实现端到端自动化：自然语言描述 → build123d Python脚本 → STEP + DXF生成 → PowerShell自动打开ZWCAD
+- [id:23afddac] text-to-CAD工作流已扩展支持多视图DXF出图，自动生成俯视图、主视图和剖面图三种视图
+- [id:da465021] cad技能的SKILL.md已从GitHub(earthtojake/text-to-cad)同步更新，新增parameters.md和render-review.md参考文件
+- [id:4c9a8e16] Agency-agents文件可转换为Incaier Agent Skills格式（加YAML frontmatter后放入skills/目录），无需改造为MCP server
+- [id:85ff7a1f] sit-reminder已通过bun run dev启动，运行在http://localhost:3000
+- [id:94c9569e] agency-agents-zh中product-manager、sales-coach、marketing-content-creator三个角色成功通过call_llm调用，以SKILL.md作为system prompt输出专业分析
+- [id:ec3cc2b0] 论文备案表已填并保存至 data/2026 年海尔集团论文备案表_已填.xlsx，待补充企业类型和通讯地址字段
+- [id:8622e931] humanize-chinese 已接入为工作区 source（local 类型）。路径：workspace/sources/humanize-chinese/，仓库克隆到 repo/ 子目录。脚本位于 repo/scripts/：detect_cn.py（检测）、humanize_cn.py（改写）、academic_cn.py（学术降重）、style_cn.py（风格转换）、compare_cn.py（对比）。纯 Python 标准库，零依赖。注意：Windows 控制台编码为 GBK，打印输出可能报 UnicodeEncodeError，但文件写入正常。
+- [id:1d82440b] 已用 humanize-chinese 改写 13 个高度疑似段落，全部降至 LOW(0-5) 水平
+- [id:097398f7] 论文授权书中作者电话应填通讯作者手机号，若无指定通讯作者则填第一作者张伟的电话
+- [id:a9b95323] 用户希望通过结构化的方式理解复杂文档，特别是Excel表格类文档。当用户说"看不懂"时，需要提供清晰的文档结构概览和重点内容说明。
+- [id:a942fd53] 已确认用户请求删除 solidworks-automation skill 及其所有相关文件
+- [id:54a199cf] 路演 PPT 关键创意点建议：一、将开柜门设计为 1.5 秒情绪仪式动作（滑动开灯/旋转选模式/轻敲两下启动）；二、把冷柜打造成情绪社交货币（透明视窗+灯光拍照背景、瓶身投影文案、物理打卡铭牌）；三、一句话概念：「冷的不是饮料，是情绪。热的不是温度，是生活。」
+- [id:f5a67309] Jlink-OB 是集成在开发板上的简化版 J-Link 调试器，无需额外购买独立调试盒。激活流程：1) 插入开发板后打开 JLink Commander 查看硬件序列号；2) 打开 JLink License.exe，将注册码粘贴到输入框后点击 OK 完成激活。
+- [id:5c0f4486] Excel 原生法制作拼豆图纸参数：行高 15/列宽 2.2（适配 29×29 标准板），或行高 20/列宽 2.2（适配 2.6mm 小颗粒），行列加坐标编号方便定位，打印设为 A4 横向 + 缩放为 1 页宽高
+
+### User Preference
+
+- [id:d9821ca7] 用户要求报告中的数据必须多重确认，不能编纂或凭推测
+- [id:046a4ad5] 情绪冰仓Chillo项目MD文档需明确区分原始文档原文和AI推导扩展内容，必须包含来源索引表标注每部分对应的原始文档来源，推导内容标注'推导内容'字样
+- [id:dce907cf] 用户要求新建技能时必须与现有能力完全隔离，不共享数据文件和配置，不影响现有工作
+- [id:dc356199] 用户明确要求在处理新版本/新配置时不要提取或引用无关的旧记忆
+- [id:18621814] 用户要求提供代码时必须给出完整整体代码，不可分片或多轮提供
+- [id:a02363c8] 用户偏好代码直接在对话中展示，不接受保存为文件后再告知的方式
+- [id:bb1938ed] HiAgent工作流必须真正可运行（"起码得跑的通"），拒绝仅外观专业但无实际功能的方案
+- [id:88046ef2] 每日新闻播报三个板块（国内外要闻、各平台热搜Top5、跨平台热点）之间需去重，同一话题不应在多个板块重复出现。已在要闻详述的话题在跨平台热点中简化为'见要闻第X条'
+
+### User Correction
+
+- [id:1f59b94e] 情绪冰仓Chillo项目原始文档定义4类首发用户画像：城市独居与二人居青年、高频居家娱乐青年、健身与功能补水人群、轻社交与微醺人群，此前总结的3类遗漏了'健身与功能补水人群'
+
+### Custom
+
+- [id:1e8ed420] 澳洲冰箱5品牌新品监控方案 (2026-06-15):
+1. 海信: firecrawl_scrape markdown格式抓取 https://hisense.com.au/appliances/fridges-freezers/all?sortCode=newestArrival-desc&currentPage=0，提取第一个产品型号，基线HRFD537SW
+2. 美的: firecrawl_scrape markdown格式抓取 https://www.midea.com/au/refrigerator，提取第一个产品型号，基线MERS791MYEDXAP
+3. 三星: firecrawl_scrape json格式+jsonOptions.prompt提取 https://www.samsung.com/au/refrigerators/ 中带New标签产品，基线SRT3300B + SRF5300SD
+4. LG: bocha_web_search 搜索 "LG Australia new fridge 2026"，官网反爬无法直接抓取，基线GF-V700BSLC + GF-L570MBNL
+5. 西屋: firecrawl_extract json格式提取 https://www.westinghouse.com.au/fridges-and-freezers 全部产品列表，基线WHE6874SA(DISCONTINUED)/WHE5204SC/WBE4504SC/WBE5300BC/WQE6000SB
+飞书Webhook: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4
+基线文件: data/au-fridge-baseline-2026-06-15.md
+- [id:eee2acf7] 澳洲冰箱品牌新品监控的权威基线文件：
+- 路径: C:\Users\26011970\.incaier-agent\workspaces\my-workspace\sessions\260616-lively-olive\data\au-fridge-baseline-2026-06-15.md
+- 这是唯一的基线文件，所有巡检会话必须从该绝对路径读取基线，不得在当前会话目录中查找
+- 巡检完成后，如有变化则更新该文件；如无变化仅更新"最后更新"日期
+- 此路径是固定的，不会随新会话创建而改变
+- [id:4372702a] 澳洲冰箱巡检基线读取强制规则：
+- 基线文件固定路径: C:\Users\26011970\.incaier-agent\workspaces\my-workspace\sessions\260616-lively-olive\data\au-fridge-baseline-2026-06-15.md（原始基线）和 au-fridge-baseline-2026-06-24.md（较新基线）
+- 每次巡检必须先读取该绝对路径的基线文件，不允许在当前会话目录中查找
+- 巡检完成后，如有变化则更新该文件，无变化则更新"最后更新"日期
+- 此路径不受新会话创建影响，是唯一权威来源
+- [id:7f358eb6] 澳洲冰箱新品监控飞书 Webhook 正确地址: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4。不要发到 iHaier 群 Webhook (608c82a6-6355-4bcb-b0b0-5c097602d2c9)。
+- [id:95cd0578] 澳洲冰箱新品监控飞书 Webhook URL: https://open.feishu.cn/open-apis/bot/v2/hook/39ace5b8-ddf6-4ccf-8912-2c2681c618a4。用于通过飞书自定义机器人向指定群组发送澳洲冰箱品牌新品监控日报。
+- [id:21eb4b1c] 海尔R&D的完整定义

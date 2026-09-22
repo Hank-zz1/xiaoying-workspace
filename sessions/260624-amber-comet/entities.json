@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 827681,
+  "entities": {
+    "夜间": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794184452
+    },
+    "智能化": {
+      "count": 3,
+      "category": "person",
+      "lastSeen": 1787794184452
+    },
+    "恒温": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184452
+    },
+    "普通": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184452
+    },
+    "平时": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794184452
+    },
+    "广角": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184452
+    },
+    "关联": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184452
+    },
+    "冰淇淋": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184452
+    },
+    "和暖": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184452
+    },
+    "杜绝": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184452
+    },
+    "密封": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184452
+    },
+    "尼龙": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184452
+    },
+    "嵌入式": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184452
+    },
+    "卡扣": {
+      "count": 1,
+      "category": "other",
+      "lastSeen": 1787794184452
+    },
+    "开关门": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184452
+    }
+  }
+}

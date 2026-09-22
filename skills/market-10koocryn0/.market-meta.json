@@ -1,0 +1,39 @@
+{
+  "capabilityId": "cap_75931ef106cd46d2ad436f4d7b7f98c6",
+  "isMarketProvisioned": true,
+  "version": "1.0.2",
+  "commitId": "17b45e6d2e918fcc86cd90730bb7b60d8b4b32db",
+  "latestCommitId": "17b45e6d2e918fcc86cd90730bb7b60d8b4b32db",
+  "contentHash": "sha256:139b5522b5b0def081597ecc7b7384131538ec6ac6c644e5e61d7a7195042323",
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/personal/24024241/screenshot-ocr-v2-ypiu",
+  "updatedAt": 1787728024831,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_af4e9c997f3b43a89438976cc3475249",
+  "name": "截图OCR工具",
+  "capabilityName": "截图OCR工具",
+  "logoUrl": "",
+  "capabilityDescription": "截图OCR工具，首次使用需部署（AI自动完成，约3-8分钟）。\n-\n部署后桌面生成\"截图OCR\"快捷方式，双击打开即可使用。打开后桌面右下角托盘图标显示绿色小球表示OCR已开启，按Ctrl+Shift+Z用iHaier截图或Ctrl+Shift+X用Windows截图，自动OCR识别文字并复制到剪贴板，Ctrl+V粘贴。右键托盘可开关OCR、设开机自启、查看使用说明。",
+  "publisherName": "王军",
+  "official": false,
+  "orgName": null,
+  "needApproval": false,
+  "categoryIds": [
+    "305"
+  ],
+  "categories": [
+    {
+      "id": "305",
+      "name": "图像处理",
+      "code": "image_processing",
+      "rootId": "3",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/aa16cc17e29641dab7c1c7c61af9f1a2.png"
+    }
+  ],
+  "usageExamples": [
+    "怎么使用截图OCR技能"
+  ],
+  "provisionSignature": "d04f9315bae1b3380a41456a478da887",
+  "localInstallFingerprint": "sha256:139b5522b5b0def081597ecc7b7384131538ec6ac6c644e5e61d7a7195042323"
+}

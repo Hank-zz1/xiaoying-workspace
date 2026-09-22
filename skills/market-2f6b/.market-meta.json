@@ -1,0 +1,58 @@
+{
+  "capabilityId": "cap_fa19b5af48d243fa97b266ed444e5581",
+  "isMarketProvisioned": true,
+  "version": "1.0.3",
+  "commitId": "1d171ecb2148121eef93587326fc78d95746f11e",
+  "latestCommitId": "1d171ecb2148121eef93587326fc78d95746f11e",
+  "contentHash": null,
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/offical/wanlian_ai_org/marketresearch",
+  "updatedAt": 1787722144575,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_d5ec0c70c83948eeba347f881901fe82",
+  "name": "市场研究",
+  "capabilityName": "市场研究",
+  "logoUrl": "",
+  "capabilityDescription": "## 能力简介\r\n\r\n对市场进行规模估算、细分、竞品图谱绘制、定价检查与需求验证，将模糊的想法转化为可供决策的证据。在以下情况下使用：(1) 你需要 TAM、SAM、SOM、市场空白或品类规模估算；(2) 在行动前，必须比较竞品、定价、定位或客户细分；(3) 用户询问某个利基市场、新品发布、扩张或进入市场策略是否真正值得追求时。\r\n\r\n## 适用场景\r\n\r\n适用于学术研究中的文献检索和信息发现，支持研究背景调研、文献综述撰写、研究前沿跟踪和竞品分析等场景。帮助研究者快速获取所需的文献、数据和背景知识，提高研究效率。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [
+    "209",
+    "301",
+    "110"
+  ],
+  "categories": [
+    {
+      "id": "209",
+      "name": "销售与市场方向",
+      "code": "sales_market_direction",
+      "rootId": "2",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/2f414f9277d04ef4b77bc64b2476d597.png"
+    },
+    {
+      "id": "301",
+      "name": "数据分析",
+      "code": "data_analysis",
+      "rootId": "3",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/5e29d0677721479faa860f0a340569e7.png"
+    },
+    {
+      "id": "110",
+      "name": "销售与市场拓展",
+      "code": "sales_market_expansion",
+      "rootId": "1",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/fb6e2bef055a422fbf7af18ea8a110ec.png"
+    }
+  ],
+  "tags": [],
+  "usageExamples": [
+    "帮我简单查一下国内\"宠物智能喂食器\"这个市场大概有多大，顺便列几个现在卖得最好的竞品，我下午开会要用。",
+    "咱们团队打算搞一个面向独居年轻人的\"半成品健康餐\"包月服务。你先帮我估算下一线城市大概有多少人会买这个，然后扒一下现在市面上做得最好的前三家竞品是怎么玩的，最后给点定价建议和咱们现在进场可能踩的坑。",
+    "老板想让咱们的\"中小企业财务SaaS\"明年出海东南亚，我得准备一份详细的出海评估汇报。你帮我理个思路并产出内容：第一，帮我把印尼、越南、泰国这三个国家的潜在市场规模分层算清楚；第二，做个这三个国家的竞品地图，看看哪里还有咱们能钻的空子；第三，结合当地老板的付费习惯给个定价参考；最后，如果我下个月要去当地做客户访谈验证需求，帮我列5个最核心的必问问题，帮公司把试错风险降到最低。"
+  ],
+  "provisionSignature": "52a853e8b2df2fa6c86a21f71a770b61",
+  "localInstallFingerprint": "sha256:87bba2d67acd83887dd7a7c88f0306cf8f835a83f8e1e36805ff5c14983cf2a5"
+}

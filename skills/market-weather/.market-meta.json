@@ -1,0 +1,34 @@
+{
+  "capabilityId": "cap_96f8c2b3c534487ca73d6c81b5e43073",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": null,
+  "latestCommitId": null,
+  "contentHash": null,
+  "projectUrl": null,
+  "updatedAt": 1787722144573,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_b5f5623c13e54bb59e4be5b70f89dc8e",
+  "name": "天气查询",
+  "capabilityName": "天气查询",
+  "logoUrl": null,
+  "capabilityDescription": "## 能力简介\r\n\r\n天气查询工具，无需API密钥即可获取当前位置的实时天气和未来天气预报信息，支持温度、湿度、风力等多维度天气数据查询。\r\n\r\n## 适用场景\r\n\r\n适用于多种科研和业务场景中的数据处理和分析需求，支持批量操作和自动化处理，可无缝集成到现有工作流程中。帮助用户提升工作效率和数据处理质量，满足不同类型项目的专业化需求。",
+  "publisherName": "AI价值中心",
+  "official": true,
+  "orgName": "AI001",
+  "needApproval": false,
+  "categoryIds": [],
+  "categories": [],
+  "tags": [
+    "官方"
+  ],
+  "usageExamples": [
+    "帮我查一下明天去上海出差的天气，看看需不需要带伞。",
+    "我下周要去杭州和苏州出差，顺便想安排半天的户外团建。帮我查一下这两个城市下周四到周日的天气预报，对比一下哪边天气更好，并给我一些穿衣和准备装备的建议。",
+    "公司下个月要在北京、广州和成都举办大型户外展会。请帮我详细查一下这三个城市展会期间的天气情况，包括温度、湿度、风力和下雨概率。另外，顺便查一下这三个城市主要机场当天的天气，评估下航班延误风险。最后根据这些数据，给各个城市的执行团队写一份天气风险评估和应急预案建议。"
+  ],
+  "provisionSignature": "67dfdbfbd6ac3ee26adca51c78331fa2",
+  "localInstallFingerprint": "sha256:e414b81a490b4b7a4f0ddf7adec13c5ea7429e949c175cf1a488dfabc608a8a2"
+}

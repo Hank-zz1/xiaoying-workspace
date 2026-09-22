@@ -1,0 +1,104 @@
+缺失配置处理流程
+执行前必须先检查 config.json 是否存在且包含有效值：
+
+文件不存在 → 告知用户技能未配置，引导用户按以下步骤完成配置：
+获取 Webhook 地址：群设置 → 群机器人 → 添加机器人 → 自定义机器人 → 复制地址
+获取 User ID：iHaier 个人资料页查看，或使用 ALL
+在技能目录下创建 config.json，填入上述三个配置项
+文件存在但值为占位符（如包含"请替换"等字样）→ 告知用户配置未完成，请提供实际值
+配置有效但发送失败 → 检查网络连通性和 Webhook 地址是否正确
+配置完成前不要尝试发送消息。
+
+部署说明
+1. 获取 Webhook 地址
+iHaier / 飞书：
+
+进入目标群组
+点击右上角 设置 -> 群机器人 -> 添加机器人
+选择 自定义机器人，填写名称和描述
+复制生成的 Webhook 地址（格式：https://open.feishu.cn/open-apis/bot/v2/hook/xxx）
+2. 获取用户 User ID
+iHaier：
+
+在 iHaier 中打开个人资料页面，查看 User ID
+或联系系统管理员获取
+飞书：
+
+飞书开放平台控制台 -> 用户管理 -> 查看用户的 user_id 或 open_id
+3. 创建配置文件
+将本技能目录复制到你的工作区 skills 目录，然后修改 config.json。
+
+4. 验证技能
+plain text
+
+skill_validate({ skillSlug: "market-23kmihaier" })
+5. 发送测试消息
+plain text
+
+发iHaier：这是一条测试消息
+执行流程
+读取技能目录下的 config.json（路径：skills/market-23kmihaier/config.json），检查配置有效性
+如配置无效或缺失，按"缺失配置处理流程"引导用户配置
+识别用户想要发送的内容
+如果内容不清晰，询问用户具体要发送什么
+构造消息：<at user_id="USER_ID">AT_DISPLAY_NAME</at>\n消息内容
+按环境选择发送方式（见下方），必须检查响应结果判断成功/失败
+向用户确认发送结果（成功或失败）
+发送方式
+Windows 环境（推荐）
+使用 Python 脚本，将脚本写入临时文件执行（不要用 python -c，__file__ 在内联模式下不存在）。
+
+{SKILL_DIR_PATH} 替换说明： 执行前将脚本中的 {SKILL_DIR_PATH} 替换为技能目录的绝对路径，可通过 skills 列表中提供的 path 获取。
+
+python
+
+import json, urllib.request, os
+
+# 使用技能目录的绝对路径（替换 {SKILL_DIR_PATH} 为实际路径，如 D:\xiaoying\skills\market-23kmihaier）
+skill_dir = r'{SKILL_DIR_PATH}'
+config_path = os.path.join(skill_dir, 'config.json')
+
+with open(config_path, 'r', encoding='utf-8') as f:
+    config = json.load(f)
+
+at_text = f'<at user_id="{config["user_id"]}">{config["at_display_name"]}</at>'
+msg = {
+    'msg_type': 'text',
+    'content': {
+        'text': f'{at_text}\n{MESSAGE_CONTENT}'
+    }
+}
+
+req = urllib.request.Request(
+    config['webhook_url'],
+    data=json.dumps(msg, ensure_ascii=False).encode('utf-8'),
+    headers={'Content-Type': 'application/json; charset=utf-8'},
+    method='POST'
+)
+
+try:
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        result = json.loads(resp.read().decode('utf-8'))
+        if result.get('code') == 0 or result.get('StatusCode') == 0:
+            print('OK: Message sent successfully')
+        else:
+            print(f'ERROR: {result}')
+except Exception as e:
+    print(f'ERROR: {e}')
+Linux/Mac 环境
+bash
+
+curl -s -X POST "WEBHOOK_URL" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d '{"msg_type":"text","content":{"text":"<at user_id=\"USER_ID\">AT_DISPLAY_NAME</at>\n消息内容"}}'
+注意事项
+Webhook URL 为敏感信息，不要向用户暴露完整的 URL
+消息内容中的特殊字符需要正确转义
+必须检查 API 响应（code 或 StatusCode 为 0 表示成功），不能仅凭 HTTP 状态码判断
+Windows 下不要用 curl 发送中文内容（编码问题），优先使用 Python
+不要用 python -c "..." 内联执行包含 __file__ 的脚本 — 应写入临时 .py 文件后执行
+环境要求
+Python 3.6+（Windows 环境推荐使用，使用标准库 urllib 无需额外依赖）
+curl（Linux/Mac 环境可选）
+网络连接：需能访问飞书开放平台 API（open.feishu.cn）
+飞书/ iHaier 群组：需提前在目标群组中创建自定义机器人并获取 Webhook 地址

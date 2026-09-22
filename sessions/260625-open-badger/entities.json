@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 1644450,
+  "entities": {
+    "海尔": {
+      "count": 2,
+      "category": "company",
+      "lastSeen": 1787794184547
+    },
+    "智能化": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184547
+    },
+    "方方正正": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184547
+    },
+    "哈士奇": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794184547
+    },
+    "深度": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794184547
+    }
+  }
+}

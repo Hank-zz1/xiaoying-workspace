@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 773163,
+  "entities": {
+    "开关门": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794183645
+    },
+    "海尔": {
+      "count": 2,
+      "category": "company",
+      "lastSeen": 1787794183645
+    },
+    "美的": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794183645
+    },
+    "延时": {
+      "count": 2,
+      "category": "location",
+      "lastSeen": 1787794183645
+    }
+  }
+}

@@ -1,0 +1,160 @@
+[
+  {
+    "role": "user",
+    "content": "{\"input\": {\"query\": \"澳洲海信26年产品给我列出\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Start",
+          "arguments": "{\"query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"query\": \"澳洲海信26年产品给我列出\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "意图识别01",
+          "arguments": "{\"query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"classificationId\": 1, \"classificationName\": \"竞品查询\", \"reason\": \"用户查询特定品牌（海信）在特定区域（澳洲）的特定时间（26年）的产品列表，属于查询新品或产品动态的范畴。\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "大模型01",
+          "arguments": "{\"input\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"region\": \"澳洲\", \"brands\": [{\"name\": \"海信\", \"mode\": \"scrape\", \"url\": \"https://hisense.com.au/appliances/fridges-freezers/all\", \"search_cn\": \"2026 海信 澳洲 冰箱 新品 上市\"}], \"raw_output\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "LLM_Tool",
+          "arguments": "{\"input\": \"{'input': '澳洲海信26年产品给我列出'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": {\"region\": \"澳洲\", \"brands\": [{\"name\": \"海信\", \"mode\": \"scrape\", \"url\": \"https://hisense.com.au/appliances/fridges-freezers/all\", \"search_cn\": \"2026 海信 澳洲 冰箱 新品 上市\"}], \"raw_output\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "代码01",
+          "arguments": "{\"input\": \"{\\n  \\\"region\\\": \\\"澳洲\\\",\\n  \\\"brands\\\": [\\n    {\\n      \\\"name\\\": \\\"海信\\\",\\n      \\\"mode\\\": \\\"scrape\\\",\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\n    }\\n  ]\\n}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"searchResult\": \"[{\\\"brand\\\": \\\"海信\\\", \\\"mode\\\": \\\"scrape\\\", \\\"models_found\\\": 13, \\\"models\\\": [\\\"HRBM503E\\\", \\\"HRBM419B\\\", \\\"HRCD483G\\\", \\\"HRFD535BW\\\", \\\"HRBM419BW\\\", \\\"HRCF702\\\", \\\"HRVF155\\\", \\\"HRBM419SW\\\", \\\"HRCD483TBW\\\", \\\"HRBM500TBW\\\", \\\"HRCD615TBWV\\\", \\\"HRCD640TBW\\\", \\\"HRFD537SW\\\"], \\\"summary\\\": \\\"Skip to Header Skip to Main Content Skip to Footer\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\"}]\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "Python_Tool",
+          "arguments": "{\"input\": \"{'input': '{\\\\n  \\\"region\\\": \\\"澳洲\\\",\\\\n  \\\"brands\\\": [\\\\n    {\\\\n      \\\"name\\\": \\\"海信\\\",\\\\n      \\\"mode\\\": \\\"scrape\\\",\\\\n      \\\"url\\\": \\\"https://hisense.com.au/appliances/fridges-freezers/all\\\",\\\\n      \\\"search_cn\\\": \\\"2026 海信 澳洲 冰箱 新品 上市\\\"\\\\n    }\\\\n  ]\\\\n}'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": \"{\\\"searchResult\\\": \\\"[{\\\\\\\"brand\\\\\\\": \\\\\\\"海信\\\\\\\", \\\\\\\"mode\\\\\\\": \\\\\\\"scrape\\\\\\\", \\\\\\\"models_found\\\\\\\": 13, \\\\\\\"models\\\\\\\": [\\\\\\\"HRBM503E\\\\\\\", \\\\\\\"HRBM419B\\\\\\\", \\\\\\\"HRCD483G\\\\\\\", \\\\\\\"HRFD535BW\\\\\\\", \\\\\\\"HRBM419BW\\\\\\\", \\\\\\\"HRCF702\\\\\\\", \\\\\\\"HRVF155\\\\\\\", \\\\\\\"HRBM419SW\\\\\\\", \\\\\\\"HRCD483TBW\\\\\\\", \\\\\\\"HRBM500TBW\\\\\\\", \\\\\\\"HRCD615TBWV\\\\\\\", \\\\\\\"HRCD640TBW\\\\\\\", \\\\\\\"HRFD537SW\\\\\\\"], \\\\\\\"summary\\\\\\\": \\\\\\\"Skip to Header Skip to Main Content Skip to Footer\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\\\\\"}]\\\"}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "大模型02",
+          "arguments": "{\"input\": \"[{\\\"brand\\\": \\\"海信\\\", \\\"mode\\\": \\\"scrape\\\", \\\"models_found\\\": 13, \\\"models\\\": [\\\"HRBM503E\\\", \\\"HRBM419B\\\", \\\"HRCD483G\\\", \\\"HRFD535BW\\\", \\\"HRBM419BW\\\", \\\"HRCF702\\\", \\\"HRVF155\\\", \\\"HRBM419SW\\\", \\\"HRCD483TBW\\\", \\\"HRBM500TBW\\\", \\\"HRCD615TBWV\\\", \\\"HRCD640TBW\\\", \\\"HRFD537SW\\\"], \\\"summary\\\": \\\"Skip to Header Skip to Main Content Skip to Footer\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\n\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\"}]\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"status\": \"success\", \"data\": {\"brand\": \"海信\", \"region\": \"Australia\", \"models\": [{\"model\": \"HRBM503E\", \"name\": \"503L Bottom Mount\", \"capacity\": \"503L\", \"price\": null}, {\"model\": \"HRBM419B\", \"name\": \"419L Bottom Mount\", \"capacity\": \"419L\", \"price\": null}, {\"model\": \"HRCD483G\", \"name\": \"483L French Door\", \"capacity\": \"483L\", \"price\": null}, {\"model\": \"HRFD535BW\", \"name\": \"535L French Door\", \"capacity\": \"535L\", \"price\": null}, {\"model\": \"HRBM419BW\", \"name\": \"419L Bottom Mount\", \"capacity\": \"419L\", \"price\": null}, {\"model\": \"HRCF702\", \"name\": \"702L French Door\", \"capacity\": \"702L\", \"price\": null}, {\"model\": \"HRVF155\", \"name\": \"155L Upright Freezer\", \"capacity\": \"155L\", \"price\": null}, {\"model\": \"HRBM419SW\", \"name\": \"419L Bottom Mount\", \"capacity\": \"419L\", \"price\": null}, {\"model\": \"HRCD483TBW\", \"name\": \"483L French Door\", \"capacity\": \"483L\", \"price\": null}, {\"model\": \"HRBM500TBW\", \"name\": \"500L Bottom Mount\", \"capacity\": \"500L\", \"price\": null}, {\"model\": \"HRCD615TBWV\", \"name\": \"615L PureView French Door\", \"capacity\": \"615L\", \"price\": null}, {\"model\": \"HRCD640TBW\", \"name\": \"640L French Door\", \"capacity\": \"640L\", \"price\": null}, {\"model\": \"HRFD537SW\", \"name\": \"537L French Door\", \"capacity\": \"537L\", \"price\": null}], \"summary\": \"Found 13 Hisense refrigerator models in the Australian market.\"}, \"raw_output\": \"{\\n  \\\"status\\\": \\\"success\\\",\\n  \\\"data\\\": {\\n    \\\"brand\\\": \\\"海信\\\",\\n    \\\"region\\\": \\\"Australia\\\",\\n    \\\"models\\\": [\\n      {\\n        \\\"model\\\": \\\"HRBM503E\\\",\\n        \\\"name\\\": \\\"503L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"503L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419B\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD483G\\\",\\n        \\\"name\\\": \\\"483L French Door\\\",\\n        \\\"capacity\\\": \\\"483L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRFD535BW\\\",\\n        \\\"name\\\": \\\"535L French Door\\\",\\n        \\\"capacity\\\": \\\"535L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419BW\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCF702\\\",\\n        \\\"name\\\": \\\"702L French Door\\\",\\n        \\\"capacity\\\": \\\"702L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRVF155\\\",\\n        \\\"name\\\": \\\"155L Upright Freezer\\\",\\n        \\\"capacity\\\": \\\"155L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419SW\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD483TBW\\\",\\n        \\\"name\\\": \\\"483L French Door\\\",\\n        \\\"capacity\\\": \\\"483L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM500TBW\\\",\\n        \\\"name\\\": \\\"500L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"500L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD615TBWV\\\",\\n        \\\"name\\\": \\\"615L PureView French Door\\\",\\n        \\\"capacity\\\": \\\"615L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD640TBW\\\",\\n        \\\"name\\\": \\\"640L French Door\\\",\\n        \\\"capacity\\\": \\\"640L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRFD537SW\\\",\\n        \\\"name\\\": \\\"537L French Door\\\",\\n        \\\"capacity\\\": \\\"537L\\\",\\n        \\\"price\\\": null\\n      }\\n    ],\\n    \\\"summary\\\": \\\"Found 13 Hisense refrigerator models in the Australian market.\\\"\\n  }\\n}\"}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "LLM_Tool",
+          "arguments": "{\"input\": \"{'input': '[{\\\"brand\\\": \\\"海信\\\", \\\"mode\\\": \\\"scrape\\\", \\\"models_found\\\": 13, \\\"models\\\": [\\\"HRBM503E\\\", \\\"HRBM419B\\\", \\\"HRCD483G\\\", \\\"HRFD535BW\\\", \\\"HRBM419BW\\\", \\\"HRCF702\\\", \\\"HRVF155\\\", \\\"HRBM419SW\\\", \\\"HRCD483TBW\\\", \\\"HRBM500TBW\\\", \\\"HRCD615TBWV\\\", \\\"HRCD640TBW\\\", \\\"HRFD537SW\\\"], \\\"summary\\\": \\\"Skip to Header Skip to Main Content Skip to Footer\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/Filter-Page-Main-Banner-Desktop-v3.webp?context=bWFzdGVyfGltYWdlc3wxMzIzNzR8aW1hZ2Uvd2VicHxhREJoTDJoall5ODRPRGs0TXpRMk5ERTRNakEyTDBacGJIUmxjaUJRWVdkbFgwMWhhVzRnUW1GdWJtVnlYMFJsYzJ0MGIzQmZkak11ZDJWaWNBfDgwOGU0Mzg2OTExMWU0ZTE4Yzk2YTI1YmZjNTIwZWQ0MjVjOWQ1MDcyMGEyYTUyNjhhYzdjZGRkNzIyZmMyMzQ)](https://hisense.com.au/world-cup-2026)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/HRVF155-Canstar-banner-Catergory-1920x450.jpg?context=bWFzdGVyfGltYWdlc3wxMjE0NjR8aW1hZ2UvanBlZ3xhRGxtTDJobE9TODRPVE14T1RRNU1qRTFOemMwTDBoU1ZrWXhOVFZmUTJGdWMzUmhjbDlpWVc1dVpYSmZRMkYwWlhKbmIzSjVMVEU1TWpCNE5EVXdMbXB3Wnd8ZmZlZGFjYWMxNjJmMmIyMzViMmZhYjVlOWVkYzdlMDA0YzhmZjUwMWFjY2NmZTAyNDE1N2IwYTNmNzdiYzVmZg)](https://hisense.com.au/blog/canstar-blue-2026-most-satisfied-customers-award-for-freezers)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27769-WG-PureView-Carousel-BannerPLP-Desktop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w1ODYzMHxpbWFnZS93ZWJwfGFEVTNMMmcyTVM4NE9EWTNPREE1TmpnNU5qTXdMekkzTnpZNVgxZEhYMUIxY21WV2FXVjNYME5oY205MWMyVnNYMEpoYm01bGNsQk1VQ0JFWlhOcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfGE2Yzk3MDQ4Y2Q4ODc3OWIxODA0ZDdkNjViMDhiOTlhOTQyODg1OTI1OWRmOTdlZjc4YzljNzAzZjNkYWFkOTk)](https://hisense.com.au/product/HRCD615TBWV/615l-pureview-french-door-fridge)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/27806-CanstarBlueAward-Fridges-CarouselsCarousel-Banner-Dektop-1920x450.webp?context=bWFzdGVyfGltYWdlc3w0NjkxMHxpbWFnZS93ZWJwfGFEYzVMMmc0TWk4NE9EY3dPVFk1T1RZMk5qSXlMekkzT0RBMklFTmhibk4wWVhKQ2JIVmxRWGRoY21SZlJuSnBaR2RsYzE5RFlYSnZkWE5sYkhORFlYSnZkWE5sYkNCQ1lXNXVaWElnUkdWcmRHOXdJREU1TWpCNE5EVXdMbmRsWW5BfDg3NzI3ZTg4YWZmZWM2NmY5MGQzZDk1ZDc4YTZlZGU1ZDJjNDU1MGVmN2Y4ZDhlNzBkYjlmMjA1ZDBkZjc1MmM)](https://hisense.com.au/blog/canstar-blue-2025-most-satisfied-customers-award-for-bottom-mount-fridges)\\\\\\\\n\\\\\\\\n[![](https://dtc-aus-api.hisense.com/medias/EcoVision-Category-Banner-Fridge-1920x450px.webp?context=bWFzdGVyfGltYWdlc3w3MzA4NHxp\\\"}]'}\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": {\"status\": \"success\", \"data\": {\"brand\": \"海信\", \"region\": \"Australia\", \"models\": [{\"model\": \"HRBM503E\", \"name\": \"503L Bottom Mount\", \"capacity\": \"503L\", \"price\": null}, {\"model\": \"HRBM419B\", \"name\": \"419L Bottom Mount\", \"capacity\": \"419L\", \"price\": null}, {\"model\": \"HRCD483G\", \"name\": \"483L French Door\", \"capacity\": \"483L\", \"price\": null}, {\"model\": \"HRFD535BW\", \"name\": \"535L French Door\", \"capacity\": \"535L\", \"price\": null}, {\"model\": \"HRBM419BW\", \"name\": \"419L Bottom Mount\", \"capacity\": \"419L\", \"price\": null}, {\"model\": \"HRCF702\", \"name\": \"702L French Door\", \"capacity\": \"702L\", \"price\": null}, {\"model\": \"HRVF155\", \"name\": \"155L Upright Freezer\", \"capacity\": \"155L\", \"price\": null}, {\"model\": \"HRBM419SW\", \"name\": \"419L Bottom Mount\", \"capacity\": \"419L\", \"price\": null}, {\"model\": \"HRCD483TBW\", \"name\": \"483L French Door\", \"capacity\": \"483L\", \"price\": null}, {\"model\": \"HRBM500TBW\", \"name\": \"500L Bottom Mount\", \"capacity\": \"500L\", \"price\": null}, {\"model\": \"HRCD615TBWV\", \"name\": \"615L PureView French Door\", \"capacity\": \"615L\", \"price\": null}, {\"model\": \"HRCD640TBW\", \"name\": \"640L French Door\", \"capacity\": \"640L\", \"price\": null}, {\"model\": \"HRFD537SW\", \"name\": \"537L French Door\", \"capacity\": \"537L\", \"price\": null}], \"summary\": \"Found 13 Hisense refrigerator models in the Australian market.\"}, \"raw_output\": \"{\\n  \\\"status\\\": \\\"success\\\",\\n  \\\"data\\\": {\\n    \\\"brand\\\": \\\"海信\\\",\\n    \\\"region\\\": \\\"Australia\\\",\\n    \\\"models\\\": [\\n      {\\n        \\\"model\\\": \\\"HRBM503E\\\",\\n        \\\"name\\\": \\\"503L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"503L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419B\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD483G\\\",\\n        \\\"name\\\": \\\"483L French Door\\\",\\n        \\\"capacity\\\": \\\"483L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRFD535BW\\\",\\n        \\\"name\\\": \\\"535L French Door\\\",\\n        \\\"capacity\\\": \\\"535L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419BW\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCF702\\\",\\n        \\\"name\\\": \\\"702L French Door\\\",\\n        \\\"capacity\\\": \\\"702L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRVF155\\\",\\n        \\\"name\\\": \\\"155L Upright Freezer\\\",\\n        \\\"capacity\\\": \\\"155L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419SW\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD483TBW\\\",\\n        \\\"name\\\": \\\"483L French Door\\\",\\n        \\\"capacity\\\": \\\"483L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM500TBW\\\",\\n        \\\"name\\\": \\\"500L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"500L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD615TBWV\\\",\\n        \\\"name\\\": \\\"615L PureView French Door\\\",\\n        \\\"capacity\\\": \\\"615L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD640TBW\\\",\\n        \\\"name\\\": \\\"640L French Door\\\",\\n        \\\"capacity\\\": \\\"640L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRFD537SW\\\",\\n        \\\"name\\\": \\\"537L French Door\\\",\\n        \\\"capacity\\\": \\\"537L\\\",\\n        \\\"price\\\": null\\n      }\\n    ],\\n    \\\"summary\\\": \\\"Found 13 Hisense refrigerator models in the Australian market.\\\"\\n  }\\n}\"}}",
+    "tool_calls": null
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "function": {
+          "name": "End",
+          "arguments": "{\"query\": \"澳洲海信26年产品给我列出\"}"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "content": "{\"output\": \"{\\n  \\\"status\\\": \\\"success\\\",\\n  \\\"data\\\": {\\n    \\\"brand\\\": \\\"海信\\\",\\n    \\\"region\\\": \\\"Australia\\\",\\n    \\\"models\\\": [\\n      {\\n        \\\"model\\\": \\\"HRBM503E\\\",\\n        \\\"name\\\": \\\"503L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"503L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419B\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD483G\\\",\\n        \\\"name\\\": \\\"483L French Door\\\",\\n        \\\"capacity\\\": \\\"483L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRFD535BW\\\",\\n        \\\"name\\\": \\\"535L French Door\\\",\\n        \\\"capacity\\\": \\\"535L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419BW\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCF702\\\",\\n        \\\"name\\\": \\\"702L French Door\\\",\\n        \\\"capacity\\\": \\\"702L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRVF155\\\",\\n        \\\"name\\\": \\\"155L Upright Freezer\\\",\\n        \\\"capacity\\\": \\\"155L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM419SW\\\",\\n        \\\"name\\\": \\\"419L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"419L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD483TBW\\\",\\n        \\\"name\\\": \\\"483L French Door\\\",\\n        \\\"capacity\\\": \\\"483L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRBM500TBW\\\",\\n        \\\"name\\\": \\\"500L Bottom Mount\\\",\\n        \\\"capacity\\\": \\\"500L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD615TBWV\\\",\\n        \\\"name\\\": \\\"615L PureView French Door\\\",\\n        \\\"capacity\\\": \\\"615L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRCD640TBW\\\",\\n        \\\"name\\\": \\\"640L French Door\\\",\\n        \\\"capacity\\\": \\\"640L\\\",\\n        \\\"price\\\": null\\n      },\\n      {\\n        \\\"model\\\": \\\"HRFD537SW\\\",\\n        \\\"name\\\": \\\"537L French Door\\\",\\n        \\\"capacity\\\": \\\"537L\\\",\\n        \\\"price\\\": null\\n      }\\n    ],\\n    \\\"summary\\\": \\\"Found 13 Hisense refrigerator models in the Australian market.\\\"\\n  }\\n}\"}",
+    "tool_calls": null
+  }
+]

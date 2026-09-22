@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BBA 全车系对标表（真实销量版）</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #0a0a0a; color: #e0e0e0; line-height: 1.6; }
+.container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+h1 { text-align: center; font-size: 2em; padding: 30px 0 10px; background: linear-gradient(90deg, #c0a060, #f0d080, #c0a060); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.subtitle { text-align:center; color:#888; margin-bottom:5px; }
+.data-source { text-align:center; color:#666; font-size:0.85em; margin-bottom:20px; }
+
+h2 { font-size: 1.4em; margin: 35px 0 15px; padding-left: 15px; border-left: 4px solid #c0a060; color: #f0d080; }
+
+.bench-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+.bench-table th, .bench-table td { padding: 10px 12px; text-align: center; border: 1px solid #333; font-size: 0.88em; vertical-align: top; }
+.bench-table th { background: #222; color: #f0d080; font-weight: bold; position: sticky; top: 0; z-index: 10; }
+.bench-table td { background: #1a1a1a; }
+.bench-table tr:hover td { background: #252525; }
+
+.col-level { background: #1e1e1e !important; color: #c0a060; font-weight: bold; min-width: 85px; white-space: nowrap; }
+
+.car-cell { min-width: 200px; }
+.car-img-wrap { width: 180px; height: 110px; margin: 6px auto; border-radius: 8px; overflow: hidden; background: #222; display: flex; align-items: center; justify-content: center; position: relative; }
+.car-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.car-img-placeholder { color: #444; font-size: 0.75em; text-align: center; padding: 10px; }
+.car-name { font-weight: bold; font-size: 1.05em; margin: 4px 0; color: #e0e0e0; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.78em; font-weight: bold; margin: 2px; }
+.badge-new { background: #2d6a4f; color: #fff; }
+.badge-hot { background: #b91c1c; color: #fff; }
+.badge-ev { background: #1d4ed8; color: #fff; }
+.badge-none { background: #444; color: #999; }
+.badge-import { background: #d97706; color: #fff; }
+.badge-performance { background: #f59e0b; color: #000; }
+.badge-sales { background: #065f46; color: #fff; }
+.badge-sales-top { background: #047857; color: #fff; }
+
+.price { color: #aaa; font-size: 0.82em; }
+.sales { color: #4ade80; font-weight: bold; font-size: 0.85em; }
+.note { color: #666; font-size: 0.78em; font-style: italic; }
+
+.col-benz { background: #151520 !important; }
+.col-bmw { background: #151520 !important; }
+.col-audi { background: #151520 !important; }
+
+.section-divider { height: 1px; background: linear-gradient(90deg, transparent, #c0a060, transparent); margin: 35px 0; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 15px 0; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 0.85em; color: #888; }
+
+.summary-box { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 20px; margin: 20px 0; }
+.summary-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.summary-item { text-align: center; padding: 18px; background: #222; border-radius: 8px; }
+.summary-item .brand-name { font-size: 1.2em; font-weight: bold; margin-bottom: 10px; }
+.summary-item ul { list-style: none; text-align: left; }
+.summary-item li { padding: 3px 0; color: #bbb; font-size: 0.88em; }
+.summary-item li::before { content: "▸ "; color: #c0a060; }
+
+footer { text-align: center; padding: 30px; color: #666; font-size: 0.85em; border-top: 1px solid #333; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>BBA 全车系对标表</h1>
+<p class="subtitle">奔驰 ↔ 宝马 ↔ 奥迪 — 完整对标 + 真实销量数据</p>
+<p class="data-source">数据来源：乘联会、汽车之家、懂车帝 | 2025年全年销量 + 2026年3月单月销量</p>
+
+<div class="legend">
+<div class="legend-item"><span class="badge badge-hot">在售</span> 在售</div>
+<div class="legend-item"><span class="badge badge-new">新品</span> 2025-2026新车</div>
+<div class="legend-item"><span class="badge badge-ev">纯电</span> 纯电动</div>
+<div class="legend-item"><span class="badge badge-import">进口</span> 进口车型</div>
+<div class="legend-item"><span class="badge badge-performance">性能</span> AMG / M / RS</div>
+<div class="legend-item"><span class="badge badge-none">暂无</span> 无对应车型</div>
+<div class="legend-item"><span class="badge badge-sales">销量</span> 2026年3月零售</div>
+</div>
+
+<!-- 销量总览 -->
+<div class="summary-box">
+<h3 style="color:#f0d080; margin-bottom:15px;">📊 品牌销量总览</h3>
+<div class="summary-grid">
+<div class="summary-item">
+<div class="brand-name" style="color:#c0c0c0;">🔵 奔驰</div>
+<div style="margin-bottom:6px;"><span class="badge badge-sales">2025全年 57.5万辆（-19%）</span></div>
+<div style="margin-bottom:6px;"><span class="badge badge-sales-top">2026年3月 42,856辆（第一）</span></div>
+<ul>
+<li>E级：3月 14,545辆 — 中大型销冠</li>
+<li>GLC：3月 14,550辆 — 中型SUV销冠</li>
+<li>C级：3月 ~8,000辆</li>
+</ul>
+</div>
+<div class="summary-item">
+<div class="brand-name" style="color:#4a90d9;">🔷 宝马</div>
+<div style="margin-bottom:6px;"><span class="badge badge-sales">2025全年 62.55万辆（-12.5%）</span></div>
+<div style="margin-bottom:6px;"><span class="badge badge-sales">2026年3月 39,820辆（第三）</span></div>
+<ul>
+<li>3系：3月 11,953辆 — 连续19个月冠军</li>
+<li>5系：3月 7,740辆（承压）</li>
+<li>X3：3月 7,424辆</li>
+</ul>
+</div>
+<div class="summary-item">
+<div class="brand-name" style="color:#ff4444;">🔴 奥迪</div>
+<div style="margin-bottom:6px;"><span class="badge badge-sales">2025全年 61.75万辆（-5%）</span></div>
+<div style="margin-bottom:6px;"><span class="badge badge-sales">2026年3月 40,520辆（第二）</span></div>
+<ul>
+<li>A6L：3月 10,591辆</li>
+<li>Q5L：3月 9,698辆</li>
+<li>A4L：3月 2,366辆（末代）</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- ========== 一、轿车 ========== -->
+<h2>一、轿车系列</h2>
+<table class="bench-table">
+<tr><th style="width:80px;">级别</th><th>奔驰</th><th>宝马</th><th>奥迪</th><th style="width:180px;">备注</th></tr>
+
+<tr>
+<td class="col-level">A级<br>紧凑型</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2408/09/c2/438045665_1723182705958_400x300.jpg" alt="🚗 奔驰A级"></div>
+<div class="car-name">A级 A180L / A200L</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 21.48万起</div>
+<div class="note">轴距2789mm(L)</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2504/02/c9/497117255_1743589146604_400x300.jpg" alt="🚗 宝马1系"></div>
+<div class="car-name">1系 120i / M运动</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 20.5万起</div>
+<div class="note">轴距2670mm，后驱</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/01/c14/460499604_1730469207566_400x300.jpg" alt="🚗 奥迪A3"></div>
+<div class="car-name">A3 35 TFSI / 40 TFSI</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价28.98万，终端约23万</div>
+<div class="note">轴距2630mm/2789mm(L)</div>
+</td>
+<td>入门三强，奥迪性价比最高</td>
+</tr>
+
+<tr>
+<td class="col-level">B级<br>中型</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2512/05/c0/576788734_1764901405820_400x300.jpg" alt="🚗 奔驰C级"></div>
+<div class="car-name">C级 C200L / C260L</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales">3月 ~8,000辆</span>
+<div class="price">终端约23万起</div>
+<div class="note">轴距2954mm，高通8295</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2409/29/c21/452310497_1727602620752_400x300.jpg" alt="🚗 宝马3系"></div>
+<div class="car-name">3系 325i / 325Li / 330Li 🔥</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales-top">3月 11,953辆</span>
+<div class="price">官方25.8-33.8万，终端21.8万起</div>
+<div class="note">轴距2961mm(L)，连续19个月冠军</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2412/05/c1/468087269_1733377937274_400x300.jpg" alt="🚗 奥迪A4L/A5L"></div>
+<div class="car-name">A4L 40 TFSI → A5L 换代</div>
+<span class="badge badge-new">A5L换代</span>
+<span class="badge badge-sales">3月 2,366辆</span>
+<div class="price">终端低于22万起</div>
+<div class="note">轴距2965mm，第五代EA888</div>
+</td>
+<td>3系销量超C级+A4L总和，A4L生命周期末</td>
+</tr>
+
+<tr>
+<td class="col-level">C级<br>中大型</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2408/09/c1/438032982_1723174492049_400x300.jpg" alt="🚗 奔驰E级"></div>
+<div class="car-name">E级 E260L / E300L 时尚/豪华/尊贵 🏆</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales-top">3月 14,545辆</span>
+<div class="price">指导价 45.18万起</div>
+<div class="note">轴距3094mm，中大型销冠</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2408/09/c1/438035604_1723176559317_400x300.jpg" alt="🚗 宝马5系"></div>
+<div class="car-name">5系 525Li / 530Li 领先/尊享/xDrive</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales">3月 7,740辆</span>
+<div class="price">指导价 43.99万起</div>
+<div class="note">轴距3105mm，承压明显</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2603/25/c19/648283830_1774406013099_400x300.jpg" alt="🚗 奥迪A6L"></div>
+<div class="car-name">A6L 40 TFSI / 45 TFSI / 55 TFSI quattro</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales">3月 10,591辆</span>
+<div class="price">指导价42.79万，终端约35万</div>
+<div class="note">轴距3024mm</div>
+</td>
+<td>E级销量是5系的近2倍，A6L稳定第二</td>
+</tr>
+
+<tr>
+<td class="col-level">D级<br>旗舰</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2408/09/c1/438039521_1723178316074_400x300.jpg" alt="🚗 奔驰S级"></div>
+<div class="car-name">S级 S400L / S450L / S500L 4MATIC</div>
+<span class="badge badge-new">2026改款</span>
+<div class="price">指导价 96.26万起</div>
+<div class="note">轴距3106mm，四屏联动</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2305/19/c4/363506221_1684459832502_400x300.jpg" alt="🚗 宝马7系"></div>
+<div class="car-name">7系 735Li / 740Li / 760Li xDrive</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 82.8万起</div>
+<div class="note">轴距3215mm</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2406/28/c1/430589023_1719540132520_400x300.jpg" alt="🚗 奥迪A8L"></div>
+<div class="car-name">A8L 45 TFSI / 50 TFSI / 55 TFSI quattro</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 82.98万起</div>
+<div class="note">轴距3128mm</div>
+</td>
+<td>S级豪华感最强，7系科技先进</td>
+</tr>
+</table>
+
+<!-- ========== 二、轿跑/跑车 ========== -->
+<h2>二、轿跑 / 跑车系列</h2>
+<table class="bench-table">
+<tr><th style="width:80px;">级别</th><th>奔驰</th><th>宝马</th><th>奥迪</th><th style="width:180px;">备注</th></tr>
+
+<tr>
+<td class="col-level">紧凑型<br>四门轿跑</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2603/04/c3/631493692_1772593164963_400x300.jpg" alt="🚗 奔驰CLA"></div>
+<div class="car-name">CLA级 CLA200 / CLA220 / CLA260 4MATIC</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 29.98万起</div>
+<div class="note">轴距2729mm，四门无框</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2601/09/c14/588522754_1767951575357_400x300.jpg" alt="🚗 宝马2系GC"></div>
+<div class="car-name">2系GC 225i M运动/曜夜</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 26.98万起</div>
+<div class="note">轴距2670mm</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td>奔驰CLA对标宝马2系GC</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>双门轿跑</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2501/20/c6/475350829_1737356599480_400x300.jpg" alt="🚗 奔驰CLE"></div>
+<div class="car-name">CLE CLE260 / CLE300 4MATIC 轿跑/敞篷</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-import">进口</span>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2412/02/c12/467675515_1733128537256_400x300.jpg" alt="🚗 宝马4系"></div>
+<div class="car-name">4系 425i / 430i M运动曜夜</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 37.99万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2512/08/c20/577660111_1765181128108_400x300.jpg" alt="🚗 奥迪A5"></div>
+<div class="car-name">A5 40 TFSI / 45 TFSI quattro 进口</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-import">进口</span>
+</td>
+<td>奔驰CLE统一替代C/E轿跑</td>
+</tr>
+
+<tr>
+<td class="col-level">中大型<br>四门轿跑</td>
+<td class="car-cell col-benz">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+<div class="note">CLS已停产</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c20/465289094_1732168496404_400x300.jpg" alt="🚗 宝马6系GT"></div>
+<div class="car-name">6系GT 630i M运动/豪华/曜夜</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 58.39万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c62/465323582_1732183091496_400x300.jpg" alt="🚗 奥迪A7"></div>
+<div class="car-name">A7 45/55 TFSI / A7L 45 TFSI quattro</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 58.58万起</div>
+<div class="note">轴距2998mm(L)</div>
+</td>
+<td>A7对标6系GT，奔驰CLS已停产</td>
+</tr>
+
+<tr>
+<td class="col-level">大型<br>旗舰轿跑</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/19/c52/464845447_1732010129372_400x300.jpg" alt="🏎️ 奔驰AMG GT四门"></div><div class="car-name">AMG GT 4-Door</div>
+<span class="badge badge-performance">性能</span>
+<div class="price">指导价 99.28万起</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c20/465289094_1732168496404_400x300.jpg" alt="🚗 宝马8系GC"></div>
+<div class="car-name">8系 840i xDrive / Gran Coupe 雷霆</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 96.8万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td>AMG GT四门对标8系GC</td>
+</tr>
+
+<tr>
+<td class="col-level">入门<br>跑车</td>
+<td class="car-cell col-benz">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+<div class="note">SLC已停产</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c13/465275286_1732161050395_400x300.jpg" alt="🏎️ 宝马Z4"></div>
+<div class="car-name">Z4 sDrive 25i / 30i M运动曜夜</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 48.98万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/1810/08/c23/113200374_1538981971574_400x300.jpg" alt="🏎️ 奥迪TT"></div>
+<div class="car-name">TT 40 TFSI / 45 TFSI quattro 进口</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-import">进口</span>
+<div class="note">即将停产</div>
+</td>
+<td>Z4对标TT，奔驰SLC已停产</td>
+</tr>
+
+<tr>
+<td class="col-level">性能<br>跑车</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2507/23/c1/539769822_1753235373025_400x300.jpg" alt="🏎️ AMG GT"></div>
+<div class="car-name">AMG GT GT50 / GT55 / GT63 S</div>
+<span class="badge badge-performance">性能</span>
+<div class="price">指导价 134.48万起</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2203/01/c20/299850953_1646104502130_400x300.jpeg" alt="🏎️ 奥迪R8"></div>
+<div class="car-name">R8 V10 5.2L 620马力（已停产）</div>
+<span class="badge badge-performance">性能</span>
+<div class="note">已停产</div>
+</td>
+<td>AMG GT与已停产的R8同属超跑级</td>
+</tr>
+</table>
+
+<!-- ========== 三、SUV ========== -->
+<h2>三、SUV 系列</h2>
+<table class="bench-table">
+<tr><th style="width:80px;">级别</th><th>奔驰</th><th>宝马</th><th>奥迪</th><th style="width:180px;">备注</th></tr>
+
+<tr>
+<td class="col-level">小型<br>SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2312/12/c15/396650684_1702361163616_400x300.jpg" alt="🚙 奔驰GLA"></div>
+<div class="car-name">GLA GLA200 / GLA220</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 28.69万起</div>
+<div class="note">轴距2729mm</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+<div class="note">X1为紧凑型</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2511/11/c6/570165423_1762851375812_400x300.jpg" alt="🚙 奥迪Q2L"></div>
+<div class="car-name">Q2L 35 TFSI 进取/豪华/RS套件 17.18万起</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 17.18万起</div>
+<div class="note">轴距2628mm</div>
+</td>
+<td>GLA对标Q2L，宝马无小型SUV</td>
+</tr>
+
+<tr>
+<td class="col-level">紧凑型<br>SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2312/12/c18/396660114_1702365891493_400x300.jpg" alt="🚙 奔驰GLB"></div>
+<div class="car-name">GLB GLB200 / GLB220 5/7座 4MATIC</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales">3月 ~2,900辆</span>
+<div class="price">指导价 31.19万起</div>
+<div class="note">轴距2820mm，7座可选</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2510/23/c59/564997046_1761208935471_400x300.jpg" alt="🚙 宝马X1"></div>
+<div class="car-name">X1 sDrive20Li / sDrive25Li / xDrive25Li</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 28.89万起</div>
+<div class="note">轴距2802mm</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2312/12/c18/396661138_1702366907185_400x300.jpg" alt="🚙 奥迪Q3"></div>
+<div class="car-name">Q3 35 TFSI / 40 TFSI / 45 TFSI quattro</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales">3月 ~2,900辆</span>
+<div class="price">指导价 27.98万起</div>
+<div class="note">轴距2680mm</div>
+</td>
+<td>GLB最大且有7座，X1空间越级</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2512/05/c0/576722038_1764899702513_400x300.jpg" alt="🚙 奔驰GLC"></div>
+<div class="car-name">GLC GLC260L / GLC300L 4MATIC 🏆</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales-top">3月 14,550辆</span>
+<div class="price">约39万落地起</div>
+<div class="note">轴距2977mm</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2601/24/c3/599134501_1769264387491_400x300.jpg" alt="🚙 宝马X3"></div>
+<div class="car-name">X3 xDrive25L / xDrive30L 豪华/M运动</div>
+<span class="badge badge-new">2025换代</span>
+<span class="badge badge-sales">3月 7,424辆</span>
+<div class="price">指导价 39.99万起</div>
+<div class="note">轴距2975mm(L)</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2602/02/c0/606062618_1769996853876_400x300.jpg" alt="🚙 奥迪Q5L"></div>
+<div class="car-name">Q5L 40 TFSI / 45 TFSI 豪华/臻选</div>
+<span class="badge badge-new">2025换代</span>
+<span class="badge badge-sales">3月 9,698辆</span>
+<div class="price">全系约7折</div>
+<div class="note">轴距2945mm，华为智驾</div>
+</td>
+<td>GLC领先X3近6000辆，Q5L居中</td>
+</tr>
+
+<tr>
+<td class="col-level">中大型<br>SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2307/14/c6/371036873_1689332845232_400x300.jpg" alt="🚙 奔驰GLE"></div>
+<div class="car-name">GLE GLE350 / GLE450 4MATIC 时尚/豪华</div>
+<span class="badge badge-new">2025长轴</span>
+<div class="price">指导价 69.98万起</div>
+<div class="note">轴距2995mm</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2510/23/c59/564996992_1761208826437_400x300.jpg" alt="🚙 宝马X5"></div>
+<div class="car-name">X5 xDrive30Li / xDrive40Li M运动</div>
+<span class="badge badge-hot">在售</span>
+<span class="badge badge-sales">3月 5,276辆</span>
+<div class="price">指导价 60.5万起</div>
+<div class="note">轴距3105mm(L)</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2407/30/c6/436164226_1722313190899_400x300.jpg" alt="🚙 奥迪Q7"></div>
+<div class="car-name">Q7 45 TFSI / 55 TFSI quattro S line</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 58.98万起</div>
+<div class="note">轴距2995mm</div>
+</td>
+<td>X5国产长轴最畅销，Q7性价比最高</td>
+</tr>
+
+<tr>
+<td class="col-level">大型<br>旗舰SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2405/23/c6/424492781_1716450576204_400x300.jpg" alt="🚙 奔驰GLS"></div>
+<div class="car-name">GLS GLS450 4MATIC 时尚/动感/豪华</div>
+<span class="badge badge-new">2025改款</span>
+<div class="price">指导价 109.38万起</div>
+<div class="note">轴距3135mm</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2305/24/c36/363783087_1684933911376_400x300.jpg" alt="🚙 宝马X7"></div>
+<div class="car-name">X7 xDrive40Li 领先/尊享/行政 M运动</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 103.9万起</div>
+<div class="note">轴距3136mm</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+<div class="note">Q8为轿跑SUV</div>
+</td>
+<td>GLS对标X7，奥迪无全尺寸SUV</td>
+</tr>
+
+<tr>
+<td class="col-level">硬派<br>越野</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2501/19/c0/475190069_1737286175120_400x300.jpg" alt="🏔️ 奔驰G级"></div>
+<div class="car-name">G级 G350 / G500 / G580 首发特别版</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 142.48万起</div>
+<div class="note">轴距2890mm，三把锁</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td class="car-cell col-audi">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td>奔驰G级独霸硬派越野市场</td>
+</tr>
+</table>
+
+<!-- ========== 四、轿跑SUV ========== -->
+<h2>四、轿跑 SUV 系列</h2>
+<table class="bench-table">
+<tr><th style="width:80px;">级别</th><th>奔驰</th><th>宝马</th><th>奥迪</th><th style="width:180px;">备注</th></tr>
+
+<tr>
+<td class="col-level">紧凑型<br>轿跑SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2312/12/c15/396650684_1702361163616_400x300.jpg" alt="🚙 奔驰GLA"></div>
+<div class="car-name">GLA（轿跑风格）</div>
+<span class="badge badge-hot">在售</span>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c17/465277985_1732162158873_400x300.jpg" alt="🚙 宝马X2"></div>
+<div class="car-name">X2 sDrive25i M运动/曜夜</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 28.89万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2507/29/c1/541390337_1753772043488_400x300.jpg" alt="🚙 奥迪Q3 Sportback"></div>
+<div class="car-name">Q3 Sportback 40/45 TFSI quattro</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 29.28万起</div>
+</td>
+<td>宝马X2对标奥迪Q3 Sportback</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>轿跑SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2602/05/c3/609182805_1770263435980_400x300.jpg" alt="🚙 奔驰GLC Coupe"></div>
+<div class="car-name">GLC Coupe GLC260 / GLC300 4MATIC</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 47.2万起</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2305/23/c39/363722208_1684830738284_400x300.jpg" alt="🚙 宝马X4"></div>
+<div class="car-name">X4 xDrive25i / xDrive30i M运动曜夜</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 45.59万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2501/24/c24/476502780_1737774334152_400x300.jpg" alt="🚙 奥迪Q5L Sportback"></div>
+<div class="car-name">Q5L Sportback</div>
+<span class="badge badge-new">新品</span>
+<div class="price">待定</div>
+</td>
+<td>三强对标，GLC Coupe最豪华</td>
+</tr>
+
+<tr>
+<td class="col-level">中大型<br>轿跑SUV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/28/c13/467121628_1732775673978_400x300.jpg" alt="🚙 奔驰GLE Coupe"></div>
+<div class="car-name">GLE Coupe GLE350 / GLE450 4MATIC</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 80.48万起</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c17/465277985_1732162158873_400x300.jpg" alt="🚙 宝马X6"></div>
+<div class="car-name">X6 xDrive30i / xDrive40i M运动/尊享</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 78.69万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/01/c13/460480490_1730457274138_400x300.jpg" alt="🚙 奥迪Q8"></div>
+<div class="car-name">Q8 45 TFSI / 55 TFSI quattro 豪华/臻选</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 76.38万起</div>
+</td>
+<td>X6开创者，GLE最优雅，Q8兼旗舰</td>
+</tr>
+</table>
+
+<!-- ========== 五、MPV / 旅行车 ========== -->
+<h2>五、MPV / 旅行车 / 多功能车</h2>
+<table class="bench-table">
+<tr><th style="width:80px;">类型</th><th>奔驰</th><th>宝马</th><th>奥迪</th><th style="width:180px;">备注</th></tr>
+
+<tr>
+<td class="col-level">紧凑型<br>MPV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2406/27/c9/430456769_1719462989895_400x300.jpg" alt="🚗 奔驰B级"></div><div class="car-name">B级</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 26.98万起</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2601/09/c14/588522754_1767951575357_400x300.jpg" alt="🚗 宝马2系旅行车"></div><div class="car-name">2系 多功能旅行车</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 26.98万起</div>
+</td>
+<td class="car-cell col-audi">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td>奔驰B级对标宝马2系旅行车</td>
+</tr>
+
+<tr>
+<td class="col-level">商务<br>MPV</td>
+<td class="car-cell col-benz">
+<div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2501/21/c24/475561005_1737460523861_400x300.jpg" alt="🚐 奔驰V级"></div><div class="car-name">V级</div>
+<span class="badge badge-hot">在售</span>
+<div class="price">指导价 47.88万起</div>
+</td>
+<td class="car-cell col-bmw">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td class="car-cell col-audi">
+<div class="car-name">无对应车型</div>
+<span class="badge badge-none">暂无</span>
+</td>
+<td>奔驰V级独霸商务MPV</td>
+</tr>
+
+<tr>
+<td class="col-level">纯电<br>MPV</td>
+<td class="car-cell col-benz">
+<div class="car-name">EQV</div>
+<span class="badge badge-ev">2025新品</span>
+<div class="note">VAN.EA平台，续航500km+</div>
+</td>
+<td class="car-cell col-bmw"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td class="car-cell col-audi"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td>奔驰纯电MPV领先</td>
+</tr>
+
+<tr>
+<td class="col-level">旗舰纯电<br>MPV</td>
+<td class="car-cell col-benz">
+<div class="car-name">纯电MPV(旗舰)</div>
+<span class="badge badge-ev">2025新品</span>
+<div class="note">VAN.EA平台，百万级</div>
+</td>
+<td class="car-cell col-bmw"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td class="car-cell col-audi"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td>奔驰旗舰纯电MPV独霸</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>旅行车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2512/05/c0/576788734_1764901405820_400x300.jpg" alt="🚗 奔驰C级旅行版"></div><div class="car-name">C级 旅行版</div><span class="badge badge-import">进口</span></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2409/29/c21/452310497_1727602620752_400x300.jpg" alt="🚗 宝马3系Touring"></div><div class="car-name">3系 Touring</div><span class="badge badge-import">进口</span></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2102/18/c7/253920846_1613648502592_400x300.jpg" alt="🚗 奥迪A4 Avant"></div><div class="car-name">A4 Avant</div><span class="badge badge-import">进口</span></td>
+<td>三家均有中型旅行车</td>
+</tr>
+
+<tr>
+<td class="col-level">中大型<br>旅行车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2412/02/c12/467675190_1733127701409_400x300.jpg" alt="🚗 奔驰E级旅行版"></div><div class="car-name">E级 旅行版</div><span class="badge badge-import">进口</span></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2408/09/c1/438035604_1723176559317_400x300.jpg" alt="🚗 宝马5系Touring"></div><div class="car-name">5系 Touring</div><span class="badge badge-import">进口</span></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2305/22/c29/363656132_1684738511771_400x300.jpg" alt="🚗 奥迪A6 Avant"></div><div class="car-name">A6 Avant / Allroad</div><span class="badge badge-import">进口</span></td>
+<td>三家均有中大型旅行车</td>
+</tr>
+
+<tr>
+<td class="col-level">高性能<br>旅行车</td>
+<td class="car-cell col-benz"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2511/01/c0/567441509_1762000256144_400x300.jpg" alt="🏎️ 宝马M3 CS Touring"></div><div class="car-name">M3 CS Touring</div><span class="badge badge-performance">2025新品</span></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2503/05/c0/487120289_1741140421044_400x300.jpg" alt="🏎️ 奥迪RS6 Avant"></div><div class="car-name">RS6 Avant</div><span class="badge badge-performance">性能</span><div class="price">145.38万起，600马力</div></td>
+<td>M3 Touring对标RS6</td>
+</tr>
+</table>
+
+<!-- ========== 六、纯电系列 ========== -->
+<h2>六、纯电系列（EV）</h2>
+<table class="bench-table">
+<tr><th style="width:80px;">级别</th><th>奔驰 EQ</th><th>宝马 i</th><th>奥迪 e-tron</th><th style="width:180px;">备注</th></tr>
+
+<tr>
+<td class="col-level">紧凑型<br>纯电SUV</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2408/01/c28/436606127_1722498910691_400x300.jpg" alt="⚡ 奔驰EQA"></div><div class="car-name">EQA 260 续航619km</div><span class="badge badge-ev">在售</span></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2508/26/c83/548721620_1756223378162_400x300.jpg" alt="⚡ 宝马iX1"></div><div class="car-name">iX1 eDrive25L / xDrive30L M运动</div><span class="badge badge-ev">在售</span><div class="price">29.99万起</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2111/23/c73/285079703_1637638779857_400x300.jpg" alt="⚡ 奥迪Q4 e-tron"></div><div class="car-name">Q4 e-tron 40/50 e-tron quattro</div><span class="badge badge-ev">在售</span></td>
+<td>EQA对标iX1和Q4 e-tron</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>纯电SUV</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2408/01/c29/436607242_1722499383060_400x300.jpg" alt="⚡ 奔驰EQB"></div><div class="car-name">EQB EQB260 / EQB350 4MATIC</div><span class="badge badge-ev">在售</span></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2311/27/c0/394106317_1701049609771_400x300.jpg" alt="⚡ 宝马iX3"></div><div class="car-name">iX3 eDrive35L / eDrive40L 续航540km</div><span class="badge badge-ev">在售</span><div class="price">40.5万起，续航540km</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2507/26/c0/540723837_1753535460274_400x300.jpg" alt="⚡ 奥迪Q6L e-tron"></div><div class="car-name">Q6L e-tron PPE平台 800V</div><span class="badge badge-ev">2025新品</span><div class="note">PPE平台，800V</div></td>
+<td>iX3最成熟，Q6L最新平台</td>
+</tr>
+
+<tr>
+<td class="col-level">中大型<br>纯电SUV</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2404/26/c13/419721287_1714092287217_400x300.jpg" alt="⚡ 奔驰EQE SUV"></div><div class="car-name">EQE SUV 500 4MATIC 先锋/豪华/旗舰</div><span class="badge badge-ev">在售</span><div class="price">48.6万起</div></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2502/07/c0/479442276_1738900178806_400x300.jpg" alt="⚡ 宝马iX"></div><div class="car-name">iX xDrive40 / xDrive50 / M60</div><span class="badge badge-ev">在售</span><div class="price">74.69万起</div></td>
+<td class="car-cell col-audi"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td>EQE SUV对标iX</td>
+</tr>
+
+<tr>
+<td class="col-level">旗舰<br>纯电SUV</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c0/465259232_1732156412673_400x300.jpg" alt="⚡ 奔驰EQS SUV"></div><div class="car-name">EQS SUV 500 4MATIC 续航777km</div><span class="badge badge-ev">在售</span><div class="price">91.05万起</div></td>
+<td class="car-cell col-bmw"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td class="car-cell col-audi"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td>EQS SUV独霸</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>纯电轿车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2507/24/c10/540171929_1753338856367_400x300.jpg" alt="⚡ 奔驰C级纯电"></div><div class="car-name">C级 纯电版</div><span class="badge badge-ev">2025新品</span></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2510/23/c44/564990175_1761205054899_400x300.jpg" alt="⚡ 宝马i3"></div><div class="car-name">i3 eDrive35L / 40L 曜夜/运动 续航550km</div><span class="badge badge-ev">在售</span><div class="price">35.39万起</div></td>
+<td class="car-cell col-audi"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td>奔驰新纯电对标宝马i3</td>
+</tr>
+
+<tr>
+<td class="col-level">中大型<br>纯电轿车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/20/c21/465059454_1732086410026_400x300.jpg" alt="⚡ 奔驰EQE"></div><div class="car-name">EQE 500 4MATIC 先锋/豪华/旗舰 续航681km</div><span class="badge badge-ev">在售</span><div class="price">48.6万起，续航590+km</div></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2412/04/c22/467931962_1733281492879_400x300.jpg" alt="⚡ 宝马i4"></div><div class="car-name">i4 eDrive35 / eDrive40 / M50 续航570km</div><span class="badge badge-ev">在售</span><div class="price">44.99万起，续航570+km</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2602/28/c0/628642183_1772272996433_400x300.jpg" alt="⚡ 奥迪A6L e-tron"></div><div class="car-name">A6 e-tron PPE 800V 续航700+km</div><span class="badge badge-ev">2025新品</span><div class="note">PPE平台，续航700+km</div></td>
+<td>EQE对标i4，A6 e-tron续航最长</td>
+</tr>
+
+<tr>
+<td class="col-level">紧凑级<br>纯电轿跑</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2511/06/c9/568551620_1762393753547_400x300.jpg" alt="⚡ 奔驰CLA纯电"></div><div class="car-name">CLA纯电(长轴)</div><span class="badge badge-ev">2025新品</span><div class="note">MMA平台，800V，续航750+km</div></td>
+<td class="car-cell col-bmw"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td class="car-cell col-audi"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td>CLA纯电独霸</td>
+</tr>
+
+<tr>
+<td class="col-level">旗舰<br>纯电轿车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c0/465259236_1732156665860_400x300.jpg" alt="⚡ 奔驰EQS"></div><div class="car-name">EQS 500 4MATIC 续航840km</div><span class="badge badge-ev">在售</span><div class="price">88.1万起，续航770+km</div></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/19/c38/464822570_1731999510559_400x300.jpg" alt="⚡ 宝马i7"></div><div class="car-name">i7 eDrive50L / xDrive60L / M70 续航625km</div><span class="badge badge-ev">在售</span><div class="price">94.9万起，续航625km</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2503/05/c0/487120289_1741140421044_400x300.jpg" alt="⚡ 奥迪e-tron GT"></div><div class="car-name">e-tron GT J1平台 RS版 124.78万</div><span class="badge badge-ev">在售</span><div class="note">J1平台，运动轿跑</div></td>
+<td>EQS对标i7</td>
+</tr>
+</table>
+
+<!-- ========== 七、性能车 ========== -->
+<h2>七、性能车对标（AMG ↔ M ↔ RS/S）</h2>
+<table class="bench-table">
+<tr><th style="width:80px;">级别</th><th>奔驰 AMG</th><th>宝马 M</th><th>奥迪 S / RS</th><th style="width:180px;">备注</th></tr>
+
+<tr>
+<td class="col-level">紧凑型<br>性能轿车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/20/c34/465070371_1732092208307_400x300.jpg" alt="🏎️ 奔驰A35 AMG"></div><div class="car-name">A35 AMG</div><span class="badge badge-performance">性能</span><div class="price">39.51万起</div></td>
+<td class="car-cell col-bmw"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2306/05/c49/364572628_1685977168153_400x300.jpg" alt="🏎️ 奥迪S3/RS3"></div><div class="car-name">S3 / RS3</div><span class="badge badge-performance">性能</span><div class="price">RS3 55.8万起</div></td>
+<td>A35对标S3，RS3天花板</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>性能轿车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2507/07/c0/534755234_1751859827183_400x300.jpg" alt="🏎️ 奔驰C级AMG"></div><div class="car-name">C43 / C63 AMG</div><span class="badge badge-performance">性能</span><div class="price">65.7 / 95.6万起</div><div class="note">C63 680马力</div></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2511/01/c0/567441509_1762000256144_400x300.jpg" alt="🏎️ 宝马M3"></div><div class="car-name">M340i / M3</div><span class="badge badge-performance">性能</span><div class="price">M3 86.39万起，510马力</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2506/26/c12/530166846_1750929740388_400x300.jpg" alt="🏎️ 奥迪S4/RS5"></div><div class="car-name">S4 / RS5</div><span class="badge badge-performance">性能</span><div class="price">RS5 83.68万起，450马力</div></td>
+<td>C63 680 vs M3 510 vs RS5 450</td>
+</tr>
+
+<tr>
+<td class="col-level">中型<br>性能轿跑</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2406/03/c21/426422661_1717408919898_400x300.jpg" alt="🏎️ 奔驰CLE AMG"></div><div class="car-name">CLE AMG</div><span class="badge badge-performance">性能</span></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c13/465274891_1732161323416_400x300.jpg" alt="🏎️ 宝马M4"></div><div class="car-name">M4 / M4 CSL</div><span class="badge badge-performance">性能</span><div class="price">CSL 119.8万起</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2306/05/c49/364571839_1685977235627_400x300.jpg" alt="🏎️ 奥迪RS5"></div><div class="car-name">RS5 Sportback</div><span class="badge badge-performance">性能</span><div class="price">83.68万起</div></td>
+<td>M4 CSL最强</td>
+</tr>
+
+<tr>
+<td class="col-level">中大型<br>性能轿车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/19/c52/464845447_1732010129372_400x300.jpg" alt="🏎️ 奔驰E级AMG"></div><div class="car-name">E53 AMG</div><span class="badge badge-performance">性能</span><div class="price">96.16万起，585马力</div></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2406/26/c5/430272169_1719372317739_400x300.jpg" alt="🏎️ 宝马M5"></div><div class="car-name">M5</div><span class="badge badge-performance">性能</span><div class="price">146.89万起，727马力</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2503/05/c0/487120289_1741140421044_400x300.jpg" alt="🏎️ 奥迪RS6/RS7"></div><div class="car-name">RS6 / RS7</div><span class="badge badge-performance">性能</span><div class="price">145.38/146.88万起，600马力</div></td>
+<td>M5 727马力 vs RS6/RS7 600马力</td>
+</tr>
+
+<tr>
+<td class="col-level">大型<br>旗舰性能</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2406/28/c2/430629610_1719544376915_400x300.jpg" alt="🏎️ 奔驰S级AMG"></div><div class="car-name">S63 AMG</div><span class="badge badge-performance">性能</span><div class="price">200+万</div></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c10/465271905_1732160199797_400x300.jpg" alt="🏎️ 宝马M8"></div><div class="car-name">M8</div><span class="badge badge-performance">性能</span><div class="price">200+万</div></td>
+<td class="car-cell col-audi"><div class="car-name">无对应车型</div><span class="badge badge-none">暂无</span></td>
+<td>S63对标M8，奥迪RS7次旗舰</td>
+</tr>
+
+<tr>
+<td class="col-level">旗舰<br>GT跑车</td>
+<td class="car-cell col-benz"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2507/23/c1/539769822_1753235373025_400x300.jpg" alt="🏎️ 奔驰AMG GT 63 S"></div><div class="car-name">AMG GT 63 S</div><span class="badge badge-performance">性能</span><div class="price">160+万，639马力</div></td>
+<td class="car-cell col-bmw"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2411/21/c10/465271905_1732160199797_400x300.jpg" alt="🏎️ 宝马M8 Competition"></div><div class="car-name">M8 Competition</div><span class="badge badge-performance">性能</span><div class="price">200+万</div></td>
+<td class="car-cell col-audi"><div class="car-img-wrap"><img src="https://img.pcauto.com.cn/images/upload/upc/tx/auto5/2203/01/c20/299850953_1646104502130_400x300.jpeg" alt="🏎️ 奥迪R8"></div><div class="car-name">R8 V10 5.2L 620马力（已停产）</div><span class="badge badge-performance">性能</span><div class="note">已停产</div></td>
+<td>AMG GT与M8竞争，R8已停产</td>
+</tr>
+</table>
+
+<div class="section-divider"></div>
+
+<!-- 总结 -->
+<h2>八、品牌综合对比</h2>
+
+<div class="summary-box">
+<div class="summary-grid">
+<div class="summary-item">
+<div class="brand-name" style="color:#c0c0c0;">🔵 奔驰</div>
+<div style="margin-bottom:10px;">
+<div style="color:#4ade80; font-size:0.95em;">2025全年中国 57.5万辆（-19%）</div>
+<div style="color:#4ade80; font-size:0.95em;">2026年3月 42,856辆（第一）</div>
+</div>
+<ul>
+<li>E级 3月14,545辆 — 中大型销冠</li>
+<li>GLC 3月14,550辆 — 中型SUV销冠</li>
+<li>C级 3月~8,000辆</li>
+<li>豪华感标杆，内饰质感最佳</li>
+<li>唯一有MPV、硬派越野的品牌</li>
+<li>车系最全，覆盖所有级别</li>
+<li>保值率最高</li>
+</ul>
+</div>
+<div class="summary-item">
+<div class="brand-name" style="color:#4a90d9;">🔷 宝马</div>
+<div style="margin-bottom:10px;">
+<div style="color:#4ade80; font-size:0.95em;">2025全年中国 62.55万辆（-12.5%）</div>
+<div style="color:#4ade80; font-size:0.95em;">2026年3月 39,820辆（第三）</div>
+</div>
+<ul>
+<li>3系 3月11,953辆 — 连续19个月冠军</li>
+<li>X5 3月5,276辆，年销近9万辆</li>
+<li>5系 3月7,740辆 — 承压明显</li>
+<li>操控标杆，驾驶乐趣之王</li>
+<li>电动化最成功传统品牌（占比24.2%）</li>
+<li>唯一全球销量正增长（+0.5%）</li>
+<li>Neue Klasse新世代平台</li>
+</ul>
+</div>
+<div class="summary-item">
+<div class="brand-name" style="color:#ff4444;">🔴 奥迪</div>
+<div style="margin-bottom:10px;">
+<div style="color:#4ade80; font-size:0.95em;">2025全年中国 61.75万辆（-5%）</div>
+<div style="color:#4ade80; font-size:0.95em;">2026年3月 40,520辆（第二）</div>
+</div>
+<ul>
+<li>A6L 3月10,591辆</li>
+<li>Q5L 3月9,698辆</li>
+<li>A4L 3月2,366辆 — 生命周期末</li>
+<li>性价比最高，终端优惠大</li>
+<li>PPE纯电平台(800V)</li>
+<li>华为乾崑智驾合作</li>
+<li>国产燃油豪华车份额第一</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="summary-box" style="margin-top:20px;">
+<h3 style="color:#f0d080;">选购建议</h3>
+<table>
+<tr><th>需求</th><th>推荐</th><th>车型</th><th>理由（含真实销量）</th></tr>
+<tr><td>豪华商务接待</td><td>奔驰</td><td>E级</td><td>3月14,545辆销冠，豪华感无可替代</td></tr>
+<tr><td>操控驾驶乐趣</td><td>宝马</td><td>3系</td><td>3月11,953辆，连续19个月冠军，终端21.8万起</td></tr>
+<tr><td>性价比科技配置</td><td>奥迪</td><td>A6L / Q5L</td><td>A6L 10,591辆，Q5L 9,698辆，终端优惠大</td></tr>
+<tr><td>家庭SUV出行</td><td>奔驰</td><td>GLC</td><td>3月14,550辆，中型SUV销冠</td></tr>
+<tr><td>中大型SUV</td><td>宝马</td><td>X5</td><td>3月5,276辆，年销近9万辆，国产长轴</td></tr>
+<tr><td>硬派越野</td><td>奔驰</td><td>G级</td><td>三把差速锁，独霸硬派越野市场</td></tr>
+<tr><td>性能发烧友</td><td>宝马</td><td>M3 / M5</td><td>M3 510马力，M5 727马力</td></tr>
+<tr><td>新能源入门</td><td>宝马</td><td>iX3</td><td>传统品牌中电动化最成熟</td></tr>
+<tr><td>高端纯电旗舰</td><td>奥迪</td><td>A6 e-tron</td><td>PPE平台800V，续航700+km</td></tr>
+</table>
+</div>
+
+<footer>
+<p>数据来源：乘联会、汽车之家、懂车帝 | 销量为2026年3月零售数据 | 更新日期：2026年4月22日</p>
+<p>价格仅供参考，实际以当地经销商报价为准 | 每一行严格对标，无对应车型明确标注"暂无"</p>
+</footer>
+</div>
+</body>
+</html>

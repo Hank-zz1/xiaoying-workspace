@@ -1,0 +1,37 @@
+{
+  "capabilityId": "cap_6a3a618e31ce4742b216fb1c0bafcd96",
+  "isMarketProvisioned": true,
+  "version": "1.0.0",
+  "commitId": "19e21d4ed5b720d98b995b85938a565d3676b08a",
+  "latestCommitId": "19e21d4ed5b720d98b995b85938a565d3676b08a",
+  "contentHash": "sha256:167e305af58cdf92d5a2fc7ade141dbd9dd258eef5f79151751974f68284fe5a",
+  "projectUrl": "https://hgit.haier.net/wlink/fhtech/digital-manage/incos/incos-dev/incaier-skills/personal/24905187/grill-me-qf1r",
+  "updatedAt": 1787726703163,
+  "isPublic": false,
+  "subscriptionStatus": "ACTIVE",
+  "capabilityStatus": "PUBLISHED",
+  "subscriptionId": "sub_3b45805d643148fa8fda482f5d2ab356",
+  "name": "烤问我",
+  "capabilityName": "烤问我",
+  "logoUrl": null,
+  "capabilityDescription": "在你动手实现之前，AI 会不依不饶地拷问你计划中的每一个细节，沿着决策树逐分支往下走，直到双方达成共识。适合在做技术选型、架构设计、功能方案前做压力测试。",
+  "publisherName": "许建康",
+  "official": false,
+  "orgName": null,
+  "needApproval": false,
+  "categoryIds": [
+    "302"
+  ],
+  "categories": [
+    {
+      "id": "302",
+      "name": "代码编程",
+      "code": "code_programming",
+      "rootId": "3",
+      "icon": "https://sit-incos-dev.haierfhtech.com/prod-api/obs-kjpt/incos-dev/11/2026/05/26/e2e4e7f5ab044064a743f6b232f85c1a.png"
+    }
+  ],
+  "usageExamples": null,
+  "provisionSignature": "499660af8436e3cca6aa4a25efb24780",
+  "localInstallFingerprint": "sha256:167e305af58cdf92d5a2fc7ade141dbd9dd258eef5f79151751974f68284fe5a"
+}

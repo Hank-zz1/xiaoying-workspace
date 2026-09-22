@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 2890,
+  "entities": {
+    "当前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794185098
+    },
+    "腾讯": {
+      "count": 4,
+      "category": "other",
+      "lastSeen": 1787794185098
+    },
+    "黑马": {
+      "count": 1,
+      "category": "location",
+      "lastSeen": 1787794185098
+    },
+    "黑客": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794185098
+    },
+    "马拉松赛": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794185098
+    },
+    "本周": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794185098
+    },
+    "日前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794185098
+    },
+    "周五": {
+      "count": 2,
+      "category": "date_period",
+      "lastSeen": 1787794185098
+    },
+    "谢谢": {
+      "count": 1,
+      "category": "person",
+      "lastSeen": 1787794185098
+    }
+  }
+}

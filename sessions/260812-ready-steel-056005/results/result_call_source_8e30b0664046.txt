@@ -1,0 +1,12 @@
+{
+  "id": "019ff3cb-f744-746c-9775-5c2099138a8d",
+  "status": "completed",
+  "completed": 0,
+  "total": 0,
+  "creditsUsed": -1,
+  "expiresAt": "2026-08-13T02:28:44.000Z",
+  "next": null,
+  "data": []
+}
+
+[SYSTEM] 任务已完成，但本次工具结果未返回可展示的图片 URL 或路径。不得输出图片 Markdown、图片地址或猜测 URL；请如实说明结果缺少图片引用。

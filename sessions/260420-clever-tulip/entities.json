@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "lastProcessedOffset": 750258,
+  "entities": {
+    "假期": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182425
+    },
+    "海尔": {
+      "count": 1,
+      "category": "company",
+      "lastSeen": 1787794182425
+    },
+    "赛季": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182425
+    },
+    "新建": {
+      "count": 7,
+      "category": "location",
+      "lastSeen": 1787794182425
+    },
+    "当前": {
+      "count": 1,
+      "category": "date_period",
+      "lastSeen": 1787794182425
+    }
+  }
+}
